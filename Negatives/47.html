@@ -1,0 +1,1217 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x5CwkBSnVXAVYO","queueTime":0,"applicationTime":2915,"ttGuid":"2E41A53469A6465D","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta property="og:title" content="Suporte Doctoralia" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.doctoralia.com.br/content/images/logo/fb_doctoralia_logo_1500x768.png" />
+<meta property="og:url" content="https://www.doctoralia.com.br/legal.aspx" />
+<meta property="og:site_name" content="Doctoralia" />
+<meta property="og:locale" content="pt_BR" />
+
+    <meta name="robots" content="all" />
+
+
+<meta property="fb:admins" content="100002164932184">
+<link rel="shortcut icon" href="/favicon.ico?v=20141103" />
+    <link rel="canonical" href="http://www.doctoralia.com.br/legal.aspx" />
+
+    
+    <title>Suporte Doctoralia</title>
+<link href="/content/css__v__DjuQEeaF2jgzsAPh35MkwhN6ilepoJzxh2gPiPGjm6I1" rel="stylesheet"/>
+        <!--[if IE 8]>
+        <link href="/content/ie8.css" rel="stylesheet"/>
+
+    <![endif]-->
+    
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-1127942-6', 'auto', { 'allowLinker': true  });
+        ga('require', 'linker');
+        ga('linker:autoLink', ['app.doctoralia.com']);
+                    ga(function (tracker) { document.cookie = '_uaClientID_=' + tracker.get('clientId') + '; path=/'; });
+        ga('send', 'pageview');
+    </script>
+    
+</head>
+<body data-fb-culture="pt_BR" data-fb-appid="138687599526585" data-login-redirect="">
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WNHGKJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+        var dataLayerContainer = {};
+        dataLayerContainer['gtm-pageType'] = '';
+        dataLayerContainer['gtm-specialization'] = '';
+        dataLayerContainer['gtm-region'] = '';
+        dataLayerContainer['gtm-city'] = '';
+        dataLayerContainer['gtm-disease'] = '';
+        dataLayerContainer['gtm-service'] = '';
+        dataLayerContainer['gtm-medication'] = '';
+        dataLayerContainer['gtm-is-mobile'] = '0';
+                dataLayer = [dataLayerContainer];
+
+
+            
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WNHGKJ');
+            
+    </script>
+
+    <div class="wrap" id="top">
+        <header class="heading-bar">
+    <div class="container-l">
+        <a href="https://www.doctoralia.com.br/" class="logo" title="Doctoralia">
+            <img src="/content/images/d4/logo.png" alt="Doctoralia" width="180" height="48" />
+        </a>
+                    <fieldset class="search">
+<form action="/search" data-search-bar="" method="post">                            <input type="text" name="SearchTerms" autocomplete="off" placeholder="" maxlength="150" class="textBox" data-searchterms-input />
+                            <input type="submit" class="btn btn-ico" value="" data-ga-event="click" data-ga-category="search" data-ga-action="header" data-ga-label="other" />
+</form>                    </fieldset>
+                    <nav class="visitor">
+                        <div class="register-multiple-container">
+                            <div class="register-multiple hidden">
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register?openSection=2" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-doctor"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Doctor Sign up">
+                                    Profissional da saúde
+                                </a>
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register?openSection=3" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-center"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Facilty Sign up">
+                                    Centro médico
+                                </a>
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register/patient/1" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-patient"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Patient Sign up">
+                                    Paciente
+                                </a>
+                            </div>
+                        </div>
+                        <a rel="nofollow" data-register-link href="https://www.doctoralia.com.br/users/register">
+                            Cadastre-se
+                            <i class="ico-triangle-down"></i>
+                        </a>
+                        <i></i>
+                        <a rel="nofollow" href="https://app.doctoralia.com.br/usuarios/login">
+                            Entrar
+                        </a>
+                    </nav>
+    </div>
+</header>
+    <div class="search-typeahead-container-center">
+        <div class="search-typeahead-container">
+            <div class="search-textbox-typeahead hidden"></div>
+        </div>
+    </div>
+
+        
+        <div class="container fixed">
+<ul class="breadcrumb"><li class="active" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.doctoralia.com.br/" itemprop="url"><span itemprop="title">Home</span></a></li></ul>
+                <p class="share">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.doctoralia.com.br%2flegal.aspx" rel="nofollow" target="_blank" title="Facebook"></a>
+<a class="twitter" data-lang="en" href="http://twitter.com/share?url=http%3a%2f%2fwww.doctoralia.com.br%2flegal.aspx&amp;text=Suporte+Doctoralia&amp;via=Doctoralia_br" rel="nofollow" target="_blank" title="Twitter"></a>
+
+                </p>
+        </div>
+
+        <div id="main">
+            
+
+    <div class="box-padded">
+        <div class="legal-text">
+            <p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;text-align: center;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">TERMOS DE USO</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;text-align: center;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Usu&aacute;rios da Plataforma Doctoralia</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;text-align: center;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:7.5pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Informamos que os produtos, os servi&ccedil;os e o site s&atilde;o de propriedade exclusiva da </span><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">DOCTORALIA BRASIL SERVICOS ONLINE E SOFTWARE LTDA.</span><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">, pessoa jur&iacute;dica de direito privado, inscrita no CNPJ sob o n&ordm;</span><span style="font-size: 9.5pt; vertical-align: baseline; white-space: pre-wrap;"> 27.053.196/0001-39</span><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">, com sede na Rua Visconde do Rio Branco, 1488 - 10&ordm; andar 80420-210 Batel - Curitiba - Paran&aacute;</span><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;"> (&ldquo;</span><span style="font-size: 11pt; color: rgb(0, 0, 0); text-decoration-line: underline; vertical-align: baseline; white-space: pre-wrap;">Doctoralia</span><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">&rdquo;).</span><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"> </span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;text-align: center;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect;1. Disposi&ccedil;&otilde;es Gerais</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Defini&ccedil;&otilde;es:</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;margin-left: 36pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Prestador de Servi&ccedil;os: Doctoralia, pessoa jur&iacute;dica de direito privado, pessoa jur&iacute;dica de direito privado, inscrita no CNPJ sob o n&ordm; </span><span style="font-size: 9.5pt; color: rgb(34, 34, 34); vertical-align: baseline; white-space: pre-wrap;">&nbsp;27.053.196/0001-39</span><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">, com sede na Rua Visconde do Rio Branco, 1488 - 10&ordm; andar 80420-210 Batel - Curitiba - Paran&aacute;, criadora e propriet&aacute;ria do Site;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Site: em: </span><span style="font-size: 11pt; text-decoration-line: underline; vertical-align: baseline; white-space: pre-wrap;">www.doctoralia.com.br;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Termos de Uso: regras e condi&ccedil;&otilde;es de presta&ccedil;&atilde;o de servi&ccedil;os pela Doctoralia</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Usu&aacute;rio: pessoa natural com plena capacidade civil, conforme art. 5&ordm; da Lei n&ordm; 10.406/02, que (i) tenha preenchido se cadastrado no Site ou (ii) tenha se registrado no Site por meio do Facebook ou (iii) tenha agendado consulta com um Profissional utilizando o Calend&aacute;rio de Consultas ou (iv) tenha entrado em contato com os Profissionais;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Profissional: Usu&aacute;rio que exer&ccedil;a a profiss&atilde;o de m&eacute;dico; dentista; psic&oacute;logo; fisioterapeuta; nutricionista ou terapeuta; assim como pessoa n&atilde;o listada acima que forne&ccedil;a servi&ccedil;os m&eacute;dicos, m&eacute;dicos ou param&eacute;dicos;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Institui&ccedil;&atilde;o: local de presta&ccedil;&atilde;o de servi&ccedil;os de sa&uacute;de, m&eacute;dicos ou param&eacute;dicos;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Titular: Usu&aacute;rio autorizado a gerenciar informa&ccedil;&otilde;es de uma determinada Institui&ccedil;&atilde;o, sujeito &agrave; verifica&ccedil;&atilde;o pelo Prestador de Servi&ccedil;os;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Perfil: informa&ccedil;&otilde;es sobre Profissional cadastrado no Site sob a forma de uma subp&aacute;gina, identificada por um endere&ccedil;o URL &uacute;nico;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Cadastro: processo de cria&ccedil;&atilde;o de uma Conta;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Conta: entrada na base de dados do Site relativa a um Usu&aacute;rio ou Profissional, que permite o acesso a Servi&ccedil;os espec&iacute;ficos;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Servi&ccedil;os: servi&ccedil;o prestado por meios eletr&ocirc;nicos que consistem na transmiss&atilde;o e recep&ccedil;&atilde;o de dados utilizando sistemas p&uacute;blicos de TIC (Tecnologias da Informa&ccedil;&atilde;o e Comunica&ccedil;&atilde;o) a pedido do destinat&aacute;rio do servi&ccedil;o, ou seja, o Usu&aacute;rio, sem a presen&ccedil;a f&iacute;sica simult&acirc;nea das partes;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Contrato: acordo para presta&ccedil;&atilde;o dos Servi&ccedil;os celebrados por via eletr&ocirc;nica entre o Prestador de Servi&ccedil;os e o respectivo Usu&aacute;rio, Profissional ou Titular com base nos Termos de Uso;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Calend&aacute;rio de Consultas: ferramenta de gerenciamento de calend&aacute;rio do Profissional que permite ao Usu&aacute;rio marcar consultas atrav&eacute;s do Site e permite que o Profissional disponibilize sua agenda de compromissos profissionais, </span><span style="font-size: 11pt; background-color: transparent; font-style: italic; vertical-align: baseline; white-space: pre-wrap;">software</span><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"> ao qual Provedor de Servi&ccedil;os det&eacute;m todos os direitos.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">2. A Doctoralia presta os Servi&ccedil;os com base nestes Termos de Uso.</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 2. Escopo dos Servi&ccedil;os</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os disponibiliza os seguintes Servi&ccedil;os:</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Permite aos Usu&aacute;rios publicar informa&ccedil;&otilde;es e avalia&ccedil;&otilde;es sobre Profissionais categorizados por localiza&ccedil;&atilde;o e especializa&ccedil;&atilde;o;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">disponibiliza ferramentas de busca para pesquisa de Profissionais e Institui&ccedil;&otilde;es;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">notifica sobre novas informa&ccedil;&otilde;es e opini&otilde;es;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">permite que os Usu&aacute;rios entrem em contato com os Profissionais verificados;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">permite que Profissionais verificados forne&ccedil;am e corrijam informa&ccedil;&otilde;es sobre si mesmos, respondam &agrave;s opini&otilde;es dos Usu&aacute;rios e respondam &agrave;s perguntas que lhes s&atilde;o direcionadas; </span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">permite agendamento de consultas atrav&eacute;s do Calend&aacute;rio de Consultas e Institui&ccedil;&otilde;es que tenham disponibilizado tal op&ccedil;&atilde;o; e</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">permite visibilidade por meio de mecanismos de buscas online </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">As informa&ccedil;&otilde;es e avalia&ccedil;&otilde;es sobre Profissionais e Institui&ccedil;&otilde;es s&atilde;o publicadas sob a forma de uma classifica&ccedil;&atilde;o, a qual comp&otilde;e um ranking que depende, entre outros, dos pareceres recebidos.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="3" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O acesso &agrave; maioria dos Servi&ccedil;os &eacute; gratuito; n&atilde;o s&atilde;o cobradas taxas para Cadastro e para a publica&ccedil;&atilde;o de informa&ccedil;&otilde;es b&aacute;sicas sobre Profissionais e Institui&ccedil;&otilde;es. O Prestador de Servi&ccedil;os n&atilde;o cobra quaisquer taxas por opini&otilde;es e coment&aacute;rios colocados no Site, com exce&ccedil;&atilde;o dos planos oferecidos aos Profissionais cadastrados.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="4" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os reserva-se ao direito de introduzir taxas para quaisquer Servi&ccedil;os prestados no Site, sendo que nesta hip&oacute;tese o usu&aacute;rio ser&aacute; previamente notificado de qualquer altera&ccedil;&atilde;o relativa ao seu acesso e uso.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 3. Termos e Condi&ccedil;&otilde;es dos Servi&ccedil;os</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Para utilizar os Servi&ccedil;os, o Usu&aacute;rio dever&aacute; atender &agrave;s seguintes condi&ccedil;&otilde;es t&eacute;cnicas:</span></span></span></p>
+	</li>
+</ol>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: 7.1pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Acesso &agrave; Internet; e</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: 7.1pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">um dos seguintes navegadores da Web: Firefox, Chrome, Safari, Internet Explorer ou Opera, atualizados para a vers&atilde;o mais recente.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;margin-left: 25.1pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Qualquer pessoa ter&aacute; acesso &agrave;s informa&ccedil;&otilde;es e avalia&ccedil;&otilde;es sobre Profissionais e Institui&ccedil;&otilde;es ao utilizar o mecanismo de busca disponibilizado no Site.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="3" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Qualquer pessoa poder&aacute; agendar uma consulta com o Profissional, utilizando o Calend&aacute;rio de Consultas, desde que as informa&ccedil;&otilde;es de contato dessa pessoa sejam verificadas pelo Prestador de Servi&ccedil;os.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="4" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Usu&aacute;rio poder&aacute;:</span></span></span></p>
+	</li>
+</ol>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Publicar avalia&ccedil;&otilde;es e opini&otilde;es sobre Profissionais e Institui&ccedil;&otilde;es;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">adicionar e corrigir informa&ccedil;&otilde;es sobre Profissionais e Institui&ccedil;&otilde;es;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">ativar servi&ccedil;os de notifica&ccedil;&atilde;o de novas informa&ccedil;&otilde;es e opini&otilde;es;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">entrar em contato com os Perfis de Profissionais verificados; e</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">denunciar abuso.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;margin-left: 36pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="5" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O servi&ccedil;o de notifica&ccedil;&atilde;o de novas informa&ccedil;&otilde;es e opini&otilde;es &eacute; ativado mediante a adi&ccedil;&atilde;o de uma opini&atilde;o sobre o Perfil de um determinado Profissional, agendamento de uma consulta por meio do Calend&aacute;rio de Compromissos ou acesso ao Perfil de um determinado Profissional.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="6" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os reserva-se o direito de suspender temporariamente a presta&ccedil;&atilde;o dos Servi&ccedil;os durante a atualiza&ccedil;&atilde;o ou reconstru&ccedil;&atilde;o do Site ou trabalhos de manuten&ccedil;&atilde;o de sistemas.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect;4. Informa&ccedil;&otilde;es sobre Profissionais e Institui&ccedil;&otilde;es</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">As opini&otilde;es/avalia&ccedil;&otilde;es ser&atilde;o acompanhadas pela assinatura do Usu&aacute;rio e somente poder&atilde;o se referir &agrave;s atividades profissionais exercidas pelo Profissional.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">As opini&otilde;es e informa&ccedil;&otilde;es sobre Profissionais se basear&atilde;o apenas na experi&ecirc;ncia pessoal do Usu&aacute;rio, sendo vedada qualquer avalia&ccedil;&atilde;o que envolva o Cadastro de terceiros, com exce&ccedil;&atilde;o de pessoas incapazes de fornecer suas pr&oacute;prias opini&otilde;es ou animais.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="3" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">&Eacute; vedado ao Usu&aacute;rio:</span></span></span></p>
+	</li>
+</ol>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Adicionar v&aacute;rias opini&otilde;es e/ou avalia&ccedil;&otilde;es sobre o mesmo incidente m&eacute;dico;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">publicar conte&uacute;do publicit&aacute;rio e de marketing de modo a direcionar para sites de para produtos e afins;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">adicionar opini&otilde;es e avalia&ccedil;&otilde;es em seus pr&oacute;prios perfis de modo a manipular opini&otilde;es, informa&ccedil;&otilde;es e classifica&ccedil;&otilde;es; e</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">apresentar opini&otilde;es e coment&aacute;rios que sejam falsos.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="4" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Usu&aacute;rio confirma que as informa&ccedil;&otilde;es ou opini&otilde;es que eles forneceram s&atilde;o verdadeiras. O Prestador de Servi&ccedil;os n&atilde;o se responsabiliza, por conseguinte, pela exist&ecirc;ncia ou legitimidade dos dados cadastrados pelo usu&aacute;rio no Site e em suas diversas ferramentas, assim como pela capacidade para contratar do Usu&aacute;rio ou pela veracidade dos dados pessoais em seu cadastro, sendo que estes dados s&atilde;o inseridos pelo usu&aacute;rio por sua pr&oacute;pria conta e risco.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="5" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os se reserva ao direito de recusar publicar opini&otilde;es ou informa&ccedil;&otilde;es e de remover conte&uacute;do publicado que contrarie os presentes Termos de Uso ou disposi&ccedil;&otilde;es legais. Nesta hip&oacute;tese, o Usu&aacute;rio n&atilde;o ter&aacute; o direito de fazer qualquer reclama&ccedil;&atilde;o contra o Prestador de Servi&ccedil;os.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="6" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os ter&aacute; o direito de exigir que ao publicar uma opini&atilde;o e/ou avalia&ccedil;&atilde;o, o Usu&aacute;rio seja adicionalmente verificado, por exemplo, com o uso de uma conta no Facebook.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="7" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os tem o direito de suspender ou cancelar o acesso de qualquer usu&aacute;rio nos casos de suspeita de fraude; de inj&uacute;ria, cal&uacute;nia ou difama&ccedil;&atilde;o; ofensas de qualquer natureza &agrave; terceiros; inser&ccedil;&atilde;o, na Plataforma, de informa&ccedil;&otilde;es inver&iacute;dicas; participa&ccedil;&atilde;o atrav&eacute;s da obten&ccedil;&atilde;o de benef&iacute;cio ou vantagem de forma il&iacute;cita; ou pelo n&atilde;o cumprimento de quaisquer das condi&ccedil;&otilde;es deste Termo de Uso e da Pol&iacute;tica de Privacidade. Nos casos referidos neste par&aacute;grafo, o Prestador de Servi&ccedil;os n&atilde;o dever&aacute; qualquer indeniza&ccedil;&atilde;o ao usu&aacute;rio e poder&aacute; ingressar com a a&ccedil;&atilde;o cab&iacute;vel a fim de resguardar seus interesses.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 5. Perfis de Profissionais e Institui&ccedil;&otilde;es</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Para o Cadastro do Perfil de um Profissional, o Usu&aacute;rio dever&aacute; fornecer informa&ccedil;&otilde;es b&aacute;sicas de cadastro, sendo necess&aacute;rio: t&iacute;tulo profissional, primeiro nome e sobrenome, endere&ccedil;o e detalhes de contato para o local onde os servi&ccedil;os de sa&uacute;de s&atilde;o realizados e a especializa&ccedil;&atilde;o do Profissional. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Para o Cadastro do Perfil de uma Institui&ccedil;&atilde;o, o Usu&aacute;rio dever&aacute; fornecer informa&ccedil;&otilde;es b&aacute;sicas de cadastro, sendo necess&aacute;rio: nome da institui&ccedil;&atilde;o, categoria e endere&ccedil;o e detalhes de contato.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="3" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os reserva-se o direito exclusivo de inserir e editar informa&ccedil;&otilde;es relativas ao n&uacute;mero de telefone e outros dados de contato do(a) Profissional/Institui&ccedil;&atilde;o. Outros dados importantes para a utiliza&ccedil;&atilde;o da Plataforma poder&atilde;o ser requeridos, sendo que o usu&aacute;rio se responsabiliza civil e criminalmente, inclusive perante terceiros, pela veracidade dos dados informados.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;margin-left: 28.35pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">3.1 </span><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"><span class="Apple-tab-span"> </span></span><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Os campos de nome e sobrenome de um perfil n&atilde;o podem ser preenchidos com nenhuma outra informa&ccedil;&atilde;o al&eacute;m do primeiro nome e sobrenome de um profissional. </span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="4" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Cada Profissional/Institui&ccedil;&atilde;o possui direito a apenas um Perfil, sendo vedada a cria&ccedil;&atilde;o de um Perfil comum para v&aacute;rios Profissionais/Institui&ccedil;&otilde;es. Se verificada a exist&ecirc;ncia de Perfis duplicados, o Prestador de Servi&ccedil;os se reserva ao direito de excluir a p&aacute;gina.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="5" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Perfil de uma Institui&ccedil;&atilde;o deve se referir a um local f&iacute;sico de uma Institui&ccedil;&atilde;o. Se uma institui&ccedil;&atilde;o m&eacute;dica tem v&aacute;rios locais f&iacute;sicos, cada um deles deve ter um perfil separado.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="6" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">&Eacute; facultado ao(&agrave;) Profissional/Institui&ccedil;&atilde;o criar seu pr&oacute;prio Perfil ou confirmar informa&ccedil;&otilde;es encontradas em um perfil existente, sendo para tanto necess&aacute;rio o Cadastro no Site.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="7" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Perfil criado ou confirmado por um determinado Profissional ser&aacute; identificado como um &quot;Perfil verificado&quot;, possibilitando ao Usu&aacute;rio:</span></span></span></p>
+	</li>
+</ol>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Editar informa&ccedil;&otilde;es sobre seu Perfil;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">adicionar fotos;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">responder sob a forma de coment&aacute;rio &agrave;s opini&otilde;es colocadas pelos Usu&aacute;rios;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">responder perguntas feitas pelos Usu&aacute;rios; e</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">revisar as estat&iacute;sticas do Perfil.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="8" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Um Perfil de uma Institui&ccedil;&atilde;o criada ou confirmada por um determinado Titular ser&aacute; identificado como um &quot;Perfil verificado&quot;, o qual possibilitar&aacute; ao Usu&aacute;rio:</span></span></span></p>
+	</li>
+</ol>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Editar informa&ccedil;&atilde;o sobre a Institui&ccedil;&atilde;o;</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">adicionar o logotipo da Institui&ccedil;&atilde;o; e</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">revisar as estat&iacute;sticas do Perfil.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;margin-left: 18pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="9" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Titular pode publicar apenas o logotipo da Institui&ccedil;&atilde;o no seu Perfil (outras imagens s&atilde;o proibidas), consentido o Propriet&aacute;rio com a divulga&ccedil;&atilde;o e compartilhamento p&uacute;blico do logotipo adicionado por ele/ela no Site. Se o logotipo da Institui&ccedil;&atilde;o tiver sido concedido prote&ccedil;&atilde;o de marca registrada, o Propriet&aacute;rio d&aacute; o seu consentimento para usar o logotipo na medida necess&aacute;ria para que o prestador de servi&ccedil;os para prestar os servi&ccedil;os, sendo vedado adicionar logotipos que infrinjam a natureza profissional do Site.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="10" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Ao disponibilizar foto e/ou qualquer outra imagem de identifica&ccedil;&atilde;o pessoal, o Profissional concorda com a divulga&ccedil;&atilde;o e partilha p&uacute;blica da sua imagem. &Eacute; proibido publicar fotos de outras pessoas e quaisquer tipos de gr&aacute;ficos. Devido &agrave;s caracter&iacute;sticas do formato digital, as fotografias podem ser retocadas, desde que se trate de uma corre&ccedil;&atilde;o global que melhore a qualidade da fotografia. Interven&ccedil;&otilde;es seletivas para adicionar ou remover elementos, combinar v&aacute;rias fotografias ou alterar a composi&ccedil;&atilde;o original de uma foto n&atilde;o s&atilde;o permitidas. Tamb&eacute;m &eacute; proibido publicar fotos com tons pornogr&aacute;ficos ou que violem a natureza profissional do Site.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="11" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">A imagem que n&atilde;o satisfizer os crit&eacute;rios acima poder&aacute; ser exclu&iacute;da pelo Prestador de Servi&ccedil;os sem aviso pr&eacute;vio e sem a necessidade de informar o profissional sobre a exclus&atilde;o.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="12" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Profissional concede ao Prestador de Servi&ccedil;os uma licen&ccedil;a n&atilde;o exclusiva, permanente e n&atilde;o paga para utilizar a fotografia atrav&eacute;s de campos de utiliza&ccedil;&atilde;o, tais como reprodu&ccedil;&atilde;o por meios anal&oacute;gicos ou digitais; mem&oacute;ria do computador; redes inform&aacute;tica ou multim&eacute;dia; circula&ccedil;&atilde;o p&uacute;blica, disponibilizar o trabalho publicamente em um local e hor&aacute;rio selecionados pelo Prestador de Servi&ccedil;os; rastreio, difus&atilde;o, re-emiss&atilde;o e reprodu&ccedil;&atilde;o; colocar a fotografia em bases de dados; e utiliza&ccedil;&atilde;o da fotografia para a promo&ccedil;&atilde;o do Prestador de Servi&ccedil;os. A remo&ccedil;&atilde;o da Conta pelo Profissional n&atilde;o afetar&aacute; a validade da referida licen&ccedil;a. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 6. Condi&ccedil;&otilde;es de ades&atilde;o e formas de extin&ccedil;&atilde;o</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Contrato ser&aacute; celebrado quando ocorrer: (i) inscri&ccedil;&atilde;o no Site, (ii) inscri&ccedil;&atilde;o no Site atrav&eacute;s do Facebook, (iii) agendamento de consulta com um Profissional atrav&eacute;s do Calend&aacute;rio de Consulta, ou (iv) entrar contato com um Profissional verificado.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">A ades&atilde;o do Contrato est&aacute; vinculada ao consentimento de todas as condi&ccedil;&otilde;es aqui estabelecidas, sem a necessidade de fornecer confirma&ccedil;&otilde;es adicionais. O Usu&aacute;rio se compromete a respeitar os Termos de Uso.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="3" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Ao aderir ao Contrato o Usu&aacute;rio, Profissional ou Propriet&aacute;rio:</span></span></span></p>
+	</li>
+</ol>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Consente com o processamento de dados pessoais de acordo com os Termos de Uso e, no caso de Cadastro de Profissional, em apresentar os seus dados pessoais no seu Perfil; </span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">confirma a veracidade das informa&ccedil;&otilde;es fornecidas no Cadastro; e</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">autoriza o recebimento, em um endere&ccedil;o de e-mail especificado, de mensagens do sistema sobre interrup&ccedil;&otilde;es t&eacute;cnicas na opera&ccedil;&atilde;o do Site, atualiza&ccedil;&otilde;es dos Termos de Uso, &nbsp;novas funcionalidades e informa&ccedil;&otilde;es de marketing. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;margin-left: 36pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="4" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Contrato &eacute; celebrado por um per&iacute;odo indeterminado.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="5" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Para se cadastrar o Usu&aacute;rio ou Profissional deve completar o formul&aacute;rio disponibilizado no Site, sendo fornecido pelo Prestador de Servi&ccedil;os login e senha para Cadastro e acesso atrav&eacute;s do link </span><a href="http://app.doctoralia.com.br/usuarios/login" style="text-decoration-line: none;"><span style="font-size: 11pt; color: rgb(0, 0, 255); background-color: transparent; text-decoration-line: underline; vertical-align: baseline; white-space: pre-wrap;">http://app.doctoralia.com.br/usuarios/login</span></a><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">. O Usu&aacute;rio tamb&eacute;m pode completar o registro, marcando um compromisso com um Profissional atrav&eacute;s do Calend&aacute;rio de Consultas.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="6" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Se o consentimento de qualquer das disposi&ccedil;&otilde;es contidas nos Termos de Uso for revogado, o Usu&aacute;rio ter&aacute; a obriga&ccedil;&atilde;o de apagar imediatamente a sua Conta ou de informar ao Prestador de Servi&ccedil;os tal revoga&ccedil;&atilde;o.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 7. Obriga&ccedil;&otilde;es </span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os garantir&aacute; que os Usu&aacute;rios e Profissionais tenham acesso aos seus pr&oacute;prios dados e possam corrigi-los e complement&aacute;-los.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Os Profissionais que prestam servi&ccedil;os de sa&uacute;de n&atilde;o regulamentados e que n&atilde;o sejam formalmente obrigados a possuir uma licen&ccedil;a profissional devem anexar c&oacute;pias digitalizadas junto ao seu Cadastro dos seguintes documentos: um certificado atestando qualifica&ccedil;&otilde;es profissionais relevantes e um bilhete de identidade pessoal. Os referidos identificadores e documentos ser&atilde;o utilizados unicamente para confirmar os direitos e qualifica&ccedil;&otilde;es profissionais do Profissional.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 8. Prote&ccedil;&atilde;o de Dados</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">A disponibiliza&ccedil;&atilde;o de informa&ccedil;&otilde;es de cunho pessoal e imagens do Usu&aacute;rio ao Prestador de Servi&ccedil;os visam o funcionamento das ferramentas que comp&otilde;em o Site, n&atilde;o podendo o Prestador de Servi&ccedil;os divulgar tais dados em atos de liberalidade. Tal uso n&atilde;o constitui uso indevido de imagem, n&atilde;o podendo o Prestador de Servi&ccedil;os ser responsabilizado pela sua divulga&ccedil;&atilde;o quando no contexto de uso do Site.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">&Eacute; de responsabilidade do Prestador de Servi&ccedil;os proteger e conservar todos os dados pessoais e senhas dos usu&aacute;rios, de modo que as informa&ccedil;&otilde;es fornecidas estar&atilde;o sujeitas a medidas de seguran&ccedil;a para impedir o acesso, o uso e a divulga&ccedil;&atilde;o n&atilde;o autorizada.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 9. Limita&ccedil;&atilde;o de Responsabilidade</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">A Doctoralia n&atilde;o presta quaisquer servi&ccedil;os m&eacute;dicos e/ou similares, sendo, portanto, uma mera plataforma digital de divulga&ccedil;&atilde;o de profissionais da sa&uacute;de e avalia&ccedil;&atilde;o de atendimento m&eacute;dico pelo Usu&aacute;rio. Por esse motivo, o Prestador de Servi&ccedil;os n&atilde;o poder&aacute;, em hip&oacute;tese alguma, ser responsabilizada por qualquer preju&iacute;zo causado aos usu&aacute;rios, tampouco, garante resultados de qualquer natureza ao usu&aacute;rio. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os n&atilde;o se responsabiliza, pela exist&ecirc;ncia ou legitimidade dos dados cadastrados pelo usu&aacute;rio no Site em suas diversas ferramentas, assim como pela capacidade para contratar do Usu&aacute;rio ou pela veracidade dos dados pessoais em seu cadastro, sendo que estes dados s&atilde;o inseridos pelo Usu&aacute;rio por sua pr&oacute;pria conta e risco. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="3" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Site &eacute; uma mera ferramenta de disponibiliza&ccedil;&atilde;o do conte&uacute;do viabilizado por parte dos Usu&aacute;rios, motivo pelo qual as responsabilidades por todas as obriga&ccedil;&otilde;es que recaiam nas atividades do Usu&aacute;rio de qualquer outra natureza, ser&atilde;o exclusivamente do Usu&aacute;rio. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="4" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os est&aacute; isento de responsabilidade perante a eventual exist&ecirc;ncia de tais conflitos e em caso de interpela&ccedil;&atilde;o judicial que tenha como r&eacute;u o Prestador de Servi&ccedil;os, cujos fatos fundem-se em a&ccedil;&otilde;es do usu&aacute;rio, este ser&aacute; chamado ao processo devendo arcar com todos os &ocirc;nus que da&iacute; decorram, nos termos do artigo 125, II do Novo C&oacute;digo de Processo Civil.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="5" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os n&atilde;o se responsabiliza por qualquer dano, preju&iacute;zo ou perda ocasionada no equipamento do Usu&aacute;rio por falhas na internet, no sistema ou no servidor utilizados pelo Usu&aacute;rio, seja decorrente de condutas de terceiros, caso fortuito ou for&ccedil;a maior. O Prestador de Servi&ccedil;os tamb&eacute;m n&atilde;o se responsabiliza por qualquer v&iacute;rus que possa atacar o equipamento do Usu&aacute;rio em decorr&ecirc;ncia do acesso, utiliza&ccedil;&atilde;o ou navega&ccedil;&atilde;o na internet ou como consequ&ecirc;ncia da transfer&ecirc;ncia de dados, arquivos, imagens ou textos. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="6" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Usu&aacute;rio n&atilde;o poder&aacute; atribuir ao Prestador de Servi&ccedil;os qualquer responsabilidade, tampouco exigir o pagamento por lucro cessante em virtude de preju&iacute;zos resultantes de dificuldades t&eacute;cnicas ou falhas nos sistemas ou na internet. Eventualmente, o sistema poder&aacute; n&atilde;o estar dispon&iacute;vel por motivos t&eacute;cnicos ou falhas da internet, ou por qualquer outro evento fortuito ou de for&ccedil;a maior alheio ao controle do Prestador de Servi&ccedil;os. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="7" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">&Eacute; de exclusiva responsabilidade do Usu&aacute;rio e, quando aplic&aacute;vel, do representante legal do Usu&aacute;rio: </span></span></span></p>
+	</li>
+</ol>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -0.55pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Manter o ambiente de seus computadores e demais dispositivos de acesso ao Site seguros, valendo-se de ferramentas espec&iacute;ficas para tanto, tais como antiv&iacute;rus, firewall, entre outras, de modo a contribuir para a preven&ccedil;&atilde;o de riscos eletr&ocirc;nicos; </span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -0.55pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">equipar-se e responsabilizar-se pelos computadores e dispositivos de hardware necess&aacute;rios para o acesso ao Site, bem como pelo acesso desses computadores e dispositivos &agrave; internet; </span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -0.55pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">o uso, a guarda, a manuten&ccedil;&atilde;o e o sigilo de todas as senhas e logins que lhe forem cedidos para acesso ao Site, garantindo ao Prestador de Servi&ccedil;os que n&atilde;o compartilhar&aacute; as senhas com quaisquer terceiros, exceto seus empregados autorizados, que as utilizar&atilde;o somente em seu benef&iacute;cio e nos termos aqui previstos; e</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -0.55pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">a utiliza&ccedil;&atilde;o de informa&ccedil;&otilde;es verdadeiras em rela&ccedil;&atilde;o &agrave;s atividades realizadas na sala de aula, ao conte&uacute;do e de seus dados pessoais, sob pena de serem aplicadas as san&ccedil;&otilde;es legas cab&iacute;veis al&eacute;m daquelas previstas neste Termo de Uso. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 10. Suporte</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O usu&aacute;rio que tenha problemas com a utiliza&ccedil;&atilde;o ou apresente dificuldade para utilizar o Site dever&aacute; entrar em contato com o suporte do Prestador de Servi&ccedil;os no prazo de at&eacute; 21 (vinte e um) dias ap&oacute;s o evento pelo e-mail: </span><a href="mailto:suporte@doctoralia.com" style="text-decoration-line: none;"><span style="font-size: 11pt; color: rgb(0, 0, 255); background-color: transparent; text-decoration-line: underline; vertical-align: baseline; white-space: pre-wrap;">suporte@doctoralia.com</span></a><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">. A partir da formaliza&ccedil;&atilde;o da comunica&ccedil;&atilde;o, o Prestador de Servi&ccedil;os trabalhar&aacute; para solucionar a situa&ccedil;&atilde;o ou esclarecer a d&uacute;vida do usu&aacute;rio.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Cada reivindica&ccedil;&atilde;o deve ser processada no prazo m&aacute;ximo de 21 (vinte e um) dias a partir do momento em que &eacute; feita. Se este prazo n&atilde;o puder ser mantido, o Prestador de Servi&ccedil;os notificar&aacute; o Usu&aacute;rio, antes do termo do prazo, das causas do atraso e especificar um novo prazo.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect;11. Den&uacute;ncias</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Den&uacute;ncias quanto &agrave; veracidade e confiabilidade das avalia&ccedil;&otilde;es do Site devem ser comunicadas e ser&atilde;o examinadas pelo Prestador de Servi&ccedil;os no prazo de 14 (quatorze) dias &uacute;teis. Outras queixas, bem como coment&aacute;rios, sugest&otilde;es e erros devem ser comunicados por e-mail para </span><a href="mailto:suporte@doctoralia.com" style="text-decoration-line: none;"><span style="font-size: 11pt; color: rgb(0, 0, 255); background-color: transparent; text-decoration-line: underline; vertical-align: baseline; white-space: pre-wrap;">suporte@doctoralia.com</span></a><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 12. Propriedade Intelectual </span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Todos os direitos relativos ao Site, e &agrave;s marcas sob a titularidade da Doctoralia, o Site e suas funcionalidades s&atilde;o de propriedade exclusiva da Doctoralia, inclusive no que diz respeito aos seus textos, imagens, layouts, base de dados, c&oacute;digos de programa&ccedil;&atilde;o, linguagens inform&aacute;ticas, bases de dados e demais conte&uacute;dos criados direta ou indiretamente pela Doctoralia, sendo que estes direitos est&atilde;o protegidos pelas leis e tratados internacionais de direito autoral, marcas, patentes, modelos e desenhos industriais.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O uso indevido e a reprodu&ccedil;&atilde;o total ou parcial dos referidos direitos de propriedade intelectual s&atilde;o proibidos, salvo quando autorizados expressamente pela Doctoralia.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="3" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Usu&aacute;rio se compromete a n&atilde;o ceder, sublicenciar, vender, doar, alienar, alugar ou transferir, total ou parcialmente, sob quaisquer modalidades, a qualquer t&iacute;tulo, as funcionalidades da plataforma que comp&otilde;em o Site, assim como seus manuais, guias, procedimentos ou quaisquer outros documentos a eles relacionados. Compromete-se, ainda, a n&atilde;o efetuar engenharia reversa, n&atilde;o revelar, n&atilde;o duplicar, n&atilde;o copiar, n&atilde;o reproduzir, n&atilde;o autorizar e/ou permitir o uso e/ou acesso da Plataforma por terceiros. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="4" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Usu&aacute;rio se compromete a:</span></span></span></p>
+	</li>
+</ol>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">N&atilde;o disponibilizar e/ou lan&ccedil;ar no Site qualquer conte&uacute;do discriminat&oacute;rio, contr&aacute;rio aos bons costumes, que contenha imagens ou informa&ccedil;&otilde;es inadequadas ou que incitem a viol&ecirc;ncia, etc.; e</span></span></span></p>
+	</li>
+	<li dir="ltr" style="list-style-type: lower-alpha; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">n&atilde;o copiar ou reproduzir o conte&uacute;do dispon&iacute;vel no Site.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;margin-left: 36pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="5" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Usu&aacute;rio reconhece que, na hip&oacute;tese de qualquer descumprimento das obriga&ccedil;&otilde;es supracitadas, estar&aacute; o usu&aacute;rio sujeito as san&ccedil;&otilde;es legais cab&iacute;veis. Todo e qualquer conte&uacute;do, seja ele informa&ccedil;&atilde;o profissional e/ou imagem, disponibilizado pelo usu&aacute;rio que contrarie os crit&eacute;rios do Prestador de Servi&ccedil;os de uso do Site ser&aacute; removido, ainda que sem aviso pr&eacute;vio.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="6" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Nada neste Termo de Uso dever&aacute; ser interpretado como restri&ccedil;&atilde;o a qualquer direito da Doctoralia sobre o Site e suas funcionalidades, inclusive, sem limita&ccedil;&atilde;o, no que se refere a seu direito de, a todo e qualquer tempo, desenvolver, modificar, explorar comercialmente e licenciar, a quaisquer terceiros e sob qualquer modalidade a plataforma do Site. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="7" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">A constata&ccedil;&atilde;o de qualquer viola&ccedil;&atilde;o a estas regras de propriedade intelectual sujeitar&aacute; o usu&aacute;rio &agrave;s penalidades previstas na Lei e, ainda, na suspens&atilde;o ou no cancelamento dos Servi&ccedil;os e da utiliza&ccedil;&atilde;o do Site. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 13. Confidencialidade</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Cada parte se compromete a manter e tratar como confidencial e n&atilde;o revelar a terceiros qualquer Informa&ccedil;&atilde;o Confidencial relacionada ao Site e aos Servi&ccedil;os, dados de Usu&aacute;rios, segredo de ind&uacute;stria e outros, ou usar referidas informa&ccedil;&otilde;es para qualquer prop&oacute;sito que n&atilde;o aquele previsto no presente Termo.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Tanto as partes quanto os seus representantes legais, diretores, empregados, agentes e consultores, incluindo advogados, auditores e consultores financeiros, est&atilde;o sujeitos ao dever de sigilo e confidencialidade previsto neste Termo.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="3" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">N&atilde;o obstante o disposto neste Termo, as Informa&ccedil;&otilde;es Confidenciais poder&atilde;o ser reveladas nas seguintes hip&oacute;teses: (i) exig&ecirc;ncia legal aplic&aacute;vel, (ii) ordem ou decis&atilde;o judicial ou em processo administrativo ou arbitral, ou (iii) solicita&ccedil;&atilde;o de qualquer autoridade ou &oacute;rg&atilde;o regulador do Brasil. Em quaisquer das situa&ccedil;&otilde;es previstas nesta cl&aacute;usula, a parte que tiver de divulgar as Informa&ccedil;&otilde;es Confidenciais somente o far&aacute; at&eacute; a extens&atilde;o exigida por tal ordem administrativa, arbitral ou judicial, e previamente orientada pela opini&atilde;o de seus assessores legais, comprometendo-se, mas n&atilde;o obrigando-se, a tomar todas as medidas razoavelmente necess&aacute;rias para preservar a confidencialidade das Informa&ccedil;&otilde;es Confidenciais, incluindo a obten&ccedil;&atilde;o de uma medida protetiva ou outro provimento que possa assegurar a concess&atilde;o de tratamento confidencial &agrave;s Informa&ccedil;&otilde;es Confidenciais. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="4" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">As partes reconhecem que qualquer quebra das obriga&ccedil;&otilde;es de confidencialidade deste Termo pode causar danos &agrave; outra parte em valor n&atilde;o prontamente mensur&aacute;vel. Sendo assim, as partes acordam, sem preju&iacute;zo a outros direitos ou medidas cab&iacute;veis, que a parte infratora dever&aacute; reparar a parte reveladora dos danos efetivamente sofridos por esta.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="5" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">A obriga&ccedil;&atilde;o de confidencialidade aqui prevista permanecer&aacute; vigente enquanto perdurar o car&aacute;ter de confidencialidade das informa&ccedil;&otilde;es recebidas.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 14. Aplicativos</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:10pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Usu&aacute;rio aceita e concorda com todos os termos e condi&ccedil;&otilde;es aplic&aacute;veis &agrave; retirada, download e atualiza&ccedil;&atilde;o de aplicativos pertencentes ao Prestador de Servi&ccedil;os, estabelecidos pelas empresas, tais como o aplicativo iTunes e o sistema operacional Android, assim como qualquer outro sistema.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Os Aplicativos podem solicitar acesso a qualquer fun&ccedil;&atilde;o do dispositivo m&oacute;vel do Usu&aacute;rio, sendo facultado ao Usu&aacute;rio permitir o acesso para o Aplicativo. O Usu&aacute;rio reconhece e concorda que, se n&atilde;o autorizar o acesso &agrave; fun&ccedil;&atilde;o do dispositivo m&oacute;vel, o Prestador de Servi&ccedil;os n&atilde;o poder&aacute; prestar os Servi&ccedil;os de forma satisfat&oacute;ria. Os Usu&aacute;rios tamb&eacute;m reconhecem e concordam, renunciando a qualquer direito, reclama&ccedil;&atilde;o, judicial ou extrajudicial, que qualquer falha ou omiss&atilde;o na presta&ccedil;&atilde;o de Servi&ccedil;os decorrente da situa&ccedil;&atilde;o acima mencionada, isenta o Prestador de Servi&ccedil;os de qualquer dano ou preju&iacute;zo que possa ser causado por esta situa&ccedil;&atilde;o.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="3" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os n&atilde;o garante que o Aplicativo ser&aacute; sempre seguro, sem erros e o funcionamento sem interrup&ccedil;&otilde;es, atrasos ou imperfei&ccedil;&otilde;es. O propriet&aacute;rio do dispositivo m&oacute;vel poder&aacute; atualizar o Aplicativo periodicamente mediante autoriza&ccedil;&atilde;o. O Usu&aacute;rio reconhece e concorda que, na aus&ecirc;ncia de atualiza&ccedil;&atilde;o, o Aplicativo poder&aacute; apresentar falhas e erros, dificultando a presta&ccedil;&atilde;o de Servi&ccedil;os. Em decorr&ecirc;ncia do mencionado, o Usu&aacute;rio isenta o Prestador de Servi&ccedil;os de qualquer falha ou dano causado pelo mencionado acima e renuncia qualquer direito, reclama&ccedil;&atilde;o, judicial ou extrajudicial, derivado da premissa acima mencionada. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="4" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os concede ao Usu&aacute;rio uma licen&ccedil;a limitada, n&atilde;o exclusiva e intransfer&iacute;vel para fazer o download e instalar o Aplicativo em dispositivo m&oacute;vel ou computador de propriedade ou controlado pelo Usu&aacute;rio, bem como para execut&aacute;-lo exclusivamente para seu uso pessoal. A licen&ccedil;a acima n&atilde;o &eacute; entendida como aplic&aacute;vel aos Servi&ccedil;os prestados pela Doctoralia.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:10pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">&sect; 15. Disposi&ccedil;&otilde;es Finais </span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O Prestador de Servi&ccedil;os reserva-se ao direito de alterar as condi&ccedil;&otilde;es deste Termo de Uso a qualquer momento, informando o Usu&aacute;rios 14 dias antes da altera&ccedil;&atilde;o entrar em vigor.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="2" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Este Termo vincula as partes e seus sucessores, sejam eles a qualquer t&iacute;tulo.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="3" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Este Termo quaisquer direitos concedidos de acordo com o presente n&atilde;o podem ser transferidos ou cedidos pelo usu&aacute;rio, mas podem ser transferidos pelo Prestador de Servi&ccedil;os sem qualquer restri&ccedil;&atilde;o ou notifica&ccedil;&atilde;o pr&eacute;via.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="4" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">A toler&acirc;ncia do Prestador de Servi&ccedil;os em exigir o estrito cumprimento das condi&ccedil;&otilde;es deste Termo de Uso, n&atilde;o constitui, em hip&oacute;tese alguma, nova&ccedil;&atilde;o ou ren&uacute;ncia, nem impede que o Prestador de Servi&ccedil;os exer&ccedil;a esses direitos a qualquer tempo. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="5" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Todas as disposi&ccedil;&otilde;es deste Termo que prevejam a observ&acirc;ncia de obriga&ccedil;&otilde;es ou responsabilidades ap&oacute;s a rescis&atilde;o ou extin&ccedil;&atilde;o deste Termo e/ou dos Servi&ccedil;os, subsistir&atilde;o a sua rescis&atilde;o ou extin&ccedil;&atilde;o e continuar&atilde;o em pleno vigor e efeito, em especial no que tange &agrave; propriedade intelectual, confidencialidade e privacidade de dados e informa&ccedil;&otilde;es.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="6" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Este Termo n&atilde;o estabelece qualquer rela&ccedil;&atilde;o de mandato, sociedade e/ou associa&ccedil;&atilde;o, v&iacute;nculo empregat&iacute;cio, agenciamento, representa&ccedil;&atilde;o, cons&oacute;rcio, joint venture ou responsabilidade solid&aacute;ria entre o Prestador de Servi&ccedil;os e o Usu&aacute;rio, que s&atilde;o pessoas f&iacute;sicas e jur&iacute;dicas independentes e aut&ocirc;nomas para todos os fins de direito, tampouco confere poderes a uma das partes para a representa&ccedil;&atilde;o da outra em quaisquer neg&oacute;cios jur&iacute;dicos. A rela&ccedil;&atilde;o aqui estipulada entre o Prestador de Servi&ccedil;os e o Usu&aacute;rio partes &eacute; v&aacute;lida exclusivamente para o objeto e efeitos deste Termo.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="7" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Se alguma cl&aacute;usula deste Termo for considerada ilegal, nula ou incapaz de ser cumprida por qualquer motivo, esta previs&atilde;o ser&aacute; considerada uma cl&aacute;usula independente da parte remanescente deste Contrato e n&atilde;o afetar&aacute; a validade ou a aplicabilidade do cumprimento dos termos do restante do presente.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="8" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Cada parte ser&aacute; respons&aacute;vel individualmente pelos atos que praticar, n&atilde;o sendo admitida solidariedade ou subsidiariedade presumidas</span><span style="font-size: 11pt; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">.</span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<ol start="9" style="margin-top:0pt;margin-bottom:0pt;">
+	<li dir="ltr" style="list-style-type: decimal; font-size: 11pt; font-family: Calibri; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; margin-left: -18pt;">
+		<p dir="ltr" style="margin-top:0pt;margin-bottom:7.5pt;text-align: justify;">
+			<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">Todos os itens deste Termo de Uso est&atilde;o regidos pelas leis vigentes na Rep&uacute;blica Federativa do Brasil. Para todos os assuntos referentes &agrave; sua interpreta&ccedil;&atilde;o e cumprimento, as partes se submeter&atilde;o o foro da Circunscri&ccedil;&atilde;o Judici&aacute;ria de Curitiba, Estado do Paran&aacute;, exce&ccedil;&atilde;o feita &agrave;s reclama&ccedil;&otilde;es apresentadas por Usu&aacute;rios que se enquadrem no conceito legal de consumidores, que poder&atilde;o submeter ao foro de seu domic&iacute;lio. </span></span></span></p>
+	</li>
+</ol>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:10pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:10pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">ESTE CONTRATO CONSIDERAR-SE-&Aacute; CELEBRADO E OBRIGAT&Oacute;RIO ENTRE A DOCTORALIA E O USU&Aacute;RIO NO MOMENTO EM QUE O USU&Aacute;RIO CONCLUIR O SEU CADASTRO E O PROCEDIMENTO PREVISTO NO SITE, SENDO CERTO QUE, ASSIM PROCEDENDO, O USU&Aacute;RIO DECLARA TER LIDO E COMPREENDIDO TODOS OS TERMOS E CONDI&Ccedil;&Otilde;ES DESTE TERMO, RAZ&Atilde;O PELA QUAL &Eacute; RECOMEND&Aacute;VEL QUE O USU&Aacute;RIO IMPRIMA UMA C&Oacute;PIA DESTE DOCUMENTO PARA FUTURA REFER&Ecirc;NCIA.</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:10pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:10pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;text-align: center;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(51, 51, 51); font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">POL&Iacute;TICA DE PRIVACIDADE</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;text-align: center;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Plataforma Doctoralia</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">O endere&ccedil;o eletr&ocirc;nico </span><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">www.doctoralia.com.br </span><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">(&ldquo;</span><span style="font-size: 11pt; color: rgb(0, 0, 0); text-decoration-line: underline; vertical-align: baseline; white-space: pre-wrap;">Site</span><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">&rdquo;) &eacute; propriedade de </span><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">DOCTORALIA BRASIL SERVICOS ONLINE E SOFTWARE LTDA.</span><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">, pessoa jur&iacute;dica de direito privado, inscrita no CNPJ sob o n&ordm; 27.053.196/0001-39, com sede na </span><span style="font-size: 9.5pt; vertical-align: baseline; white-space: pre-wrap;">Rua Visconde do Rio Branco, 1488 - 10&ordm; andar 80420-210 Batel - Curitiba - Paran&aacute; </span><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">(&ldquo;Doctoralia&rdquo;). O acesso e o uso deste Site est&atilde;o sujeitos a esta Pol&iacute;tica de Privacidade e aos Termos e Condi&ccedil;&otilde;es de Uso (&ldquo;Termo de Uso&rdquo;), por isso, qualquer pessoa, f&iacute;sica ou jur&iacute;dica, que acessar e usar este Site (&ldquo;</span><span style="font-size: 11pt; color: rgb(0, 0, 0); text-decoration-line: underline; vertical-align: baseline; white-space: pre-wrap;">Usu&aacute;rio</span><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">&rdquo;) deve ler na &iacute;ntegra ambos instrumentos.</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">POR FAVOR, LEIA COM ATEN&Ccedil;&Atilde;O ESTA POL&Iacute;TICA DE PRIVACIDADE PARA CONHECER OS TERMOS E CONDI&Ccedil;&Otilde;ES EM QUE SUAS INFORMA&Ccedil;&Otilde;ES PESSOAIS SER&Atilde;O ARMAZENADAS, UTILIZADAS E PROTEGIDAS EM NOSSO SITE. AO FORNECER INFORMA&Ccedil;&Otilde;ES PESSOAIS OU NAVEGAR NO SITE, VOC&Ecirc; ESTAR&Aacute; AUTOMATICAMENTE CONCORDANDO COM AS REGRAS DE UTILIZA&Ccedil;&Atilde;O, PROTE&Ccedil;&Atilde;O E SEGURAN&Ccedil;A AQUI ESTABELECIDAS.</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">I &ndash; Finalidade</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:7.5pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">A solicita&ccedil;&atilde;o de dados pessoais do Usu&aacute;rio pela Doctoralia tem como finalidade, exclusivamente, viabilizar o uso da Plataforma Doctoralia (&ldquo;Plataforma&rdquo;), a qual fornece uma plataforma que permite ao Usu&aacute;rio </span><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">o acesso a informa&ccedil;&otilde;es de profissionais da sa&uacute;de, realizar agendamentos e avaliar os servi&ccedil;os prestados (&ldquo;Servi&ccedil;os&rdquo;).</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:7.5pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">II &ndash; Coleta de informa&ccedil;&otilde;es</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">Ao utilizar os Servi&ccedil;os de nossa Plataforma, solicitaremos que o Usu&aacute;rio se identifique com o preenchimento de apenas um cadastro. </span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">Entende-se por Usu&aacute;rio tanto as pessoas f&iacute;sicas e jur&iacute;dicas que atuem na &aacute;rea da sa&uacute;de, como aqueles que utilizam a Plataforma para acesso &agrave;s informa&ccedil;&otilde;es disponibilizadas na Plataforma.</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">A identifica&ccedil;&atilde;o nada mais &eacute; que o preenchimento de um cadastro pessoal contendo campos obrigat&oacute;rios e opcionais, incluindo, quando for o caso, informa&ccedil;&otilde;es m&eacute;dicas, sendo que as informa&ccedil;&otilde;es coletadas visam possibilitar um tratamento especial e individualizado para cada Usu&aacute;rio. Atrav&eacute;s dessas informa&ccedil;&otilde;es, buscamos aprimorar nosso canal de comunica&ccedil;&atilde;o com o Usu&aacute;rio, conhec&ecirc;-lo melhor e prestar servi&ccedil;os que atendam &agrave;s suas necessidades, expectativas e prefer&ecirc;ncias.</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">Atrav&eacute;s dessas informa&ccedil;&otilde;es, buscamos aprimorar nosso canal de comunica&ccedil;&atilde;o com o Usu&aacute;rio, conhec&ecirc;-lo melhor e prestar servi&ccedil;os que atendam &agrave;s suas necessidades, expectativas e prefer&ecirc;ncias.</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">III &ndash; Formas de utiliza&ccedil;&atilde;o</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">Ao preencher os dados e anexar os documentos solicitados pelo Site, o Usu&aacute;rio sempre dever&aacute; prezar pela veracidade e exatid&atilde;o dos mesmos, sabendo que poder&aacute; responder civil ou criminalmente por informa&ccedil;&otilde;es indevidas ou equivocadas.</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">O Usu&aacute;rio autoriza o Site e seus parceiros a consultar informa&ccedil;&otilde;es adicionais sobre o pr&oacute;prio em fontes e de naturezas diversas e a realizar contatos telef&ocirc;nicos com o pr&oacute;prio ou com terceiros por ele indicados. O Usu&aacute;rio autoriza a Doctoralia a usar estes dados e documentos para realizar avalia&ccedil;&atilde;o do perfil do Usu&aacute;rio, confirmar a veracidade das informa&ccedil;&otilde;es prestadas e para outros usos necess&aacute;rios &agrave; presta&ccedil;&atilde;o dos produtos e servi&ccedil;os oferecidos. O USU&Aacute;RIO AUTORIZA O SITE A COMPARTILHAR OS DADOS E DOCUMENTOS NECESS&Aacute;RIOS PARA REALIZAR OS SERVI&Ccedil;OS OFERECIDOS COM SEUS PARCEIROS.</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">Suas informa&ccedil;&otilde;es ser&atilde;o usadas, ainda, para estat&iacute;sticas sobre o seu perfil e de outros internautas que acessam o Site, permitindo o desenvolvimento de produtos e servi&ccedil;os personalizados.</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">IV &ndash; Seguran&ccedil;a e prote&ccedil;&atilde;o (Criptografia de Dados)</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">Suas informa&ccedil;&otilde;es ser&atilde;o armazenadas em um servidor seguro, e sempre que houver necessidade de identifica&ccedil;&atilde;o ou fornecimento de informa&ccedil;&otilde;es sigilosas, a transmiss&atilde;o de dados entre seu computador e o Site ser&aacute; realizada atrav&eacute;s de conex&atilde;o segura.</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">V &ndash; Exclus&atilde;o de Garantias e de Responsabilidade</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;">N&atilde;o nos responsabilizamos pelos servi&ccedil;os prestados por terceiros ap&oacute;s o Usu&aacute;rio ser direcionado atrav&eacute;s dos links contidos no Site o qual ocorrer&aacute; por conta e risco do Usu&aacute;rio, inclusive os sites direcionados ser&atilde;o regidos pelos pr&oacute;prios Termos de Uso e Pol&iacute;ticas de Privacidade destes sites os quais dever&atilde;o ser lidos pelo Usu&aacute;rio. O Usu&aacute;rio ser&aacute; o &uacute;nico respons&aacute;vel por entender os termos e condi&ccedil;&otilde;es de contrata&ccedil;&atilde;o dos produtos e servi&ccedil;os que ser&atilde;o oferecidos/contratados a partir das simula&ccedil;&otilde;es realizadas no Site. A DOCTORALIAN&Atilde;O PODER&Aacute; SER RESPONSABILIZADA POR QUALQUER PERDA OU DANO QUE O USU&Aacute;RIO POSSA INCORRER COM ESTAS CONTRATA&Ccedil;&Otilde;ES.</span></span></span></p>
+<p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">VI &ndash; Disposi&ccedil;&otilde;es Gerais</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">A toler&acirc;ncia ao eventual descumprimento de quaisquer das cl&aacute;usulas e condi&ccedil;&otilde;es do presente instrumento n&atilde;o constituir&aacute; nova&ccedil;&atilde;o das obriga&ccedil;&otilde;es aqui estipuladas e tampouco impedir&aacute; ou inibir&aacute; a exigibilidade das mesmas a qualquer tempo. A presente Pol&iacute;tica de Privacidade constitui acordo integral entre as partes envolvidas, prevalecendo sobre qualquer outro entendimento firmado anteriormente.</span></span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1">&nbsp;</span></span></p>
+<p dir="ltr" style="padding: 0;margin-top:0pt;margin-bottom:0pt;text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-5b275957-8c41-03a0-d487-a6b90e6fa6c1"><span style="font-size: 11pt; color: rgb(0, 0, 0); background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">O uso deste Site e qualquer lit&iacute;gio decorrente dessa utiliza&ccedil;&atilde;o est&atilde;o sujeitos &agrave;s leis da Rep&uacute;blica Federativa do Brasil e dos tribunais da Comarca Central da Capital do Estado do Paran&aacute;.</span></span></span></p>
+<div>
+	&nbsp;</div>
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'Helvetica Neue'; color: #454545}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 12.0px 'Helvetica Neue'; color: #454545}
+p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #454545}
+li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #454545}
+span.s1 {text-decoration: underline}
+span.s2 {text-decoration: underline ; color: #e4af0a}
+span.Apple-tab-span {white-space:pre}
+ol.ol1 {list-style-type: decimal}</style>
+        </div>
+    </div>
+
+        </div>
+
+    </div>
+<script src="/bundles/layout__v__miT3LYpNHOzMLtiw0wIR9eDJAHw5C3whXB8znnRQr301"></script>
+    
+    <script src="/bundles/search-typeahead__v__D806VR3Su6Z1WFH9RhNrZSjsaZ_RzHaRovfj8P1IuNY1"></script>
+
+<script src="/bundles/register-header__v__qIJz9fNypRKpAlc8HWqF6Wy7vZlH6SLU8DXuJcq1Rsw1"></script>
+
+<footer class="footer">
+    <div class="container cross-link seo clearfix" role="navigation">
+        <section>
+<h3>Médicos em Brasil</h3>                <ul>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305/goiania-116733-1">Oftalmologistas Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/goiania-116733-1">Endocrinologistas Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312/curitiba-116724-1">Psiquiatras Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/belo+horizonte-116720-1">Dentistas Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/caratinga-117479-1">Dentistas Caratinga</a></li>
+                        <li><a href="/medicos/especialidade/dermatologistas-1314/bauru-116904-1">Dermatologistas Bauru</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/bauru-116904-1">Ortopedistas - Traumatologistas Bauru</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/sao+bernardo+do+campo-116875-1">Psicólogos São Bernardo do Campo</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/osasco-117106-1">Cirurgiões vasculares Osasco</a></li>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312/sao+carlos-117039-1">Psiquiatras São Carlos</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310">Cirurgiões plásticos</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434">Psicólogos</a></li>
+                        <li><a href="/medicos/especialidade/homeopatas-1335">Homeopatas</a></li>
+                    <li><span><a href="https://www.doctoralia.com.br/lista-de-medicos">Lista de médicos</a></span></li>
+                </ul>
+        </section>
+        <section>
+                <ul class="mt28">
+                        <li><a href="/medicos/especialidade/psicologos-1434/sao+paulo-116705-1">Psicólogos São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305/rio+de+janeiro-116704-1">Oftalmologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/dermatologistas-1314/sao+paulo-116705-1">Dermatologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/sao+paulo-116705-1">Cirurgiões vasculares São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/sao+paulo-116705-1">Fisioterapeutas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/rio+de+janeiro-116704-1">Endocrinologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/sao+paulo-116705-1">Ortopedistas - Traumatologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/nutricionistas-2203/rio+de+janeiro-116704-1">Nutricionistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312/sao+paulo-116705-1">Psiquiatras São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/rio+de+janeiro-116704-1">Pediatras Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/medicos+do+esporte-1342/rio+de+janeiro-116704-1">Médicos do esporte Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/geriatras-1295/belo+horizonte-116720-1">Geriatras Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/terapeutas+ocupacionais-2799/goiania-116733-1">Terapeutas ocupacionais Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/radioterapeutas-1319/brasilia-116707-1">Radioterapeutas Brasília</a></li>
+                </ul>
+        </section>
+        <section>
+<h3>Especialistas</h3>                <ul>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/bloqueios+neuroliticos-29049/especialistas/sao+paulo-116705-1">Bloqueios Neurolíticos São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/entropio+e+ectropio-14266/especialistas/belo+horizonte-116720-1">Entropio e ectropio Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/retirada+de+sinais+cistos+e+verrugas-26054/especialistas/curitiba-116724-1">Retirada de sinais, cistos e verrugas Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/skin+booster-29041/especialistas/sao+paulo-116705-1">Skin Booster São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/herniorrafia+inguinal+videolaparoscopica-14946/especialistas/curitiba-116724-1">Herniorrafia Inguinal Videolaparoscopica Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/tratamento+em+transtorno+obsessivo+compulsivo+toc-32247/especialistas/rio+de+janeiro-116704-1">Tratamento em Transtorno Obsessivo Compulsivo (TOC) Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/traumatismos+maxilofaciais-17627/especialistas/belo+horizonte-116720-1">Traumatismos Maxilofaciais Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/deficiencia+da+energia+yang-14207/especialistas/curitiba-116724-1">Deficiência Da Energia Yang Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/privacao+do+sono-16871/especialistas/curitiba-116724-1">Privação Do Sono Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/abracao+dentaria-13505/especialistas/belo+horizonte-116720-1">Abração Dentária Belo Horizonte</a></li>
+                </ul>
+        </section>
+        <section>
+            <h3>Pesquisar por</h3>            <ul class="other-links">
+                        <li><a href="https://www.doctoralia.com.br/sitemap/medicos">Profissionais por cidade</a></li>
+                        <li><a href="https://www.doctoralia.com.br/sitemap/centros-medicos">Centros médicos por cidade</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provasmedicas">Exames médicos e tratamentos</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidades">Doenças</a></li>
+                        <li><a href="https://www.doctoralia.com.br/medicamentos">Medicamentos</a></li>
+                        <li><a href="https://www.doctoralia.com.br/sitemap/perguntas">Perguntas a Especialistas</a></li>
+                        <li><a href="https://www.doctoralia.com.br/medicos-credenciados">Convênios médicos</a></li>
+            </ul>
+<span>Rede Doctoralia</span>            <ul>
+                        <li class="network"><a href="http://www.doctoralia.pe">Peru</a></li>
+                        <li class="network"><a href="http://www.doctoralia.co">Colômbia</a></li>
+                        <li class="network"><a href="http://www.doctoralia.es">Espanha</a></li>
+            </ul>
+        </section>
+    </div>
+    <nav class="links-about" role="navigation">
+    <div class="container clearfix">
+        <ul>
+            <li><a href="https://www.doctoralia.com.br/quem-somos-contato" rel="nofollow">Quem somos</a></li>
+            <li><a href="https://www.doctoralia.com.br/quem-somos-contato#contact" rel="nofollow">Contatar</a></li>
+                <li><a href="http://press.doctoralia.com.br" rel="nofollow">Press</a></li>
+            <li><a href="http://www.doctoralia.com.br/legal.aspx" rel="nofollow">Termos de Uso e Privacidade</a></li>
+        </ul>
+        <ul class="right">
+                <li><a href="http://insights.doctoralia.com.br">Insights Blog</a></li>
+                    <li><a href="http://academy.doctoralia.com.br">Doctoralia Academy</a></li>
+                    <li><a href="http://blog.doctoralia.com.br/">Blog para especialistas</a></li>
+    </ul>
+    </div>
+</nav>
+    
+    <div class="copy">
+        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 27/03/2018</span>
+    </div>
+</footer>
+    </body>
+</html>

@@ -1,0 +1,906 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0xwFw8lC3xKFlIQEh4qXwABHA==","queueTime":0,"applicationTime":89,"ttGuid":"82F38AA4C95EB4C8","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="description" content="Você poderá resolver todas as suas dúvidas relacionadas à saúde de forma anônima." /><meta property="og:title" content="Pergunte ao especialista" />
+<meta property="og:description" content="Você poderá resolver todas as suas dúvidas relacionadas à saúde de forma anônima." /><meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.doctoralia.com.br/content/images/logo/fb_doctoralia_logo_1500x768.png" />
+<meta property="og:url" content="https://www.doctoralia.com.br/pergunte-ao-especialista" />
+<meta property="og:site_name" content="Doctoralia" />
+<meta property="og:locale" content="pt_BR" />
+
+    <meta name="robots" content="all" />
+
+
+<meta property="fb:admins" content="100002164932184">
+<link rel="shortcut icon" href="/favicon.ico?v=20141103" />
+    <link rel="canonical" href="https://www.doctoralia.com.br/pergunte-ao-especialista" />
+
+    
+    <title>Pergunte ao especialista</title>
+
+    <link href="/content/askanexpert__v__y9GLfqzlDKTVvyvkfokrdaMPoro6lb09BZMTZHf4KaI1" rel="stylesheet"/>
+
+        <!--[if IE 8]>
+        <link href="/content/ie8.css" rel="stylesheet"/>
+
+    <![endif]-->
+    
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-1127942-6', 'auto', { 'allowLinker': true  });
+        ga('require', 'linker');
+        ga('linker:autoLink', ['app.doctoralia.com']);
+                    ga(function (tracker) { document.cookie = '_uaClientID_=' + tracker.get('clientId') + '; path=/'; });
+        ga('send', 'pageview');
+    </script>
+    
+</head>
+<body data-fb-culture="pt_BR" data-fb-appid="138687599526585" data-login-redirect="">
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WNHGKJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+        var dataLayerContainer = {};
+        dataLayerContainer['gtm-pageType'] = '';
+        dataLayerContainer['gtm-specialization'] = '';
+        dataLayerContainer['gtm-region'] = '';
+        dataLayerContainer['gtm-city'] = '';
+        dataLayerContainer['gtm-disease'] = '';
+        dataLayerContainer['gtm-service'] = '';
+        dataLayerContainer['gtm-medication'] = '';
+        dataLayerContainer['gtm-is-mobile'] = '0';
+                dataLayer = [dataLayerContainer];
+
+
+            
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WNHGKJ');
+            
+    </script>
+
+    <div class="wrap" id="top">
+        <header class="heading-bar">
+    <div class="container-l">
+        <a href="https://www.doctoralia.com.br/" class="logo" title="Doctoralia">
+            <img src="/content/images/d4/logo.png" alt="Doctoralia" width="180" height="48" />
+        </a>
+                    <fieldset class="search">
+<form action="/search" data-search-bar="" method="post">                            <input type="text" name="SearchTerms" autocomplete="off" placeholder="" maxlength="150" class="textBox" data-searchterms-input />
+                            <input type="submit" class="btn btn-ico" value="" data-ga-event="click" data-ga-category="search" data-ga-action="header" data-ga-label="other" />
+</form>                    </fieldset>
+                    <nav class="visitor">
+                        <div class="register-multiple-container">
+                            <div class="register-multiple hidden">
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register?openSection=2" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-doctor"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Doctor Sign up">
+                                    Profissional da saúde
+                                </a>
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register?openSection=3" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-center"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Facilty Sign up">
+                                    Centro médico
+                                </a>
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register/patient/1" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-patient"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Patient Sign up">
+                                    Paciente
+                                </a>
+                            </div>
+                        </div>
+                        <a rel="nofollow" data-register-link href="https://www.doctoralia.com.br/users/register">
+                            Cadastre-se
+                            <i class="ico-triangle-down"></i>
+                        </a>
+                        <i></i>
+                        <a rel="nofollow" href="https://app.doctoralia.com.br/usuarios/login">
+                            Entrar
+                        </a>
+                    </nav>
+    </div>
+</header>
+    <div class="search-typeahead-container-center">
+        <div class="search-typeahead-container">
+            <div class="search-textbox-typeahead hidden"></div>
+        </div>
+    </div>
+
+        
+        <div class="container fixed">
+<ul class="breadcrumb"><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.doctoralia.com.br/" itemprop="url"><span itemprop="title">Home</span></a></li><li><span itemprop="title">Pergunte ao especialista</span></li></ul>
+                <p class="share">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.doctoralia.com.br%2fpergunte-ao-especialista" rel="nofollow" target="_blank" title="Facebook"></a>
+<a class="twitter" data-lang="en" href="http://twitter.com/share?url=https%3a%2f%2fwww.doctoralia.com.br%2fpergunte-ao-especialista&amp;text=Pergunte+ao+especialista&amp;via=Doctoralia_br" rel="nofollow" target="_blank" title="Twitter"></a>
+
+                </p>
+        </div>
+
+        <div id="main">
+            <header class="box cap">
+    <div class="title">
+        <h1>Pergunte ao especialista</h1>
+        <p>Você poderá resolver todas as suas dúvidas relacionadas à saúde de forma anônima.</p>
+    </div>
+    <div class="shareglory">
+
+    <a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.doctoralia.com.br%2fpergunte-ao-especialista" target="_blank">
+        <i class="icon"></i>
+        <span class="counter"></span>
+    </a>
+    <a class="tw" href="http://twitter.com/share?url=https%3a%2f%2fwww.doctoralia.com.br%2fpergunte-ao-especialista&amp;text=Pergunte+ao+especialista&amp;via=Doctoralia_br" target="_blank">
+        <i class="icon"></i>
+        <span class="counter"></span>
+    </a>
+    <a class="in" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.doctoralia.com.br/pergunte-ao-especialista&title=Pergunte ao especialista - https://www.doctoralia.com.br/pergunte-ao-especialista&summary=&source=" target="_blank">
+        <i class="icon"></i>
+        <span class="counter"></span>
+    </a>
+    <a class="gplus" href="https://plus.google.com/share?url=https://www.doctoralia.com.br/pergunte-ao-especialista" target="_blank">
+        <i class="icon"></i>
+        <span class="counter"></span>
+    </a>
+    <a class="email" href="mailto:?body=Pergunte ao especialista - https://www.doctoralia.com.br/pergunte-ao-especialista" target="_blank">
+        <i class="icon"></i>
+    </a>
+</div>
+</header>
+
+<section class="box askan-form">
+<div data-ask-an-expert class="askAnExpertBox">
+    <p>Pergunte a milhares de especialistas <strong>de forma anônima e gratuita</strong></p>
+
+<form action="/askanexpert-question" method="post"><input name="__RequestVerificationToken" type="hidden" value="o2JXWkdew1t08peqiD7UGzkrqch0FHEK4udj6BD72LzXV_job1_tQDz69c-T8nze8LjlruixGgmUCHSN76NGq5LD8ds1" /><input data-val="true" data-val-number="The field ContentType must be a number." id="ContentType" name="ContentType" type="hidden" value="" /><input data-val="true" data-val-number="The field ContentKey must be a number." id="ContentKey" name="ContentKey" type="hidden" value="" /><input id="ContentName" name="ContentName" type="hidden" value="" /><input id="City" name="City" type="hidden" value="" /><input id="Lat" name="Lat" type="hidden" value="" /><input id="Lng" name="Lng" type="hidden" value="" />            <div class="media">
+                    <div class="media__body">
+                        <textarea class="askAnExpertTextArea placeholder" cols="20" data-ae-text="" data-val="true" data-val-minlength="Mínimo de {0} caractéres" data-val-minlength-min="15" data-val-required="Campo obrigatório" id="Question" maxlength="300" name="Question" placeholder="Escreva aqui a sua pergunta..." rows="2">
+</textarea>
+                        <span class="textAreaCounter hidden" data-ae-counter></span>
+                    </div>
+                    <div class="media__aside">
+                        <a data-ae-button class="btn btn-primary" href="#">Perguntar a especialistas</a>
+                    </div>
+                    <span class="field-validation-valid askAnExpertValidation" data-valmsg-for="Question" data-valmsg-replace="true"></span>
+            </div>
+</form>        <ul data-ae-opened-state class="blt displayNone">
+            <li>A sua pergunta se publicará de forma anônima.</li>
+            <li>Faça uma pergunta concreta, mantenha o foco em uma pergunta médica.</li>
+            <li>Seja breve e conciso.</li>
+            <li>Este serviço não substitui uma consulta com um profissional da saúde. Se tiver algum problema ou urgência, vá ao médico ou ao pronto-socorro.</li>
+            <li>Não estará permitido obter segundas opiniões ou consultas sobre um caso em concreto.</li>
+        </ul>
+<form action="/askanexpert-related-questions" id="frmRelatedQuestions" method="post"><input data-val="true" data-val-number="The field ContentType must be a number." id="ContentType" name="ContentType" type="hidden" value="" /><input data-val="true" data-val-number="The field ContentKey must be a number." id="ContentKey" name="ContentKey" type="hidden" value="" /><input id="ContentName" name="ContentName" type="hidden" value="" /><input id="QuestionText" name="QuestionText" type="hidden" value="" /></form></div>
+<div id="divRelatedQuestions" class="modal4 hidden"></div>
+</section>
+
+<section class="box askan-overview">
+    <h4>Doctoralia é um líder em perguntas e respostas médicas na internet no Brasil</h4>
+    <ul>
+        <li class="questions">
+            <i class="icon"></i> 82.612
+            <span>Perguntas</span>
+        </li>
+
+        <li class="answers">
+            <i class="icon"></i> 324.589.676
+            <span>Respostas oferecidas</span>
+        </li>
+
+        <li class="experts">
+            <i class="icon"></i> 9.924
+            <span>Especialistas respondendo</span>
+        </li>
+    </ul>
+</section>
+
+<section class="box askan-populars askAnExpert">
+    <h2><i class="icon"></i>Perguntas mais populares</h2>
+
+    
+<div class="askan-carousel" data-slider="askan">
+        <div class="qa-combo">
+            <p class="lead"><b></b> Sobre&nbsp;<a href="https://www.doctoralia.com.br/provamedica/imagens+por+ressonancia+magnetica+irm-23675">Imagens por Resson&#226;ncia Magn&#233;tica (IRM)</a></p>
+            <div class="question">
+                <p>Neuro imagem estrutural por Ressonância Magnética de Encéfalo é a mesma coisa que Ressonância Magnética de Encéfalo ? <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/provamedica/imagens+por+ressonancia+magnetica+irm-23675/pergunta/neuro-imagem-estrutural-por-ressonancia-magnetica-de-encefalo-e-a-mesma-coisa-que-ressonancia-1282649">Ler mais</a></p>
+            </div>
+            <div class="answer">
+                <div class="top">
+                    <figure class="photo">
+                        <img alt="Sandra Mara Comper" class="pic relevantAnswerDoctorWrapperImg" height="104" src="//photos.doctoralia.com/636149410615200949_1.jpg" width="87" />
+                    </figure>
+                    <h3 class="name">
+                        Sandra Mara Comper
+                            <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                                <i class="icon"></i>
+                                <b>Profissional Premium: Tem um perfil mais completo.</b>
+                            </dfn>
+                    </h3>
+                    <p class="speciality">Psic&#243;logo</p>
+                    <p class="text">
+                        Sim. Vou explicar porque o sistema não aceita apenas sim como resposta:
+Neuroimagem estrutural significa exame em forma de imagem (&quot;foto&quot;)...
+                            <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/provamedica/imagens+por+ressonancia+magnetica+irm-23675/pergunta/neuro-imagem-estrutural-por-ressonancia-magnetica-de-encefalo-e-a-mesma-coisa-que-ressonancia-1282649">Ler mais</a>
+                    </p>
+                </div>
+
+                        <div class="bottom">
+                            <ul class="clearfix">
+                                <li class="agree">
+                                    <i class="icon"></i>
+                                    14 especialistas de acordo
+                                </li>
+                                    <li class="photo">
+<img alt="Regina Mocellim Dos Reis" height="38" src="//photos.doctoralia.com/636504874721690411_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Dínerson Fiuza" height="38" src="//photos.doctoralia.com/636470381662201237_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Raquel M G Morais Carvalho" height="38" src="//photos.doctoralia.com/634974836810972067_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Prof. Luis Anunciação" height="38" src="//photos.doctoralia.com/635052326618908554_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Claudia Luiza Toss" height="38" src="//photos.doctoralia.com/636456843458582777_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Rogério Cogo" height="38" src="//photos.doctoralia.com/636428528193118760_1.jpg" width="32" />                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        <div class="qa-combo">
+            <p class="lead"><b></b> Sobre&nbsp;<a href="https://www.doctoralia.com.br/enfermidade/transtorno+depressivo-17475">Transtorno Depressivo</a></p>
+            <div class="question">
+                <p>Antidepressivo é Benéfico ou é malefico ?
+Todo mundo fala que os ante depressivo e ansiolíticos da isso da aquilo e que faz mal e futuramente pode tra... <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/transtorno+depressivo-17475/pergunta/antidepressivo-e-benefico-ou-e-malefico-todo-mundo-fala-que-os-ante-depressivo-e-ansioliticos-da-1297241">Ler mais</a></p>
+            </div>
+            <div class="answer">
+                <div class="top">
+                    <figure class="photo">
+                        <img alt="Tomás Rotelli de Olivieira Ferreira" class="pic relevantAnswerDoctorWrapperImg" height="104" src="//photos.doctoralia.com/636214997459712537_1.jpg" width="87" />
+                    </figure>
+                    <h3 class="name">
+                        Tom&#225;s Rotelli de Olivieira Ferreira
+                            <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                                <i class="icon"></i>
+                                <b>Profissional Premium: Tem um perfil mais completo.</b>
+                            </dfn>
+                    </h3>
+                    <p class="speciality">Psiquiatra</p>
+                    <p class="text">
+                        A resposta mais precisa para a sua pergunta é um &quot;depende&quot;. 
+    Tanto o uso de antidepressivo como de qualquer outra medicação deve ser ind...
+                            <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/transtorno+depressivo-17475/pergunta/antidepressivo-e-benefico-ou-e-malefico-todo-mundo-fala-que-os-ante-depressivo-e-ansioliticos-da-1297241">Ler mais</a>
+                    </p>
+                </div>
+
+                        <div class="bottom">
+                            <ul class="clearfix">
+                                <li class="agree">
+                                    <i class="icon"></i>
+                                    10 especialistas de acordo
+                                </li>
+                                    <li class="photo">
+<img alt="Dra. Gissela Risnic" height="38" src="//photos.doctoralia.com/635167930592890938_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Bárbara Adele de Moraes" height="38" src="//photos.doctoralia.com/635646195398462171_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. José Dilson Ferreira Maciel" height="38" src="//photos.doctoralia.com/635852662590054376_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Thiago de Sousa" height="38" src="//photos.doctoralia.com/636003258930796061_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Vânia Castor" height="38" src="//photos.doctoralia.com/636310513132961601_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Clayton dos Santos Silva" height="38" src="//photos.doctoralia.com/636160397730475443_1.jpg" width="32" />                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        <div class="qa-combo">
+            <p class="lead"><b></b> Sobre&nbsp;<a href="https://www.doctoralia.com.br/enfermidade/hiperatividade-54547">Hiperatividade</a></p>
+            <div class="question">
+                <p>Meu filho de 3 anos tem hiperatividade qual o melhor tratamento? Eu trato com Neuleptil não tá funcionando muito. <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/hiperatividade-54547/pergunta/meu-filho-de-3-anos-tem-hiperatividade-qual-o-melhor-tratamento-eu-trato-com-neuleptil-nao-ta-1285652">Ler mais</a></p>
+            </div>
+            <div class="answer">
+                <div class="top">
+                    <figure class="photo">
+                        <img alt="Bárbara Adele de Moraes" class="pic relevantAnswerDoctorWrapperImg" height="104" src="//photos.doctoralia.com/635646195398462171_1.jpg" width="87" />
+                    </figure>
+                    <h3 class="name">
+                        B&#225;rbara Adele de Moraes
+                            <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                                <i class="icon"></i>
+                                <b>Profissional Premium: Tem um perfil mais completo.</b>
+                            </dfn>
+                    </h3>
+                    <p class="speciality">Psic&#243;logo, Psicanalista</p>
+                    <p class="text">
+                        Há controvérsias no uso de medicação em crianças tão pequenas e no fechamento de diagnóstico em uma idade em que muitas coisas ainda estão p...
+                            <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/hiperatividade-54547/pergunta/meu-filho-de-3-anos-tem-hiperatividade-qual-o-melhor-tratamento-eu-trato-com-neuleptil-nao-ta-1285652">Ler mais</a>
+                    </p>
+                </div>
+
+                        <div class="bottom">
+                            <ul class="clearfix">
+                                <li class="agree">
+                                    <i class="icon"></i>
+                                    10 especialistas de acordo
+                                </li>
+                                    <li class="photo">
+<img alt="Joana Almeida" height="38" src="//photos.doctoralia.com/635541989121369467_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<span class="placeholder"></span>                                    </li>
+                                    <li class="photo">
+<img alt="Thiago de Sousa" height="38" src="//photos.doctoralia.com/636003258930796061_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dra. Ivanilda Ubaldina Silva" height="38" src="//photos.doctoralia.com/635947734470437602_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Wellington Albuquerque Filho" height="38" src="//photos.doctoralia.com/636561523260475681_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Prof. Danuza Effegem de Souza" height="38" src="//photos.doctoralia.com/636084565618260252_1.jpg" width="32" />                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        <div class="qa-combo">
+            <p class="lead"><b></b> Sobre&nbsp;<a href="https://www.doctoralia.com.br/enfermidade/transtorno+da+conduta-17461">Transtorno Da Conduta</a></p>
+            <div class="question">
+                <p>Um pré-adolescente de 11 anos e 8 meses ele está muito agressivo, mandando os pais tomarem no..... etc. Respondendo muito e quando é corrigido pega at... <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/transtorno+da+conduta-17461/pergunta/um-pre-adolescente-de-11-anos-e-8-meses-ele-esta-muito-agressivo-mandando-os-pais-tomarem-no-etc-1287602">Ler mais</a></p>
+            </div>
+            <div class="answer">
+                <div class="top">
+                    <figure class="photo">
+                        <img alt="Dra. Naique Dellai Campos" class="pic relevantAnswerDoctorWrapperImg" height="104" src="//photos.doctoralia.com/636565456808816417_1.jpg" width="87" />
+                    </figure>
+                    <h3 class="name">
+                        Dra. Naique Dellai Campos
+                            <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                                <i class="icon"></i>
+                                <b>Profissional Premium: Tem um perfil mais completo.</b>
+                            </dfn>
+                    </h3>
+                    <p class="speciality">Psiquiatra</p>
+                    <p class="text">
+                        As principais patologias psiquiátricas que acometem a Infância e Adolescência tendem a aumentar a frequência de comportamentos agressivos qu...
+                            <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/transtorno+da+conduta-17461/pergunta/um-pre-adolescente-de-11-anos-e-8-meses-ele-esta-muito-agressivo-mandando-os-pais-tomarem-no-etc-1287602">Ler mais</a>
+                    </p>
+                </div>
+
+                        <div class="bottom">
+                            <ul class="clearfix">
+                                <li class="agree">
+                                    <i class="icon"></i>
+                                    7 especialistas de acordo
+                                </li>
+                                    <li class="photo">
+<img alt="Deborah Mantovani Machado" height="38" src="//photos.doctoralia.com/636557109751398457_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dra. Roberta Mellem Avante" height="38" src="//photos.doctoralia.com/636111040951684185_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dra. Ivanilda Ubaldina Silva" height="38" src="//photos.doctoralia.com/635947734470437602_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Adriana Rocca" height="38" src="//photos.doctoralia.com/635989536605586246_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Amanda Salomão" height="38" src="//photos.doctoralia.com/636269385537837809_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Camila De Lima Lucio Dias" height="38" src="//photos.doctoralia.com/636511240200352387_1.jpg" width="32" />                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        <div class="qa-combo">
+            <p class="lead"><b></b> Sobre&nbsp;<a href="https://www.doctoralia.com.br/medicamento/gingilone-11983">Gingilone</a></p>
+            <div class="question">
+                <p>Gingilone pode ser engolida? <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/medicamento/gingilone-11983/pergunta/gingilone-pode-ser-engolida-1278275">Ler mais</a></p>
+            </div>
+            <div class="answer">
+                <div class="top">
+                    <figure class="photo">
+                        <img alt="Dra. Andrea Dias Rocha Freitas" class="pic relevantAnswerDoctorWrapperImg" height="104" src="//photos.doctoralia.com/636294343943293689_1.jpg" width="87" />
+                    </figure>
+                    <h3 class="name">
+                        Dra. Andrea Dias Rocha Freitas
+                    </h3>
+                    <p class="speciality">Dentista</p>
+                    <p class="text">
+                        Olá , essa é uma medicação de uso tópico bucal, é para ser usada em pequenas quantidades nas áreas afetadas, não existe problema na ingestão...
+                            <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/medicamento/gingilone-11983/pergunta/gingilone-pode-ser-engolida-1278275">Ler mais</a>
+                    </p>
+                </div>
+
+                        <div class="bottom">
+                            <ul class="clearfix">
+                                <li class="agree">
+                                    <i class="icon"></i>
+                                    7 especialistas de acordo
+                                </li>
+                                    <li class="photo">
+<span class="placeholder"></span>                                    </li>
+                                    <li class="photo">
+<img alt="Dra. Regina Yatsuda Sakiama Okamoto" height="38" src="//photos.doctoralia.com/636529112966431843_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dra. Suzana Sánchez" height="38" src="//photos.doctoralia.com/636373733320569981_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Carolina G. R. Saran" height="38" src="//photos.doctoralia.com/636106800591467229_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Paulo César Segatti" height="38" src="//photos.doctoralia.com/636507536893377290_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Real Odonto Serviços Especializados" height="38" src="//photos.doctoralia.com/636507984760294350_1.jpg" width="32" />                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        <div class="qa-combo">
+            <p class="lead"><b></b> Sobre&nbsp;<a href="https://www.doctoralia.com.br/enfermidade/varizes-17770">Varizes</a></p>
+            <div class="question">
+                <p>Tenho 21 anos e tenho varizes nas pernas estou grávida e elas só pioram, o que faço? <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/varizes-17770/pergunta/tenho-21-anos-e-tenho-varizes-nas-pernas-estou-gravida-e-elas-so-pioram-o-que-faco-1297227">Ler mais</a></p>
+            </div>
+            <div class="answer">
+                <div class="top">
+                    <figure class="photo">
+                        <img alt="Dra. Helena De Oliveira Santos" class="pic relevantAnswerDoctorWrapperImg" height="104" src="//photos.doctoralia.com/636474927110192720_1.jpg" width="87" />
+                    </figure>
+                    <h3 class="name">
+                        Dra. Helena De Oliveira Santos
+                            <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                                <i class="icon"></i>
+                                <b>Profissional Premium: Tem um perfil mais completo.</b>
+                            </dfn>
+                    </h3>
+                    <p class="speciality">Angiologista, Cirurgi&#227;o vascular</p>
+                    <p class="text">
+                        Ola!
+A tendencia da doença venosa é piorar durante a gestaçao, devido ao aumento dos hormonios e do peso sobre as pernas.
+Mas nao precisa...
+                            <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/varizes-17770/pergunta/tenho-21-anos-e-tenho-varizes-nas-pernas-estou-gravida-e-elas-so-pioram-o-que-faco-1297227">Ler mais</a>
+                    </p>
+                </div>
+
+                        <div class="bottom">
+                            <ul class="clearfix">
+                                <li class="agree">
+                                    <i class="icon"></i>
+                                    6 especialistas de acordo
+                                </li>
+                                    <li class="photo">
+<img alt="Dr. Edmar Pereira Olympio" height="38" src="//photos.doctoralia.com/636320375386839313_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Felipe Skupien" height="38" src="//photos.doctoralia.com/636085389189984099_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Patricia Bittencourt Zanoni" height="38" src="//photos.doctoralia.com/636448991113374349_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dra. Juliana Lopes Alfaia" height="38" src="//photos.doctoralia.com/636564891133121924_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Leonardo Teixeira de Almeida" height="38" src="//photos.doctoralia.com/636220895619946331_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dra. Maria Clara Pereira Sanjuan" height="38" src="//photos.doctoralia.com/636528758014532466_1.jpg" width="32" />                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        <div class="qa-combo">
+            <p class="lead"><b></b> Sobre&nbsp;<a href="https://www.doctoralia.com.br/enfermidade/demencia-14275">Dem&#234;ncia</a></p>
+            <div class="question">
+                <p>Numa primeira consulta de um idoso, lúcido, que tem ainda leves sinais de demência e depressão, é interessante fazer uma consulta prévia com o geriatr... <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/demencia-14275/pergunta/numa-primeira-consulta-de-um-idoso-lucido-que-tem-ainda-leves-sinais-de-demencia-e-depressao-e-1281217">Ler mais</a></p>
+            </div>
+            <div class="answer">
+                <div class="top">
+                    <figure class="photo">
+                        <img alt="Dr. Diego de Castro dos Santos" class="pic relevantAnswerDoctorWrapperImg" height="104" src="//photos.doctoralia.com/636463508655636125_1.jpg" width="87" />
+                    </figure>
+                    <h3 class="name">
+                        Dr. Diego de Castro dos Santos
+                            <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                                <i class="icon"></i>
+                                <b>Profissional Premium: Tem um perfil mais completo.</b>
+                            </dfn>
+                    </h3>
+                    <p class="speciality">Neurologista, Neurofisiologista</p>
+                    <p class="text">
+                        Olá! É comum que pacientes com demência na fase inicial tenham a tendência a negar perda de memória ou omitir dificuldade de realizar alguma...
+                            <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/demencia-14275/pergunta/numa-primeira-consulta-de-um-idoso-lucido-que-tem-ainda-leves-sinais-de-demencia-e-depressao-e-1281217">Ler mais</a>
+                    </p>
+                </div>
+
+                        <div class="bottom">
+                            <ul class="clearfix">
+                                <li class="agree">
+                                    <i class="icon"></i>
+                                    6 especialistas de acordo
+                                </li>
+                                    <li class="photo">
+<img alt="Deborah Mantovani Machado" height="38" src="//photos.doctoralia.com/636557109751398457_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dra. Ivanilda Ubaldina Silva" height="38" src="//photos.doctoralia.com/635947734470437602_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Ana Lucia de Macedo" height="38" src="//photos.doctoralia.com/636367828065391327_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Fábio Luiz Socreppa da Fonseca" height="38" src="//photos.doctoralia.com/636513745764386378_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Paulo Renato Oliveira" height="38" src="//photos.doctoralia.com/636470338580129779_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Patricia De Lucia Nadruz" height="38" src="//photos.doctoralia.com/636462251215508702_1.jpg" width="32" />                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        <div class="qa-combo">
+            <p class="lead"><b></b> Sobre&nbsp;<a href="https://www.doctoralia.com.br/enfermidade/hipotireoidismo-15615">Hipotireoidismo</a></p>
+            <div class="question">
+                <p>Tenho hipotiroidismo posso tomar a vacina da febre amarela?? <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/hipotireoidismo-15615/pergunta/tenho-hipotiroidismo-posso-tomar-a-vacina-da-febre-amarela-1277949">Ler mais</a></p>
+            </div>
+            <div class="answer">
+                <div class="top">
+                    <figure class="photo">
+                        <img alt="Maria Isabel Jardim Pereira" class="pic relevantAnswerDoctorWrapperImg" height="104" src="//photos.doctoralia.com/636333096044089584_1.jpg" width="87" />
+                    </figure>
+                    <h3 class="name">
+                        Maria Isabel Jardim Pereira
+                            <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                                <i class="icon"></i>
+                                <b>Profissional Premium: Tem um perfil mais completo.</b>
+                            </dfn>
+                    </h3>
+                    <p class="speciality">Endocrinologista</p>
+                    <p class="text">
+                        Olá! O hipotireoidismo não é uma contraindicação a vacinação. Pode vacinar sem problema algum. Atenciosamente.
+                    </p>
+                </div>
+
+                        <div class="bottom">
+                            <ul class="clearfix">
+                                <li class="agree">
+                                    <i class="icon"></i>
+                                    6 especialistas de acordo
+                                </li>
+                                    <li class="photo">
+<img alt="Dra. Maria da Gloria de Alencar Araripe" height="38" src="//photos.doctoralia.com/636519776420895967_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Ivan Correa da Cruz" height="38" src="//photos.doctoralia.com/V2635470160211465768_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Flávia Macedo de Vasconcelos" height="38" src="//photos.doctoralia.com/636508480450474459_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Massimo Colombini Netto" height="38" src="//photos.doctoralia.com/636524879434564616_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Julio Cesar de Oliveira" height="38" src="//photos.doctoralia.com/636314193601881481_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. José Luís Verbiski" height="38" src="//photos.doctoralia.com/636545129116170228_1.jpg" width="32" />                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        <div class="qa-combo">
+            <p class="lead"><b></b> Sobre&nbsp;<a href="https://www.doctoralia.com.br/enfermidade/dentes+tortos-52662">Dentes tortos</a></p>
+            <div class="question">
+                <p>Os meus dentes começaram a entortar por volta dos 30 anos. Decorridos 4 anos estão encavalitados os dois superiores da frente. Pode ser alguma deficiê... <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/dentes+tortos-52662/pergunta/os-meus-dentes-comecaram-a-entortar-por-volta-dos-30-anos-decorridos-4-anos-estao-encavalitados-os-1291200">Ler mais</a></p>
+            </div>
+            <div class="answer">
+                <div class="top">
+                    <figure class="photo">
+                        <img alt="Dra. Katia Valeria Albuquerque" class="pic relevantAnswerDoctorWrapperImg" height="104" src="//photos.doctoralia.com/636308017602557409_1.jpg" width="87" />
+                    </figure>
+                    <h3 class="name">
+                        Dra. Katia Valeria Albuquerque
+                            <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                                <i class="icon"></i>
+                                <b>Profissional Premium: Tem um perfil mais completo.</b>
+                            </dfn>
+                    </h3>
+                    <p class="speciality">Dentista</p>
+                    <p class="text">
+                        É natural da espécie humana o apinhamento dentário (acavalamento) com o passar da idade, não em decorrência da mudança de hábitos alimentare...
+                            <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/enfermidade/dentes+tortos-52662/pergunta/os-meus-dentes-comecaram-a-entortar-por-volta-dos-30-anos-decorridos-4-anos-estao-encavalitados-os-1291200">Ler mais</a>
+                    </p>
+                </div>
+
+                        <div class="bottom">
+                            <ul class="clearfix">
+                                <li class="agree">
+                                    <i class="icon"></i>
+                                    5 especialistas de acordo
+                                </li>
+                                    <li class="photo">
+<img alt="Dra. Regina Yatsuda Sakiama Okamoto" height="38" src="//photos.doctoralia.com/636529112966431843_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Priscila Menezes de Oliveira Leite" height="38" src="//photos.doctoralia.com/636546377661252919_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Rodrigo Tavares Bomfim" height="38" src="//photos.doctoralia.com/635643174056357700_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Diego Limoeiro" height="38" src="//photos.doctoralia.com/636464383223865265_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dra. Viviane Lopez Blanck" height="38" src="//photos.doctoralia.com/636386149989249710_1.jpg" width="32" />                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        <div class="qa-combo">
+            <p class="lead"><b></b> Sobre&nbsp;<a href="https://www.doctoralia.com.br/provamedica/abdominoplastia-23894">Abdominoplastia</a></p>
+            <div class="question">
+                <p>Faz quase 3 anos que fiz colicistectomia com incisão no abdomen, posso fazer abdominoplastia sem riscos de necrose? <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/provamedica/abdominoplastia-23894/pergunta/faz-quase-3-anos-que-fiz-colicistectomia-com-incisao-no-abdomen-posso-fazer-abdominoplastia-sem-1290362">Ler mais</a></p>
+            </div>
+            <div class="answer">
+                <div class="top">
+                    <figure class="photo">
+                        <img alt="Dr. Bruno De Paula E Silva Felici de Souza" class="pic relevantAnswerDoctorWrapperImg" height="104" src="//photos.doctoralia.com/635942778924066754_1.jpg" width="87" />
+                    </figure>
+                    <h3 class="name">
+                        Dr. Bruno De Paula E Silva Felici de Souza
+                            <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                                <i class="icon"></i>
+                                <b>Profissional Premium: Tem um perfil mais completo.</b>
+                            </dfn>
+                    </h3>
+                    <p class="speciality">Cirurgi&#227;o pl&#225;stico</p>
+                    <p class="text">
+                        Não existe cirurgia sem risco. O fato de ter realizado a retirada da vesícula (colecistectomia) é um fator a mais de risco, mas cabe ao ciru...
+                            <a class="readmore" rel="nofollow" href="https://www.doctoralia.com.br/provamedica/abdominoplastia-23894/pergunta/faz-quase-3-anos-que-fiz-colicistectomia-com-incisao-no-abdomen-posso-fazer-abdominoplastia-sem-1290362">Ler mais</a>
+                    </p>
+                </div>
+
+                        <div class="bottom">
+                            <ul class="clearfix">
+                                <li class="agree">
+                                    <i class="icon"></i>
+                                    5 especialistas de acordo
+                                </li>
+                                    <li class="photo">
+<img alt="Dr. Eudes Soares De Sá Nóbrega" height="38" src="//photos.doctoralia.com/636492894330237433_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Amilton Sevilhano Casado Neto" height="38" src="//photos.doctoralia.com/635107292694889428_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Matheus Manica" height="38" src="//photos.doctoralia.com/636112799183382688_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Tasso Lara Donato" height="38" src="//photos.doctoralia.com/636510325457537883_1.jpg" width="32" />                                    </li>
+                                    <li class="photo">
+<img alt="Dr. Eduardo Pasquarelli" height="38" src="//photos.doctoralia.com/636377362623201083_1.jpg" width="32" />                                    </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+</div></section>
+
+    <section class="box askan-collaborators">
+        <h2><i class="icon"></i>Os especialistas que mais responderam</h2>
+
+            <div class="collaborator">
+                <figure class="photo d">
+                    <a href="https://www.doctoralia.com.br/medico/paiva+rodrigues+heitor+leandro-14895754">
+                            <img alt="Dr. Heitor Leandro Paiva Rodrigues" src="//photos.doctoralia.com/636148352276717802_1.jpg">
+                    </a>
+                </figure>
+                <h3>
+                    <a href="https://www.doctoralia.com.br/medico/paiva+rodrigues+heitor+leandro-14895754">Dr. Heitor Leandro Paiva Rodrigues</a>
+                    <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                        <i class="icon"></i>
+                        <b>Profissional Premium: Tem um perfil mais completo.</b>
+                    </dfn>
+                </h3>
+
+                    <p class="specialities">Ginecologia e Obstetr&#237;cia</p>
+                                    <p class="location">Ribeir&#227;o Preto</p>
+                <p class="contribution">
+                    <i class="icon"></i> 593
+                    <span>Respostas nos ultimos 30 dias</span>
+                </p>
+            </div>
+            <div class="collaborator">
+                <figure class="photo d">
+                    <a href="https://www.doctoralia.com.br/medico/bergamasco+joao-14938582">
+                            <img alt="Dr. João Bergamasco" src="//photos.doctoralia.com/636508315917704443_1.jpg">
+                    </a>
+                </figure>
+                <h3>
+                    <a href="https://www.doctoralia.com.br/medico/bergamasco+joao-14938582">Dr. João Bergamasco</a>
+                    <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                        <i class="icon"></i>
+                        <b>Profissional Premium: Tem um perfil mais completo.</b>
+                    </dfn>
+                </h3>
+
+                    <p class="specialities">Cirurgia do Aparelho Digestivo</p>
+                                    <p class="location">Manaus</p>
+                <p class="contribution">
+                    <i class="icon"></i> 361
+                    <span>Respostas nos ultimos 30 dias</span>
+                </p>
+            </div>
+            <div class="collaborator">
+                <figure class="photo d">
+                    <a href="https://www.doctoralia.com.br/medico/oliveira+paulo+renato-14938386">
+                            <img alt="Paulo Renato Oliveira" src="//photos.doctoralia.com/636470338580129779_1.jpg">
+                    </a>
+                </figure>
+                <h3>
+                    <a href="https://www.doctoralia.com.br/medico/oliveira+paulo+renato-14938386">Paulo Renato Oliveira</a>
+                    <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                        <i class="icon"></i>
+                        <b>Profissional Premium: Tem um perfil mais completo.</b>
+                    </dfn>
+                </h3>
+
+                    <p class="specialities">Psican&#225;lise</p>
+                                    <p class="location">Niter&#243;i</p>
+                <p class="contribution">
+                    <i class="icon"></i> 107
+                    <span>Respostas nos ultimos 30 dias</span>
+                </p>
+            </div>
+
+    </section>
+
+    <section class="box askan-themes">
+        <h2><i class="icon"></i>Temas mais populares</h2>
+        <ol>
+                <li><a href="https://www.doctoralia.com.br/medicamento/fluconazol-11841">Fluconazol</a><progress value="87" max="100"></progress></li>
+                <li><a href="https://www.doctoralia.com.br/medicamento/rivotril-13204">Rivotril</a><progress value="64" max="100"></progress></li>
+                <li><a href="https://www.doctoralia.com.br/provamedica/vasectomia-14670">Vasectomia</a><progress value="57" max="100"></progress></li>
+                <li><a href="https://www.doctoralia.com.br/medicamento/fluoxetina-11871">Fluoxetina</a><progress value="34" max="100"></progress></li>
+                <li><a href="https://www.doctoralia.com.br/enfermidade/sifilis-17070">S&#237;filis</a><progress value="28" max="100"></progress></li>
+                <li><a href="https://www.doctoralia.com.br/enfermidade/hpv-52756">HPV</a><progress value="26" max="100"></progress></li>
+                <li><a href="https://www.doctoralia.com.br/enfermidade/diabetes-40993">Diabetes</a><progress value="18" max="100"></progress></li>
+                <li><a href="https://www.doctoralia.com.br/provamedica/hipnose-24047">Hipnose</a><progress value="17" max="100"></progress></li>
+                <li><a href="https://www.doctoralia.com.br/provamedica/colposcopia-24798">Colposcopia</a><progress value="13" max="100"></progress></li>
+                <li><a href="https://www.doctoralia.com.br/provamedica/abdominoplastia-23894">Abdominoplastia</a><progress value="12" max="100"></progress></li>
+        </ol>
+    </section>
+
+<section class="container legal-notice">
+    <p>Aviso Legal - doctoralia.com.br - Todo o conteúdo publicado na Doctoralia é de caráter informativo e nunca deve ser considerado um substituto de aconselhamento médico.</p>
+</section>
+
+<div class="sticky-topbar magic">
+    <header class="box">
+        <div class="entity-actions">
+            <a href="/" class="icon minilogo" title="Home"></a>
+            <h1><a href="#top">Pergunte ao especialista</a></h1>
+            <div class="shareglory">
+
+    <a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.doctoralia.com.br%2fpergunte-ao-especialista" target="_blank">
+        <i class="icon"></i>
+        <span class="counter"></span>
+    </a>
+    <a class="tw" href="http://twitter.com/share?url=https%3a%2f%2fwww.doctoralia.com.br%2fpergunte-ao-especialista&amp;text=Pergunte+ao+especialista&amp;via=Doctoralia_br" target="_blank">
+        <i class="icon"></i>
+        <span class="counter"></span>
+    </a>
+    <a class="in" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.doctoralia.com.br/pergunte-ao-especialista&title=Pergunte ao especialista - https://www.doctoralia.com.br/pergunte-ao-especialista&summary=&source=" target="_blank">
+        <i class="icon"></i>
+        <span class="counter"></span>
+    </a>
+    <a class="gplus" href="https://plus.google.com/share?url=https://www.doctoralia.com.br/pergunte-ao-especialista" target="_blank">
+        <i class="icon"></i>
+        <span class="counter"></span>
+    </a>
+    <a class="email" href="mailto:?body=Pergunte ao especialista - https://www.doctoralia.com.br/pergunte-ao-especialista" target="_blank">
+        <i class="icon"></i>
+    </a>
+</div>
+        </div>
+    </header>
+</div>
+
+
+        </div>
+
+    </div>
+
+    <script>var i18n = { noResults: "Nenhum resultado foi encontrado" };</script>
+    <script src="/bundles/askanexpert__v__1lDQrtoZ7Q5-BJQz59Hy8gXfXOfFovLy6IllYcFQE2Y1"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".askan-carousel").owlCarousel({
+                autoPlay: 6000,
+                stopOnHover: true,
+                navigation: false,
+                paginationSpeed: 1000,
+                goToFirstSpeed: 2000,
+                singleItem: true,
+                transitionStyle: "fade"
+            });
+            if ($('div[data-ask-an-expert]').length > 0) {
+                $('div[data-ask-an-expert]').askAnExpert();
+            }
+        });
+    </script>
+            <script>dralia.ads.ui.setup([{'key':"_ctr",'value':"br"}]);</script>
+    
+    <script src="/bundles/search-typeahead__v__D806VR3Su6Z1WFH9RhNrZSjsaZ_RzHaRovfj8P1IuNY1"></script>
+
+<script src="/bundles/register-header__v__qIJz9fNypRKpAlc8HWqF6Wy7vZlH6SLU8DXuJcq1Rsw1"></script>
+
+<footer class="footer">
+    <div class="container cross-link seo clearfix" role="navigation">
+        <section>
+<h3>Médicos em Brasil</h3>                <ul>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/curitiba-116724-1">Cirurgiões vasculares Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/brasilia-116707-1">Psicólogos Brasília</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/brasilia-116707-1">Ginecologistas Brasília</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/goiania-116733-1">Cirurgiões plásticos Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/registro-117402-1">Ginecologistas Registro</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/alem+paraiba-131612-1">Dentistas Além Paraíba</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/maraba-117384-1">Pediatras Marabá</a></li>
+                        <li><a href="/medicos/especialidade/otorrinos-1308/araras-116867-1">Otorrinos Araras</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/aracaju-116718-1">Pediatras Aracaju</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/ararangua-117264-1">Dentistas Araranguá</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305">Oftalmologistas</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300">Ginecologistas</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307">Pediatras</a></li>
+                    <li><span><a href="https://www.doctoralia.com.br/lista-de-medicos">Lista de médicos</a></span></li>
+                </ul>
+        </section>
+        <section>
+                <ul class="mt28">
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/rio+de+janeiro-116704-1">Cirurgiões plásticos Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/sao+paulo-116705-1">Psicólogos São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305/sao+paulo-116705-1">Oftalmologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/rio+de+janeiro-116704-1">Ginecologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/sao+paulo-116705-1">Ortopedistas - Traumatologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/rio+de+janeiro-116704-1">Cirurgiões vasculares Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/homeopatas-1335/rio+de+janeiro-116704-1">Homeopatas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312/rio+de+janeiro-116704-1">Psiquiatras Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/sao+paulo-116705-1">Endocrinologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/rio+de+janeiro-116704-1">Pediatras Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/medicos+de+trafego-1345/belo+horizonte-116720-1">Médicos de tráfego Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/especialistas+em+medicina+nuclear-1337/goiania-116733-1">Especialistas em Medicina Nuclear Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/anestesiologistas-1325/curitiba-116724-1">Anestesiologistas Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/especialistas+em+dor-2840/belo+horizonte-116720-1">Especialistas em Dor Belo Horizonte</a></li>
+                </ul>
+        </section>
+        <section>
+<h3>Especialistas</h3>                <ul>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/excisao+de+glandula+salivar-14177/especialistas/brasilia-116707-1">Excisao De Glandula Salivar Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/lente+de+contato+dental-29222/especialistas/brasilia-116707-1">Lente de contato dental Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/microcirurgia+otologica-15223/especialistas/sao+paulo-116705-1">Microcirurgia Otologica São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/nutricao+na+gestacao-29343/especialistas/curitiba-116724-1">Nutrição na Gestação Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/facetas+em+ceramica-24948/especialistas/belo+horizonte-116720-1">Facetas em cerâmica Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/prostatectomia+por+cancer-14029/especialistas/sao+paulo-116705-1">Prostatectomia Por Cancer São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/glioblastoma-15294/especialistas/belo+horizonte-116720-1">Glioblastoma Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/ureterolitiase-17749/especialistas/rio+de+janeiro-116704-1">Ureterolitíase Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/frigidez-53029/especialistas/rio+de+janeiro-116704-1">Frigidez Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/encoprese-14875/especialistas/belo+horizonte-116720-1">Encoprese Belo Horizonte</a></li>
+                </ul>
+        </section>
+        <section>
+            <h3>Pesquisar por</h3>            <ul class="other-links">
+                        <li><a href="https://www.doctoralia.com.br/sitemap/medicos">Profissionais por cidade</a></li>
+                        <li><a href="https://www.doctoralia.com.br/sitemap/centros-medicos">Centros médicos por cidade</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provasmedicas">Exames médicos e tratamentos</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidades">Doenças</a></li>
+                        <li><a href="https://www.doctoralia.com.br/medicamentos">Medicamentos</a></li>
+                        <li><a href="https://www.doctoralia.com.br/sitemap/perguntas">Perguntas a Especialistas</a></li>
+                        <li><a href="https://www.doctoralia.com.br/medicos-credenciados">Convênios médicos</a></li>
+            </ul>
+<span>Rede Doctoralia</span>            <ul>
+                        <li class="network"><a href="http://www.doctoraliar.com">Argentina</a></li>
+                        <li class="network"><a href="http://www.doctoralia-fr.com">França</a></li>
+                        <li class="network"><a href="http://www.doctoralia.it">Itália</a></li>
+            </ul>
+        </section>
+    </div>
+    <nav class="links-about" role="navigation">
+    <div class="container clearfix">
+        <ul>
+            <li><a href="https://www.doctoralia.com.br/quem-somos-contato" rel="nofollow">Quem somos</a></li>
+            <li><a href="https://www.doctoralia.com.br/quem-somos-contato#contact" rel="nofollow">Contatar</a></li>
+                <li><a href="http://press.doctoralia.com.br" rel="nofollow">Press</a></li>
+            <li><a href="http://www.doctoralia.com.br/legal.aspx" rel="nofollow">Termos de Uso e Privacidade</a></li>
+        </ul>
+        <ul class="right">
+                <li><a href="http://insights.doctoralia.com.br">Insights Blog</a></li>
+                    <li><a href="http://academy.doctoralia.com.br">Doctoralia Academy</a></li>
+                    <li><a href="http://blog.doctoralia.com.br/">Blog para especialistas</a></li>
+    </ul>
+    </div>
+</nav>
+    
+    <div class="copy">
+        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 27/03/2018</span>
+    </div>
+</footer>
+    </body>
+</html>

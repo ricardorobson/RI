@@ -1,0 +1,1866 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:og="http://opengraphprotocol.org/schema/"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head id="ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ace61b4582","applicationID":"3335316","transactionName":"ZQBTYEVTXhBUUhJaC1xKcGdnHVkOWkcDWhdBAENCXlFfEBpTE0AHU0hBRlJBRAJRXhRAAUATWFdYHFEQRUk=","queueTime":0,"applicationTime":39,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><title>
+	PAISAGISMO - ZAP IMÓVEIS SERVIÇOS
+</title><meta name="description" content="Encontre aqui serviços de PAISAGISMO. O ZAP Serviços é a sua melhor opção para encontrar os profissionais mais indicados. Confira!"><meta name="keywords" content="ZAP, oesp, oglobo, carros, veiculos, motos, empregos, vaga, curriculum,mix">	
+
+	<!------ Google Analytics início ------>
+	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-230770-2');ga('send', 'pageview');</script>
+	<!------ Google Analytics fim ------>
+
+	<meta name="Author" content="ZAP" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><link rel='shortcut icon' href='https://c.zapcorp.com.br/imagem/zap/favicon.ico'  type='image/x-icon' /><link rel="canonical" href="http://www.zap.com.br/imoveis/servicos/paisagismo/" /><link rel="stylesheet" href=https://c.zapcorp.com.br/css2/zap.css?versao=20150601.001 type="text/css" />
+    <link rel="stylesheet" href="/NovoSite/css/zap-imoveis.css?versao=20150601.001" type="text/css" />
+	<script language ="javascript" type="text/javascript" src=https://c.zapcorp.com.br/ScriptLibrary/Modal.js?versao=20150601.001></script>
+<script language ="javascript" type="text/javascript" src=https://c.zapcorp.com.br/ScriptLibrary/zap.js?versao=20150601.001></script>
+<script language="javascript" type="text/javascript" src=https://c.zapcorp.com.br/ScriptLibrary/jquery-1.3.2.min.js?versao=20150601.001></script>
+<script language="javascript" type="text/javascript" src=https://c.zapcorp.com.br/Scripts/CommonZap.js?versao=20150601.001></script><script language="javascript" type="text/javascript" src="/ScriptLibrary/mobiledetect/mobile-detect.min.js?versao=20150601.001"></script><script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/jquery.watermark.min.js?versao=20150601.001"></script><script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/novosite/contabilizarGA.js?versao=20150601.001"></script>
+    <script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/localidade/jquery-1.7.2.js?versao=20150601.001"></script> 
+    <script src="https://c.zapcorp.com.br/ScriptLibrary/jsmin/buscaprestadorservicoMin.js?versao=20150601.001" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://c.zapcorp.com.br/css2/cssmin/perfilPrestadorServico.css?versao=20150601.001" type="text/css" />
+    <script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/servicos/logon.js?versao=20150601.001"></script> 
+    <script language="javascript" type="text/javascript">
+
+        $(function () {
+            criaAccordionVerTodos('ctl00_ContentPlaceHolder1_NavegadoresBusca_hdnControleVerTodosIds');
+        });
+
+        //Tips Subnavegação
+        $(document).ready(function () {
+            $('.sessions-tips .my-list-tip').hide();
+            $('.sessions-tips .profile-tip').hide();
+            $('.my-list-link').mouseenter(function () {
+                $('.my-list-tip').fadeIn("fast");
+                $('.profile-tip').hide();
+            });
+            $('.my-list-link').mouseleave(function () {
+                $('.my-list-tip').fadeOut("fast");
+                $('.profile-tip').hide();
+            });
+            $('.profile-link').mouseenter(function () {
+                $('.profile-tip').fadeIn("fast");
+                $('.my-list-tip').hide();
+            });
+            $('.profile-link').mouseleave(function () {
+                $('.profile-tip').fadeOut("fast");
+                $('.my-list-tip').hide();
+            });
+
+        });
+
+    </script>
+
+    <style type="text/css">
+        .ui-state-hover{color:inherit !important;background:transparent !important; cursor:pointer;}
+    </style>
+
+  
+	<!-- Scripts para modal, efeitos sobre imagens, etc, todos movidos para o arquivo consolidado -->
+	<script src='https://c.zapcorp.com.br/ScriptLibrary/String.js?versao=20150601.001' type='text/javascript'></script></head>
+
+<script type="text/javascript" language="javascript">
+    var VerLogin;
+    VerLogin = '';
+    function GravaNavegacaoHome(funcionalidade, identificador, qtdselecao) {
+        //********* ATENÇÃO *********
+        // - toda alteração feita nesta função deverá ser replicada no arquivo valida_busca_rapida_imovel.js
+        /*var head = document.getElementsByTagName('head').item(0);
+	    var eScript = document.createElement('script');
+	    eScript.setAttribute('src', '/imoveis/contabiliza_navegacao_home.aspx?func=' + funcionalidade + '&ident=' + identificador + '&qtdsel=' + qtdselecao );
+	    head.appendChild(eScript);*/
+
+	    // Mudança na contabilização para assíncrona devido a problemas com firefox e chrome.
+	    $.ajax({
+	        type: "POST",
+	        url: '/imoveis/contabiliza_navegacao_home.aspx?func=' + funcionalidade + '&ident=' + identificador + '&qtdsel=' + qtdselecao,
+	        dataType: "script",
+	        success: function () { return true; },
+	        error: function (request, status, error) { }
+	    });
+    }
+    function LeCookieContabilizaHome() {
+        //********* ATENÇÃO *********
+        // - toda alteração feita nesta função deverá ser replicada no arquivo valida_busca_rapida_imovel.js
+        var sCookie = "";
+        var iDentifica = "";
+        sCookie = readCookie('ZapID');
+        if (sCookie != null) {
+            sCookie = sCookie.split('&')
+            for (i = 0; i < sCookie.length; i++) {
+                sConteudo = sCookie[i];
+                if (sConteudo.split('=')[0] == 'Identificador')
+                    iDentifica = sConteudo.split('=')[1];
+            }
+        }
+        return iDentifica;
+    }
+
+    function rastreamentoNavegacaoModulo(modulo, tipoOferta) {
+        $.ajax({
+            type: "GET",
+            url: '/imoveis/ajax.ashx',
+            async: false,
+            cache: false,
+            data: {
+                metodo: 'gravarastreamentonavegacaomodulo',
+                modulo: modulo,
+                tipoOferta: tipoOferta != undefined ? tipoOferta : 'NaoInformado'
+            },
+            dataType: "text",
+            success: function (data) { }
+        });
+    }
+
+    function rastreamentoNavegacaoAcao(acao, codigo, tipoOferta, codCliente) {
+        if (document.location.toString().toLowerCase().indexOf("msn") != -1) {
+            acao = acao + 'MSN';
+        }
+
+        $.ajax({
+            type: "GET",
+            url: '/imoveis/ajax.ashx',
+            async: false,
+            cache: false,
+            data: {
+                metodo: 'gravarastreamentonavegacaoacao',
+                acao: acao,
+                id_oferta: codigo,
+                tipoOferta: tipoOferta,
+                codCliente: codCliente
+            },
+            dataType: "script",
+            success: function (data) { }
+        });
+    }
+
+</script>
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+
+    OAS_url = '/img/ads';
+
+    var retranca = 'imoveis'
+    var bYahoo = "False";
+    var bMSN = "False";
+    document.write('');
+    function OAS_AD(pos) {
+        var link = linkCampanha(pos)
+        if (link != '') 
+            OAS_NORMAL(pos, link);
+    }
+    function OAS_NORMAL(pos, link) {
+        if (bYahoo == 'False' && bMSN == 'False') {
+            document.write('<A HREF="' + link + '" TARGET=_top>');
+            document.write('<IMG SRC="' + OAS_url + '/' + retranca + '/' + pos + '.jpg" BORDER=0></A>');
+        }
+        else if (pos != 'Top') {
+            document.write('<A HREF="' + link + '" TARGET=_top>');
+            document.write('<IMG SRC="' + OAS_url + '/' + retranca + '/' + pos + '.jpg" BORDER=0></A>');    
+        }
+    }
+    function linkCampanha(pos) {
+        if (retranca == 'imoveis') return linkImoveis(pos);
+        else if (retranca == 'autos') return linkAutos(pos);
+        else if (retranca == 'empregos') return linkEmpregos(pos);
+        else if (retranca == 'mix') return linkMix(pos);
+        else return '';
+    }
+
+    function linkImoveis(pos) {        
+        switch (pos){
+            case 'x01': return 'http://www.zapimoveis.com.br/busca-mapa/';
+            case 'Position2': case 'Top': return 'https://www.zap.com.br/anuncie/default.aspx?ret=1';
+            case 'Right1': return 'http://twitter.com/zapimoveis';
+            case 'Right': return '/anuncie/selecao-retranca.aspx';
+            case 'x12': return '/imoveis/simule-seu-financiamento.aspx';
+            default: return '';
+        }
+    }
+    function linkAutos(pos) {
+        switch (pos) {
+            case 'x15': case 'Top': return 'https://www.zap.com.br/anuncie/default.aspx?ret=2';
+            case 'Position1': return 'http://twitter.com/zapautos';
+            case 'Right': return '/anuncie/selecao-retranca.aspx';
+            case 'x01': case 'Position4': return '/anunciezap/anuncie-autos-home-moto.aspx';
+            default: return '';
+        }
+    }
+    function linkEmpregos(pos) {
+        switch (pos) {
+            case 'x15': case 'Top': return 'https://www.zap.com.br/anuncie/default.aspx?ret=3';
+            case 'Position1': return 'http://twitter.com/zapempregos';
+            case 'Right': return '/anuncie/selecao-retranca.aspx';
+            default: return '';
+        }
+    }
+    function linkMix(pos) {
+        switch (pos) {
+            case 'x15': case 'Top': case 'Position1': return 'https://www.zap.com.br/anunciezap/anuncie-mix-home.aspx';
+            case 'Right': return '/anuncie/selecao-retranca.aspx';
+            default: return '';
+        }
+    }
+</script>
+
+
+<script language="JavaScript" type="text/javascript">
+    function pophotsite(nUrlUnid, pCodParc) {
+        var nWind
+        nUrlUnid = 'Redir_HotSite.aspx?cp=' + nUrlUnid + '&parc=' + pCodParc;
+        nUrlUnid = '/imoveis/lancamentos/' + nUrlUnid;
+		nWind = window.open(nUrlUnid, '_blank', 'width=800,height=600,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes')
+    }
+    function pophotsitecarros(nUrl) {
+        var nWind;
+        nWind = window.open(nUrl, '_blank', 'width=800,height=600,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');
+    }
+    function popdetalhe(pCodInt, pCodImobiliaria, pCodItem) {
+        var nWind, nUrlUnid;
+        nUrlUnid = '/imoveis/detalhes.aspx?Imovel=' + pCodInt + '&Imobiliaria=' + pCodImobiliaria + '&coditem=' + pCodItem;
+        nWind = window.open(nUrlUnid, '_self');
+    }
+    function popdetalhecarro(pCodInt, pCodItem) {
+        var nWind, nUrlUnid;
+        nUrlUnid = '/carros/detalhes.aspx?ID=' + pCodInt + '&coditem=' + pCodItem;
+        nWind = window.open(nUrlUnid, '_self');
+    }
+    function popdetalhemoto(pCodInt, pCodItem) {
+        var nWind, nUrlUnid;
+        nUrlUnid = '/motos/detalhes.aspx?ID=' + pCodInt + '&coditem=' + pCodItem;
+        nWind = window.open(nUrlUnid, '_self');
+    }
+    function popdetalhemix(pCodInt, pCodItem) {
+        var nWind, nUrlUnid;
+        nUrlUnid = '/mix/detalhes.aspx?ID=' + pCodInt + '&coditem=' + pCodItem;
+        nWind = window.open(nUrlUnid, '_self');
+    }
+    function popdetalhevaga(pCodInt, pCodItem) {
+        var nWind, nUrlUnid;
+        nUrlUnid = '/empregos/vagas/detalhes.aspx?ID=' + pCodInt + '&coditem=' + pCodItem;
+        nWind = window.open(nUrlUnid, '_self');
+    }
+</script>
+
+<!------ OAS SETUP begin ------>
+<script language="JavaScript" type="text/javascript">
+
+    // Início: Login //
+    /* Código para manipulação dos divs modais presentes no User control de Login */
+    /* OBS.: Não utilizar o nome VerLogin para variáveis em javascript */
+    var VerLogin;
+    VerLogin = '';
+    //  Fim: Login //
+
+
+    //-->
+    
+</script>
+<!------ OAS SETUP end ------>
+<body id="ctl00_bodBody">
+    <input name="ctl00$emailToCriteo" type="hidden" id="ctl00_emailToCriteo" />
+    <input name="ctl00$transacaoId" type="hidden" id="ctl00_transacaoId" />
+    <input name="ctl00$newCustomer" type="hidden" id="ctl00_newCustomer" />
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MNRTXP" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <script>
+
+        setCriteoTags();
+        
+        var chaveGTM = 'GTM-MNRTXP';
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })
+        (window, document, 'script', 'dataLayer', ''+ chaveGTM +'');
+
+        function setCriteoTags(){
+            var emailMD5Encrypted = $('[id$=emailToCriteo]').val();
+            var sourceDevice = getSourceDevice();
+
+            if(typeof dataLayer === "undefined"){
+                dataLayer = [];
+            }
+
+            dataLayer.push({ 'event': 'setAccount', 'account': 23223 });
+
+            var hashedEmail = (emailMD5Encrypted != null && emailMD5Encrypted.length > 0) ? emailMD5Encrypted : '';
+            dataLayer.push({'event': 'setHashedEmail', 'email': hashedEmail});
+
+            if (sourceDevice != null && sourceDevice.length > 0) {
+                dataLayer.push({'event': 'setSiteType', 'type': sourceDevice});
+            }
+
+            if(window.location.href.indexOf('conf-cartao') > -1 || window.location.href.indexOf('conf-boleto') > -1) {
+                var transacaoId = $('[id$=transacaoId]').val();
+                var newCustomer = $('[id$=newCustomer]').val();
+                dataLayer.push({ 'event': 'trackTransaction', 'id': parseInt(transacaoId), 'new_customer': parseInt(newCustomer) });
+            }
+        }
+
+        function getSourceDevice(){
+            var md = new MobileDetect(window.navigator.userAgent);
+
+            if(md.mobile()){
+                if(md.phone()){
+                    return 'm';
+                }
+                else if(md.tablet()){
+                    return 't';
+                }
+            }
+
+            return 'd';
+        }
+    </script>
+    <!-- End Google Tag Manager -->
+
+<!-- MasterNovoSite -->
+	<form name="aspnetForm" method="post" action="./" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDgzMDMzMjA3D2QWAmYPZBYGZg9kFhICAg9kFgJmDxYCHgRUZXh0BSNQQUlTQUdJU01PIC0gWkFQIElNw5NWRUlTIFNFUlZJw4dPU2QCBA8WAh8ABawBPG1ldGEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IkVuY29udHJlIGFxdWkgc2VydmnDp29zIGRlwqBQQUlTQUdJU01PLiBPIFpBUCBTZXJ2acOnb3Mgw6kgYSBzdWEgbWVsaG9yIG9ww6fDo28gcGFyYSBlbmNvbnRyYXIgb3MgcHJvZmlzc2lvbmFpcyBtYWlzIGluZGljYWRvcy4gQ29uZmlyYSEiPmQCBQ8WAh8ABWs8bWV0YSBuYW1lPSJrZXl3b3JkcyIgY29udGVudD0iWkFQLCBvZXNwLCBvZ2xvYm8sIGNhcnJvcywgdmVpY3Vsb3MsIG1vdG9zLCBlbXByZWdvcywgdmFnYSwgY3VycmljdWx1bSxtaXgiPmQCBg8WAh8ABfkCPHNjcmlwdD4oZnVuY3Rpb24oaSxzLG8sZyxyLGEsbSl7aVsnR29vZ2xlQW5hbHl0aWNzT2JqZWN0J109cjtpW3JdPWlbcl18fGZ1bmN0aW9uKCl7KGlbcl0ucT1pW3JdLnF8fFtdKS5wdXNoKGFyZ3VtZW50cyl9LGlbcl0ubD0xKm5ldyBEYXRlKCk7YT1zLmNyZWF0ZUVsZW1lbnQobyksbT1zLmdldEVsZW1lbnRzQnlUYWdOYW1lKG8pWzBdO2EuYXN5bmM9MTthLnNyYz1nO20ucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoYSxtKX0pKHdpbmRvdyxkb2N1bWVudCwnc2NyaXB0JywnLy93d3cuZ29vZ2xlLWFuYWx5dGljcy5jb20vYW5hbHl0aWNzLmpzJywnZ2EnKTtnYSgnY3JlYXRlJywgJ1VBLTIzMDc3MC0yJyk7Z2EoJ3NlbmQnLCAncGFnZXZpZXcnKTs8L3NjcmlwdD5kAgsPFgIfAAVoPGxpbmsgcmVsPSdzaG9ydGN1dCBpY29uJyBocmVmPSdodHRwczovL2MuemFwY29ycC5jb20uYnIvaW1hZ2VtL3phcC9mYXZpY29uLmljbycgIHR5cGU9J2ltYWdlL3gtaWNvbicgLz5kAgwPFgIfAAVSPGxpbmsgcmVsPSJjYW5vbmljYWwiIGhyZWY9Imh0dHA6Ly93d3cuemFwLmNvbS5ici9pbW92ZWlzL3NlcnZpY29zL3BhaXNhZ2lzbW8vIiAvPmQCDQ8WAh8ABWg8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9aHR0cHM6Ly9jLnphcGNvcnAuY29tLmJyL2NzczIvemFwLmNzcz92ZXJzYW89MjAxNTA2MDEuMDAxIHR5cGU9InRleHQvY3NzIiAvPmQCDg8WAh8ABeEHPHNjcmlwdCBsYW5ndWFnZSA9ImphdmFzY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPWh0dHBzOi8vYy56YXBjb3JwLmNvbS5ici9TY3JpcHRMaWJyYXJ5L01vZGFsLmpzP3ZlcnNhbz0yMDE1MDYwMS4wMDE+PC9zY3JpcHQ+DQo8c2NyaXB0IGxhbmd1YWdlID0iamF2YXNjcmlwdCIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9aHR0cHM6Ly9jLnphcGNvcnAuY29tLmJyL1NjcmlwdExpYnJhcnkvemFwLmpzP3ZlcnNhbz0yMDE1MDYwMS4wMDE+PC9zY3JpcHQ+DQo8c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz1odHRwczovL2MuemFwY29ycC5jb20uYnIvU2NyaXB0TGlicmFyeS9qcXVlcnktMS4zLjIubWluLmpzP3ZlcnNhbz0yMDE1MDYwMS4wMDE+PC9zY3JpcHQ+DQo8c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz1odHRwczovL2MuemFwY29ycC5jb20uYnIvU2NyaXB0cy9Db21tb25aYXAuanM/dmVyc2FvPTIwMTUwNjAxLjAwMT48L3NjcmlwdD48c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iL1NjcmlwdExpYnJhcnkvbW9iaWxlZGV0ZWN0L21vYmlsZS1kZXRlY3QubWluLmpzP3ZlcnNhbz0yMDE1MDYwMS4wMDEiPjwvc2NyaXB0PjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2MuemFwY29ycC5jb20uYnIvU2NyaXB0TGlicmFyeS9qcXVlcnkud2F0ZXJtYXJrLm1pbi5qcz92ZXJzYW89MjAxNTA2MDEuMDAxIj48L3NjcmlwdD48c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jLnphcGNvcnAuY29tLmJyL1NjcmlwdExpYnJhcnkvbm92b3NpdGUvY29udGFiaWxpemFyR0EuanM/dmVyc2FvPTIwMTUwNjAxLjAwMSI+PC9zY3JpcHQ+ZAIQDxYCHwAFczxzY3JpcHQgc3JjPSdodHRwczovL2MuemFwY29ycC5jb20uYnIvU2NyaXB0TGlicmFyeS9TdHJpbmcuanM/dmVyc2FvPTIwMTUwNjAxLjAwMScgdHlwZT0ndGV4dC9qYXZhc2NyaXB0Jz48L3NjcmlwdD5kAgEPFgIeB1Zpc2libGVoZAIDD2QWDAIDD2QWCAIED2QWAmYPZBYGZg8PFgIfAAUFTG9naW5kZAIBDxYCHwFoZAICDw8WAh8ABQtDYWRhc3RyZS1zZWRkAgcPZBYKZg9kFgJmD2QWCAIBDw9kFgQeCW9ua2V5ZG93bgXFA0xpbXBhQ3JpdGVyaW9CYWNrU3BhY2UoZXZlbnQsICdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfaGlkQ3JpdGVyaW9zU2VydmljbycsICdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfbGJsUXRkUmVnaXN0cm9zJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV9sYmxFbmNvbnRyYWRvcycsICdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfaW1nQnVzY2FyJyk7IFRyYXRhQnVzY2EoZXZlbnQsJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV90eHRTZXJ2aWNvJywnY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9DYWl4YUJ1c2NhX2RpdkV4ZW1wbG9TZXJ2aWNvJywnY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9DYWl4YUJ1c2NhX2hpZENyaXRlcmlvc1NlcnZpY28nLCd0b29sdGlwU2VydmljbycpOx4Gb25ibHVyBUlvY3VsdGFyRWxlbWVudG8oJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV9kaXZFeGVtcGxvU2VydmljbycpZAIFDw9kFgYfAgXUA0xpbXBhQ3JpdGVyaW9CYWNrU3BhY2UoZXZlbnQsICdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfaGlkQ3JpdGVyaW9zTG9jYWxpZGFkZScsICdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfbGJsUXRkUmVnaXN0cm9zJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV9sYmxFbmNvbnRyYWRvcycsICdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfaW1nQnVzY2FyJyk7IFRyYXRhQnVzY2EoZXZlbnQsJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV90eHRMb2NhbGlkYWRlJywnY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9DYWl4YUJ1c2NhX2RpdkV4ZW1wbG9Mb2NhbGlkYWRlJywnY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9DYWl4YUJ1c2NhX2hpZENyaXRlcmlvc0xvY2FsaWRhZGUnLCd0b29sdGlwTG9jYWxpZGFkZScpOx4Hb25mb2N1cwXeA1JlbW92ZUNhcmFjdGVyZXNJbnZhbGlkb3NQb3N0RG90TkVUKHRoaXMuaWQpO0V4aWJlRXhlbXBsbyhmYWxzZSwnY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9DYWl4YUJ1c2NhX2RpdkV4ZW1wbG9Mb2NhbGlkYWRlJyk7Q2FycmVnYXJJbmZvcm1hY29lc0J1c2NhKCdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfdHh0U2VydmljbycsICdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfdHh0TG9jYWxpZGFkZScsICdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfbGJsUXRkUmVnaXN0cm9zJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV9sYmxFbmNvbnRyYWRvcycsICdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfaW1nQnVzY2FyJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV9oaWRDcml0ZXJpb3NMb2NhbGlkYWRlJykfAwVMb2N1bHRhckVsZW1lbnRvKCdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0NhaXhhQnVzY2FfZGl2RXhlbXBsb0xvY2FsaWRhZGUnKWQCCQ8PZBYCHgdvbmNsaWNrBZcDcmV0dXJuIEV4ZWN1dGFyQnVzY2EoJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV90eHRTZXJ2aWNvJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV90eHRMb2NhbGlkYWRlJywgZmFsc2UsJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV90eHRTZXJ2aWNvJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV90eHRMb2NhbGlkYWRlJywgJ2ZhbHNlJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV90eHRTZXJ2aWNvJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV90eHRMb2NhbGlkYWRlJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfQ2FpeGFCdXNjYV9sYmxRdGRSZWdpc3Ryb3MnKTtkAgsPFgIfAAUdUG9yIGZhdm9yLCByZWZhw6dhIHN1YSBidXNjYS5kAgEPEGRkFgFmZAICDw8WAh8ABQpwYWlzYWdpc21vZGQCAw9kFgJmD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAIDFgZmD2QWAgIDDxYCHwYCD2QCAQ9kFgICAw8WAh8GAg9kAgIPZBYCAgMPFgIfBgJaFgICWw9kFgICAQ9kFgICAQ8WAh8BaGQCBA8WAh8GAgpkAgkPFgIfAWgWCgIBDxBkZBYBZmQCAg8WAh4Kb25rZXlwcmVzcwUwamF2YXNjcmlwdDpyZXR1cm4gTWF4TGVuZ3RoVGV4dEFyZWEodGhpcywgNDAwMCk7ZAIDDw8WAh4IUmVhZE9ubHloZGQCBA8PFgIfCGhkZAIFDw8WAh4ISW1hZ2VVcmwFGC9pbWcvYWp1ZGEvYnRfZW52aWFyLmdpZhYCHwUFImphdmFzY3JpcHQ6cmV0dXJuIFZhbGlkYVphcEVycm8oKTtkAgsPFgIfAGVkAgQPFgIfAAUzPFNDUklQVCBMQU5HVUFHRT1KYXZhU2NyaXB0Pk9BU19BRCgneDEwJyk7PC9TQ1JJUFQ+ZAIGDw8WAh8BZ2RkAgcPDxYCHwFnZBYCAgEPFgIfAAUOYW51bmNpZTogJ25hbydkAgoPFgIfAAUTPCEtLSUlREFUQUhPUkElJS0tPmQCEg8PFgIfAWdkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUuY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRDYWl4YUJ1c2NhJGltZ0J1c2Nhcva5YrAuEhsShkaD1cMABsA=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="549303F0" />
+    
+	<input type="hidden" id="NomeServidor" value="WWW4" />
+
+	<!-- Reposiciona SlideShow -->
+	<a name="SlideShow"></a>
+
+	
+    
+    
+
+        
+<link rel="stylesheet" type="text/css" href="/css2/imoveis.css" />
+<link rel="stylesheet" href="/css2/chat-direct-talk.css?versao=20150601.001" type="text/css" />
+
+<div id="ctl00_header_divHeader">
+
+    <div class="" id="modal_container" style="display: none; z-index: 9999; left: 279px; width: 700px; position: absolute; top: 80px; height: 390px" _absolutized>
+        <input type="hidden" id="_blankPage" value='http://www.zap.com.br/ascx/blank.htm' />
+        <iframe id="modal_iframe" src='http://www.zap.com.br/ascx/blank.htm' frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+
+    </div>
+
+    <nav class="action-navbar">
+        <div class="container">
+            <section class="pull-right">
+                <a id="ctl00_header_lnkLogin" href="javascript:__doPostBack(&#39;ctl00$header$lnkLogin&#39;,&#39;&#39;)">Login</a>
+                <span class="divider">|</span>
+                
+
+                <a onclick="loginLogOut(); return false;" id="ctl00_header_lnkCadastrese" href="javascript:__doPostBack(&#39;ctl00$header$lnkCadastrese&#39;,&#39;&#39;)">Cadastre-se</a>
+
+                <a class="advertise sitemobile" href="http://www.zapimoveis.com.br/mobile?campanha_interna=hotsiteappmobile&origem=Header">Celulares e Tablets</a>
+                <a href="/anuncieb/anunciezap/anuncie-imoveis-home.aspx" class="advertise hand" id="lnkAnuncie" onclick="javascript:contabilizarEventoGA('AnuncieC2C_SiteNovoImoveis','Chamada','Header_Geral');">Anunciar meu Imóvel</a>
+                <iframe id="iframeNovoSite" height="1" width="1" hidden="hidden"></iframe>
+            </section>
+        </div>
+    </nav>
+
+    <div class="content border-b">
+        <div class="container">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="http://www.zapimoveis.com.br">
+                        <img src="/NovoSite/img/logo.png"></a>
+                    <ul class="zapnav nav pull-right">
+                        <li>
+                            <a class="zapnav-link" href="http://www.zapimoveis.com.br">Home</a>
+                            <!-- SEARCH HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="http://www.zapimoveis.com.br">
+                                        <img class="pull-left" src="/NovoSite/img/img_busca.jpg" width="60" height="60" />
+                                        <p>ZAP, o mais completo Portal de Imóveis. </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li style="display: none" id="PagBusca">
+                            <a class="zapnav-link" href="http://www.zapimoveis.com.br/busca/">Busca</a>
+                            <!-- SEARCH HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="http://www.zapimoveis.com.br/busca/">
+                                        <img class="pull-left" src="/NovoSite/img/img_busca.jpg" width="60" height="60" />
+                                        <p>Zap Imóveis, o Mais Completo Portal de Imóveis. </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="PagMinhaLista">
+                            <a class="zapnav-link" href="http://www.zapimoveis.com.br/Favorito/Listar">Minha Lista</a>
+                            <!-- FAVORITES HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="http://www.zapimoveis.com.br/Favorito/Listar">
+                                        <img class="pull-left" src="/NovoSite/img/img_minhalista.jpg" width="60" height="60" />
+                                        <p>
+                                            Crie uma lista<br>
+                                            com seus imóveis preferidos
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li id="PagBuscasAlertas">
+                            <a class="zapnav-link" href="http://www.zapimoveis.com.br/alerta">Buscas e Alertas</a>
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="http://www.zapimoveis.com.br/alerta">
+                                        <img class="pull-left" src="/NovoSite/img/img_buscasalertas.jpg" width="60" height="60" />
+                                        <p>Salve buscas e crie alertas para receber novas ofertas</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li id="PagServicos" class="active" >
+                            <a class="zapnav-link" href="/imoveis/servicos/home">Serviços</a>
+
+                            <!-- IMPROVEMENT HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="/imoveis/servicos/home">
+                                        <img class="pull-left" src="/NovoSite/img/img_servicos.jpg" width="60" height="60" />
+                                        <p>Profissionais para a manutenção do seu imóvel</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li id="PagMapa">
+                            <a class="zapnav-link" href="http://www.zapimoveis.com.br/mapa-de-precos">Mapa de preços</a>
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="/mapa-de-precos">
+                                        <img class="pull-left" src="/NovoSite/img/img_mapaprecos.jpg" width="60" height="60" />
+                                        <p>
+                                            Encontre no mapa<br />
+                                            o valor estimado<br />
+                                            dos imóveis de seu interesse
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li id="PagRevista">
+                            <a href="http://revista.zap.com.br//imoveis/" class="zapnav-link">DICAS</a>
+                            <!-- MAGAZINE HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="http://revista.zap.com.br//imoveis/">
+                                        <img class="pull-left hand" src="/NovoSite/img/img_revista.jpg" width="60" height="60" />
+                                        <p>Saiba tudo de decoração e mercado imobiliário</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li id="PagTemporadas">
+                            <a href="/aluguel-temporada" class="zapnav-link">TEMPORADA</a>
+                            <!-- MAGAZINE HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="/aluguel-temporada">
+                                        <img class="pull-left hand" src="/NovoSite/img/img_temporada.jpg" width="60" height="60" />
+                                        <p>Busque o local perfeito para passar as férias</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    function abreModal(i) {
+        if (i.toLowerCase() == 'login') {
+            n_abreModal('login', '/ascx/if_modallogin.aspx');
+    }
+    else if (i.toLowerCase() == 'cadastrese') {
+        Cadastro();
+    }
+    else if (i.toLowerCase() == 'emailold') {
+        Esqueci();
+    }
+    else if (i.toLowerCase().substr(0, 17) == 'zap_confirm_email') {
+        try {
+            var _email = (i.toLowerCase().substr(20, i.length - 20));
+            var _url = '/ascx/if_modalconfcadastro.aspx?e=' + _email;
+            n_abreModal('zap_confirm_email', _url);
+        }
+        catch (e) {
+        }
+    }
+    else {
+        n_abreModal(i);
+    }
+}
+
+function Cadastro() {
+    n_abreModal('cadastrese', '/ascx/if_modalcadastrese.aspx');
+}
+
+function Esqueci() {
+    n_abreModal('emailold', '/ascx/if_modalesqueci.aspx');
+}
+
+function AbreModalEmail() {
+    fechaModal('login');
+    abreModal('emailold');
+}
+
+function AbreModalCadastro() {
+    fechaModal('login');
+    abreModal('cadastreSe');
+}
+
+function abreModalLog(i, url) {
+    n_abreModal(i, '/ascx/if_modalnovocadastro.aspx');
+}
+
+function URLencode(sStr) {
+    return escape(sStr).replace(/\+/g, '%2B').replace(/\"/g, '%22').replace(/\'/g, '%27').replace(/\//g, '%2F');
+}
+
+
+
+    function atualizaContadorFavoritos() {
+        var total = parseInt($('#totalfavoritos').text());
+        total++;
+        $('#totalfavoritos').text(total.toString());
+    }
+
+    function loginLogOut() {
+        if (document.cookie.indexOf("CodUsuario") >= 0) {
+            document.cookie = 'CodUsuario=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'TimeStamp=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'TipoUsuario=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'PrimeiroNome=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'IdUsuario=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'CEPBusca=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'NomeCompleto=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'CoordX=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'UltimoAcesso=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';            
+
+            location.href += '#logout';
+
+            document.forms[0].submit();
+
+            logoutSiteNovo();
+
+        }
+        else {
+            window.location.href = 'http://www.zapimoveis.com.br/#ModalCadastrar&UrlRedirect=Servicos';
+        }
+    }
+
+    function logoutSiteNovo() {
+        if (location.href.indexOf('#logout') > -1) {
+
+            window.location.href = 'http://www.zapimoveis.com.br/#logoutmeuzap';
+
+        }
+    }
+
+    window.onload = function () { logoutSiteNovo(); };
+
+    function loadjsfile(filename, id) {
+        var fileref = document.createElement('script')
+        fileref.setAttribute("type", "text/javascript")
+        fileref.setAttribute("src", filename)
+        fileref.setAttribute("id", id);
+
+        if (typeof fileref != "undefined") {
+            var scripts = document.getElementsByTagName('body')[0];
+            scripts.appendChild(fileref);
+        }
+    }
+
+
+
+    function ChatBot() {
+        var el = document.getElementById('dtbot-controll');
+
+        if (el) {
+            el.onclick = function () {
+                var id = 'dtbot-script';
+                if (!document.getElementById(id)) {
+                    loadjsfile('https://dtbot.directtalk.com.br/1.0/staticbot/dist/js/dtbot.js?token=6157856c-24dd-4884-a7fb-04317de0bb68&widget=true&top=97&left=80', id);
+                    VerificarDTBOT();
+                }
+                else
+                    ExecutarDTBOT();
+            };
+        }
+    }
+
+    function VerificarDTBOT() {
+        if (!window.DTBOT)
+            setTimeout(VerificarDTBOT, 50);
+        else
+            window.DTBOT.loadComplete = ExecutarDTBOT;
+    }
+
+    function ExecutarDTBOT() {
+        if (window.DTBOT.iframe.style.visibility == "hidden")
+            window.DTBOT.fadeIn('origem=site');
+    }
+</script>
+
+	<div class="branco" id="zapGeral">
+
+        
+        
+		<div class="zap_grade">			
+
+				<div class="geral-meio">
+					<!-- Abre SubMenu -->
+					
+					<!-- Fecha SubMenu -->
+					
+					<!-- Abre Corpo da Página-->
+					    
+    <div id="divConteudo" class="conteudo">
+    <div class="sub-nav-serv">
+        <div class="serv-sessions serv-sessions-first"><a href="http://www.zapimoveis.com.br">Imóveis</a></div>
+        <div class="session-arrow"></div>
+        <div class="serv-sessions"><a href="/imoveis/servicos">Serviços</a></div>
+        <div class="session-arrow"></div>
+        <div class="serv-sessions serv-sessions-active"><span>Busca</span></div>
+    </div>
+    <div class="right-actions">
+        <div class="serv-panel my-list-link"><span class="my-list-ico"></span><a href="javascript:void(0)" id="lnkListaProfissional">Minha Lista de Profissionais</a> </div>
+        <div class="serv-panel profile-link"><span class="profile-ico"></span><a href="javascript:void(0)" id="lnkPerfilPrestador">Perfil Prestador</a></div>
+    </div>
+    <div class="sessions-tips">
+        <p class="my-list-tip" style="display: none;"><span class="TickArrowToolTip2"></span>Criar e acessar sua lista de profissionais.</p>
+            <p class="profile-tip" style="display: none;"><span class="TickArrowToolTip3"></span>Cadastrar ou acessar seu perfil de prestador de serviços.</p>
+    </div>
+
+        <div class="BoxCaixaBuscaSerp">
+            <div id="ctl00_ContentPlaceHolder1_CaixaBusca_pnlCaixaBusca">
+	
+    <div class="serv-box-busca">
+        <div class="serv-busca-grupo">
+            <label>O Que?</label>
+            <input name="ctl00$ContentPlaceHolder1$CaixaBusca$txtServico" type="text" id="ctl00_ContentPlaceHolder1_CaixaBusca_txtServico" class="busca watermark" onkeydown="LimpaCriterioBackSpace(event, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_hidCriteriosServico&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_lblQtdRegistros&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_lblEncontrados&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_imgBuscar&#39;); TrataBusca(event,&#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtServico&#39;,&#39;ctl00_ContentPlaceHolder1_CaixaBusca_divExemploServico&#39;,&#39;ctl00_ContentPlaceHolder1_CaixaBusca_hidCriteriosServico&#39;,&#39;tooltipServico&#39;);" onblur="ocultarElemento(&#39;ctl00_ContentPlaceHolder1_CaixaBusca_divExemploServico&#39;)" />
+            <div id="ctl00_ContentPlaceHolder1_CaixaBusca_divExemploServico" class="autoSugest" style="display: none;">
+                <p class="sampleTitle">Exemplos:</p>
+                <ul class="typeKeyword">
+                    <li>Serviço</li>
+                    <li>Especialidade</li>
+                </ul>
+                <ul class="sampleKeyword">
+                    <li>Pintura</li>
+                    <li>Pintura Texturizada</li>
+                </ul>
+            </div>
+            <div class="tooltipBuscaHome" id="tooltipServico">
+                <span class="TickArrowToolTip"></span>Qual serviço você está procurando?
+            </div>
+        </div>
+        <div class="serv-busca-grupo">
+            <label>Onde?</label>
+            <input name="ctl00$ContentPlaceHolder1$CaixaBusca$txtLocalidade" type="text" id="ctl00_ContentPlaceHolder1_CaixaBusca_txtLocalidade" class="busca watermark" onkeydown="LimpaCriterioBackSpace(event, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_hidCriteriosLocalidade&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_lblQtdRegistros&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_lblEncontrados&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_imgBuscar&#39;); TrataBusca(event,&#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtLocalidade&#39;,&#39;ctl00_ContentPlaceHolder1_CaixaBusca_divExemploLocalidade&#39;,&#39;ctl00_ContentPlaceHolder1_CaixaBusca_hidCriteriosLocalidade&#39;,&#39;tooltipLocalidade&#39;);" onfocus="RemoveCaracteresInvalidosPostDotNET(this.id);ExibeExemplo(false,&#39;ctl00_ContentPlaceHolder1_CaixaBusca_divExemploLocalidade&#39;);CarregarInformacoesBusca(&#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtServico&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtLocalidade&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_lblQtdRegistros&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_lblEncontrados&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_imgBuscar&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_hidCriteriosLocalidade&#39;)" onblur="ocultarElemento(&#39;ctl00_ContentPlaceHolder1_CaixaBusca_divExemploLocalidade&#39;)" />
+            <div id="ctl00_ContentPlaceHolder1_CaixaBusca_divExemploLocalidade" class="autoSugest" style="display: none;">
+                <p class="sampleTitle">Exemplos:</p>
+                <ul class="typeKeyword">
+                    <li>Cidade - UF</li>
+                    <li>Bairro</li>
+                </ul>
+                <ul class="sampleKeyword">
+                    <li>Santo André - SP</li>
+                    <li>Moema, São Paulo - SP</li>
+                </ul>
+            </div>
+            <div class="tooltipBuscaHome" id="tooltipLocalidade">
+                <span class="TickArrowToolTip"></span>Onde você precisa desse serviço?
+            </div>
+
+        </div>
+        <input type="image" name="ctl00$ContentPlaceHolder1$CaixaBusca$imgBuscar" id="ctl00_ContentPlaceHolder1_CaixaBusca_imgBuscar" class="bt-buscaaberta" align="absmiddle" src="/img/servicos/btn-buscar.png" onclick="return ExecutarBusca(&#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtServico&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtLocalidade&#39;, false,&#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtServico&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtLocalidade&#39;, &#39;false&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtServico&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtLocalidade&#39;, &#39;ctl00_ContentPlaceHolder1_CaixaBusca_lblQtdRegistros&#39;);" border="0" />
+
+        <div class="ResultZeroHome" id="divResultZeroHome">
+            <span><a href="javascript:ocultarElemento('divResultZeroHome');" title="Fechar">X</a></span>
+            <p>Infelizmente <strong>não temos</strong> resultado para essa busca. Por favor, refaça sua busca. </p>
+        </div>
+
+        <p class="serv-box-busca-resultado" id="pQtdRegistros">
+            <strong>
+                <span id="ctl00_ContentPlaceHolder1_CaixaBusca_lblQtdRegistros"></span>
+            </strong>
+            <span id="ctl00_ContentPlaceHolder1_CaixaBusca_lblEncontrados"></span>
+        </p>
+
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$CaixaBusca$hidCriteriosServico" id="ctl00_ContentPlaceHolder1_CaixaBusca_hidCriteriosServico" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$CaixaBusca$hidCriteriosLocalidade" id="ctl00_ContentPlaceHolder1_CaixaBusca_hidCriteriosLocalidade" />
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript" lang="javascript">
+    LoadAutoCompleteCategoriaEspecialidade('ctl00_ContentPlaceHolder1_CaixaBusca_txtServico', '/ascx/imoveis/servicos/autocomplete.aspx', 'ctl00_ContentPlaceHolder1_CaixaBusca_divExemploServico', 'ctl00_ContentPlaceHolder1_CaixaBusca_hidCriteriosServico', 'ctl00_ContentPlaceHolder1_CaixaBusca_txtLocalidade', 'ctl00_ContentPlaceHolder1_CaixaBusca_lblQtdRegistros', 'ctl00_ContentPlaceHolder1_CaixaBusca_lblEncontrados', 'ctl00_ContentPlaceHolder1_CaixaBusca_imgBuscar');
+    LoadAutoCompleteLocalidade('ctl00_ContentPlaceHolder1_CaixaBusca_txtLocalidade', '/ascx/imoveis/servicos/autocomplete.aspx', 'ctl00_ContentPlaceHolder1_CaixaBusca_divExemploLocalidade', 'ctl00_ContentPlaceHolder1_CaixaBusca_hidCriteriosLocalidade', 'ctl00_ContentPlaceHolder1_CaixaBusca_txtServico', 'ctl00_ContentPlaceHolder1_CaixaBusca_lblQtdRegistros', 'ctl00_ContentPlaceHolder1_CaixaBusca_lblEncontrados', 'ctl00_ContentPlaceHolder1_CaixaBusca_imgBuscar');
+</script>
+
+        </div>
+
+        <div class="serv-result-info">
+            <p class="serv-result-exibicao" style="width: 15%; float: right; display:none;">
+                <label>Ordenar por:&nbsp;</label>
+                <br />
+                <select name="ctl00$ContentPlaceHolder1$cboOrdenacao" id="ctl00_ContentPlaceHolder1_cboOrdenacao" class="c01">
+	<option selected="selected" value="">Relev&#226;ncia</option>
+	<option value="rating">Melhores avaliados</option>
+	<option value="dataatualizacao">Data de atualiza&#231;&#227;o</option>
+
+</select>
+            </p>
+
+            <p class="serv-result-texto-quantidade">
+                Foram encontrados <span class="serv-result-qtde">48</span> profissionais para a sua busca por:<br />
+            </p>
+            <div class="serv-result-texto">
+                <h1><span id="ctl00_ContentPlaceHolder1_lblParametrosBusca" class="serv-result-texto-busca">paisagismo</span></h1>
+            </div>
+        </div>
+
+        <div class="col-2">
+
+            <div id="ctl00_ContentPlaceHolder1_NavegadoresBusca_pnlNavegadores">
+	
+    
+            <div class="serv-box-filtros">
+                <h3 class="StyleTitleFicha StyleTitleFichaAjuste StyleTituloVermelho">Servi&#231;os relacionados com sua busca </h3>
+                
+                        <P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/decoracao+t/">Decora&#231;&#227;o</a></P>
+                    
+                        <P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/construcao-e-reformas+t/">Constru&#231;&#227;o e Reformas</a></P>
+                    
+                        <P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/acabamentos+t/">Acabamentos</a></P>
+                    
+                        <P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/servicos-de-limpeza+t/">Servi&#231;os de Limpeza</a></P>
+                    
+                        <P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/instalacoes-gerais+t/">Instala&#231;&#245;es Gerais</a></P>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        <div id="ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl00_rptModificadores_ctl16_accordion">
+                            <h3 id="ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl00_rptModificadores_ctl16_verTodosTitle" onclick="$(this).hide();"><p class="linha"><a class="expandir">Ver Todos »</a></p></h3>
+                            <div id="ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl00_rptModificadores_ctl16_divAccordion1"><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/pintura+t/">Pintura</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/administracao-casa-e-condominio+t/">Administra&#231;&#227;o Casa e Condom&#237;nio</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/encanamento+t/">Encanamento</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/manutencao-domestica+t/">Manuten&#231;&#227;o Dom&#233;stica</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/moveis+t/">M&#243;veis</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/servicos-domesticos+t/">Servi&#231;os Dom&#233;sticos</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/dedetizacao-e-desratizacao+t/">Dedetiza&#231;&#227;o e Desratiza&#231;&#227;o</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/eletrica+t/">El&#233;trica</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/ar-condicionado-e-climatizacao+t/">Ar Condicionado e Climatiza&#231;&#227;o</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/transportadora,-mudancas-e-carretos+t/">Transportadora, Mudan&#231;as e Carretos</a></P><P class="linha"><a onclick="novaBusca(&#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtServico&#39;, 1000);" class="expandir" href="#">Nova Busca &#187;</a></P></div>
+                        </div>
+                    
+            </div>
+        
+            <div class="serv-box-filtros">
+                <h3 class="StyleTitleFicha StyleTituloVermelho">Especialidades relacionadas com sua busca </h3>
+                
+                        <P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+paisagista/">Paisagista</a></P>
+                    
+                        <P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+arquiteto/">Arquiteto</a></P>
+                    
+                        <P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+instalacao-de-ar-condicionado/">Instala&#231;&#227;o de Ar Condicionado</a></P>
+                    
+                        <P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+jardineiro/">Jardineiro</a></P>
+                    
+                        <P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+limpeza-de-caixa-dagua/">Limpeza de Caixa Dagua</a></P>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        <div id="ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl01_rptModificadores_ctl16_accordion">
+                            <h3 id="ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl01_rptModificadores_ctl16_verTodosTitle" onclick="$(this).hide();"><p class="linha"><a class="expandir">Ver Todos »</a></p></h3>
+                            <div id="ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl01_rptModificadores_ctl16_divAccordion2"><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+copeira/">Copeira</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+eletricista/">Eletricista</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+encanador/">Encanador</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+engenheiro-civil/">Engenheiro Civil</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+engenheiro-eletricista/">Engenheiro Eletricista</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+instalacao-eletrica/">Instala&#231;&#227;o El&#233;trica</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+personal-organizer/">Personal Organizer</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+reformas/">reformas</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+seguranca/">Seguran&#231;a</a></P><P class="linha"><a href="http://www.zap.com.br/imoveis/servicos/paisagismo+vigilante/">Vigilante</a></P><P class="linha"><a onclick="novaBusca(&#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtServico&#39;, 1000);" class="expandir" href="#">Nova Busca &#187;</a></P></div>
+                        </div>
+                    
+            </div>
+        
+            <div class="serv-box-filtros">
+                <h3 class="StyleTitleFicha StyleTituloVermelho">Localidade em: </h3>
+                
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        <div id="ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl02_rptModificadores_ctl91_accordion">
+                            
+                            <div id="ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl02_rptModificadores_ctl91_divAccordion3"><P class="linha"><a onclick="preencheTextBoxOque(&#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtServico&#39;,&#39;ctl00_ContentPlaceHolder1_CaixaBusca_hidCriteriosServico&#39;,&#39;paisagismo&#39;);novaBusca(&#39;ctl00_ContentPlaceHolder1_CaixaBusca_txtLocalidade&#39;, 1000);" class="expandir" href="#">Onde voc&#234; precisa deste servi&#231;o?</a></P></div>
+                        </div>
+                    
+            </div>
+        
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$NavegadoresBusca$hdnControleVerTodosIds" id="ctl00_ContentPlaceHolder1_NavegadoresBusca_hdnControleVerTodosIds" value="ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl00_rptModificadores_ctl16_accordion|ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl00_rptModificadores_ctl16_verTodosTitle;ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl01_rptModificadores_ctl16_accordion|ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl01_rptModificadores_ctl16_verTodosTitle;ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl02_rptModificadores_ctl91_accordion|ctl00_ContentPlaceHolder1_NavegadoresBusca_rptNavegadores_ctl02_rptModificadores_ctl91_verTodosTitle" />
+
+</div>
+
+
+            <div class="serv-box-anuncie serv-box-anuncie-serp">
+                <p>Se você é profissional e quer aparecer no<br />ZAP Imóveis Serviços, <strong><a href="/imoveis/servicos/cadastro-profissional">
+                    cadastre-se</a></strong></p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div>
+                
+                        
+<script src="../../../../ScriptLibrary/imoveis/jquery.rating.js"></script>
+
+
+<div class="serv-minificha result-page">
+    
+     <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl00_MiniFicha_lnkUrlPrestadorLogo" href="http://www.zap.com.br/imoveis/servicos/pro/espaco-limpo-reformas">
+        <p class="serv-logo-minificha">
+            <img src="../../../img/servicos/foto_default_ficha.png" id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl00_MiniFicha_imgLogoPrestador" class="serv-imagem-centralizada" />
+        </p>
+     </a>
+    <p itemprop="name" class="serv-nome-minificha">
+        
+        <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl00_MiniFicha_lnkUrlPerfil" href="http://www.zap.com.br/imoveis/servicos/pro/espaco-limpo-reformas">Espaço limpo reformas</a>
+    </p>
+        <!-- Ações Mini ficha -->    
+    <div class="serv-action-minificha">
+        <p class="serv-badge-container">
+            <span class="paisagismo_31" title=" Paisagismo"></span><span class="construcao_31" title="Construção e Reformas"></span><span class="pintura_31" title=" Pintura"></span>
+        </p>
+        <p class="serv-atualizacao-minificha"><span>Última atualização:</span>
+            23/06/2015</p>
+        <p class="serv-action-container">
+            
+        </p>
+    </div>
+    <!-- Ações Mini ficha -->
+    <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl00_MiniFicha_lnkUrlPrestadorDetalhes" href="http://www.zap.com.br/imoveis/servicos/pro/espaco-limpo-reformas">
+        
+        <div class="serv-detalhes-minificha">
+            <div id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl00_MiniFicha_AvaliacaoTopo" class="rating" itemprop="aggregateRating">
+                <!-- ESTRELAS TOPO -->
+            </div>
+            <p class="serv-especialidade-minificha"></p>
+            <h2><p class="serv-local-minificha" itemprop="address"><span>Atende em:</span>
+                PARANA, Capital, CURITIBA, PR
+            </p></h2>
+        </div>
+
+    </a>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl00_MiniFicha_AvaliacaoTopo').rating(0, { maxvalue: 5, increment: 0.5, curvalue: "5.0", ratingDescription: "TopoAvaliacao" });
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl00_MiniFicha_AvaliacaoTopo').attr('class', 'ratingStars');
+    });
+</script>
+
+                    
+                        
+<script src="../../../../ScriptLibrary/imoveis/jquery.rating.js"></script>
+
+
+<div class="serv-minificha result-page">
+    
+     <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl01_MiniFicha_lnkUrlPrestadorLogo" href="http://www.zap.com.br/imoveis/servicos/pro/moniquesilsanfotografia">
+        <p class="serv-logo-minificha">
+            <img src="../../../img/servicos/foto_default_ficha.png" id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl01_MiniFicha_imgLogoPrestador" class="serv-imagem-centralizada" />
+        </p>
+     </a>
+    <p itemprop="name" class="serv-nome-minificha">
+        
+        <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl01_MiniFicha_lnkUrlPerfil" href="http://www.zap.com.br/imoveis/servicos/pro/moniquesilsanfotografia">Monique Silsan Fotografia</a>
+    </p>
+        <!-- Ações Mini ficha -->    
+    <div class="serv-action-minificha">
+        <p class="serv-badge-container">
+            <span class="paisagismo_31" title=" Paisagismo"></span><span class="acabamento_31" title="Acabamentos"></span><span class="decoracao_31" title=" Decoração"></span>
+        </p>
+        <p class="serv-atualizacao-minificha"><span>Última atualização:</span>
+            08/12/2016</p>
+        <p class="serv-action-container">
+            
+        </p>
+    </div>
+    <!-- Ações Mini ficha -->
+    <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl01_MiniFicha_lnkUrlPrestadorDetalhes" href="http://www.zap.com.br/imoveis/servicos/pro/moniquesilsanfotografia">
+        
+        <div class="serv-detalhes-minificha">
+            <div id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl01_MiniFicha_AvaliacaoTopo" class="rating" itemprop="aggregateRating">
+                <!-- ESTRELAS TOPO -->
+            </div>
+            <p class="serv-especialidade-minificha"></p>
+            <h2><p class="serv-local-minificha" itemprop="address"><span>Atende em:</span>
+                RIO DE JANEIRO, Capital, RIO DE JANEIRO, BARR...
+            </p></h2>
+        </div>
+
+    </a>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl01_MiniFicha_AvaliacaoTopo').rating(0, { maxvalue: 5, increment: 0.5, curvalue: "0", ratingDescription: "TopoAvaliacao" });
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl01_MiniFicha_AvaliacaoTopo').attr('class', 'ratingStars');
+    });
+</script>
+
+                    
+                        
+<script src="../../../../ScriptLibrary/imoveis/jquery.rating.js"></script>
+
+
+<div class="serv-minificha result-page">
+    
+     <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl02_MiniFicha_lnkUrlPrestadorLogo" href="http://www.zap.com.br/imoveis/servicos/pro/jrd-sports">
+        <p class="serv-logo-minificha">
+            <img src="../../../img/servicos/foto_default_ficha.png" id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl02_MiniFicha_imgLogoPrestador" class="serv-imagem-centralizada" />
+        </p>
+     </a>
+    <p itemprop="name" class="serv-nome-minificha">
+        
+        <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl02_MiniFicha_lnkUrlPerfil" href="http://www.zap.com.br/imoveis/servicos/pro/jrd-sports">JRD SPORTS</a>
+    </p>
+        <!-- Ações Mini ficha -->    
+    <div class="serv-action-minificha">
+        <p class="serv-badge-container">
+            <span class="paisagismo_31" title=" Paisagismo"></span><span class="eletrica_31" title="Elétrica"></span><span class="encanamento_31" title=" Encanamento"></span>
+        </p>
+        <p class="serv-atualizacao-minificha"><span>Última atualização:</span>
+            18/10/2016</p>
+        <p class="serv-action-container">
+            
+        </p>
+    </div>
+    <!-- Ações Mini ficha -->
+    <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl02_MiniFicha_lnkUrlPrestadorDetalhes" href="http://www.zap.com.br/imoveis/servicos/pro/jrd-sports">
+        
+        <div class="serv-detalhes-minificha">
+            <div id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl02_MiniFicha_AvaliacaoTopo" class="rating" itemprop="aggregateRating">
+                <!-- ESTRELAS TOPO -->
+            </div>
+            <p class="serv-especialidade-minificha"><span id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl02_MiniFicha_lblEspecialidade">Especialidades:&nbsp;</span>Eletricista,  Encanador,  Paisagista</p>
+            <h2><p class="serv-local-minificha" itemprop="address"><span>Atende em:</span>
+                FLOR DE ABRIL RICARDO - LONDRINA/PR
+            </p></h2>
+        </div>
+
+    </a>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl02_MiniFicha_AvaliacaoTopo').rating(0, { maxvalue: 5, increment: 0.5, curvalue: "0", ratingDescription: "TopoAvaliacao" });
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl02_MiniFicha_AvaliacaoTopo').attr('class', 'ratingStars');
+    });
+</script>
+
+                    
+                        
+<script src="../../../../ScriptLibrary/imoveis/jquery.rating.js"></script>
+
+
+<div class="serv-minificha result-page">
+    
+     <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl03_MiniFicha_lnkUrlPrestadorLogo" href="http://www.zap.com.br/imoveis/servicos/pro/limpeza-tecnica">
+        <p class="serv-logo-minificha">
+            <img src="../../../img/servicos/foto_default_ficha.png" id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl03_MiniFicha_imgLogoPrestador" class="serv-imagem-centralizada" />
+        </p>
+     </a>
+    <p itemprop="name" class="serv-nome-minificha">
+        
+        <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl03_MiniFicha_lnkUrlPerfil" href="http://www.zap.com.br/imoveis/servicos/pro/limpeza-tecnica">Limpeza Técnica</a>
+    </p>
+        <!-- Ações Mini ficha -->    
+    <div class="serv-action-minificha">
+        <p class="serv-badge-container">
+            <span class="paisagismo_31" title="Paisagismo"></span><span class="limpeza_31" title=" Serviços de Limpeza"></span>
+        </p>
+        <p class="serv-atualizacao-minificha"><span>Última atualização:</span>
+            20/09/2016</p>
+        <p class="serv-action-container">
+            
+        </p>
+    </div>
+    <!-- Ações Mini ficha -->
+    <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl03_MiniFicha_lnkUrlPrestadorDetalhes" href="http://www.zap.com.br/imoveis/servicos/pro/limpeza-tecnica">
+        
+        <div class="serv-detalhes-minificha">
+            <div id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl03_MiniFicha_AvaliacaoTopo" class="rating" itemprop="aggregateRating">
+                <!-- ESTRELAS TOPO -->
+            </div>
+            <p class="serv-especialidade-minificha"></p>
+            <h2><p class="serv-local-minificha" itemprop="address"><span>Atende em:</span>
+                SAO PAULO, Campinas e região, CAMPINAS, SP; S...
+            </p></h2>
+        </div>
+
+    </a>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl03_MiniFicha_AvaliacaoTopo').rating(0, { maxvalue: 5, increment: 0.5, curvalue: "0", ratingDescription: "TopoAvaliacao" });
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl03_MiniFicha_AvaliacaoTopo').attr('class', 'ratingStars');
+    });
+</script>
+
+                    
+                        
+<script src="../../../../ScriptLibrary/imoveis/jquery.rating.js"></script>
+
+
+<div class="serv-minificha result-page">
+    
+     <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl04_MiniFicha_lnkUrlPrestadorLogo" href="http://www.zap.com.br/imoveis/servicos/pro/celebrar-festas">
+        <p class="serv-logo-minificha">
+            <img src="../../../img/servicos/foto_default_ficha.png" id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl04_MiniFicha_imgLogoPrestador" class="serv-imagem-centralizada" />
+        </p>
+     </a>
+    <p itemprop="name" class="serv-nome-minificha">
+        
+        <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl04_MiniFicha_lnkUrlPerfil" href="http://www.zap.com.br/imoveis/servicos/pro/celebrar-festas">Celebrar Festas</a>
+    </p>
+        <!-- Ações Mini ficha -->    
+    <div class="serv-action-minificha">
+        <p class="serv-badge-container">
+            <span class="paisagismo_31" title=" Paisagismo"></span><span class="decoracao_31" title="Decoração"></span><span class="servicosdomes_31" title=" Serviços Domésticos"></span>
+        </p>
+        <p class="serv-atualizacao-minificha"><span>Última atualização:</span>
+            02/09/2016</p>
+        <p class="serv-action-container">
+            
+        </p>
+    </div>
+    <!-- Ações Mini ficha -->
+    <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl04_MiniFicha_lnkUrlPrestadorDetalhes" href="http://www.zap.com.br/imoveis/servicos/pro/celebrar-festas">
+        
+        <div class="serv-detalhes-minificha">
+            <div id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl04_MiniFicha_AvaliacaoTopo" class="rating" itemprop="aggregateRating">
+                <!-- ESTRELAS TOPO -->
+            </div>
+            <p class="serv-especialidade-minificha"><span id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl04_MiniFicha_lblEspecialidade">Especialidades:&nbsp;</span>Decorador(a)</p>
+            <h2><p class="serv-local-minificha" itemprop="address"><span>Atende em:</span>
+                HUGO MUSSO PRAIA DE ITAPOA - VILA VELHA/ES
+            </p></h2>
+        </div>
+
+    </a>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl04_MiniFicha_AvaliacaoTopo').rating(0, { maxvalue: 5, increment: 0.5, curvalue: "0", ratingDescription: "TopoAvaliacao" });
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl04_MiniFicha_AvaliacaoTopo').attr('class', 'ratingStars');
+    });
+</script>
+
+                    
+                        
+<script src="../../../../ScriptLibrary/imoveis/jquery.rating.js"></script>
+
+
+<div class="serv-minificha result-page">
+    
+     <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl05_MiniFicha_lnkUrlPrestadorLogo" href="http://www.zap.com.br/imoveis/servicos/pro/alfaia-arquitetura">
+        <p class="serv-logo-minificha">
+            <img src="../../../img/servicos/foto_default_ficha.png" id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl05_MiniFicha_imgLogoPrestador" class="serv-imagem-centralizada" />
+        </p>
+     </a>
+    <p itemprop="name" class="serv-nome-minificha">
+        
+        <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl05_MiniFicha_lnkUrlPerfil" href="http://www.zap.com.br/imoveis/servicos/pro/alfaia-arquitetura">Alfaia Arquitetura</a>
+    </p>
+        <!-- Ações Mini ficha -->    
+    <div class="serv-action-minificha">
+        <p class="serv-badge-container">
+            <span class="paisagismo_31" title=" Paisagismo"></span><span class="construcao_31" title="Construção e Reformas"></span><span class="decoracao_31" title=" Decoração"></span>
+        </p>
+        <p class="serv-atualizacao-minificha"><span>Última atualização:</span>
+            26/08/2016</p>
+        <p class="serv-action-container">
+            
+        </p>
+    </div>
+    <!-- Ações Mini ficha -->
+    <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl05_MiniFicha_lnkUrlPrestadorDetalhes" href="http://www.zap.com.br/imoveis/servicos/pro/alfaia-arquitetura">
+        
+        <div class="serv-detalhes-minificha">
+            <div id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl05_MiniFicha_AvaliacaoTopo" class="rating" itemprop="aggregateRating">
+                <!-- ESTRELAS TOPO -->
+            </div>
+            <p class="serv-especialidade-minificha"></p>
+            <h2><p class="serv-local-minificha" itemprop="address"><span>Atende em:</span>
+                MARIO YPIRANGA ADRIANOPOLIS - MANAUS/AM
+            </p></h2>
+        </div>
+
+    </a>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl05_MiniFicha_AvaliacaoTopo').rating(0, { maxvalue: 5, increment: 0.5, curvalue: "0", ratingDescription: "TopoAvaliacao" });
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl05_MiniFicha_AvaliacaoTopo').attr('class', 'ratingStars');
+    });
+</script>
+
+                    
+                        
+<script src="../../../../ScriptLibrary/imoveis/jquery.rating.js"></script>
+
+
+<div class="serv-minificha result-page">
+    
+     <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl06_MiniFicha_lnkUrlPrestadorLogo" href="http://www.zap.com.br/imoveis/servicos/pro/mcm-servicos-ltda">
+        <p class="serv-logo-minificha">
+            <img src="../../../img/servicos/foto_default_ficha.png" id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl06_MiniFicha_imgLogoPrestador" class="serv-imagem-centralizada" />
+        </p>
+     </a>
+    <p itemprop="name" class="serv-nome-minificha">
+        
+        <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl06_MiniFicha_lnkUrlPerfil" href="http://www.zap.com.br/imoveis/servicos/pro/mcm-servicos-ltda">MCM SERVIÇOS LTDA</a>
+    </p>
+        <!-- Ações Mini ficha -->    
+    <div class="serv-action-minificha">
+        <p class="serv-badge-container">
+            <span class="paisagismo_31" title=" Paisagismo"></span><span class="construcao_31" title="Construção e Reformas"></span><span class="pintura_31" title=" Pintura"></span>
+        </p>
+        <p class="serv-atualizacao-minificha"><span>Última atualização:</span>
+            19/08/2016</p>
+        <p class="serv-action-container">
+            
+        </p>
+    </div>
+    <!-- Ações Mini ficha -->
+    <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl06_MiniFicha_lnkUrlPrestadorDetalhes" href="http://www.zap.com.br/imoveis/servicos/pro/mcm-servicos-ltda">
+        
+        <div class="serv-detalhes-minificha">
+            <div id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl06_MiniFicha_AvaliacaoTopo" class="rating" itemprop="aggregateRating">
+                <!-- ESTRELAS TOPO -->
+            </div>
+            <p class="serv-especialidade-minificha"><span id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl06_MiniFicha_lblEspecialidade">Especialidades:&nbsp;</span>reformas,  Instalação de Ar Condicionado</p>
+            <h2><p class="serv-local-minificha" itemprop="address"><span>Atende em:</span>
+                RIO DE JANEIRO, Baixada Fluminense, DUQUE DE ...
+            </p></h2>
+        </div>
+
+    </a>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl06_MiniFicha_AvaliacaoTopo').rating(0, { maxvalue: 5, increment: 0.5, curvalue: "0", ratingDescription: "TopoAvaliacao" });
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl06_MiniFicha_AvaliacaoTopo').attr('class', 'ratingStars');
+    });
+</script>
+
+                    
+                        
+<script src="../../../../ScriptLibrary/imoveis/jquery.rating.js"></script>
+
+
+<div class="serv-minificha result-page">
+    
+     <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl07_MiniFicha_lnkUrlPrestadorLogo" href="http://www.zap.com.br/imoveis/servicos/pro/vip-360-visita-interativa-profisional">
+        <p class="serv-logo-minificha">
+            <img src="../../../img/servicos/foto_default_ficha.png" id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl07_MiniFicha_imgLogoPrestador" class="serv-imagem-centralizada" />
+        </p>
+     </a>
+    <p itemprop="name" class="serv-nome-minificha">
+        
+        <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl07_MiniFicha_lnkUrlPerfil" href="http://www.zap.com.br/imoveis/servicos/pro/vip-360-visita-interativa-profisional">VIP 360° - Visita Interativa Profisional</a>
+    </p>
+        <!-- Ações Mini ficha -->    
+    <div class="serv-action-minificha">
+        <p class="serv-badge-container">
+            <span class="paisagismo_31" title=" Paisagismo"></span><span class="admcasascondom_31" title="Administração Casa e Condomínio"></span><span class="decoracao_31" title=" Decoração"></span>
+        </p>
+        <p class="serv-atualizacao-minificha"><span>Última atualização:</span>
+            04/08/2016</p>
+        <p class="serv-action-container">
+            
+        </p>
+    </div>
+    <!-- Ações Mini ficha -->
+    <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl07_MiniFicha_lnkUrlPrestadorDetalhes" href="http://www.zap.com.br/imoveis/servicos/pro/vip-360-visita-interativa-profisional">
+        
+        <div class="serv-detalhes-minificha">
+            <div id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl07_MiniFicha_AvaliacaoTopo" class="rating" itemprop="aggregateRating">
+                <!-- ESTRELAS TOPO -->
+            </div>
+            <p class="serv-especialidade-minificha"></p>
+            <h2><p class="serv-local-minificha" itemprop="address"><span>Atende em:</span>
+                SAO PAULO, Capital, SAO PAULO, CENTRO, SP; SA...
+            </p></h2>
+        </div>
+
+    </a>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl07_MiniFicha_AvaliacaoTopo').rating(0, { maxvalue: 5, increment: 0.5, curvalue: "0", ratingDescription: "TopoAvaliacao" });
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl07_MiniFicha_AvaliacaoTopo').attr('class', 'ratingStars');
+    });
+</script>
+
+                    
+                        
+<script src="../../../../ScriptLibrary/imoveis/jquery.rating.js"></script>
+
+
+<div class="serv-minificha result-page">
+    
+     <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl08_MiniFicha_lnkUrlPrestadorLogo" href="http://www.zap.com.br/imoveis/servicos/pro/disk-limp-desentupidora-e-dedetizacao">
+        <p class="serv-logo-minificha">
+            <img src="../../../img/servicos/foto_default_ficha.png" id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl08_MiniFicha_imgLogoPrestador" class="serv-imagem-centralizada" />
+        </p>
+     </a>
+    <p itemprop="name" class="serv-nome-minificha">
+        
+        <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl08_MiniFicha_lnkUrlPerfil" href="http://www.zap.com.br/imoveis/servicos/pro/disk-limp-desentupidora-e-dedetizacao">DISK LIMP DESENTUPIDORA E DEDETIZAÇÃO</a>
+    </p>
+        <!-- Ações Mini ficha -->    
+    <div class="serv-action-minificha">
+        <p class="serv-badge-container">
+            <span class="dedetizacao_31" title="Dedetização e Desratização"></span><span class="encanamento_31" title=" Encanamento"></span><span class="limpeza_31" title=" Serviços de Limpeza"></span>
+        </p>
+        <p class="serv-atualizacao-minificha"><span>Última atualização:</span>
+            04/08/2016</p>
+        <p class="serv-action-container">
+            
+        </p>
+    </div>
+    <!-- Ações Mini ficha -->
+    <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl08_MiniFicha_lnkUrlPrestadorDetalhes" href="http://www.zap.com.br/imoveis/servicos/pro/disk-limp-desentupidora-e-dedetizacao">
+        
+        <div class="serv-detalhes-minificha">
+            <div id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl08_MiniFicha_AvaliacaoTopo" class="rating" itemprop="aggregateRating">
+                <!-- ESTRELAS TOPO -->
+            </div>
+            <p class="serv-especialidade-minificha"></p>
+            <h2><p class="serv-local-minificha" itemprop="address"><span>Atende em:</span>
+                PEDRO BALA PQ TREMENDAO - GOIANIA/GO
+            </p></h2>
+        </div>
+
+    </a>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl08_MiniFicha_AvaliacaoTopo').rating(0, { maxvalue: 5, increment: 0.5, curvalue: "0", ratingDescription: "TopoAvaliacao" });
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl08_MiniFicha_AvaliacaoTopo').attr('class', 'ratingStars');
+    });
+</script>
+
+                    
+                        
+<script src="../../../../ScriptLibrary/imoveis/jquery.rating.js"></script>
+
+
+<div class="serv-minificha result-page">
+    
+     <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl09_MiniFicha_lnkUrlPrestadorLogo" href="http://www.zap.com.br/imoveis/servicos/pro/ccr">
+        <p class="serv-logo-minificha">
+            <img src="../../../img/servicos/foto_default_ficha.png" id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl09_MiniFicha_imgLogoPrestador" class="serv-imagem-centralizada" />
+        </p>
+     </a>
+    <p itemprop="name" class="serv-nome-minificha">
+        
+        <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl09_MiniFicha_lnkUrlPerfil" href="http://www.zap.com.br/imoveis/servicos/pro/ccr">CCR</a>
+    </p>
+        <!-- Ações Mini ficha -->    
+    <div class="serv-action-minificha">
+        <p class="serv-badge-container">
+            <span class="paisagismo_31" title=" Paisagismo"></span><span class="instalacoes_31" title="Instalações Gerais"></span><span class="manutencao_31" title=" Manutenção Doméstica"></span>
+        </p>
+        <p class="serv-atualizacao-minificha"><span>Última atualização:</span>
+            07/07/2016</p>
+        <p class="serv-action-container">
+            
+        </p>
+    </div>
+    <!-- Ações Mini ficha -->
+    <a id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl09_MiniFicha_lnkUrlPrestadorDetalhes" href="http://www.zap.com.br/imoveis/servicos/pro/ccr">
+        
+        <div class="serv-detalhes-minificha">
+            <div id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl09_MiniFicha_AvaliacaoTopo" class="rating" itemprop="aggregateRating">
+                <!-- ESTRELAS TOPO -->
+            </div>
+            <p class="serv-especialidade-minificha"><span id="ctl00_ContentPlaceHolder1_rpMiniFicha_ctl09_MiniFicha_lblEspecialidade">Especialidades:&nbsp;</span>Engenheiro Civil</p>
+            <h2><p class="serv-local-minificha" itemprop="address"><span>Atende em:</span>
+                SAO PAULO, Vale do Paraíba, CACAPAVA, SP; SAO...
+            </p></h2>
+        </div>
+
+    </a>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl09_MiniFicha_AvaliacaoTopo').rating(0, { maxvalue: 5, increment: 0.5, curvalue: "0", ratingDescription: "TopoAvaliacao" });
+        $('#ctl00_ContentPlaceHolder1_rpMiniFicha_ctl09_MiniFicha_AvaliacaoTopo').attr('class', 'ratingStars');
+    });
+</script>
+
+                    
+            </div>
+            <div class="bug"></div>
+            <!-- Paginacao -->
+            <div id="ctl00_ContentPlaceHolder1_pnlBoxpaginacao" class="paginacao">
+                
+                        <ul>
+                            <div id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl00_pnlAnteriores">
+	
+                                <a id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl00_lnkPrimeiro" class="pagPrevAll inactive" rel="nofollow"></a>
+                                <a id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl00_lnkAnterior" class="pagPrev inactive" rel="prev"></a>
+                            
+</div>
+                    
+                        <li>
+                            <a id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl01_lnkPagina" class="paginacao_link ativo" rel="nofollow" href="http://www.zap.com.br/imoveis/servicos/paisagismo+t/?pagina=1&amp;rn=1376450266">1</a>
+                        </li>
+                    
+                        <li>
+                            <a id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl02_lnkPagina" class="paginacao_link" rel="next" href="http://www.zap.com.br/imoveis/servicos/paisagismo+t/?pagina=2&amp;rn=1376450266">2</a>
+                        </li>
+                    
+                        <li>
+                            <a id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl03_lnkPagina" class="paginacao_link" rel="nofollow" href="http://www.zap.com.br/imoveis/servicos/paisagismo+t/?pagina=3&amp;rn=1376450266">3</a>
+                        </li>
+                    
+                        <li>
+                            <a id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl04_lnkPagina" class="paginacao_link" rel="nofollow" href="http://www.zap.com.br/imoveis/servicos/paisagismo+t/?pagina=4&amp;rn=1376450266">4</a>
+                        </li>
+                    
+                        <li>
+                            <a id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl05_lnkPagina" class="paginacao_link" rel="nofollow" href="http://www.zap.com.br/imoveis/servicos/paisagismo+t/?pagina=5&amp;rn=1376450266">5</a>
+                        </li>
+                    
+                        </ul>
+                        <div id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl06_pnlProximos">
+	
+                            <a id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl06_lnkProximo" class="pagNext" rel="next" href="http://www.zap.com.br/imoveis/servicos/paisagismo+t/?pagina=2"></a>
+                            <a id="ctl00_ContentPlaceHolder1_rptPaginacaoBaixo_ctl06_lnkUltimo" class="pagNextAll" rel="nofollow" href="http://www.zap.com.br/imoveis/servicos/paisagismo+t/?pagina=5"></a>
+                        
+</div>
+                    
+            </div>
+        </div>
+    </div>
+
+					<!-- Fecha Corpo da Página-->
+					
+					<!-- Patrocínio Real Media -->
+					
+					<!-- Fim Patrocínio Real Media -->
+
+					<!-- Ajude o Zap a Melhorar -->
+					<div class="zap_modal_inform" id="DivMensagens">
+						<div id="TituloDivMensagens" class="titulo"></div><a href="javascript:fechaModal('DivMensagens');" class="fechar">Fechar[x]</a>
+						<div class="corpo" id="CorpoDivMensagens"></div>	        
+					</div>
+					
+					
+					 
+					<!-- Fim Ajude o Zap a Melhorar -->
+
+					<!-- Início Sky -->
+					
+					
+					<div class="bug"></div>
+					<!-- Fim Sky -->
+			   </div>
+
+			<script language="javascript" type="text/javascript">
+			    function BarraHiResHome() {
+			        var res = screen.availWidth;
+			        if (res <= 800) {
+			            if (navigator.appName != 'Netscape') {
+			                try {
+			                    document.all.total.style.width = "766px";
+			                    document.all.BarraHiRes.style.display = "none";
+			                }
+			                catch (e) {
+			                    try {
+			                        document.getElementById("total").style.width = "766px";
+			                        document.getElementById("BarraHiRes").style.display = "none";
+			                    }
+			                    catch (e) {
+			                    }
+			                }
+
+			            } else
+			                if (parseInt(navigator.appVersion) >= 5) {
+			                    document.getElementById('BarraHiRes').style.display = "none";
+			                }
+			        }
+			    }
+			    BarraHiResHome();
+
+			    if (VerLogin != '') {
+			        abreModal(VerLogin);
+			    }
+			</script>
+		</div>
+	</div>
+
+	<!-- Início footer -->
+	
+<link rel="stylesheet" href="/css2/chat-direct-talk.css?versao=20150601.001"type="text/css" />
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="span5">
+                <ul class="nav nav-list pull-left">
+                    <li class="nav-header">Imóveis</li>
+                    <li><a id="ctl00_footer_hlMeuZap" href="../../../meuzap/meuzap-login.aspx" target="_blank">Meu ZAP</a></li>
+                    <li><a href="/anuncieb/anunciezap/anuncie-imoveis-home.aspx" onclick="javascript:contabilizarEventoGA('AnuncieC2C_SiteNovoImoveis','Chamada','Footer_Geral');">Anuncie Seu Imóvel</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/Favorito/Listar">Minha Lista</a></li>
+                    <li><a href="/imoveis/servicos">Serviços</a></li>
+                    <li><a href="http://revista.zap.com.br//imoveis/">Dicas & Notícias</a></li>
+                    <li><a href="/imoveis/simule-seu-financiamentob.aspx">Financiamento</a></li>
+                    <li><a href="/imoveis/fipe-zap-b/">FipeZAP</a></li>
+                    <li><a href="http://www.zapimoveis.com.br">Ir para a Home</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/mapa/">Mapa do Site</a></li>
+
+                    <li>
+                        <div class="smlist pull-left">
+                            <div class="sprite-sm sm-twitter"><a href="http://twitter.com/zapimoveis" target="_blank"></a></div>
+                            <div class="sprite-sm sm-facebook"><a href="http://www.facebook.com/zapimoveis" target="_blank"></a></div>
+                            <div class="sprite-sm sm-google"><a href="https://plus.google.com/+ZapImoveis" rel="publisher" target="_blank"></a></div>
+                            <div class="sprite-sm sm-youtube"><a href="http://www.youtube.com/ZAPImoveis" target="_blank"></a></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav nav-list pull-right">
+                    <li class="nav-header">Dúvidas</li> 
+                    <li><a href="http://www.zapimoveis.com.br/perguntas-frequentes">
+                        <span class="zapit">Central de atendimento<br />
+                            ao cliente</span></a></li>
+                </ul>
+            </div>
+            <div class="span3">
+                <div class="webad">
+                    <a href="http://www.zapimoveis.com.br/mobile?campanha_interna=hotsiteappmobile&origem=ImgFooter">
+                        <img src="/NovoSite/img/banner_mobile_apps_novos.png" class="bannermobile" width="184" height="113"/>
+                    </a>
+                </div>
+            </div>
+            <div class="span2">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Sobre o ZAP</li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=quemsomos">Quem Somos</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=dicasseguranca">Dicas de Segurança</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=termouso">Termos de Uso</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=politicaprivacidade">Política de Privacidade</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=politicaqualidade">Política de Qualidade</a></li>
+                    <li><a href="https://jobs.kenoby.com/zap" target="_blank">Trabalhe Conosco</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=parceiros">Parceiros</a></li>
+                    <li><a id="lnkDownloadPublicidade" title="Faça o download do arquivo midiakit." href="http://www.zapimoveis.com.br/publicidade" target="_blank" >Publicidade</a></li>
+                    <li><a href="http://www.zappro.com.br/?utm_source=zapimoveis&amp;utm_medium=link-rodape&amp;utm_campaign=btn-zappro" target="_blank">ZAP Pro</a></li>
+                    <li><a href="http://sala-de-imprensa.zapimoveis.com.br/" target="_blank">Sala de imprensa</a></li>                </ul>
+            </div>
+            <div class="span2">
+                <span class="copyright">
+                    <span style="text-transform: uppercase; font-size: 14px;">Uma empresa do<!--A Newspaper Company--></span>
+                    <a href="http://www.grupoglobo.globo.com/" target="_blank">
+                        <img src="/img/logotipo_grupo_globo.png" width="127" height="16" alt="Grupo Globo" />
+                        grupoglobo.globo.com
+                    </a>
+                    Copyright 2018 ZAP.<br />
+                    Todos os direitos reservados.<!--All rights reserved.-->
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+	<!-- fim footer -->
+
+	<!------ Google Analytics (tracker) begin ------>
+	
+    
+	<!------ Google Analytics (tracker) end ------>
+
+	<iframe src="/ascx/modal_grade.htm" frameborder="0" id="modalGrade"></iframe>
+
+<script language='javascript'> ChatBot(); </script></form>    
+	<SCRIPT LANGUAGE=JavaScript>OAS_AD('x10');</SCRIPT>
+	<a name="f"></a>
+	<!-- UTILIZADO PARA A CONTABILIZAÇÃO DA NAVEGAÇÃO DA HOME DE IMÓVEIS -->
+
+	
+
+	<div id="ctl00_pnlConversionGoogleImoveis">
+	
+		<!-- ZAP Imoveis - Google Code for P&aacute;ginas Visitadas Conversion Page -->
+		<script type="text/javascript">
+		<!--
+    var google_conversion_id = 1068872678;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "7ob7CJLTaBDm59b9Aw";
+    var google_conversion_value = 0;
+    //-->
+		</script>
+		<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1068872678/?label=7ob7CJLTaBDm59b9Aw&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+		
+        <!-- Google Code for P&aacute;gina Visitadas Conversion Page -->
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 991656355;
+            var google_conversion_language = "en";
+            var google_conversion_format = "2";
+            var google_conversion_color = "ffffff";
+            var google_conversion_label = "hy1bCJXg4QQQo_Pt2AM";
+            var google_conversion_value = 0;
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/991656355/?value=0&amp;label=hy1bCJXg4QQQo_Pt2AM&amp;guid=ON&amp;script=0"/>
+            </div>
+        </noscript>
+	
+</div>
+
+    <div id="ctl00_pnlGoogleSmartPixel">
+	
+    <!-- Google Code for Smart Pixel Remarketing List -->
+		<script type="text/javascript">
+		    /* <![CDATA[ */
+		    var google_conversion_id = 1050634893;
+		    var google_conversion_language = "en";
+		    var google_conversion_format = "3";
+		    var google_conversion_color = "666666";
+		    var google_conversion_label = "09bQCJ3-ogIQjdX99AM";
+		    var google_conversion_value = 0;
+		    /* ]]> */
+		    var google_custom_params = {
+				anuncie: 'nao'
+		    };
+		    var google_remarketing_only = true;
+		</script>
+		<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1050634893/?label=09bQCJ3-ogIQjdX99AM&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+    
+</div>
+
+	
+	
+	<!--%%DATAHORA%%-->
+		
+        
+        
+
+		
+
+		
+		
+        
+
+        <!-- Begin comScore Tag -->
+        <script>
+            var _comscore = _comscore || [];
+            _comscore.push({ c1: "2", c2: "14617388" });
+            (function () {
+                var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+                s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+                el.parentNode.insertBefore(s, el);
+            })();
+        </script>
+        <noscript>
+          <img src="http://b.scorecardresearch.com/p?c1=2&c2=14617388&cv=2.0&cj=1" />
+        </noscript>
+        <!-- End comScore Tag -->
+
+        <div id="ctl00_pnlCrazyEgg">
+	
+			<!-- BEGIN: CrazyEgg -->
+            <script type="text/javascript">
+                setTimeout(function(){var a=document.createElement("script");
+                    var b=document.getElementsByTagName("script")[0];
+                    a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0014/3915.js?"+Math.floor(new Date().getTime()/3600000);
+                    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+            </script>
+            <!-- END: CrazyEgg -->
+		
+</div>
+	</body>
+</html>

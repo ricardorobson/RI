@@ -1,0 +1,647 @@
+<!DOCTYPE unspecified PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Serviceira </title>
+	<base href="https://serviceira.com/" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" >
+    
+    <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+    <meta name="language" content="pt-br" />
+     <link rel="shortcut icon"  href="https://img.serviceira.com/marcadist.png" type="image/x-icon" />
+     
+ 	<meta property="fb:app_id"        content="167652127050947"/>
+    <meta property="og:url"           content="https://serviceira.com/busca" />
+    <meta property="og:locale"        content="pt_BR"/>
+    <meta property="og:type"         content="website"/>
+    <meta property="og:title"         content="Serviceira.com - Profissionais Autônomos, Freelancers e Empresas prestadoras de serviços." />
+    <meta property="og:site_name" content="Serviceira.com"/>
+    <meta property="og:description"   content="" />
+    <meta property="og:image"         content="https://img.serviceira.com/Divulgacao01.jpg" />
+
+	<link rel="stylesheet" type="text/css" href="css/busca/sidebar-busca.css">
+	<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="css/busca/busca-mapa.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css" rel="stylesheet">
+    
+    
+
+
+    <script type='text/javascript' src='https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0-rc.1.0/leaflet.markercluster.js'></script>
+    <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' /> 
+     <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+     
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"> </script>
+	<style type="text/css">
+		.leaflet-popup-content-wrapper{
+			height: 400px !important;
+		}
+		.leaflet-popup-content{
+			width:100%;
+			height:100%;
+			padding:0;
+			margin:0;
+		}
+		.leaflet-container a.leaflet-popup-close-button{
+			z-index:1;
+			color:#fff;
+		}
+		.leaflet-popup-content-wrapper {
+		    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.35) !important;
+		}
+    </style>
+    	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-90871794-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105298128-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+</head>
+<body>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=167652127050947";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="lightbox-padrao"></div>
+<div class="background"></div>
+<div class="background-overlay"></div>
+<div class="lightbox-cadastro">
+	    <div class="top_lightbox">
+	    	<div class="row-row"><span class="close-lightbox">x</span></div>
+	    </div>
+		<div class="col-2">
+			<div class="cadastro-block">
+					<a href="/cadastro"><span class="span1"> <i class="fa fa-id-card-o" aria-hidden="true"></i> </span></a>
+					<a href="/cadastro"><h1>Profissional ou empresa</h1></a>
+					<p> Sou profissional ou empresa prestadora de serviço</p>
+					<a href="/cadastro"><p><button class="btn_btn btn_cadastro">Cadastre-se grátis</button></p></a>
+		    </div>
+		</div>
+		<div class="col-2">
+			<div class="cadastro-block">
+					<a href="/cadastre-se"><span class="span2"> <i class="fa fa-search" aria-hidden="true"></i> </span></a>
+					<a href="/cadastre-se"><h1>Estou procurando</h1></a>
+					<p> Estou procurando profissionais ou serviços</p>
+					<a href="/cadastre-se"><p><button class="btn_btn btn_cadastro">Cadastre-se grátis</button></p></a>
+		    </div>
+		</div>
+		<div class="row-row row-cadastrou">
+				<h1>Já sou cadastrado</h1>
+				<a href="/login"><p>Entre na sua conta</p></a>
+		</div>
+</div>
+
+<div class="inner-body" style="height:100%; max-width:100% !important;">
+
+
+
+
+
+<div class="background-standard"></div>
+<div class="lightbox-standard lb-standard"></div>
+<div class="lightbox-padrao"></div>
+
+
+<aside class="sidebar">
+<div class="inner-sidebar">
+				<div class="topo-sidebar">
+			<div class="row-row row-logo-sidebar">
+				<div class="caixa-logo">
+					<a href="/"><img alt="logotipo serviceira.com"
+						src="https://img.serviceira.com/logo-cabecalho-preto.png"></a>
+				</div>
+			</div>
+			<hr>
+				<div class="box_wellcome">
+					<div class="row-row">
+						<div class="foto-mb">
+							<img alt="" src="https://users.serviceira.com/login.jpg">
+						</div>
+						<div class="saudacao_mb">
+							<div class="row-row"><span>Olá, Visitante!</span></div>
+						</div>
+					</div>
+					<div class="row-row row-entrar">
+						<button class="entrar-conta btn-sign">LOGIN</button>
+						<button class="criar-conta btn-open-account">Crie sua conta Grátis</button>
+					</div>
+				</div>
+			</div>
+					
+
+		<div class="menub">
+
+		  <div class="row-row row-barra">
+		  		<div class="box-subtit">Busca</div>
+		  		<div class="barra-menu">
+		  			<hr>
+		  			<div class="inner-barra"></div>
+		  		</div>
+		  </div>
+		    <ul>
+              <li class="item_menu free-li"><a href="/busca/freelancers-autonomos"><span class="item_menu_ico"><i class="fa fa-user" aria-hidden="true"></i></span><span class="item_menu_a"> Freelancers, Autônomos</span></a></li>
+              <li class="item_menu empresa-li"><a href="/busca/empresas-servicos"><span class="item_menu_ico"><i class="fa  fa-building-o" aria-hidden="true"></i></span><span class="item_menu_a">Busca Empresas e Serviços</span></a></li>
+        	  <li class="item_menu  ptf-li"><a href="/busca/portfolios"><span class="item_menu_ico "><i class="fa fa-address-card-o" aria-hidden="true"></i></span><span class="item_menu_a li-active"> Currículos Profissionais</span></a></li>
+     		<li class="item_menu mapa-li "><a href="/mapa"><span class="item_menu_ico"><i class="fa fa-map aria-hidden="true"></i></span><span class="item_menu_a">Encontre no Mapa</span></a></li>
+     		 <li class="item_menu trab-li"><a href="/trabalhos"><span class="item_menu_ico"><i class="fa fa-star" aria-hidden="true"></i> </span><span class="item_menu_a">Premium em destaque</span></a></li>
+        </ul>
+
+   		 <div class="row-row row-barra">
+		  		<div class="box-subtit">Orçamentos</div>
+		  		<div class="barra-menu">
+		  			<hr>
+		  			<div class="inner-barra"></div>
+		  		</div>
+		  </div>
+		  <ul>
+		<!--       <li class="item_menu  vaga-li"><a href="/trabalhos"><span class="item_menu_ico"><i class="fa fa-bullhorn" aria-hidden="true"></i></span><span class="item_menu_a">Vagas de Emprego</span></a></li>
+         	  <li class="item_menu servico-li"><a href="/oportunidades"><span class="item_menu_ico"><i class="fa fa-bullhorn" aria-hidden="true"></i></span><span class="item_menu_a">Ofertas de Servicos e trabalhos </span></a></li>
+			 -->  <li class="item_menu orc-li"><a href="/orcamentos"><span class="item_menu_ico"><i class="fa fa-handshake-o" aria-hidden="true"></i> </span><span class="item_menu_a">Solicite Orçamentos </span></a></li>
+          </ul>
+		<div class="row-row row-barra">
+			  		<!-- <div class="box-subtit">Em destaque</div> -->
+			  		<div class="barra-menu">
+			  			<hr>
+			  			<div class="inner-barra" ></div>
+			  		</div>
+			  </div>
+	          <ul>
+								<li class="item_menu plan-li"><a href="/planos"><span class="item_menu_ico"><i class="fa fa-diamond" aria-hidden="true" style="color:#FF2F39" ></i> </span><span class="item_menu_a">Planos Premium</span></a></li>
+				<li class="item_menu" onclick="faleCom('fale')"><a href="/#" class="item-none"><span class="item_menu_ico"><i class="fa fa-question-circle" aria-hidden="true"></i> </span><span class="item_menu_a">Dúvidas? Fale conosco</span> </a></li>
+	         	<li class="item_menu home-li"><a href="/"><span class="item_menu_ico"><i class="fa fa-home" aria-hidden="true"></i> </span><span class="item_menu_a"> Início</span> </a></li>
+	      
+	           </ul>
+	     </div>
+     </div>
+  </aside>
+  <script>
+  
+	$(document).on('click','.li-menu-nav', function(){
+		$(this).addClass("li-on");
+		//$(".inner-sidebar").toggle("slide");
+		$(".inner-sidebar").animate({'width': 'toggle'});
+		$('.background-standard').css('display','block');
+	});
+
+	$(document).on('click','.li-busca-nav',function() {
+		  $( ".row-nav-busca" ).fadeToggle( "fast", "linear" );
+	 });
+
+  
+    $('.item-none').attr("href", "");
+	$('.item-none').css("pointer-events", "none");
+  
+	$(document).on('click','.btn-open-account', function(ev){
+		ev.preventDefault();
+		$.ajax({
+				type : 'POST',
+				url : '_entrar',
+				data : {
+					open_lightbox_cadastro : ''
+				},
+				success : function(retorno) {
+					$('.background-standard').css('display','block');
+					$('.lb-standard').css('display','block');
+					$('.lb-standard').html(retorno);
+				}
+			});
+	});
+	$(document).on('click','.btn-sign', function(ev){
+		ev.preventDefault();
+		$.ajax({
+				type : 'POST',
+				url : '_entrar',
+				data : {
+					open_lightbox_login : ''
+				},
+				success : function(retorno) {
+
+					$('.background-standard').css('display','block');
+					$('.lb-standard').css('display','block');
+					$('.lb-standard').html(retorno);
+				}
+			});
+	});
+
+
+	
+	$(document).on('click','.sair-logado', function(ev){
+		ev.preventDefault();
+		$.ajax({
+				type : 'POST',
+				url : '_entrar',
+				data : {
+					sair_logado : ''
+				},
+				success : function(retorno) {
+					window.location.href= '/';
+				}
+			});
+	});
+
+	$(document).on('click','.menub ul li', function(){
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			 $('.inner-sidebar').css('display','none');
+		}
+	});
+
+	$(document).on('click','.box_wellcome button', function(){
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			 $('.inner-sidebar').css('display','none');
+			 $('.background-standard').css('display','none');
+		}
+	});
+
+	
+	
+	$(document).on('click','.background-standard', function(){
+		$('.background-standard').css('display','none');
+		$('.lb-standard').css('display','none');
+		 $('.lightbox-complementos').css('display','none');
+		 $('.lightbox-produto').css('display','none');
+		 $('.lightbox-galeria').css('display','none');
+		 $('.lightbox-padrao').css('display','none');
+		 $('.lightbox-premium').css('display','none');
+		 $('.lightbox-video').css('display','none');
+		 $('.lightbox_background_edit').css('display','none');
+
+		 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				 $('.inner-sidebar').css('display','none');
+		}
+		
+	});
+	
+	$(document).on('click','.close-close', function(){
+		$('.background-standard').css('display','none');
+		$('.lb-standard').css('display','none');
+		$('.lightbox-complementos').css('display','none');
+		$('.lightbox-produto').css('display','none');
+		$('.lightbox-galeria').css('display','none');
+		 $('.lightbox-padrao').css('display','none');
+		 $('.lightbox-premium').css('display','none');
+		 $('.lightbox_background_edit').css('display','none');
+	});
+
+	
+	function faleCom(fale){
+		var falecom = fale;
+
+		$.ajax({
+				type : "POST",
+				url : 'lightbox',
+				data :{ falecom : falecom
+			    },
+				success : function(retorno){
+					
+					$('.background-standard').css('display','block');
+					$('.lightbox-padrao').css('display','block');
+					$('.lightbox-padrao').html(retorno);
+				}
+			});
+	}
+	
+	$(document).on('click','#btn_envia_mensagem', function(event){
+		event.preventDefault();
+			var nome = $('#nome_lb').val();
+			var email = $('#email_lb').val();
+			var assunto = $('#assunto').val();
+			var mensagem = $('#mensagem').val();
+			var mensagem_faleconosco = $('#mensagem_faleconosco').val();
+
+			$.ajax({
+					type : 'POST',
+					url : '_contato',
+					data : {
+						nome : nome,
+						email : email,
+						assunto : assunto,
+						mensagem : mensagem,
+						mensagem_faleconosco : mensagem_faleconosco
+					},
+					success : function(retorno){
+						if (retorno == 1){
+							$('.retorno').html('Desculpe, você atingiu o limite de envio por esse formulário. Entre em contato conosco pelo email: falecom@serviceira.com. ');
+							$('#btn_envia_mensagem').attr("disabled", true);
+							$('#btn_envia_mensagem').css("display", "none");
+							$('#nome').val('');
+							$('#email').val('');
+							$('#mensagem').val('');
+							$('#nome').attr("disabled", true);
+							$('#email').attr("disabled", true);
+							$('#mensagem').attr("disabled", true);
+
+						}else if(retorno == 2){
+							$('.retorno').html('Por favor, preencha todos os campos.');
+						}else if (retorno == 99){
+							$('.retorno').html('Sua mensagem foi enviada com sucesso!');
+							$('#nome').val('');
+							$('#email').val('');
+							$('#mensagem').val('');
+							$('#nome').attr("disabled", true);
+							$('#email').attr("disabled", true);
+							$('#mensagem').attr("disabled", true);
+							$('#btn_envia_mensagem').attr("disabled", true);
+							$('#btn_envia_mensagem').css("display", "none");
+
+						}else{
+
+						}
+					}
+				});
+	});
+
+	
+  </script>
+	<section id="sec-pag-map">
+	 
+	 
+	<header>
+		<div class="row-nav-busca">
+			<div class="box-nav-busca">
+				 <a href="/busca/freelancers-autonomos"> <span class="animated bounceIn" >	
+						 <i class="fa fa-user"></i><br> Autônomos
+				 </span></a>
+				 <a href="/busca/empresas-servicos">  <span class="animated bounceIn" style="animation-delay:0.1s;">	
+						 <i class="fa fa-building-o"></i><br> Empresas
+				 </span></a>
+				  <a href="/busca/portfolios"><span class="animated bounceIn" style="animation-delay:0.2s;">	
+						 <i class="fa fa-address-card-o"></i><br> Currículos
+				 </span></a>
+			</div>
+		</div>
+		<div class="navegacao">
+				<ul>
+					<li class="li-menu-nav"><span><i class="fa fa-bars"></i><br>menu</span></li>
+					<li><a href="/"><span class="nav-inicio"><i class="fa fa-home"></i><br>início</span></a></li>
+					<li class="li-busca-nav" ><span class="nav-busca"><i class="fa fa-search"></i><br>busca</span></li>
+					<li><a href="/orcamentos"><span class="nav-orc"><i class="fa fa-handshake-o"></i><br>orcamentos</span></a></li>
+					<li><a href="/mapa"><span class="nav-map"><i class="fa fa-map"></i><br>mapas</span></a></li>
+				</ul>
+		</div>
+	</header>
+	
+	<div id="header-map">
+		<div class="row-row">
+					<ul class="menu-pag-map">
+						<a href="/mapa"><li class="li_tudo">Tudo</li></a>
+						<a href="/mapa/empresas"><li class="li_empresas"> <i class="fa fa-building-o" aria-hidden="true"></i> Empresas e serviços</li></a>
+						<a href="/mapa/autonomos"><li class="li_autonomos"> <i class="fa fa-user" aria-hidden="true"></i> Autônomos</li></a>
+						
+						<li class="li_curriculos"> <i class="fa fa-address-card-o" aria-hidden="true"></i> Currículos</li>
+					</ul>
+			</div>
+	
+	<div class="row-row row-form-map">
+		<form action="/mapa" id="form-map" method="get">
+
+			<div class="wrapper-busca-mapa">
+				<div class="col-inputs">
+						<div class="col-input-profissao">
+
+							<input type="hidden" id="tipo_busca" name="tipo_busca" value=""> 
+							<input type="hidden" id="prof_url" name="prof_url" value=""> 
+							
+							<input type="hidden" id="profissao_cod" name="profissao_cod" value="" >
+							<input type="hidden" id="profissao_id"  value="" >
+							<input type="text" id="profissao" name="profissao"  value="" placeholder="Pesquise pelo profissional, empresa ou serviço">
+						</div>
+						<div class="col-input-cidade">
+						<input type="hidden" id="cidade_cod" name="cidade_cod" value="" >
+							<input type="text" id="cidade" name="cidade" value="" placeholder="Pesquise em uma cidade" >
+						</div>
+				</div>
+				<div class="col-input-btn">
+						<button class="btn-busca-mapa" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+				</div>
+			</div>
+		</form>
+	</div>	
+	</div>
+	<div class="row-row">
+		<div class="container-fix-map">
+			<div class="popup-super">
+					
+			</div>
+			<div id="map">
+		
+			
+			</div>
+			<div class="row-row">
+				<div class="row-legenda-mapa"></div>
+			</div>
+		</div>
+		
+		
+		
+		
+	</div>
+	
+</section>
+  </div>
+        
+         <script type="text/javascript">
+
+                                var map = L.map('map').setView([
+                                			-23.2972389,-47.0286276], 9);
+         </script>
+                    <script type='text/javascript' src='js/maps/mapa_geral.js'></script>
+
+
+
+
+
+<script type="text/javascript">
+
+$('.mapa-li').addClass('active-menu');
+$('.nav-map').addClass('nav-active');
+$('.nav-map').css("pointer-events", "none");
+
+$('.mapa-li').attr("href", "");
+$('.mapa-li').css("pointer-events", "none");
+
+
+$(document).on('click','#buscar_mapa', function(event){
+		event.preventDefault();
+		
+		var tipo_busca = $('#tipo_busca').val();
+		var profissao = $('#prof_url').val();
+		var cidade = $('#cidade').val();
+
+		if(tipo_busca == ''){
+			 if(profissao == ''){
+				url = 'mapa';
+			 }else{
+				if (cidade == ''){
+					url = 'mapa/'+profissao;
+				}else{
+					url = 'mapa/'+profissao+'?cidade='+cidade;
+				}
+			 }
+		}else{
+			 if(profissao == ''){
+					url = 'mapa/'+tipo_busca;
+				 }else{
+					if (cidade == ''){
+						url = 'mapa/'+tipo_busca+'/'+profissao;
+					}else{
+						url = 'mapa/'+tipo_busca+'/'+profissao+'?cidade='+cidade;
+					}
+			 }
+		}
+		window.location.href= url;
+});
+
+
+$(document).ready(function(){
+    var options = {
+				url: function(phrase) {
+					return "_buscaTrabalhos?inputs=&profissao_cadastrada="+phrase+"&format=json";
+				},
+
+				getValue: "name",
+			 	template: {
+					type: "description",
+					fields: {
+						description: "type"
+					}
+				},
+	 	 		theme: "blue-light",
+		 			list: {
+		 					 onSelectItemEvent: function() {
+			 					var value = $("#profissao").getSelectedItemData().name;
+			 					var prof_id = $("#profissao").getSelectedItemData().id;
+			 					$('#profissao').val(value);
+			 					$('#profissao_cod').val(prof_id);
+			 				},
+			 				maxNumberOfElements: 10,
+			 				match: {
+			 					enabled: true
+			 				}
+		 			}
+ 			};
+ 	$('#profissao').easyAutocomplete(options);
+});
+
+
+
+
+
+
+
+$(document).ready(function(){
+    var options = {
+				url: function(phrase) {
+					return "_buscaTrabalhos?inputs=&cidades_cadastradas="+phrase+"&format=json";
+				},
+
+				getValue: "name",
+			 	template: {
+					type: "description",
+					fields: {
+						description: "type"
+					}
+				},
+	 	 		theme: "blue-light",
+		 			list: {
+		 					 onSelectItemEvent: function() {
+			 					var value = $("#cidade").getSelectedItemData().name;
+			 					var cidade_cod = $("#cidade").getSelectedItemData().id;
+			 					$('#cidade').val(value);
+			 					$('#cidade_cod').val(cidade_cod);
+			 				},
+			 				maxNumberOfElements: 20,
+			 				match: {
+			 					enabled: true
+			 				}
+		 			}
+ 			};
+ 	$('#cidade').easyAutocomplete(options);
+});
+
+
+
+
+$(document).ready(function(){
+	var tipo_busca = $('#tipo_busca').val();
+	var profissao = $('#profissao_url').val();
+	var cidade = $('#cidade').val();
+	$('.li_tudo').removeClass('menu-active');
+	
+	if (tipo_busca == 'curriculos'){
+		$('.li_curriculos').addClass('menu-active');
+	}else if (tipo_busca == 'empresas'){
+		$('.li_empresas').addClass('menu-active');
+	}else if (tipo_busca == 'autonomos'){
+		$('.li_autonomos').addClass('menu-active');
+	}else{
+		$('.li_tudo').addClass('menu-active');
+	}
+});
+
+
+	 $(window).resize(function(){
+			var largura = $(window).width();
+			var altura = $(window).height();
+			if (largura > 980){
+				$('.cidades').css('display','block');
+				$('#sidebar').css('display','block');
+			}else{
+				$('.cidades').css('display','none');
+				$('#sidebar').css('display','none');
+			}
+		});
+
+		var largura = $(window).width();
+		var altura = $(window).height();
+
+		if(largura <= 980){
+			$('.submit_3').click(function(){
+				$('.cidades').css('display','none');
+			});
+		}
+
+		/** PESQUISA MOBILE*/
+		$('.pesquisa_mobile').click(function () {
+		    $(".cidades").slideToggle('fast');
+		});
+
+		$('.action_c').click(function(){
+			$('.background-overlay').css('display','block');
+		    $('.lightbox-cadastro').css('display','block');
+		});
+
+
+
+
+
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
+</body>
+</html>
+

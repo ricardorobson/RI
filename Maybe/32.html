@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="/assets/img/favico.png" rel="shortcut icon" />
+
+    <meta name="rights" content="O AchouServiços detém os direitos sobre o conteúdo deste site. É proibida a reprodução total ou parcial deste conteúdo sem prévia autorização. Para mais informações acesse o link Termos de Uso" />
+    <meta name="description" content="Encontre Fotografia  no AchouServiços. Ajudamos você a encontrar um profissional perto de você de forma rápida e fácil." />
+
+    <title> Fotografia  | AchouServiços </title>
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/offcanvas.css">
+    <link rel="stylesheet" href="/assets/css/autocomplete.css">
+    <link rel="stylesheet" href="/assets/css/results.css">
+</head>
+
+<body>
+
+<nav class="navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="/"><span class="logo-a">Achou</span><span class="logo-s">Serviços</span><span class="logo-e">!</span></a>
+
+        <div class="navbar-search hidden-xs">
+            <div class="form-inline" role="form">
+                <div class="form-group search-input">
+                    <input type="text" class="form-control search-word" id="search-word" placeholder="Busca">
+                </div>
+                <button type="button" class="btn btn-success btn-search">Buscar</button>
+            </div>
+        </div>
+
+        <li class="link-login-logout"><a href="/login">Entrar</a></li>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9 top">
+            <div class="visible-xs">
+                <div class="mobile-search-box">
+                    <input type="text" id="search-word2" class="new-search" placeholder="&nbsp;Nova Busca">
+                    <label for="mySubmitXs" class="btn btn-search"><i class="fa fa-search"></i></label>
+                    <input id="mySubmitXs" type="button" value="Go" class="hidden" />
+                </div>
+                <button type="button" class="btn btn-success btn-sm btn-filter" data-toggle="offcanvas">Filtros</button>
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas hidden-md hidden-sm hidden-lg top" id="sidebar">
+            <div class="filter-box filter-small">
+                <div class="form-inline">
+                    <input class="filter-city form-control" type="text" placeholder="Filtrar por cidade">
+
+                    <select class="form-control" id="order2" name="" required>
+                        <option value="0">Ordenar</option>
+                        <option value="1">Ordem alfabética</option>
+                        <option value="2">Avaliações</option>
+                    </select>
+
+                </div>
+        </div>
+    </div>
+
+
+    <div class="row clearfix top">
+        <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 column">
+            <div class="filter-box hidden-xs">
+                <div class="form-inline">
+                    <input class="filter-city form-control" type="text" placeholder="Filtrar por cidade">
+
+                    <select class="form-control" id="order" name="" required>
+                        <option value="" disabled>Ordenar</option>
+                        <option value="1">Ordem alfabética</option>
+                        <option value="2">Avaliações</option>
+                    </select>
+                </div>
+            </div>
+            <div class="results-resume">
+                <h1>Encontramos mais de <span> 126  </span> profissionais  <div class="suggest-filter"> Melhore o resultado filtrando por cidade </div></h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+        <div class="col-md-12 col-xs-12 column">
+            <div class="row clearfix">
+                <ul id="providers-list">
+                <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1185/avatar/608ec6b4-1e95-4e79-944c-c3e7fb016162_sm.JPG" alt="Foto do prestador de serviço" title="Foto de Gledson Silva Fotos">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Gledson Silva Fotos</p>
+                                <p class="details-activity">Fotografia</p>
+                                <p class="details-city">Florianópolis / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/gledson_silva_fotos" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1189/avatar/b2f0fa23-434a-4ca9-abc0-1d0b1e97c2eb_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Allan Weber">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Allan Weber</p>
+                                <p class="details-activity">Fotografia</p>
+                                <p class="details-city">Florianópolis / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/allan_weber" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1190/avatar/c8162144-8db5-40d3-a032-85c47ef595ad_sm.png" alt="Foto do prestador de serviço" title="Foto de Tripous">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Tripous</p>
+                                <p class="details-activity">Fotografia...</p>
+                                <p class="details-city">Florianópolis / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/tripous" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1192/avatar/12cedca1-b2b7-4f4d-a19f-227dca344b34_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Priscila Rejane Fotografias">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Priscila Rejane Fotografias</p>
+                                <p class="details-activity">Fotografia de eventos...</p>
+                                <p class="details-city">Florianópolis / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/priscila_rejane" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1193/avatar/a24d60ee-5813-475e-80a1-e7df92e43e3d_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Studio Save">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Studio Save</p>
+                                <p class="details-activity">Fotografia de eventos...</p>
+                                <p class="details-city">Florianópolis / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/studio_save" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1211/avatar/6499e8f8-dbeb-4699-b57d-cd6525826685_sm.jpg" alt="Foto do prestador de serviço" title="Foto de André Nascimento">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">André Nascimento</p>
+                                <p class="details-activity">Fotografia de eventos...</p>
+                                <p class="details-city">São Paulo / SP</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/andre_nascimento" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1278/avatar/cce6a9bb-2a11-447f-84be-aff7b66b53de_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Imagine Fotografia">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Imagine Fotografia</p>
+                                <p class="details-activity">Fotografia</p>
+                                <p class="details-city">Porto Alegre / RS</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/imagine_fotografia" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1282/avatar/66285ca8-7a90-4586-93b1-a0c1a716b988_sm.jpg" alt="Foto do prestador de serviço" title="Foto de MO Photography">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">MO Photography</p>
+                                <p class="details-activity">Fotografia de eventos</p>
+                                <p class="details-city">Porto Alegre / RS</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/mo_photography" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1283/avatar/141cc0be-00bb-4ad6-bc43-c8ce5017fdf2_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Glauccio Dutra - Fotografia">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Glauccio Dutra - Fotografia</p>
+                                <p class="details-activity">Fotografia de eventos</p>
+                                <p class="details-city">Porto Alegre / RS</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/glauccio_dutra___fotografia" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1290/avatar/ce29534e-655f-4ef7-b6da-a45a9143216a_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Studio Star Lux">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Studio Star Lux</p>
+                                <p class="details-activity">Fotografia</p>
+                                <p class="details-city">Porto Alegre / RS</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/studio_star_lux" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1341/avatar/055ff1c7-09fe-42ec-9d60-fa1e70335f66_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Salomão Cardoso Estúdio">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Salomão Cardoso Estúdio</p>
+                                <p class="details-activity">Fotografia</p>
+                                <p class="details-city">Porto Alegre / RS</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/salomao_cardoso_estudio" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1346/avatar/0b283709-467d-41aa-99a8-34a88bbdd085_sm.png" alt="Foto do prestador de serviço" title="Foto de Lisa Roos Fotografia">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Lisa Roos Fotografia</p>
+                                <p class="details-activity">Fotografia de eventos</p>
+                                <p class="details-city">Porto Alegre / RS</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/lisa_roos_fotografia" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1350/avatar/f4e9bae8-c3c9-416a-8933-e4ed69c66993_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Recortes de Felicidade">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Recortes de Felicidade</p>
+                                <p class="details-activity">Fotografia de eventos</p>
+                                <p class="details-city">Osasco / SP</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/recortesdefelicidade" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1433/avatar/59670298-b010-45f8-8f2f-c93c80e3378a_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Daniela Pires Fotografia">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Daniela Pires Fotografia</p>
+                                <p class="details-activity">Fotografia de eventos</p>
+                                <p class="details-city">Porto Alegre / RS</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/daniela_pires_fotografia" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1442/avatar/d9dc9786-c9dc-4310-8f24-37a2d18c0c67_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Peterson Paul Fotografia">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Peterson Paul Fotografia</p>
+                                <p class="details-activity">Fotografia de eventos</p>
+                                <p class="details-city">Biguaçu / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/peterson_paul_fotografia" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1446/avatar/9018469b-7d87-4f60-aae8-a27bb44d56bf_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Pedro Paulo">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Pedro Paulo</p>
+                                <p class="details-activity">Fotografia de eventos</p>
+                                <p class="details-city">São José / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/pedro_paulo" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1489/avatar/d602e31b-a631-4527-a38b-740ca5d26b07_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Juliana Carvalho">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Juliana Carvalho</p>
+                                <p class="details-activity">Fotografia</p>
+                                <p class="details-city">Florianópolis / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/juliana_carvalho" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1490/avatar/1d8553b8-d6be-4abe-b62c-19d520db63ff_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Luiza Santa Helena">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Luiza Santa Helena</p>
+                                <p class="details-activity">Fotografia</p>
+                                <p class="details-city">Florianópolis / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/luiza_santa_helena" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1502/avatar/1e95e928-4695-4e91-9e07-bb9598b8bc09_sm.jpg" alt="Foto do prestador de serviço" title="Foto de KKFurttado">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">KKFurttado</p>
+                                <p class="details-activity">Fotografia</p>
+                                <p class="details-city">Florianópolis / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/kkfurttado" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-4 col-xs-12 column item-padding ">
+                        <div class="results-item">
+                            <div class="results-image">
+                                <img src="http://www.achouservicos.com.br//assets/img/1616/avatar/e443bd5f-81ea-4554-b642-cd8937ca0c5a_sm.jpg" alt="Foto do prestador de serviço" title="Foto de Magno Bottrel - fotografia">
+                            </div>
+                            <div class="results-work-icon">
+                                
+                            </div>
+                            <div class="results-details">
+                                <p class="details-name">Magno Bottrel - fotografia</p>
+                                <p class="details-activity">Professor de fotografia</p>
+                                <p class="details-city">Florianópolis / SC</p>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                                <div class="rating-count">
+                                    0 avaliações
+                                </div>
+
+                                <a href="/magnobottrel" class="btn btn-success btn-details">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+        </div>
+</body>
+<script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.autocomplete.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-57557554-1', 'auto');
+    ga('send', 'pageview');
+
+    $(function() {
+
+        $('#myModal').modal('show', 2500);
+
+        $('[data-toggle="offcanvas"]').click(function () {
+            $('.row-offcanvas').toggleClass('active')
+        });
+
+        $("#order, #order2").on("change", function() {
+            var items = $('#providers-list li').get();
+
+            if(this.value == 1) {
+                items.sort(function(a,b){
+                    var aName = $(a).find(".details-name").text().toLowerCase();
+                    var bName = $(b).find(".details-name").text().toLowerCase();
+
+                    if(bName > aName) return -1;
+                    if(bName < aName) return 1;
+
+                    return 0;
+                });
+
+            } else if(this.value == 2) {
+                items.sort(function(a,b){
+                    var aRating = $(a).find(".rating-count").text();
+                    var aCount = aRating.match("[0-9]{1,10}")[0];
+                    var bRating = $(b).find(".rating-count").text();
+                    var bCount = bRating.match("[0-9]{1,10}")[0];
+
+                    if(bCount < aCount) return -1;
+                    if(bCount > aCount) return 1;
+
+                    return 0;
+                });
+            }
+
+            var ul = $('#providers-list');
+            $.each(items, function(i, li){
+                ul.append(li);
+            });
+
+            if($('.row-offcanvas').hasClass("active")) {
+                $('.row-offcanvas').removeClass('active');
+            }
+        });
+
+        $("#cities, #cities2").on("change", function() {
+            var selectedCity = this.value.split(" / ")[0];
+
+            $('.row-offcanvas').toggleClass('active');
+            var word = "Fotografia";
+            word = word.replace(new RegExp(" ", 'g'), "+");
+
+            window.location.href = "/resultado/" + word + "/" + selectedCity;
+        });
+
+        //$("#order").val("2").change();
+
+        $(".btn-search").on("click", function() {
+            var word = $("#search-word").val() || $("#search-word2").val();
+            console.log("word: " + word);
+            if(word.length <= 0)
+                return false;
+
+            window.location.href = "/resultado/" + word.replace(new RegExp(" ", 'g'), "+");
+        });
+
+        $("#search-word, #search-word2").keypress(function(e) {
+            if(e.which == 13) {
+                var word = $("#search-word").val() || $("#search-word2").val();
+                window.location.href = "/resultado/" + word.replace(new RegExp(" ", 'g'), "+");
+            }
+        });
+
+        $.get("/ajax/getServices.php", function(data, status) {
+            accentsTidy = function(s){
+                var r = s.toLowerCase();
+                non_asciis = {'a': '[àáâãäå]', 'ae': 'æ', 'c': 'ç', 'e': '[èéêë]', 'i': '[ìíîï]', 'n': 'ñ', 'o': '[òóôõö]', 'oe': 'œ', 'u': '[ùúûűü]', 'y': '[ýÿ]'};
+                for (i in non_asciis) { r = r.replace(new RegExp(non_asciis[i], 'g'), i); }
+                return r;
+            };
+            var tags = JSON.parse(data);
+            $( "#search-word, #search-word2" ).autocomplete({
+                lookup: tags,
+                onSelect: function (suggestion) {
+                    word = suggestion.value.split(" / ")[0];
+                    window.location.href = "/resultado/" + word.replace(new RegExp(" ", 'g'), "+");
+                },
+                lookupFilter: function (suggestion, query, queryLowerCase) {
+                    return accentsTidy(suggestion.value).toLowerCase().indexOf(accentsTidy(queryLowerCase)) > -1;
+                }
+            });
+        });
+
+        $.get("/ajax/getCities.php", function(data, status) {
+            accentsTidy = function(s){
+                var r = s.toLowerCase();
+                non_asciis = {'a': '[àáâãäå]', 'ae': 'æ', 'c': 'ç', 'e': '[èéêë]', 'i': '[ìíîï]', 'n': 'ñ', 'o': '[òóôõö]', 'oe': 'œ', 'u': '[ùúûűü]', 'y': '[ýÿ]'};
+                for (i in non_asciis) { r = r.replace(new RegExp(non_asciis[i], 'g'), i); }
+                return r;
+            };
+            var tags = JSON.parse(data);
+            $( ".filter-city" ).autocomplete({
+                lookup: tags,
+                onSelect: function (suggestion) {
+                    word = suggestion.value.split(" / ")[0];
+                    var href = window.location.href.split("/", 5).join("/");
+                    window.location.href = href + "/" + word.replace(new RegExp(" ", 'g'), "+");
+                }
+            });
+        });
+    });
+</script>
+</html>
