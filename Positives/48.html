@@ -1,0 +1,2052 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:og="http://opengraphprotocol.org/schema/"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head id="ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ace61b4582","applicationID":"3335316","transactionName":"ZQBTYEVTXhBUUhJaC1xKcGdnHVkOWkcDWhdBAENCXlFfEBpXD1AMUxZURkFbUwxGHwdAFEo=","queueTime":0,"applicationTime":914,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><title>
+	Limpeza Técnica - ZAP Imóveis Serviços
+</title><meta name="description" content="ZAP - A melhor forma para fazer negócios na Internet"><meta name="keywords" content="ZAP, oesp, oglobo, carros, veiculos, motos, empregos, vaga, curriculum,mix">	
+
+	<!------ Google Analytics início ------>
+	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-230770-2');ga('send', 'pageview');</script>
+	<!------ Google Analytics fim ------>
+
+	<meta name="Author" content="ZAP" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" />
+	<meta property="fb:admins" content="100000490818781" />
+	
+	<meta property="og:site_name" content="Zap" />
+	
+    <meta id='OpenGraphType' property='og:type' content='article'/>
+    <meta property='og:image' content='http://www.zap.com.br/img/zapimoveisFace.gif'/>
+	<meta property='og:url' content='http://www.zap.com.br/imoveis/servicos/pro/limpeza-tecnica'/>
+	<meta property='og:title' content='Veja o perfil desse profissional que encontrei no ZAP Imóveis Serviços'/>
+	<meta id='OpenGraphDescription' property='og:description' content='No ZAP Imóveis | Serviços você encontra empresas e profissionais autônomos especializados em serviços para a sua casa.'/>
+<link rel='shortcut icon' href='https://c.zapcorp.com.br/imagem/zap/favicon.ico'  type='image/x-icon' /><link rel="stylesheet" href=https://c.zapcorp.com.br/css2/zap.css?versao=20150601.001 type="text/css" />
+    <link rel="stylesheet" href="/NovoSite/css/zap-imoveis.css?versao=20150601.001" type="text/css" />
+	<script language ="javascript" type="text/javascript" src=https://c.zapcorp.com.br/ScriptLibrary/Modal.js?versao=20150601.001></script>
+<script language ="javascript" type="text/javascript" src=https://c.zapcorp.com.br/ScriptLibrary/zap.js?versao=20150601.001></script>
+<script language="javascript" type="text/javascript" src=https://c.zapcorp.com.br/ScriptLibrary/jquery-1.3.2.min.js?versao=20150601.001></script>
+<script language="javascript" type="text/javascript" src=https://c.zapcorp.com.br/Scripts/CommonZap.js?versao=20150601.001></script><script language="javascript" type="text/javascript" src="/ScriptLibrary/mobiledetect/mobile-detect.min.js?versao=20150601.001"></script><script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/jquery.watermark.min.js?versao=20150601.001"></script><script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/novosite/contabilizarGA.js?versao=20150601.001"></script>
+    
+    <title>ZAP Imóveis Serviços</title>
+
+    <link rel="stylesheet" href="https://c.zapcorp.com.br/css2/cssmin/fichaPrestadorServico.css?versao=20150601.001" type="text/css" />
+    <script src="https://c.zapcorp.com.br/ScriptLibrary/jsmin/perfil-prestador-servico-ficha-min.js?versao=20150601.001" type="text/javascript"></script>
+        
+    <script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/servicos/ficha/jquery-1.6.3.min.js?versao=20150601.001"></script> 
+    <script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/servicos/ficha/jquery.fancybox.pack.js?versao=20150601.001"></script> 
+    <script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/servicos/ficha/jquery.fancybox-thumbs.js?versao=20150601.001"></script> 
+    <script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/servicos/enviar-mensagem.js?versao=20150601.001"></script> 
+    <script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/servicos/logon.js?versao=20150601.001"></script> 
+
+    <script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/imoveis/jquery.rating.js?versao=20150601.001"></script> 
+    <script language="javascript" type="text/javascript" src="https://c.zapcorp.com.br/ScriptLibrary/servicos/ficha/avaliacao.js?versao=20150601.001"></script> 
+    
+    <script type="text/javascript">
+
+        //Lightbox
+        $(document).ready(function () {
+            $(".fancybox-thumb").fancybox({
+                prevEffect: 'none',
+                nextEffect: 'none',
+                helpers: {
+                    title: {
+                        type: 'outside'
+                    },
+                    thumbs: {
+                        width: 50,
+                        height: 50
+                    }
+                }
+            });
+        });
+
+
+        // JQuery para exibição da Div de Alerta
+        $(document).ready(function () {
+
+            var y_fixo = $("#ModalDenunciaSD").offset().top;
+            $(window).scroll(function () {
+                $("#ModalDenunciaSD").animate({
+                    top: $(document).scrollTop() + $(window).height() / 8 + "px"
+                }, { duration: 500, queue: false }
+               );
+            });
+
+            y_fixo = $("#dicasSeguranca").offset().top;
+            $(window).scroll(function () {
+                $("#dicasSeguranca").animate({
+                    top: $(document).scrollTop() + $(window).height() / 8 + "px"
+                }, { duration: 500, queue: false }
+               );
+            });
+
+            y_fixo = $("#Avaliacao").offset().top;
+            $(window).scroll(function () {
+                $("#Avaliacao").animate({
+                    top: $(document).scrollTop() + $(window).height() / 8 + "px"
+                }, { duration: 500, queue: false }
+               );
+            });
+
+        });
+
+
+        $('.txt_todas_avalia_srv').click(function () {
+
+            ExibirAvaliacoes();
+            
+        });
+
+        //Tips Subnavegação
+        $(document).ready(function () {
+            $('.sessions-tips .my-list-tip').hide();
+            $('.sessions-tips .profile-tip').hide();
+            $('.my-list-link').mouseenter(function () {
+                $('.my-list-tip').fadeIn("fast");
+                $('.profile-tip').hide();
+            });
+            $('.my-list-link').mouseleave(function () {
+                $('.my-list-tip').fadeOut("fast");
+                $('.profile-tip').hide();
+            });
+            $('.profile-link').mouseenter(function () {
+                $('.profile-tip').fadeIn("fast");
+                $('.my-list-tip').hide();
+            });
+            $('.profile-link').mouseleave(function () {
+                $('.profile-tip').fadeOut("fast");
+                $('.my-list-tip').hide();
+            });
+
+        });
+
+    </script>
+
+
+	<!-- Scripts para modal, efeitos sobre imagens, etc, todos movidos para o arquivo consolidado -->
+	<script src='https://c.zapcorp.com.br/ScriptLibrary/String.js?versao=20150601.001' type='text/javascript'></script></head>
+
+<script type="text/javascript" language="javascript">
+    var VerLogin;
+    VerLogin = '';
+    function GravaNavegacaoHome(funcionalidade, identificador, qtdselecao) {
+        //********* ATENÇÃO *********
+        // - toda alteração feita nesta função deverá ser replicada no arquivo valida_busca_rapida_imovel.js
+        /*var head = document.getElementsByTagName('head').item(0);
+	    var eScript = document.createElement('script');
+	    eScript.setAttribute('src', '/imoveis/contabiliza_navegacao_home.aspx?func=' + funcionalidade + '&ident=' + identificador + '&qtdsel=' + qtdselecao );
+	    head.appendChild(eScript);*/
+
+	    // Mudança na contabilização para assíncrona devido a problemas com firefox e chrome.
+	    $.ajax({
+	        type: "POST",
+	        url: '/imoveis/contabiliza_navegacao_home.aspx?func=' + funcionalidade + '&ident=' + identificador + '&qtdsel=' + qtdselecao,
+	        dataType: "script",
+	        success: function () { return true; },
+	        error: function (request, status, error) { }
+	    });
+    }
+    function LeCookieContabilizaHome() {
+        //********* ATENÇÃO *********
+        // - toda alteração feita nesta função deverá ser replicada no arquivo valida_busca_rapida_imovel.js
+        var sCookie = "";
+        var iDentifica = "";
+        sCookie = readCookie('ZapID');
+        if (sCookie != null) {
+            sCookie = sCookie.split('&')
+            for (i = 0; i < sCookie.length; i++) {
+                sConteudo = sCookie[i];
+                if (sConteudo.split('=')[0] == 'Identificador')
+                    iDentifica = sConteudo.split('=')[1];
+            }
+        }
+        return iDentifica;
+    }
+
+    function rastreamentoNavegacaoModulo(modulo, tipoOferta) {
+        $.ajax({
+            type: "GET",
+            url: '/imoveis/ajax.ashx',
+            async: false,
+            cache: false,
+            data: {
+                metodo: 'gravarastreamentonavegacaomodulo',
+                modulo: modulo,
+                tipoOferta: tipoOferta != undefined ? tipoOferta : 'NaoInformado'
+            },
+            dataType: "text",
+            success: function (data) { }
+        });
+    }
+
+    function rastreamentoNavegacaoAcao(acao, codigo, tipoOferta, codCliente) {
+        if (document.location.toString().toLowerCase().indexOf("msn") != -1) {
+            acao = acao + 'MSN';
+        }
+
+        $.ajax({
+            type: "GET",
+            url: '/imoveis/ajax.ashx',
+            async: false,
+            cache: false,
+            data: {
+                metodo: 'gravarastreamentonavegacaoacao',
+                acao: acao,
+                id_oferta: codigo,
+                tipoOferta: tipoOferta,
+                codCliente: codCliente
+            },
+            dataType: "script",
+            success: function (data) { }
+        });
+    }
+
+</script>
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+
+    OAS_url = '/img/ads';
+
+    var retranca = 'imoveis'
+    var bYahoo = "False";
+    var bMSN = "False";
+    document.write('');
+    function OAS_AD(pos) {
+        var link = linkCampanha(pos)
+        if (link != '') 
+            OAS_NORMAL(pos, link);
+    }
+    function OAS_NORMAL(pos, link) {
+        if (bYahoo == 'False' && bMSN == 'False') {
+            document.write('<A HREF="' + link + '" TARGET=_top>');
+            document.write('<IMG SRC="' + OAS_url + '/' + retranca + '/' + pos + '.jpg" BORDER=0></A>');
+        }
+        else if (pos != 'Top') {
+            document.write('<A HREF="' + link + '" TARGET=_top>');
+            document.write('<IMG SRC="' + OAS_url + '/' + retranca + '/' + pos + '.jpg" BORDER=0></A>');    
+        }
+    }
+    function linkCampanha(pos) {
+        if (retranca == 'imoveis') return linkImoveis(pos);
+        else if (retranca == 'autos') return linkAutos(pos);
+        else if (retranca == 'empregos') return linkEmpregos(pos);
+        else if (retranca == 'mix') return linkMix(pos);
+        else return '';
+    }
+
+    function linkImoveis(pos) {        
+        switch (pos){
+            case 'x01': return 'http://www.zapimoveis.com.br/busca-mapa/';
+            case 'Position2': case 'Top': return 'https://www.zap.com.br/anuncie/default.aspx?ret=1';
+            case 'Right1': return 'http://twitter.com/zapimoveis';
+            case 'Right': return '/anuncie/selecao-retranca.aspx';
+            case 'x12': return '/imoveis/simule-seu-financiamento.aspx';
+            default: return '';
+        }
+    }
+    function linkAutos(pos) {
+        switch (pos) {
+            case 'x15': case 'Top': return 'https://www.zap.com.br/anuncie/default.aspx?ret=2';
+            case 'Position1': return 'http://twitter.com/zapautos';
+            case 'Right': return '/anuncie/selecao-retranca.aspx';
+            case 'x01': case 'Position4': return '/anunciezap/anuncie-autos-home-moto.aspx';
+            default: return '';
+        }
+    }
+    function linkEmpregos(pos) {
+        switch (pos) {
+            case 'x15': case 'Top': return 'https://www.zap.com.br/anuncie/default.aspx?ret=3';
+            case 'Position1': return 'http://twitter.com/zapempregos';
+            case 'Right': return '/anuncie/selecao-retranca.aspx';
+            default: return '';
+        }
+    }
+    function linkMix(pos) {
+        switch (pos) {
+            case 'x15': case 'Top': case 'Position1': return 'https://www.zap.com.br/anunciezap/anuncie-mix-home.aspx';
+            case 'Right': return '/anuncie/selecao-retranca.aspx';
+            default: return '';
+        }
+    }
+</script>
+
+
+<script language="JavaScript" type="text/javascript">
+    function pophotsite(nUrlUnid, pCodParc) {
+        var nWind
+        nUrlUnid = 'Redir_HotSite.aspx?cp=' + nUrlUnid + '&parc=' + pCodParc;
+        nUrlUnid = '/imoveis/lancamentos/' + nUrlUnid;
+		nWind = window.open(nUrlUnid, '_blank', 'width=800,height=600,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes')
+    }
+    function pophotsitecarros(nUrl) {
+        var nWind;
+        nWind = window.open(nUrl, '_blank', 'width=800,height=600,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');
+    }
+    function popdetalhe(pCodInt, pCodImobiliaria, pCodItem) {
+        var nWind, nUrlUnid;
+        nUrlUnid = '/imoveis/detalhes.aspx?Imovel=' + pCodInt + '&Imobiliaria=' + pCodImobiliaria + '&coditem=' + pCodItem;
+        nWind = window.open(nUrlUnid, '_self');
+    }
+    function popdetalhecarro(pCodInt, pCodItem) {
+        var nWind, nUrlUnid;
+        nUrlUnid = '/carros/detalhes.aspx?ID=' + pCodInt + '&coditem=' + pCodItem;
+        nWind = window.open(nUrlUnid, '_self');
+    }
+    function popdetalhemoto(pCodInt, pCodItem) {
+        var nWind, nUrlUnid;
+        nUrlUnid = '/motos/detalhes.aspx?ID=' + pCodInt + '&coditem=' + pCodItem;
+        nWind = window.open(nUrlUnid, '_self');
+    }
+    function popdetalhemix(pCodInt, pCodItem) {
+        var nWind, nUrlUnid;
+        nUrlUnid = '/mix/detalhes.aspx?ID=' + pCodInt + '&coditem=' + pCodItem;
+        nWind = window.open(nUrlUnid, '_self');
+    }
+    function popdetalhevaga(pCodInt, pCodItem) {
+        var nWind, nUrlUnid;
+        nUrlUnid = '/empregos/vagas/detalhes.aspx?ID=' + pCodInt + '&coditem=' + pCodItem;
+        nWind = window.open(nUrlUnid, '_self');
+    }
+</script>
+
+<!------ OAS SETUP begin ------>
+<script language="JavaScript" type="text/javascript">
+
+    // Início: Login //
+    /* Código para manipulação dos divs modais presentes no User control de Login */
+    /* OBS.: Não utilizar o nome VerLogin para variáveis em javascript */
+    var VerLogin;
+    VerLogin = '';
+    //  Fim: Login //
+
+
+    //-->
+    
+</script>
+<!------ OAS SETUP end ------>
+<body id="ctl00_bodBody">
+    <input name="ctl00$emailToCriteo" type="hidden" id="ctl00_emailToCriteo" />
+    <input name="ctl00$transacaoId" type="hidden" id="ctl00_transacaoId" />
+    <input name="ctl00$newCustomer" type="hidden" id="ctl00_newCustomer" />
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MNRTXP" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <script>
+
+        setCriteoTags();
+        
+        var chaveGTM = 'GTM-MNRTXP';
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })
+        (window, document, 'script', 'dataLayer', ''+ chaveGTM +'');
+
+        function setCriteoTags(){
+            var emailMD5Encrypted = $('[id$=emailToCriteo]').val();
+            var sourceDevice = getSourceDevice();
+
+            if(typeof dataLayer === "undefined"){
+                dataLayer = [];
+            }
+
+            dataLayer.push({ 'event': 'setAccount', 'account': 23223 });
+
+            var hashedEmail = (emailMD5Encrypted != null && emailMD5Encrypted.length > 0) ? emailMD5Encrypted : '';
+            dataLayer.push({'event': 'setHashedEmail', 'email': hashedEmail});
+
+            if (sourceDevice != null && sourceDevice.length > 0) {
+                dataLayer.push({'event': 'setSiteType', 'type': sourceDevice});
+            }
+
+            if(window.location.href.indexOf('conf-cartao') > -1 || window.location.href.indexOf('conf-boleto') > -1) {
+                var transacaoId = $('[id$=transacaoId]').val();
+                var newCustomer = $('[id$=newCustomer]').val();
+                dataLayer.push({ 'event': 'trackTransaction', 'id': parseInt(transacaoId), 'new_customer': parseInt(newCustomer) });
+            }
+        }
+
+        function getSourceDevice(){
+            var md = new MobileDetect(window.navigator.userAgent);
+
+            if(md.mobile()){
+                if(md.phone()){
+                    return 'm';
+                }
+                else if(md.tablet()){
+                    return 't';
+                }
+            }
+
+            return 'd';
+        }
+    </script>
+    <!-- End Google Tag Manager -->
+
+<!-- MasterNovoSite -->
+	<form name="aspnetForm" method="post" action="./limpeza-tecnica" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1MjcyMjUxODYPZBYCZg9kFgZmD2QWFAICD2QWAmYPFgIeBFRleHQFKUxpbXBlemEgVMOpY25pY2EgLSBaQVAgSW3Ds3ZlaXMgU2VydmnDp29zZAIEDxYCHwAFWTxtZXRhIG5hbWU9ImRlc2NyaXB0aW9uIiBjb250ZW50PSJaQVAgLSBBIG1lbGhvciBmb3JtYSBwYXJhIGZhemVyIG5lZ8OzY2lvcyBuYSBJbnRlcm5ldCI+ZAIFDxYCHwAFazxtZXRhIG5hbWU9ImtleXdvcmRzIiBjb250ZW50PSJaQVAsIG9lc3AsIG9nbG9ibywgY2Fycm9zLCB2ZWljdWxvcywgbW90b3MsIGVtcHJlZ29zLCB2YWdhLCBjdXJyaWN1bHVtLG1peCI+ZAIGDxYCHwAF+QI8c2NyaXB0PihmdW5jdGlvbihpLHMsbyxnLHIsYSxtKXtpWydHb29nbGVBbmFseXRpY3NPYmplY3QnXT1yO2lbcl09aVtyXXx8ZnVuY3Rpb24oKXsoaVtyXS5xPWlbcl0ucXx8W10pLnB1c2goYXJndW1lbnRzKX0saVtyXS5sPTEqbmV3IERhdGUoKTthPXMuY3JlYXRlRWxlbWVudChvKSxtPXMuZ2V0RWxlbWVudHNCeVRhZ05hbWUobylbMF07YS5hc3luYz0xO2Euc3JjPWc7bS5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLG0pfSkod2luZG93LGRvY3VtZW50LCdzY3JpcHQnLCcvL3d3dy5nb29nbGUtYW5hbHl0aWNzLmNvbS9hbmFseXRpY3MuanMnLCdnYScpO2dhKCdjcmVhdGUnLCAnVUEtMjMwNzcwLTInKTtnYSgnc2VuZCcsICdwYWdldmlldycpOzwvc2NyaXB0PmQCCg8WAh4HVmlzaWJsZWcWCAIDDxYCHwAFUjxtZXRhIHByb3BlcnR5PSdvZzppbWFnZScgY29udGVudD0naHR0cDovL3d3dy56YXAuY29tLmJyL2ltZy96YXBpbW92ZWlzRmFjZS5naWYnLz5kAgUPFgIfAAVePG1ldGEgcHJvcGVydHk9J29nOnVybCcgY29udGVudD0naHR0cDovL3d3dy56YXAuY29tLmJyL2ltb3ZlaXMvc2Vydmljb3MvcHJvL2xpbXBlemEtdGVjbmljYScvPmQCBw8WAh8ABW48bWV0YSBwcm9wZXJ0eT0nb2c6dGl0bGUnIGNvbnRlbnQ9J1ZlamEgbyBwZXJmaWwgZGVzc2UgcHJvZmlzc2lvbmFsIHF1ZSBlbmNvbnRyZWkgbm8gWkFQIEltw7N2ZWlzIFNlcnZpw6dvcycvPmQCCQ8WAh8ABcEBPG1ldGEgaWQ9J09wZW5HcmFwaERlc2NyaXB0aW9uJyBwcm9wZXJ0eT0nb2c6ZGVzY3JpcHRpb24nIGNvbnRlbnQ9J05vIFpBUCBJbcOzdmVpcyB8IFNlcnZpw6dvcyB2b2PDqiBlbmNvbnRyYSBlbXByZXNhcyBlIHByb2Zpc3Npb25haXMgYXV0w7Rub21vcyBlc3BlY2lhbGl6YWRvcyBlbSBzZXJ2acOnb3MgcGFyYSBhIHN1YSBjYXNhLicvPmQCCw8WAh8ABWg8bGluayByZWw9J3Nob3J0Y3V0IGljb24nIGhyZWY9J2h0dHBzOi8vYy56YXBjb3JwLmNvbS5ici9pbWFnZW0vemFwL2Zhdmljb24uaWNvJyAgdHlwZT0naW1hZ2UveC1pY29uJyAvPmQCDA8WAh8AZWQCDQ8WAh8ABWg8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9aHR0cHM6Ly9jLnphcGNvcnAuY29tLmJyL2NzczIvemFwLmNzcz92ZXJzYW89MjAxNTA2MDEuMDAxIHR5cGU9InRleHQvY3NzIiAvPmQCDg8WAh8ABeEHPHNjcmlwdCBsYW5ndWFnZSA9ImphdmFzY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPWh0dHBzOi8vYy56YXBjb3JwLmNvbS5ici9TY3JpcHRMaWJyYXJ5L01vZGFsLmpzP3ZlcnNhbz0yMDE1MDYwMS4wMDE+PC9zY3JpcHQ+DQo8c2NyaXB0IGxhbmd1YWdlID0iamF2YXNjcmlwdCIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9aHR0cHM6Ly9jLnphcGNvcnAuY29tLmJyL1NjcmlwdExpYnJhcnkvemFwLmpzP3ZlcnNhbz0yMDE1MDYwMS4wMDE+PC9zY3JpcHQ+DQo8c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz1odHRwczovL2MuemFwY29ycC5jb20uYnIvU2NyaXB0TGlicmFyeS9qcXVlcnktMS4zLjIubWluLmpzP3ZlcnNhbz0yMDE1MDYwMS4wMDE+PC9zY3JpcHQ+DQo8c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz1odHRwczovL2MuemFwY29ycC5jb20uYnIvU2NyaXB0cy9Db21tb25aYXAuanM/dmVyc2FvPTIwMTUwNjAxLjAwMT48L3NjcmlwdD48c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iL1NjcmlwdExpYnJhcnkvbW9iaWxlZGV0ZWN0L21vYmlsZS1kZXRlY3QubWluLmpzP3ZlcnNhbz0yMDE1MDYwMS4wMDEiPjwvc2NyaXB0PjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2MuemFwY29ycC5jb20uYnIvU2NyaXB0TGlicmFyeS9qcXVlcnkud2F0ZXJtYXJrLm1pbi5qcz92ZXJzYW89MjAxNTA2MDEuMDAxIj48L3NjcmlwdD48c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jLnphcGNvcnAuY29tLmJyL1NjcmlwdExpYnJhcnkvbm92b3NpdGUvY29udGFiaWxpemFyR0EuanM/dmVyc2FvPTIwMTUwNjAxLjAwMSI+PC9zY3JpcHQ+ZAIQDxYCHwAFczxzY3JpcHQgc3JjPSdodHRwczovL2MuemFwY29ycC5jb20uYnIvU2NyaXB0TGlicmFyeS9TdHJpbmcuanM/dmVyc2FvPTIwMTUwNjAxLjAwMScgdHlwZT0ndGV4dC9qYXZhc2NyaXB0Jz48L3NjcmlwdD5kAgEPFgIfAWhkAgMPZBYMAgMPZBYIAgQPZBYCZg9kFgZmDw8WAh8ABQVMb2dpbmRkAgEPFgIfAWhkAgIPDxYCHwAFC0NhZGFzdHJlLXNlZGQCBw9kFhwCAQ8PFgIeCEltYWdlVXJsBSV+L2ltZy9zZXJ2aWNvcy9mb3RvX2RlZmF1bHRfZmljaGEucG5nZGQCAg8PFgIfAAUQTGltcGV6YSBUw6ljbmljYWRkAgQPZBYCAgEPFgIeC18hSXRlbUNvdW50AgIWBGYPZBYCZg8VAQpQYWlzYWdpc21vZAIBD2QWAmYPFQEUU2VydmnDp29zIGRlIExpbXBlemFkAgUPFgIfAWhkAgYPZBYCAgEPDxYCHwAFrwFMaW1wZXphIGNvbWVyY2lhbCBlIHJlc2lkZW5jaWFsIDogUMOzcyBvYnJhICwgdHJhdGFtZW50byBlIGltcGVybWVhYmlsaXphw6fDo28gZGUgcGlzb3MsIGphcmRpbmFnZW0sIGxpbXBlemEgZGUgcGVkcmFzLiBDYW1waW5hcyBlIGNpZGFkZXMgYWRqYWNlbnRlcy4gUmFwaWRleiBlIG1lbGhvciBwcmXDp28uZGQCBw8PFgIfAAUKMjAvMDkvMjAxNmRkAggPZBYCZg9kFgICBg9kFgICAg8QDxYGHg1EYXRhVGV4dEZpZWxkBQROb21lHg5EYXRhVmFsdWVGaWVsZAUXVGlwb1JlY2xhbWFjYW9TZXJ2aWNvSUQeC18hRGF0YUJvdW5kZ2QQFQsJU2VsZWNpb25lFEFuw7puY2lvIGluZXhpc3RlbnRlIURlc2NyacOnw6NvIGluY29ycmV0YSBkbyBzZXJ2acOnbx5FbmRlcmXDp28gZXJyYWRvIG91IGluY29tcGxldG8ORm90byBpbmNvcnJldGEhTsOjbyByZXNwb25kZXUgZS1tYWlsIGVtIGF0w6kgNDhIHlB1YmxpY2HDp8OjbyBzZW0gYXV0b3JpemHDp8OjbyFRdWFsaWRhZGUgZG8gYXRlbmRpbWVudG8gcmVjZWJpZG8eUXVhbGlkYWRlIGRvIHNlcnZpw6dvIGVudHJlZ3VlGVNlbSByZXRvcm5vIGRvIGFudW5jaWFudGUUVGVsZWZvbmUgbsOjbyBhdGVuZGUVCwlTZWxlY2lvbmUBMQEyATMBNAE1ATYBNwE4ATkCMTAUKwMLZ2dnZ2dnZ2dnZ2dkZAIJDw8WAh8BaGRkAgoPZBYCAgEPFgIfAwIEFghmD2QWAgIBDw8WBB8ABQ1DQU1QSU5BUyAtIFNQHgtOYXZpZ2F0ZVVybAU3aHR0cDovL3d3dy56YXAuY29tLmJyL2ltb3ZlaXMvc2Vydmljb3MvYytlbStTUCtDQU1QSU5BU2RkAgEPZBYCAgEPDxYEHwAFEEhPUlRPTEFORElBIC0gU1AfBwU6aHR0cDovL3d3dy56YXAuY29tLmJyL2ltb3ZlaXMvc2Vydmljb3MvYytlbStTUCtIT1JUT0xBTkRJQWRkAgIPZBYCAgEPDxYEHwAFDVZBTElOSE9TIC0gU1AfBwU3aHR0cDovL3d3dy56YXAuY29tLmJyL2ltb3ZlaXMvc2Vydmljb3MvYytlbStTUCtWQUxJTkhPU2RkAgMPZBYCAgEPDxYEHwAFDFZJTkhFRE8gLSBTUB8HBTZodHRwOi8vd3d3LnphcC5jb20uYnIvaW1vdmVpcy9zZXJ2aWNvcy9jK2VtK1NQK1ZJTkhFRE9kZAIUDxYCHwFoZAIXD2QWAgICD2QWBAIBDw9kFgIeB29ua2V5dXAF3QJBdXRvSnVtcERERCgnY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9FbnZpYXJNZW5zYWdlbTFfY3RyVGVsZWZvbmVfdHh0REREJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfRW52aWFyTWVuc2FnZW0xX2N0clRlbGVmb25lX3R4dFRlbGVmb25lJywgJzExfDEyfDEzfDE0fDE1fDE2fDE3fDE4fDE5fDIxfDIyfDI0fDI3fDI4fDkxfDkyfDkzfDk0fDk1fDk2fDk3fDk4fDk5fDgxfDgyfDgzfDg0fDg1fDg2fDg3fDg4fDg5fDcxfDczfDc0fDc1fDc3fDc5fDMxfDMyfDMzfDM0fDM1fDM3fDM4fDYxfDYyfDYzfDY0fDY1fDY2fDY3fDY4fDY5fDQxfDQyfDQzfDQ0fDQ1fDQ2fDQ3fDQ4fDQ5fDUxfDUyfDUzfDU0Jyk7ZAIDDw9kFgYeB29uZm9jdXMFogNFeGliZU1lbnNhZ2VtRGlnaXRvQWRpY2lvbmFsKCdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX0Vudmlhck1lbnNhZ2VtMV9jdHJUZWxlZm9uZV90eHREREQnLCAxLCAnY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9FbnZpYXJNZW5zYWdlbTFfY3RyVGVsZWZvbmVfZGl2VG9vbHRpcENlbHVsYXInLCAnY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9FbnZpYXJNZW5zYWdlbTFfY3RyVGVsZWZvbmVfbGJsTWVuc2FnZW0nKTtTZXRhck1hc2NhcmFEaWdpdG9BZGljaW9uYWwodGhpcy52YWx1ZSwgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfRW52aWFyTWVuc2FnZW0xX2N0clRlbGVmb25lX2xibE1lbnNhZ2VtJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfRW52aWFyTWVuc2FnZW0xX2N0clRlbGVmb25lX3R4dFRlbGVmb25lJyk7HwgFsgFTZXRhck1hc2NhcmFEaWdpdG9BZGljaW9uYWwodGhpcy52YWx1ZSwgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfRW52aWFyTWVuc2FnZW0xX2N0clRlbGVmb25lX2xibE1lbnNhZ2VtJywgJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfRW52aWFyTWVuc2FnZW0xX2N0clRlbGVmb25lX3R4dFRlbGVmb25lJyk7HgZvbmJsdXIFH0ZlY2hhclRvb2xUaXBEaWdpdG9BZGljaW9uYWwoKTtkAhgPFgIfAWhkAhkPDxYCHwFoZGQCGg9kFgICAw8PFgIfBwVzaHR0cHM6Ly9yZXZpc3RhLnphcGltb3ZlaXMuY29tLmJyL25vdGljaWFzLz9jYW1wYW5oYV9pbnRlcm5hPXJldmlzdGEtemFwLWltb3ZlaXNfb3JpZ2VtPWZpY2hhLXByb2Zpc3Npb25hbC1zZXJ2aWNvc2RkAgkPFgIfAWgWCgIBDxBkZBYBZmQCAg8WAh4Kb25rZXlwcmVzcwUwamF2YXNjcmlwdDpyZXR1cm4gTWF4TGVuZ3RoVGV4dEFyZWEodGhpcywgNDAwMCk7ZAIDDw8WAh4IUmVhZE9ubHloZGQCBA8PFgIfDGhkZAIFDw8WAh8CBRgvaW1nL2FqdWRhL2J0X2Vudmlhci5naWYWAh4Hb25jbGljawUiamF2YXNjcmlwdDpyZXR1cm4gVmFsaWRhWmFwRXJybygpO2QCCw8WAh8AZWQCBA8WAh8ABTM8U0NSSVBUIExBTkdVQUdFPUphdmFTY3JpcHQ+T0FTX0FEKCd4MTAnKTs8L1NDUklQVD5kAgYPDxYCHwFnZGQCBw8PFgIfAWdkFgICAQ8WAh8ABQ5hbnVuY2llOiAnbmFvJ2QCCg8WAh8ABRM8IS0tJSVEQVRBSE9SQSUlLS0+ZAISDw8WAh8BZ2RkZJ9U/cQOHt6HjQgq7MFml54=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="80A3F28F" />
+    
+	<input type="hidden" id="NomeServidor" value="WWW3" />
+
+	<!-- Reposiciona SlideShow -->
+	<a name="SlideShow"></a>
+
+	
+    
+    
+
+        
+<link rel="stylesheet" type="text/css" href="/css2/imoveis.css" />
+<link rel="stylesheet" href="/css2/chat-direct-talk.css?versao=20150601.001" type="text/css" />
+
+<div id="ctl00_header_divHeader">
+
+    <div class="" id="modal_container" style="display: none; z-index: 9999; left: 279px; width: 700px; position: absolute; top: 80px; height: 390px" _absolutized>
+        <input type="hidden" id="_blankPage" value='http://www.zap.com.br/ascx/blank.htm' />
+        <iframe id="modal_iframe" src='http://www.zap.com.br/ascx/blank.htm' frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+
+    </div>
+
+    <nav class="action-navbar">
+        <div class="container">
+            <section class="pull-right">
+                <a id="ctl00_header_lnkLogin" href="javascript:__doPostBack(&#39;ctl00$header$lnkLogin&#39;,&#39;&#39;)">Login</a>
+                <span class="divider">|</span>
+                
+
+                <a onclick="loginLogOut(); return false;" id="ctl00_header_lnkCadastrese" href="javascript:__doPostBack(&#39;ctl00$header$lnkCadastrese&#39;,&#39;&#39;)">Cadastre-se</a>
+
+                <a class="advertise sitemobile" href="http://www.zapimoveis.com.br/mobile?campanha_interna=hotsiteappmobile&origem=Header">Celulares e Tablets</a>
+                <a href="/anuncieb/anunciezap/anuncie-imoveis-home.aspx" class="advertise hand" id="lnkAnuncie" onclick="javascript:contabilizarEventoGA('AnuncieC2C_SiteNovoImoveis','Chamada','Header_Geral');">Anunciar meu Imóvel</a>
+                <iframe id="iframeNovoSite" height="1" width="1" hidden="hidden"></iframe>
+            </section>
+        </div>
+    </nav>
+
+    <div class="content border-b">
+        <div class="container">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="http://www.zapimoveis.com.br">
+                        <img src="/NovoSite/img/logo.png"></a>
+                    <ul class="zapnav nav pull-right">
+                        <li>
+                            <a class="zapnav-link" href="http://www.zapimoveis.com.br">Home</a>
+                            <!-- SEARCH HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="http://www.zapimoveis.com.br">
+                                        <img class="pull-left" src="/NovoSite/img/img_busca.jpg" width="60" height="60" />
+                                        <p>ZAP, o mais completo Portal de Imóveis. </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li style="display: none" id="PagBusca">
+                            <a class="zapnav-link" href="http://www.zapimoveis.com.br/busca/">Busca</a>
+                            <!-- SEARCH HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="http://www.zapimoveis.com.br/busca/">
+                                        <img class="pull-left" src="/NovoSite/img/img_busca.jpg" width="60" height="60" />
+                                        <p>Zap Imóveis, o Mais Completo Portal de Imóveis. </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="PagMinhaLista">
+                            <a class="zapnav-link" href="http://www.zapimoveis.com.br/Favorito/Listar">Minha Lista</a>
+                            <!-- FAVORITES HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="http://www.zapimoveis.com.br/Favorito/Listar">
+                                        <img class="pull-left" src="/NovoSite/img/img_minhalista.jpg" width="60" height="60" />
+                                        <p>
+                                            Crie uma lista<br>
+                                            com seus imóveis preferidos
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li id="PagBuscasAlertas">
+                            <a class="zapnav-link" href="http://www.zapimoveis.com.br/alerta">Buscas e Alertas</a>
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="http://www.zapimoveis.com.br/alerta">
+                                        <img class="pull-left" src="/NovoSite/img/img_buscasalertas.jpg" width="60" height="60" />
+                                        <p>Salve buscas e crie alertas para receber novas ofertas</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li id="PagServicos" class="active" >
+                            <a class="zapnav-link" href="/imoveis/servicos/home">Serviços</a>
+
+                            <!-- IMPROVEMENT HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="/imoveis/servicos/home">
+                                        <img class="pull-left" src="/NovoSite/img/img_servicos.jpg" width="60" height="60" />
+                                        <p>Profissionais para a manutenção do seu imóvel</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li id="PagMapa">
+                            <a class="zapnav-link" href="http://www.zapimoveis.com.br/mapa-de-precos">Mapa de preços</a>
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="/mapa-de-precos">
+                                        <img class="pull-left" src="/NovoSite/img/img_mapaprecos.jpg" width="60" height="60" />
+                                        <p>
+                                            Encontre no mapa<br />
+                                            o valor estimado<br />
+                                            dos imóveis de seu interesse
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li id="PagRevista">
+                            <a href="http://revista.zap.com.br//imoveis/" class="zapnav-link">DICAS</a>
+                            <!-- MAGAZINE HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="http://revista.zap.com.br//imoveis/">
+                                        <img class="pull-left hand" src="/NovoSite/img/img_revista.jpg" width="60" height="60" />
+                                        <p>Saiba tudo de decoração e mercado imobiliário</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li id="PagTemporadas">
+                            <a href="/aluguel-temporada" class="zapnav-link">TEMPORADA</a>
+                            <!-- MAGAZINE HOVER FLYOUT -->
+                            <div class="nav-flyout">
+                                <div class="property-item">
+                                    <a href="/aluguel-temporada">
+                                        <img class="pull-left hand" src="/NovoSite/img/img_temporada.jpg" width="60" height="60" />
+                                        <p>Busque o local perfeito para passar as férias</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    function abreModal(i) {
+        if (i.toLowerCase() == 'login') {
+            n_abreModal('login', '/ascx/if_modallogin.aspx');
+    }
+    else if (i.toLowerCase() == 'cadastrese') {
+        Cadastro();
+    }
+    else if (i.toLowerCase() == 'emailold') {
+        Esqueci();
+    }
+    else if (i.toLowerCase().substr(0, 17) == 'zap_confirm_email') {
+        try {
+            var _email = (i.toLowerCase().substr(20, i.length - 20));
+            var _url = '/ascx/if_modalconfcadastro.aspx?e=' + _email;
+            n_abreModal('zap_confirm_email', _url);
+        }
+        catch (e) {
+        }
+    }
+    else {
+        n_abreModal(i);
+    }
+}
+
+function Cadastro() {
+    n_abreModal('cadastrese', '/ascx/if_modalcadastrese.aspx');
+}
+
+function Esqueci() {
+    n_abreModal('emailold', '/ascx/if_modalesqueci.aspx');
+}
+
+function AbreModalEmail() {
+    fechaModal('login');
+    abreModal('emailold');
+}
+
+function AbreModalCadastro() {
+    fechaModal('login');
+    abreModal('cadastreSe');
+}
+
+function abreModalLog(i, url) {
+    n_abreModal(i, '/ascx/if_modalnovocadastro.aspx');
+}
+
+function URLencode(sStr) {
+    return escape(sStr).replace(/\+/g, '%2B').replace(/\"/g, '%22').replace(/\'/g, '%27').replace(/\//g, '%2F');
+}
+
+
+
+    function atualizaContadorFavoritos() {
+        var total = parseInt($('#totalfavoritos').text());
+        total++;
+        $('#totalfavoritos').text(total.toString());
+    }
+
+    function loginLogOut() {
+        if (document.cookie.indexOf("CodUsuario") >= 0) {
+            document.cookie = 'CodUsuario=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'TimeStamp=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'TipoUsuario=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'PrimeiroNome=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'IdUsuario=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'CEPBusca=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'NomeCompleto=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'CoordX=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';
+            document.cookie = 'UltimoAcesso=; expires=Thu, 01-Jan-70 00:00:01 GMT;domain=.zap.com.br;path=/';            
+
+            location.href += '#logout';
+
+            document.forms[0].submit();
+
+            logoutSiteNovo();
+
+        }
+        else {
+            window.location.href = 'http://www.zapimoveis.com.br/#ModalCadastrar&UrlRedirect=Servicos';
+        }
+    }
+
+    function logoutSiteNovo() {
+        if (location.href.indexOf('#logout') > -1) {
+
+            window.location.href = 'http://www.zapimoveis.com.br/#logoutmeuzap';
+
+        }
+    }
+
+    window.onload = function () { logoutSiteNovo(); };
+
+    function loadjsfile(filename, id) {
+        var fileref = document.createElement('script')
+        fileref.setAttribute("type", "text/javascript")
+        fileref.setAttribute("src", filename)
+        fileref.setAttribute("id", id);
+
+        if (typeof fileref != "undefined") {
+            var scripts = document.getElementsByTagName('body')[0];
+            scripts.appendChild(fileref);
+        }
+    }
+
+
+
+    function ChatBot() {
+        var el = document.getElementById('dtbot-controll');
+
+        if (el) {
+            el.onclick = function () {
+                var id = 'dtbot-script';
+                if (!document.getElementById(id)) {
+                    loadjsfile('https://dtbot.directtalk.com.br/1.0/staticbot/dist/js/dtbot.js?token=6157856c-24dd-4884-a7fb-04317de0bb68&widget=true&top=97&left=80', id);
+                    VerificarDTBOT();
+                }
+                else
+                    ExecutarDTBOT();
+            };
+        }
+    }
+
+    function VerificarDTBOT() {
+        if (!window.DTBOT)
+            setTimeout(VerificarDTBOT, 50);
+        else
+            window.DTBOT.loadComplete = ExecutarDTBOT;
+    }
+
+    function ExecutarDTBOT() {
+        if (window.DTBOT.iframe.style.visibility == "hidden")
+            window.DTBOT.fadeIn('origem=site');
+    }
+</script>
+
+	<div class="branco" id="zapGeral">
+
+        
+        
+		<div class="zap_grade">			
+
+				<div class="geral-meio">
+					<!-- Abre SubMenu -->
+					
+					<!-- Fecha SubMenu -->
+					
+					<!-- Abre Corpo da Página-->
+					
+       
+
+    <div class="conteudo">
+        <!-- COMEÇO CONTEÚDO -->        
+       
+         <!-- Início da subnavegação -->
+        <div class="sub-nav-serv">
+            <div class="serv-sessions serv-sessions-first"><a href="http://www.zapimoveis.com.br">Imóveis</a></div>
+            <div class="session-arrow"></div>
+            <div class="serv-sessions"><a href="/imoveis/servicos">Serviços</a></div>
+            <div class="session-arrow"></div>
+            <div class="serv-sessions"><a id="ctl00_ContentPlaceHolder1_HyperLinkBusca" href="/imoveis/servicos">Busca</a></div>
+            <div class="session-arrow"></div>
+            <div class="serv-sessions serv-sessions-active"><span>Ficha</span></div>
+        </div>
+        <div class="right-actions">
+            <div class="serv-panel my-list-link"><span class="my-list-ico"></span><a href="javascript:void(0)" id="lnkListaProfissional">Minha Lista de Profissionais</a> </div>
+            <div class="serv-panel profile-link"><span class="profile-ico"></span><a href="javascript:void(0)" id="lnkPerfilPrestador">Perfil Prestador</a></div>
+        </div>
+        <div class="sessions-tips">
+            <p class="my-list-tip" style="display: none;"><span class="TickArrowToolTip2"></span>Criar e acessar sua lista de profissionais.</p>
+                <p class="profile-tip" style="display: none;"><span class="TickArrowToolTip3"></span>Cadastrar ou acessar seu perfil de prestador de serviços.</p>
+        </div>
+        <!-- // Fim da subnavegação -->
+
+
+        <div class="conteudo_esquerdo">
+            <!-- COMEÇO CONTEÚDO ESQUERDO -->
+
+            <!-- COMEÇO BOX DADOS ANUNCIANTE -->
+            <div class="box_geral_conteudo">
+                <div class="foto_anunciante">
+                        
+                        <img id="ctl00_ContentPlaceHolder1_imgLogo" src="../../../img/servicos/foto_default_ficha.png" border="0" />
+                </div>
+                <div class="dados_anunciante">
+
+                    <h1 class="txt_nome_anunciante">
+
+                        <span id="lblNomeProfissional">Limpeza Técnica</span></h1>
+
+                      <!-- COMEÇO AVALIAÇÃO COL DIREITA -->
+                     
+            <!-- COMEÇO AVALIAÇÃO COL DIREITA -->
+            <div class="box_avaliacao1_srv">
+                <span class="txt_titulo_avalia1">Avaliação:</span>
+                <div  id="AvaliacaoTopo" class="rating">
+                    <!-- ESTRELAS TOPO -->
+                </div>
+                <span class="txt_avalia1_resumo hover_txt"><a href="#AvaliacaoBox">ver comentários (<span id="lblTotalComentariosTopoAvaliacao">0</span>)</a></span>
+            </div>
+            <!-- FIM AVALIAÇÃO COL DIREITA -->
+                      <!-- FIM AVALIAÇÃO COL DIREITA -->
+                    
+                    <div id="ctl00_ContentPlaceHolder1_divCategorias">
+                        <h3 class="StyleTitleFicha StyleTituloVermelho">Este profissional oferece serviços nas áreas de:</h3>
+                        <h2>
+                            <ul>
+                                
+                                        <li>Paisagismo </li>
+                                    
+                                        <li>Serviços de Limpeza </li>
+                                    
+                            </ul>
+                        </h2>
+                    </div>
+                </div>
+                    
+                    <div id="ctl00_ContentPlaceHolder1_divDescricaoServicos">
+                        <h3 class="StyleTitleFicha StyleTitleFichaMaior StyleTituloVermelho">Descrição dos serviços:</h3>
+
+                        <p>
+                            <span id="ctl00_ContentPlaceHolder1_lblDescricao">Limpeza comercial e residencial : Pós obra , tratamento e impermeabilização de pisos, jardinagem, limpeza de pedras. Campinas e cidades adjacentes. Rapidez e melhor preço.</span>
+                        </p>
+                    </div>
+                </div>
+            <!-- FIM BOX DADOS ANUNCIANTE -->
+
+            <!-- COMEÇO BOX SOCIAL e FERRAMENTAS -->
+            <div class="box_ferramentasShare">
+                <span class="dados_atualizadoem"><strong>Atualizado em:<br />
+                        <span id="ctl00_ContentPlaceHolder1_lblDataAtualizacao">20/09/2016</span></strong></span>
+            
+<script src="https://c.zapcorp.com.br/ScriptLibrary/servicos/ficha/social.js?versao=20150601.001" type="text/javascript"></script>
+<input type="hidden" name="ctl00$ContentPlaceHolder1$boxSocialEFerramentas$hdnPrestadorServicoID" id="hdnPrestadorServicoID" value="1018" /><input type="hidden" name="ctl00$ContentPlaceHolder1$boxSocialEFerramentas$hdnCodUsuario" id="hdnCodUsuario" /><input type="hidden" name="ctl00$ContentPlaceHolder1$boxSocialEFerramentas$hdnSalvaPost" id="hdnSalvaPost" />
+    <div class="box_social_ferramentas">
+        <div class="box_social">
+            <h4 class="StyleTitleFicha StyleTituloAzul">Compartilhar</h4>
+            <div class="box_fbb">
+                
+                    
+                <div id="fb-root"></div>
+                    <script>    (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=201796389865872";
+                    fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="fb-like" data-href="http://www.zap.com.br/imoveis/servicos/pro/limpeza-tecnica" data-send="false" data-layout="button_count" data-show-faces="false" data-action="recommend"></div>
+
+                
+
+            </div>
+            <div class="box_twt">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt" data-text="Veja o perfil desse profissional que encontrei no ZAP Imóveis Serviços" data-count="none">Tweetar</a>
+                <script type="text/javascript">!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+            </div>
+            <div class="box_gplus">
+                <!-- Place this tag where you want the +1 button to render. -->
+                <div class="g-plusone" data-size="tall" data-annotation="none"></div>
+
+                <!-- Place this tag after the last +1 button tag. -->
+                <script type="text/javascript">
+                    window.___gcfg = { lang: 'pt-BR' };
+
+                    (function () {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                </script>
+            </div>
+        </div>
+        <div class="box_ferramentas">
+            <h4 class="StyleTitleFicha StyleTituloAzul">Ferramentas</h4>
+            <span id="spanSalvar" class="txt_ferram_ico box_ferram_cel1">
+                <a id="btnSalvarServicoUsuario" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$boxSocialEFerramentas$btnSalvarServicoUsuario&#39;,&#39;&#39;)">Salvar</a></span>
+            <span class="txt_ferram_ico box_ferram_cel3"  onclick="javascript:window.print();"><a href="#" >Imprimir</a></span>
+            <span id="spanDenunciar" class="txt_ferram_ico box_ferram_cel4">
+                
+                <a id="btnDenunciar" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$boxSocialEFerramentas$btnDenunciar&#39;,&#39;&#39;)">Denunciar</a></span>
+        </div>
+    </div>
+    <div class="zap_modal_inform" id="salvo">
+        <h1>Perfil salvo com sucesso.</h1>
+        <a href="javascript:fechaModal('salvo');" class="fechar">fechar[x]</a>
+        <div class="corpo" style="padding: 10px 0px 10px 0px;">
+            Este perfil foi salvo na Minha conta, sua &aacute;rea personalizada. Voc&ecirc; pode
+				visualizar este perfil quando desejar.
+        </div>
+    </div>
+    <div class="modal ModalDFundoTotal" id="ModalDenunciaSD" style="display: none;">
+        <div class="ModalDFundoModalTitulo"><span class="ArrowTitleModal"></span>Denúncia de profissional:</div>
+        <div class="FundoFechaModalServ"><a href="javascript:fechaModal('ModalDenunciaSD');" title="Fechar">X</a></div>
+        <!-- Formulário Denuncia + mensagens -->
+        <div class="LoggedModalSD" style="display: block;">
+            <div class="BoxFormSDP1" id="divCadReclamacao">
+                
+<script src="https://c.zapcorp.com.br/ScriptLibrary/servicos/reclamacaoServico.js?versao=20150601.001" type="text/javascript"></script>
+
+<!-- Formulário-Campos -->
+<p>Preencha com os dados da denúncia fornecendo o máximo de informações possíveis</p>
+<div class="FundoModalPadrao"><span class="icoFormDModalSD"></span>Seus dados serão mantidos em sigilo</div>
+<span class="labelFormModalSD labelFormDenunciaAj">Nome de Usuário</span>
+<span class="TxtImpressoModalSD"><span id="lblNome"></span></span>
+<br clear="all" />
+<span class="labelFormModalSD labelFormDenunciaAj">E-mail</span>
+<span id="lblEmail" class="TxtImpressoModalSD"></span>
+<br clear="all" />
+<span class="labelFormModalSD labelFormDenunciaAj">Motivo da Denúncia *</span>
+<select name="ctl00$ContentPlaceHolder1$boxSocialEFerramentas$Reclamacao1$ddlTipoReclamacaoServicoID" id="ddlTipoReclamacaoServicoID" class="imputFormModalSD2 imputAjModalSD2">
+	<option value="Selecione">Selecione</option>
+	<option value="1">An&#250;ncio inexistente</option>
+	<option value="2">Descri&#231;&#227;o incorreta do servi&#231;o</option>
+	<option value="3">Endere&#231;o errado ou incompleto</option>
+	<option value="4">Foto incorreta</option>
+	<option value="5">N&#227;o respondeu e-mail em at&#233; 48H</option>
+	<option value="6">Publica&#231;&#227;o sem autoriza&#231;&#227;o</option>
+	<option value="7">Qualidade do atendimento recebido</option>
+	<option value="8">Qualidade do servi&#231;o entregue</option>
+	<option value="9">Sem retorno do anunciante</option>
+	<option value="10">Telefone n&#227;o atende</option>
+
+</select>
+<br clear="all" />
+<span class="labelFormModalSD labelFormDenunciaAj2">Descreva o motivo da denúncia *</span>
+<textarea name="ctl00$ContentPlaceHolder1$boxSocialEFerramentas$Reclamacao1$txtTexto" rows="10" cols="20" id="txtTexto" class="imputFormModalSD2 imputAj2ModalSD2">
+</textarea>
+<br clear="all" />
+<span class="txtApoioModalSD">* Todos os campos são de preenchimento obrigatório</span>
+<div class="BtnsAcaoModalErroSD AjustePosBtnsAvlia">
+    <input type="button" value="Enviar" id="btnSalvarReclamacao" onclick="return GravarReclamacaoServico()" class="acessarButton acessarButtonAj">
+</div>
+<!-- Formulário-Campos -->
+
+
+
+            </div>
+            <div class="BoxMsgSend1SD" id="divDenunciaEnviando">
+                <!--    Mensagem 1 ENVIANDO -->
+                <p>Aguarde, estamos processando as informações</p>
+                <img alt="Enviando" src="/img/servicos/enviandoSD.gif">
+            </div>
+            <!-- Mensagem 1 ENVIANDO -->
+            <!-- Mensagem ERRO -->
+            <div class="BoxMsgSend2SD" id="DenunciaNaoEnviada" style="display:none">
+                <!-- Mensagem 3 ERRO -->
+                <span class="icoErroMsgModalSD"></span>
+                <p>
+                    <b>Ops! Ocorreu um problema no envio de sua denúncia!</b><br />
+                    Você pode tentar reenviar sua mensagem clicando no botão abaixo.
+                </p>
+                <div class="BtnsAcaoModalErroSD">
+                    <input type="button" id="btnCancelarDenuncia" value="Cancelar" class="acessarButton acessarButtonAj" />
+                    <input type="button" id="btnReenviarDenuncia" value="Tentar Novamente" class="acessarButton acessarButtonAj">
+                </div>
+            </div>
+            <!-- Mensagem ERRO -->
+        </div>
+        <!-- Formulário Denuncia + mensagens -->
+    </div>
+
+
+
+            </div>
+            <!-- FIM BOX SOCIAL e FERRAMENTAS -->
+
+            <!-- COMEÇO BOX ATUAÇÃO -->
+            <h3 class="StyleTitleFicha StyleTituloVermelho StyleTitleFichaFull">Região de Atuação</h3>
+            <div class="box_conteudo_geral">
+                
+
+                <h2 id="ctl00_ContentPlaceHolder1_bairrosBloco" class="bairros_style"><b>Localidades Atendidas:</b>
+                    <ul>
+                        
+                                <li class="dados_tags"><a id="ctl00_ContentPlaceHolder1_rptBairros_ctl00_hplBairro" href="http://www.zap.com.br/imoveis/servicos/c+em+SP+CAMPINAS">CAMPINAS - SP</a> </li>
+                            
+                                <li class="dados_tags"><a id="ctl00_ContentPlaceHolder1_rptBairros_ctl01_hplBairro" href="http://www.zap.com.br/imoveis/servicos/c+em+SP+HORTOLANDIA">HORTOLANDIA - SP</a> </li>
+                            
+                                <li class="dados_tags"><a id="ctl00_ContentPlaceHolder1_rptBairros_ctl02_hplBairro" href="http://www.zap.com.br/imoveis/servicos/c+em+SP+VALINHOS">VALINHOS - SP</a> </li>
+                            
+                                <li class="dados_tags"><a id="ctl00_ContentPlaceHolder1_rptBairros_ctl03_hplBairro" href="http://www.zap.com.br/imoveis/servicos/c+em+SP+VINHEDO">VINHEDO - SP</a> </li>
+                            
+                    </ul>
+                </h2>
+            </div>
+
+            <!-- FIM BOX ATUAÇÃO -->
+
+            <!-- COMEÇO AVALIAÇÃO -->
+            <h3 class="StyleTitleFicha StyleTituloVermelho StyleTitleFichaFull" id="cabecalhoAvaliacao">
+                <a href="#AvaliacaoBox" id="AvaliacaoBox"></a><p>Avaliações</p>
+                        <div id="AvaliacaoResumo" class="rating">
+                            <!-- AVALIAÇÃO RESUMO ESTRELAS -->
+                        </div>
+                        <span class="txt_total_avaliacoes2_srv" id="commentsFooter">(0 avaliações)</span>
+                        <span class="btn_avaliar_srv" id="span_avaliacao">
+                            <a id="btnAvaliar" class="fancybox">Avaliar</a>
+                        </span>
+            </h3>
+            <div class="box_conteudo_geral">
+                <div id="divAvaliacao" class="BoxAvaliacServ" style="display:none;">
+                    <!-- DISPLAY:BLOCK quando existe alguma avaliação. DISPLAY:NONE quando não existe -->
+
+                    <!-- A classe box_corpo_avalia_srv_1 deve ser aplicada apenas em caso de 2 ou 3 boxes,
+                    sendo quando 2 boxes apenas no box 1 e
+                   em caso de 3 boxes apenas nos 2 primeiros boxes -->
+
+                        <!-- BOX#1 AVALIAÇÃO -->
+                        <div id="divAvaliacao1" class="box_corpo_avalia_srv" >
+                            <h4 id="txt_nome_avaliacao_1"></h4>
+                            <h5 id="txt_titulo_avaliacao_1"></h5>
+                            <div id="Box1Avaliacao" class="estrelas_style">
+                                <!-- BOX#1 ESTRELAS -->
+                            </div>
+                            <p>
+                                <span id="lblAvaliacao1"></span>
+                            </p>
+                            <span class="txt_utilidade_avalia">Essa avaliação foi útil?</span>
+                            <div class="box_indica_avalia" id="div_avaliacao_util_1">
+                                <span class="ico_avaliacao_sim"></span>
+                                <span class="txt_avalia_sim_nao"><a href="javascript:void(0);" id="avalia_sim_1">SIM</a>
+                                    <span id="lblQtdeUtil1"></span>
+                                </span>
+                            </div>
+                            <div class="box_indica_avalia" id="div_avaliacao_naoutil_1">
+                                <span class="ico_avaliacao_nao"></span>
+                                <span class="txt_avalia_sim_nao"><a href="javascript:void(0);" id="avalia_nao_1">NÃO</a>
+                                    <span id="lblQtdeNaoUtil1"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- BOX#1 AVALIAÇÃO -->
+
+                        <!-- BOX#2 AVALIAÇÃO -->
+                        <div id="divAvaliacao2" class="box_corpo_avalia_srv">
+                            <h4 id="txt_nome_avaliacao_2"></h4>
+                            <h5 id="txt_titulo_avaliacao_2"></h5>
+                            <div id="Box2Avaliacao" class="estrelas_style">
+                                <!-- BOX#2 ESTRELAS -->
+                            </div>
+                            <p>
+                                <span id="lblAvaliacao2"></span>
+                            </p>
+                            <span class="txt_utilidade_avalia">Essa avaliação foi útil?</span>
+                            <div class="box_indica_avalia">
+                                <span class="ico_avaliacao_sim"></span>
+                                <span class="txt_avalia_sim_nao"><a href="javascript:void(0);" id="avalia_sim_2">SIM</a>
+                                    <span id="lblQtdeUtil2"></span>
+                                </span>
+                            </div>
+                            <div class="box_indica_avalia">
+                                <span class="ico_avaliacao_nao"></span>
+                                <span class="txt_avalia_sim_nao"><a href="javascript:void(0);" id="avalia_nao_2">NÃO</a>
+                                    <span id="lblQtdeNaoUtil2"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- BOX#2 AVALIAÇÃO -->
+
+                        <!-- BOX#3 AVALIAÇÃO -->
+                        <div id="divAvaliacao3" class="box_corpo_avalia_srv">
+                            <h4 id="txt_nome_avaliacao_3">></h4>
+                            <h5 id="txt_titulo_avaliacao_3"></h5>
+                            <div id="Box3Avaliacao" class="estrelas_style">
+                                <!-- BOX#3 ESTRELAS -->
+                            </div>
+                            <p>
+                                <span id="lblAvaliacao3"></span>
+                            </p>
+                            <span class="txt_utilidade_avalia">Essa avaliação foi útil?</span>
+                            <div class="box_indica_avalia">
+                                <span class="ico_avaliacao_sim"></span>
+                                <span class="txt_avalia_sim_nao"><a href="javascript:void(0);" id="avalia_sim_3">SIM</a>
+                                    <span id="lblQtdeUtil3"></span>
+                                </span>
+                            </div>
+                            <div class="box_indica_avalia">
+                                <span class="ico_avaliacao_nao"></span>
+                                <span class="txt_avalia_sim_nao"><a href="javascript:void(0);" id="avalia_nao_3">NÃO</a>
+                                    <span id="lblQtdeNaoUtil3"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- BOX#3 AVALIAÇÃO -->
+
+
+
+                        <!-- Avaliações Extras - Acima de 3 -->
+                        <div id="todas_avaliacoes" class="BoxMaisAvaliacoesPro" style="overflow: hidden; display: none;">
+                        </div>
+                        <!-- Avaliações Extras - Acima de 3 -->
+
+                    <span class="txt_todas_avalia_srv">
+                    <span class="box_todas_materias" id="todos_comentarios_title" onclick="ExibirAvaliacoes();">
+                            <span class="ico_expandir_avalia"></span><span class="linkComentariosAv"> todos os comentários</span> <span id="totalComments"></span>
+                        </span>
+
+                    </span>
+
+                </div>
+
+                <!-- Sem Avaliações -->
+                <div class="BoxSemAvaliacServ" style="display: none;" id="BoxSemAvaliacao">
+                    <!-- DISPLAY:NONE quando existe alguma avaliação. DISPLAY:BLOCK quando não existe -->
+                    <p>Esse profissional ainda não tem avaliações, gostaria de ser o primeiro a escrever sobre ele?</p>
+                    <span class="btn_avaliar_srv btn_sem_avalia_srv"><a id="btnPrimeiraAvaliacao">Avaliar</a></span>
+                </div>
+                <!-- Sem Avaliações -->
+
+            </div>
+
+            <!-- FIM AVALIAÇÃO -->
+
+            <!-- COMEÇO PAGINAÇÃO FICHAS -->
+            
+            <!-- FIM PAGINAÇÃO FICHAS -->
+
+        </div>
+        <!-- FIM CONTEÚDO ESQUERDO -->
+
+        <div class="conteudo_direito">
+            <!-- COMEÇO CONTEÚDO DIREITO -->
+
+            <!-- COMEÇO ENTRAR EM CONTATO -->
+            
+            <div class="box_col_dir_conteudo_srv StyleTituloAzul">
+                <h5>Entre em Contato</h5>
+                <!-- Começo do form -->
+                
+<script src="https://c.zapcorp.com.br/ScriptLibrary/servicos/ficha/telefone.js?versao=20150601.001" type="text/javascript"></script>
+
+<h3 id="ctl00_ContentPlaceHolder1_Telefone1_h3Vertel" class="box_imput_telefone ">Ver telefone(s)</h3>
+<div id="divTelefones" class="box_telefones_srv_oc">
+</div>
+
+<input type="hidden" name="ctl00$ContentPlaceHolder1$Telefone1$hdnTelefoneCriptografado" id="hdnTelefoneCriptografado" value="yt3prGjYdJTGIsz/De8l1EbXWrCsyR7CfOn0/1OQ6E21U7jg4d82ItTrazVU+I5Ea3ThxnHHbLma9MyMh86pv8GmqUQsDD7pQ4HnAyT8Qhp3YMpNyzfs4sE1wfycFlfvYKcbEMmSGJjiNN5OwCHL2CVZ7f52mFtgjv7dovGuB/09lEf+HQqtXm9spzmITmIfoG2uJWGmz6zk1k7NcUshlCVxCTAysUjc" />
+<input type="hidden" name="ctl00$ContentPlaceHolder1$Telefone1$hdnPrestadorServicoTelefoneID" id="hdnPrestadorServicoTelefoneID" value="1018" />
+<input type="hidden" name="ctl00$ContentPlaceHolder1$Telefone1$hdnOrigemLeadID" id="hdnOrigemLeadID" value="2" />
+<input type="hidden" name="ctl00$ContentPlaceHolder1$Telefone1$hdnOrigemContabilizacaoID" id="hdnOrigemContabilizacaoID" value="1" />
+<input type="hidden" name="ctl00$ContentPlaceHolder1$Telefone1$hdnOrigemFuncionalidadeID" id="hdnOrigemFuncionalidadeID" value="3" />
+<input type="hidden" name="ctl00$ContentPlaceHolder1$Telefone1$hdnIP" id="hdnIP" value="172.16.1.89" />
+<input type="hidden" name="ctl00$ContentPlaceHolder1$Telefone1$hdnTelefoneTextoGA" id="hdnTelefoneTextoGA" value="/estado-SAO-PAULO/cidade-CAMPINAS/bairro-LOT-RESID-NOVO-MUNDO/Paisagismo--Servicos-de-Limpeza//perfil#LIMPEZA-TECNICA#" />
+                <div class="box_form_lead_f">
+                    <h6 id="ctl00_ContentPlaceHolder1_tituloEnviarMensagem">Enviar Mensagem</h6>
+                
+
+<div class="grupo-enviarMensagem">
+    <div id="MsgEnvio" class="sendingMessage" style="display:none">
+        <p>Sua mensagem está sendo enviada</p>
+        <img alt="Enviando" src="/img/servicos/enviandoSD.gif">
+    </div>
+
+<span class="linha_imput_cont">
+    <span id="spanTituloNome" class="label_txt_imput_cont">Seu Nome</span>
+    <span id="spanNome" class="imput_contato_srv">
+        <input name="ctl00$ContentPlaceHolder1$EnviarMensagem1$txtNome" type="text" id="txtNome" class="style_imput_contato" onblur="RemoveCaracteresInvalidosPostDotNET(this.id);" />
+    </span>
+</span>
+
+<span class="linha_imput_cont">
+    <span id="spanTituloEmail" class="label_txt_imput_cont">E-mail</span>
+    <span id="spanEmail" class="imput_contato_srv">
+        <input name="ctl00$ContentPlaceHolder1$EnviarMensagem1$txtEmail" type="text" id="txtEmail" class="style_imput_contato" size="35" onchange="RemoveAcentos(this);" onblur="RemoveAcentos(this);" />
+    </span>
+</span>
+
+<span class="linha_imput_cont">
+    <span id="spanTituloTelefone" class="label_txt_imput_cont">Telefone</span>
+    <span id="spanTelefone" class="imput_contato_srv">
+        
+        
+<div class="camposTelefone" style="position: relative; z-index: 10">
+    <div id="ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_divTooltipCelular" class="tooltipCelular" style="display: none;">
+        <span id="ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_lblMensagem"></span>
+        <a id="lnkFechar" onclick="FecharToolTipDigitoAdicional();"></a>
+    </div>
+    <input name="ctl00$ContentPlaceHolder1$EnviarMensagem1$ctrTelefone$txtDDD" type="text" maxlength="2" id="ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtDDD" class="omCampoDdd" size="2" onkeypress="return mascaraInteiro(event);" onkeyup="AutoJumpDDD(&#39;ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtDDD&#39;, &#39;ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtTelefone&#39;, &#39;11|12|13|14|15|16|17|18|19|21|22|24|27|28|91|92|93|94|95|96|97|98|99|81|82|83|84|85|86|87|88|89|71|73|74|75|77|79|31|32|33|34|35|37|38|61|62|63|64|65|66|67|68|69|41|42|43|44|45|46|47|48|49|51|52|53|54&#39;);" />
+    
+    <input name="ctl00$ContentPlaceHolder1$EnviarMensagem1$ctrTelefone$txtTelefone" type="text" maxlength="9" id="ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtTelefone" class="omCampoFone" onkeypress="return mascaraInteiro(event);" onfocus="ExibeMensagemDigitoAdicional(&#39;ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtDDD&#39;, 1, &#39;ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_divTooltipCelular&#39;, &#39;ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_lblMensagem&#39;);SetarMascaraDigitoAdicional(this.value, &#39;ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_lblMensagem&#39;, &#39;ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtTelefone&#39;);" onkeyup="SetarMascaraDigitoAdicional(this.value, &#39;ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_lblMensagem&#39;, &#39;ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtTelefone&#39;);" onblur="FecharToolTipDigitoAdicional();" />
+    
+</div>
+<script type="text/javascript">
+    //desabilita control para prevenir copiar e colar. quando usado ctrl + v, a máscara não é respeitada
+    $("#ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtTelefone").bind('paste', function () { return false; })
+
+    $(document).ready(function () {
+        $("#ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtTelefone, #ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtDDD").keydown(function (e) {
+            // Permite: backspace, delete, tab, escape e enter
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                // Permite: Ctrl/A
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Permite: Ctrl/C
+                (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Permite: Ctrl/X
+                (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Permite: home, end, left, right
+                (e.keyCode >= 35 && e.keyCode <= 39)) {
+                return;
+            }
+            //Se a tecla for número, não deixa digitar
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105) || (e.keyCode > 185 && e.keyCode < 223) || (e.keyCode > 16 && e.keyCode < 19)) {
+                e.preventDefault();
+            }
+        });
+    });
+</script>
+    </span>
+</span>
+
+<span class="linha_imput_cont">
+    <span id="spanTituloComentario" class="label_txt_imput_cont">Comentário</span>
+    <span id="spanComentario" class="imput_contato_txt_srv">
+        <textarea name="ctl00$ContentPlaceHolder1$EnviarMensagem1$txtMensagem" rows="2" cols="20" id="txtMensagem" class="style_imput_contato style_textarea_contato">
+Ol&#225;, Gostaria de ter mais informa&#231;&#245;es sobre seus servi&#231;os que encontrei no ZAP Im&#243;veis Servi&#231;os. Aguardo seu contato, obrigado.</textarea>
+    </span>
+</span>
+
+<span id="spanEnvioNovidade"  class="check_contato_srv">
+    <input id="chkOptIn" type="checkbox" name=""> <span class="txt_check_srv">Envie-me novidades</span></input>
+</span>
+
+<div id="ctl00_ContentPlaceHolder1_EnviarMensagem1_btnEnviarMsg">
+<span class="btn_avaliar_srv box_btn_enviar_contato">
+    <a onclick="return Enviar('txtNome','txtEmail','ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtDDD','ctl00_ContentPlaceHolder1_EnviarMensagem1_ctrTelefone_txtTelefone', 'txtMensagem', 'chkOptIn','MsgEnvio', 'ctl00_ContentPlaceHolder1_EnviarMensagem1_btnEnviarMsg');" id="btnEnviarMensagem" >Enviar</a>
+</span>
+</div>
+
+</div>
+
+<input type="hidden" name="ctl00$ContentPlaceHolder1$EnviarMensagem1$hdnLeadServico" id="hdnLeadServico" value="QRoyiXcC1u3HRqCGzwaPSi2wpA0hUpA1Tj85dLGBTD1L4JMlZrnwPA+oRgOvtDn7sFm+BRlFOrpbR38dP8WhSzlwazk0FyQT2VJepkf/CkkVxaAcQCoE4PMkr8yHB6t60nCQHspim7KZyvlLfm1I4vSl4JPC6OialLXFOVQJxYYQOK4BGrhtIyfcfT2FaV+JvCNPS2Aiu2i2WWXK4U6vSFisGshWRFpQBSnyGb9lXM58rgjEpMN5tO+y55CCmEzRp7nj0jl4jW/1f3WITLEzKOeoI6gTT520GbFXmZhg9xPcBZbdmRgkm4II9YuqPlISQ6LpUanZ+7cgN1zXCFrLi26xFXscqRQ2kSQRW/5W/Ix7OzUe8pkZ6sCqu3oq60KB/VJBeTJ3jndMj05uMtYoLPsFoaZWm4nZhbJ5F2kxo5tiw5Hf3rMJ0yPXrKQl2aNa9NMTdA41y8PfyzVAVohe3MMeC7LSHSVsPb5DwAgEcQGe/bTNSEU7UZufZz9lSrMUGs7FHINBDIw3Qm7adHoYl3o5aOOd8T0SiZy2XNq+O6zFECtWrXX/cBfoldInkJc23LcdEwNfnM8tZnZsmHoXW3mG/LGKIX0t01LT2svY+KbwzzfJGOOhNEJ+UMgLzJZs8oOH9QnPlI/NRTKkUMoX/5M00MYiAWmk4cAK6wOkdsd8nP8ib1a3f6n4iyNue1IeILiTv+uFwoa0Md0MvuDqB/FpDWsgLXFK1EHR8cCVHtBSqmivg4GrlcDpwhWrDKmzJVnt/naYW2Am/rnB6fbVujLb/42PDIszM8sCoNewJRjU9qpTeiesHI07dP5Ox3uINa3md4NtjwTwjj2/w8hMWR8H/TOVxMOs2WmHz3XAoRRa6tDsPJPnBDgcQh4DQM9NKxL1dyNxOd1EJvFw0U/b39Bri6aO/VYlLBvfugdlHuvUQdHxwJUe0MG+z7hC2I/g43BHGIThK+WYp0SY4+RrOQGGZG6ca7opdKz8zPXl2GM1RKtk7XI8UJufZz9lSrMUWFHBmSlozlSXyt/Gkz/pf52rJH161Z65dKz8zPXl2GM1RKtk7XI8UJufZz9lSrMUWFHBmSlozlS3Wi3hWB91Hx2jBcZ8ZdZIfBghsyjvWn1g8+IepCWGYXr7SdBNzmYHNy7yQdYiHE6ZFsokOVtRHKCrcomRCr86cQrF+yAYncJL0CAUhNe4F2xuJrZUiVL54u9cf+6TV+wVtfBV3xp00Gt04cZxx2y54vrfIZ7h8ZEzoMCRM6n8s+PFbHKIME6/X/nDWstVfKQ4nN+oHBnnsIZKmMmwP7VxgdsU1Lc+3K13rDhSd0D/fsMg2LPBJVmLtwfdqihSx6Y1LQzuG47K7PXmw9aiKDnbD/TV9sYeI5JC8Kx/XfdOR+nmEsZcWUAwiRxkmJ8Yiwm4LgwKc4oufZY6LKyzLRKWPG5Z+bgLL917Y02DGQNz9su87Q0sr6bX8NhcqtDF589UcUMi9Lo9JbW90DAnykO5zMlZQvCETzfAWK6O5J/cc+8AaglVlt83QrCBqWwbbsCOjqGd3oad1o+z+0GddfeiAql7D+bRbmwzFhFeK95ctqfqpp3wxtvdrwkdpxPjR8UvCbgPF8mengBqCcB8j+42GjySzYF5vSJX6INsL14Eqya/qXk4nSVJ3dmU0RXav9AtsKQNIVKQNU4/OXSxgUw9fBghsyjvWn1vte7FsYUtNOiH24Cip+ha7ipboNFGsrocsnzFxk/Tme60tuzOG7OknjO9dnjX+wvzFK7sKZYgpMxXLCfDvBnWLBvfugdlHusVEb/L8JH8fTVEJZ9v8AQ2" />  
+<input type="hidden" name="ctl00$ContentPlaceHolder1$EnviarMensagem1$hdnGA" id="hdnGA" value="/estado-SAO-PAULO/cidade-CAMPINAS/bairro-LOT-RESID-NOVO-MUNDO/Paisagismo--Servicos-de-Limpeza//perfil#LIMPEZA-TECNICA#" />  
+<input ID="hdnModalEnviarMensagem" type="hidden" Value="" />
+                </div>
+                <!-- Inicio Dicas de Segurança -->
+                <div class="box_info">
+                    <h2 class="titulo"><span class="ico_info"></span>Importante!</h2>
+                    <div class="box_info_conteudo">
+                        <ul>
+                            <li>Busque informações e referências do profissional</li>
+                            <li>Evite pagar adiantado</li>
+                        </ul>
+                        <a href="javascript:abreModal('dicasSeguranca');">» Leia as dicas de segurança</a>
+                        <br clear="both" />
+                    </div>
+                </div>
+                <!-- Fim Dicas de Segurança -->
+
+                <!-- Fim do form -->
+            </div>
+            <!-- FIM ENTRAR EM CONTATO -->
+
+            <!-- INICIO DICAS PARA CONTATAR -->
+            <h4 class="StyleTitleFicha StyleTituloLaranja StyleTituloAzul300px">Dicas para contatar serviços</h4>
+            <span class="box_outrosCont">
+                <p><strong>Sempre busque adquirir informações e referências do profissional antes de contratá-lo</strong></p>
+                <p>A seguir disponibilizamos algumas opções de sites para consultas:</p>
+                <ul>
+                    <li><a href="http://www.reclameaqui.com.br/" target="_blank">Reclame Aqui</a></li>
+                    <li><a href="http://www.portaldatransparencia.gov.br/ceis/Consulta.seam" target="_blank">Portal da Transparência</a></li>
+                </ul>
+            </span>
+
+            <!-- COMEÇO OUTROS CONTATOS -->
+            
+            <span class="box_outrosCont ListOutCont">
+            
+                </span>
+            <!-- FIM OUTROS CONTATOS -->
+
+            <!-- COMEÇO REVISTA ZAP -->
+
+                <input type="hidden" name="ctl00$ContentPlaceHolder1$ucRevista$hdnCategoria1" id="hdnCategoria1" value="Paisagismo" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$ucRevista$hdnCategoria2" id="hdnCategoria2" value="Serviços de Limpeza" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$ucRevista$hdnCategoria3" id="hdnCategoria3" />
+<!-- COMEÇO REVISTA ZAP -->
+<h4 class="StyleTitleFicha StyleTituloLaranja StyleTituloAzul300px" data-bind="visible: materias().length > 0" >Revista ZAP Imóveis</h4>
+<div class="box_outrosCont"  data-bind="foreach: materias,  visible: materias().length > 0">
+
+
+    <!-- CÉLULA REVISTA -->
+        <div class="box_celula_revista">
+        <span class="img_revista_srv"><a data-bind="attr:{href: link}">
+            <img alt="" data-bind="attr: { src: imagemMateria }" src="/img/servicos/foto_revista.jpg"   width="124" height="81"/></a></span>
+        <span class="box_cont_revista_srv txt_revista_link">
+            <a data-bind="attr:{href: link}"><span data-bind="text: titulo"></span></a>
+            
+        </span>
+    </div>
+    <!-- CÉLULA REVISTA -->
+
+    <div class="box_todas_materias" data-bind="visible: exibirMaisMaterias">
+        <span class="txt_todas_avalia_srv"><a id="ctl00_ContentPlaceHolder1_ucRevista_hplTodasAsMaterias" href="https://revista.zapimoveis.com.br/noticias/?campanha_interna=revista-zap-imoveis_origem=ficha-profissional-servicos">» Leia a Revista ZAP Imóveis </a></span>
+    </div>
+    
+</div>
+
+
+<script src="https://c.zapcorp.com.br/ScriptLibrary/knockout-2.2.1.js?versao=20150601.001" type="text/javascript"></script>
+<script src="https://c.zapcorp.com.br/ScriptLibrary/servicos/ficha/revista.js?versao=20150601.001" type="text/javascript"></script>
+    
+
+
+<!-- FIM REVISTA ZAP -->
+
+
+            <!-- FIM REVISTA ZAP -->
+            </div>
+            <!-- FIM DICAS PARA CONTATAR-->
+
+            <!-- COMEÇO DICAS DE SEGURANÇA (MODAL) -->
+            <div class="modal ModalDFundoTotal" id="dicasSeguranca" style="display: none; left: 209.5px; top: 169px;">
+                <div class="ModalDFundoModalTitulo"><span class="ArrowTitleModal"></span>Dicas de segurança:</div>
+
+                <div class="FundoFechaModalServ"><a href="javascript:fechaModal('dicasSeguranca');" title="Fechar">X</a></div>
+
+                <div class="modal-wrapper" style="display: block;">
+                    <div class="modal-conteudo">
+                        <div class="FundoModalPadrao">Selecionando o profissional</div>
+
+                        <ul>
+                            <li>Verifique os documentos.</li>
+                            <li>Peça o maior número de documentos originais possíveis e verifique se esses documentos não foram adulterados.</li>
+                            <li>Exija uma comprovação de endereço residencial.</li>
+                            <li>Obtenha  o certificado de bons antecedentes junto a uma delegacia. Este documento, também chamado de ficha corrida, pode ser solicitado em qualquer delegacia e é gratuito.</li>
+                            <li>Verifique a CTPS do candidato (caso possua), pois nela geralmente constam informações importantes.</li>
+                            <li>Peça referência de locais trabalhados anteriormente (pelo menos os últimos 3): com nome, telefone e endereço e cheque as referências.</li>
+                            <li>Busque também as referências formais. Descobrir se a empresa possui CNPJ, site e se tem registro de reclamações.</li>
+                            <li>Contratar um especialista é essencial. Arquitetos e engenheiros precisam de registro no conselho regional que regula tais atividades. Com o nome completo e o CPF do profissional, você pode entrar no site do CREA e/ou CAU e checar se está devidamente registrado (ou seja, tem a formação superior que diz ter) e se tem alguma pendência com o Conselho. Formação técnica também é registrada no respectivo Conselho.</li>
+                            <li>Guarde as cópias de todos os documentos, dados e fotos do candidato, pois eles serão muito importantes caso ocorra algum problema e você precise recorrer à polícia.</li>
+                            <li>Ao checar referências anteriores, pergunte o que acharam sobre a qualidade do trabalho e sobre o relacionamento com o profissional (se cumpre horários, se é organizado, etc.).</li>
+                        </ul>
+
+                        <div class="FundoModalPadrao">Contratação</div>
+
+                        <ul>
+                            <li>Peça orçamentos detalhados, separando os custos o máximo possível. O orçamento deve ser preciso tanto quando se trata de empresas, quanto de profissionais liberais.</li>
+                            <li>Sempre que possível faça contrato do serviço. Indique, nele, o que vai ser feito, em quanto tempo, e em quanto foi acertado o pagamento, bem como a periodicidade (semanal, mensal, etc).</li>
+                            <li>Documente-se em relação a todos os pagamentos realizados.</li>
+                            <li>Junte recibos e faça reclamações por escrito para deixar tudo protocolado.</li>
+                            <li>Nunca deixe a chave do imóvel com o profissional.</li>
+                            <li>Não deixe documentos, talão de cheque ou outros papéis importantes à mostra.</li>
+                            <li>Acompanhe o andamento do serviço, direcionando e verificando para que o resultado fique como o esperado.</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- FIM DICAS DE SEGURANÇA (MODAL) -->
+
+        </div>
+        <!-- FIM CONTEÚDO DIREITO -->
+
+        <div class="conteudo_baixo" style="display: none">
+            <!-- COMEÇO CONTEÚDO BAIXO -->
+
+            <div class="box_geral_conteudo">
+                <!-- COMEÇO ANÚNCIOS SEMELHANTES -->
+                <h2><span class="arrow2"></span>Anúncios Semelhantes</h2>
+                <div class="box_conteudo_geral_1">
+
+                    <!-- FICHA#1 MENOR -->
+                    <div class="box_ficha_semelhantes">
+                        <span class="img_ficha_semelhantes"><a href="#">
+                            <img alt="" src="/img/servicos/foto_ficha_menor.jpg" alt="" /></a></span>
+                        <h4 class="txt_nome_ficha_seml"><span class="arrow4"></span><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                        <ul class="box_estrelas4_srv">
+                            <li class="estrela4_cheia"></li>
+                            <li class="estrela4_vazia"></li>
+                            <li class="estrela4_vazia"></li>
+                            <li class="estrela4_vazia"></li>
+                            <li class="estrela4_vazia"></li>
+                        </ul>
+                        <ul class="dados_categorias2">
+                            <li class="construcao_22 dados_categ2"></li>
+                            <li class="pintura_22 dados_categ2"></li>
+                            <li class="paisagismo_22 dados_categ2"></li>
+                            <li class="decoracao_22 dados_categ2"></li>
+                        </ul>
+                        <span class="txt_local_ficha_srv"><span class="pinServicos"></span>Rua Mauris in dolor nunc - São Paulo/SP</span>
+                    </div>
+                    <!-- FICHA#1 MENOR -->
+
+                    <!-- FICHA#1 MENOR -->
+                    <div class="box_ficha_semelhantes">
+                        <span class="img_ficha_semelhantes"><a href="#">
+                            <img alt="" src="/img/servicos/foto_ficha_menor.jpg" alt="" /></a></span>
+                        <h4 class="txt_nome_ficha_seml"><span class="arrow4"></span><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                        <ul class="box_estrelas4_srv">
+                            <li class="estrela4_cheia"></li>
+                            <li class="estrela4_vazia"></li>
+                            <li class="estrela4_vazia"></li>
+                            <li class="estrela4_vazia"></li>
+                            <li class="estrela4_vazia"></li>
+                        </ul>
+                        <ul class="dados_categorias2">
+                            <li class="construcao_22 dados_categ2"></li>
+                            <li class="pintura_22 dados_categ2"></li>
+                            <li class="paisagismo_22 dados_categ2"></li>
+                            <li class="decoracao_22 dados_categ2"></li>
+                        </ul>
+                        <span class="txt_local_ficha_srv"><span class="pin"></span>Rua Mauris in dolor nunc - São Paulo/SP</span>
+                    </div>
+                    <!-- FICHA#1 MENOR -->
+
+                    <!-- FICHA#1 MENOR -->
+                    <div class="box_ficha_semelhantes">
+                        <span class="img_ficha_semelhantes"><a href="#">
+                            <img alt="" src="/img/servicos/foto_ficha_menor.jpg" alt="" /></a></span>
+                        <h4 class="txt_nome_ficha_seml"><span class="arrow4"></span><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                        <ul class="box_estrelas4_srv">
+                            <li class="estrela4_cheia"></li>
+                            <li class="estrela4_vazia"></li>
+                            <li class="estrela4_vazia"></li>
+                            <li class="estrela4_vazia"></li>
+                            <li class="estrela4_vazia"></li>
+                        </ul>
+                        <ul class="dados_categorias2">
+                            <li class="construcao_22 dados_categ2"></li>
+                            <li class="pintura_22 dados_categ2"></li>
+                            <li class="paisagismo_22 dados_categ2"></li>
+                            <li class="decoracao_22 dados_categ2"></li>
+                        </ul>
+                        <span class="txt_local_ficha_srv"><span class="pin"></span>Rua Mauris in dolor nunc - São Paulo/SP</span>
+                    </div>
+                    <!-- FICHA#1 MENOR -->
+
+                    <div class="box_todas_materias">
+                        <span class="txt_todas_avalia_srv"><span class="ico_expandir_avalia"></span><a href="#">ver todos os anúncios (215)</a></span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- FIM ANÚNCIOS SEMELHANTES -->
+
+            <div class="box_geral_conteudo">
+                <!-- COMEÇO SERVIÇOS RELACIONADOS -->
+                <h2><span class="arrow2"></span>Serviços Relacionados</h2>
+                <div class="box_conteudo_geral_1">
+
+                    <div class="box_resumo_relacionados">Usuários que buscam <strong>LOREN IPSUN</strong> também buscam por:</div>
+
+                    <!-- COLUNA CAT#1 -->
+                    <div class="box_col_dir_srv1">
+                        <h4 class="txt_titulo_box_dir1 txt_titulo_box_dir">Categoria 1</h4>
+                        <div class="box_col_dir_conteudo_srv">
+                            <!-- FICHA#1 MENOR -->
+                            <div class="box_ficha_semelhantes1 box_ficha_semelhantes">
+                                <span class="img_ficha_semelhantes"><a href="#">
+                                    <img alt="" src="/img/servicos/foto_ficha_menor.jpg" alt="" /></a></span>
+                                <h4 class="txt_nome_ficha_seml1 txt_nome_ficha_seml"><span class="arrow4"></span><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                                <ul class="box_estrelas4_srv">
+                                    <li class="estrela4_cheia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                </ul>
+                                <ul class="dados_categorias2">
+                                    <li class="construcao_22 dados_categ2"></li>
+                                    <li class="pintura_22 dados_categ2"></li>
+                                    <li class="paisagismo_22 dados_categ2"></li>
+                                    <li class="decoracao_22 dados_categ2"></li>
+                                </ul>
+                                <span class="txt_local_ficha_srv1 txt_local_ficha_srv"><span class="pin"></span>Rua Mauris in dolor nunc - São Paulo/SP</span>
+                            </div>
+                            <!-- FICHA#1 MENOR -->
+
+                            <!-- FICHA#2 MENOR -->
+                            <div class="box_ficha_semelhantes1 box_ficha_semelhantes">
+                                <span class="img_ficha_semelhantes"><a href="#">
+                                    <img alt="" src="/img/servicos/foto_ficha_menor.jpg" alt="" /></a></span>
+                                <h4 class="txt_nome_ficha_seml1 txt_nome_ficha_seml"><span class="arrow4"></span><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                                <ul class="box_estrelas4_srv">
+                                    <li class="estrela4_cheia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                </ul>
+                                <ul class="dados_categorias2">
+                                    <li class="construcao_22 dados_categ2"></li>
+                                    <li class="pintura_22 dados_categ2"></li>
+                                    <li class="paisagismo_22 dados_categ2"></li>
+                                    <li class="decoracao_22 dados_categ2"></li>
+                                </ul>
+                                <span class="txt_local_ficha_srv1 txt_local_ficha_srv"><span class="pin"></span>Rua Mauris in dolor nunc - São Paulo/SP</span>
+                            </div>
+                            <!-- FICHA#2 MENOR -->
+                        </div>
+                    </div>
+                    <!-- COLUNA CAT#1 -->
+
+                    <!-- COLUNA CAT#2 -->
+                    <div class="box_col_dir_srv1">
+                        <h4 class="txt_titulo_box_dir1 txt_titulo_box_dir">Categoria 2</h4>
+                        <div class="box_col_dir_conteudo_srv">
+                            <!-- FICHA#1 MENOR -->
+                            <div class="box_ficha_semelhantes1 box_ficha_semelhantes">
+                                <span class="img_ficha_semelhantes"><a href="#">
+                                    <img alt="" src="/img/servicos/foto_ficha_menor.jpg" alt="" /></a></span>
+                                <h4 class="txt_nome_ficha_seml1 txt_nome_ficha_seml"><span class="arrow4"></span><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                                <ul class="box_estrelas4_srv">
+                                    <li class="estrela4_cheia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                </ul>
+                                <ul class="dados_categorias2">
+                                    <li class="construcao_22 dados_categ2"></li>
+                                    <li class="pintura_22 dados_categ2"></li>
+                                    <li class="paisagismo_22 dados_categ2"></li>
+                                    <li class="decoracao_22 dados_categ2"></li>
+                                </ul>
+                                <span class="txt_local_ficha_srv1 txt_local_ficha_srv"><span class="pin"></span>Rua Mauris in dolor nunc - São Paulo/SP</span>
+                            </div>
+                            <!-- FICHA#1 MENOR -->
+
+                            <!-- FICHA#2 MENOR -->
+                            <div class="box_ficha_semelhantes1 box_ficha_semelhantes">
+                                <span class="img_ficha_semelhantes"><a href="#">
+                                    <img alt="" src="/img/servicos/foto_ficha_menor.jpg" alt="" /></a></span>
+                                <h4 class="txt_nome_ficha_seml1 txt_nome_ficha_seml"><span class="arrow4"></span><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                                <ul class="box_estrelas4_srv">
+                                    <li class="estrela4_cheia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                </ul>
+                                <ul class="dados_categorias2">
+                                    <li class="construcao_22 dados_categ2"></li>
+                                    <li class="pintura_22 dados_categ2"></li>
+                                    <li class="paisagismo_22 dados_categ2"></li>
+                                    <li class="decoracao_22 dados_categ2"></li>
+                                </ul>
+                                <span class="txt_local_ficha_srv1 txt_local_ficha_srv"><span class="pin"></span>Rua Mauris in dolor nunc - São Paulo/SP</span>
+                            </div>
+                            <!-- FICHA#2 MENOR -->
+                        </div>
+                    </div>
+                    <!-- COLUNA CAT#2 -->
+
+                    <!-- COLUNA CAT#3 -->
+                    <div class="box_col_dir_srv1">
+                        <h4 class="txt_titulo_box_dir1 txt_titulo_box_dir">Categoria 3</h4>
+                        <div class="box_col_dir_conteudo_srv">
+                            <!-- FICHA#1 MENOR -->
+                            <div class="box_ficha_semelhantes1 box_ficha_semelhantes">
+                                <span class="img_ficha_semelhantes"><a href="#">
+                                    <img alt="" src="/img/servicos/foto_ficha_menor.jpg" alt="" /></a></span>
+                                <h4 class="txt_nome_ficha_seml1 txt_nome_ficha_seml"><span class="arrow4"></span><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                                <ul class="box_estrelas4_srv">
+                                    <li class="estrela4_cheia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                </ul>
+                                <ul class="dados_categorias2">
+                                    <li class="construcao_22 dados_categ2"></li>
+                                    <li class="pintura_22 dados_categ2"></li>
+                                    <li class="paisagismo_22 dados_categ2"></li>
+                                    <li class="decoracao_22 dados_categ2"></li>
+                                </ul>
+                                <span class="txt_local_ficha_srv1 txt_local_ficha_srv"><span class="pin"></span>Rua Mauris in dolor nunc - São Paulo/SP</span>
+                            </div>
+                            <!-- FICHA#1 MENOR -->
+
+                            <!-- FICHA#2 MENOR -->
+                            <div class="box_ficha_semelhantes1 box_ficha_semelhantes">
+                                <span class="img_ficha_semelhantes"><a href="#">
+                                    <img alt="" src="/img/servicos/foto_ficha_menor.jpg" alt="" /></a></span>
+                                <h4 class="txt_nome_ficha_seml1 txt_nome_ficha_seml"><span class="arrow4"></span><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                                <ul class="box_estrelas4_srv">
+                                    <li class="estrela4_cheia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                    <li class="estrela4_vazia"></li>
+                                </ul>
+                                <ul class="dados_categorias2">
+                                    <li class="construcao_22 dados_categ2"></li>
+                                    <li class="pintura_22 dados_categ2"></li>
+                                    <li class="paisagismo_22 dados_categ2"></li>
+                                    <li class="decoracao_22 dados_categ2"></li>
+                                </ul>
+                                <span class="txt_local_ficha_srv1 txt_local_ficha_srv"><span class="pin"></span>Rua Mauris in dolor nunc - São Paulo/SP</span>
+                            </div>
+                            <!-- FICHA#2 MENOR -->
+                        </div>
+                    </div>
+                    <!-- COLUNA CAT#3 -->
+                    <div class="box_todas_materias">
+                        <span class="txt_todas_avalia_srv">
+                        <span class="txt_todas_avalia_srv"><span class="ico_expandir_avalia"></span><a href="#">ver todos</a></span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- FIM SERVIÇOS RELACIONADOS -->
+
+        </div>
+        <!-- FIM CONTEÚDO BAIXO -->
+
+    </div>
+    <!-- FIM CONTEÚDO -->
+
+    <div class="modalEnvioMsg modal" id="MensagemEnviada" style="display: none; width: 638px">
+        <div class="ModalDFundoModalTitulo"><span class="ArrowTitleModal"></span>Envio de mensagem ao profissional:</div>
+        <div class="FundoFechaModalServ"><a href="javascript:fechaModal('MensagemEnviada');" title="Fechar">X</a></div>
+        <!-- Mensagem enviando e enviado com sucesso -->
+        <div class="LoggedModalSD" style="display: block">
+            <div class="BoxMsgSend2SD" style="display: block">
+                <!-- Mensagem 2 ENVIADA -->
+                <span class="icoEnviadoMsgModalSD"></span>
+                <p>
+                    <strong>Sua mensagem foi enviada ao profissional com sucesso.</strong><br />
+                    Como os profissionais podem, frequentemente, estar em trabalhos externos<br />
+                    e sem acesso a e-mails, recomendamos também que faça contato por telefone.
+                </p>
+                <div class="BoxMsgSeg">
+                    <strong>Importante</strong><br />
+                    É sempre importante verificar as informações e avaliações 
+                do profissional antes de contratar o serviço.
+                </div>
+            </div>
+            <!-- Mensagem 2 ENVIADA -->
+        </div>
+        <!-- ensagem enviando e enviado com sucesso -->
+    </div>
+
+    <div style="display: none;" id="MensagemNaoEnviada" class="modalEnvioMsg modal">
+        <div class="ModalDFundoModalTitulo"><span class="ArrowTitleModal"></span>Mensagem não enviada:</div>
+        <div class="FundoFechaModalServ"><a title="Fechar" href="javascript:fechaModal('MensagemNaoEnviada');">X</a></div>
+        <div style="display: block;" class="LoggedModalSD">
+            <div class="BoxMsgSend2SD">
+                <span class="icoErroMsgModalSD"></span>
+                <p>
+                    <b>Sua mensagem não pode ser enviada.</b><br>
+                    Por favor, tente novamente mais tarde ou, se preferir, utilize outra forma de contato com o anunciante.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modalEnvioMsg" id="DenunciaEnviada" style="display: none; width: 638px">
+        <div class="ModalDFundoModalTitulo"><span class="ArrowTitleModal"></span>Denúncia de profissional:</div>
+        <div class="FundoFechaModalServ"><a href="javascript:fechaModal('DenunciaEnviada');" title="Fechar">X</a></div>
+        <!-- Denuncia enviando e enviado com sucesso -->
+        <div class="LoggedModalSD" style="display: block">
+            <div class="BoxMsgSend2SD" style="display: block">
+                <!-- Denuncia 2 ENVIADA -->
+                <!-- Denuncia 2 ENVIADA -->
+                <span class="icoEnviadoMsgModalSD"></span>
+                <p>
+                    <b>Sua denuncia foi enviada com sucesso.</b><br />
+                    Em breve, você receberá um retorno da nossa Equipe de Qualidade.
+                </p>
+            </div>
+            <!-- Denuncia 2 ENVIADA -->
+        </div>
+        <!-- denuncia enviando e enviado com sucesso -->
+    </div>
+
+    <!-- Modal Avaliação -->
+    <div class="modal ModalDFundoTotal" id="Avaliacao" style="display: none">
+        <div class="ModalDFundoModalTitulo"><span class="ArrowTitleModal"></span>Avaliação de Profissional ou Empresa:</div>
+        <div class="FundoFechaModalServ"><a href="javascript:fechaModal('Avaliacao');">X</a></div>
+
+        <!-- Login/Cadastro -->
+        <div class="NoLoginModalSD" style="display: none;">
+
+            <div class="LoginBoxModalSD">
+                <!-- Login -->
+                <p>Já sou cadastrado</p>
+                <div class="FundoModalPadrao"><span class="icoLoginModalSD"></span>Login</div>
+                <span class="labelFormModalSD">E-mail</span>
+                <input type="text" class="imputFormModalSD1" />
+                <br clear="all" />
+                <span class="labelFormModalSD">Senha</span>
+                <input type="password" class="imputFormModalSD1" />
+                <span class="txtApoioModalSD"><a href="#" title="Esqueci minha senha">Esqueci minha senha</a></span>
+                <input type="button" value="Acessar" class="acessarButton">
+            </div>
+            <!-- Login -->
+            <div class="CadastroBoxModalSD">
+                <!-- Cadastro -->
+                <p>Ainda não sou cadastrado</p>
+                <div class="FundoModalPadrao"><span class="icoCadastroModalSD"></span>Cadastro</div>
+                <span class="labelFormModalSD">Nome</span>
+                <input type="text" class="imputFormModalSD1" />
+                <br clear="all" />
+                <span class="labelFormModalSD">E-mail</span>
+                <input type="text" class="imputFormModalSD1" />
+                <br clear="all" />
+                <span class="labelFormModalSD labelFormModalSD2rows">Repita<br />
+                    o e-mail</span>
+                <input type="text" class="imputFormModalSD1" />
+                <br clear="all" />
+                <span class="labelFormModalSD">Senha</span>
+                <input type="password" class="imputFormModalSD2" /><span class="txtApoioModalSD">6 à 9 caracteres</span>
+                <br clear="all" />
+                <span class="labelFormModalSD labelFormModalSD2rows">Repita a<br />
+                    Senha</span>
+                <input type="password" class="imputFormModalSD2" />
+                <br clear="all" />
+                <span class="labelFormModalSD">CEP</span>
+                <input type="text" class="imputFormModalSD2" /><span class="txtApoioModalSD"><a href="#" title="Não sei o CEP">Não sei o CEP</a></span>
+                <br clear="all" />
+                <input type="checkbox" class="imputCheckModalSD" name="Termos"><span class="txtApoioModalSD txtTermosModalSDA">Li e concordo com os <a href="#" title="Termos de Uso" id="mostraTermos"><b>Termos de Uso</b></a></span>
+                <br clear="all" />
+                <input type="checkbox" class="imputCheckModalSD" name="Termos"><span class="txtApoioModalSD txtTermosModalSDA">Desejo receber ofertas</span>
+                <input type="button" value="Cadastrar" class="acessarButton">
+            </div>
+            <!-- Cadastro -->
+            <!-- Jquery mostra/oculta Termos -->
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("a#mostraTermos").toggle(
+                                       function () {
+                                           $("div#ocultoTermos").slideDown(); // ou fadeIn()
+                                       },
+                                       function () {
+                                           $("div#ocultoTermos").slideUp(); // ou fadeOut()
+                                       }
+                          );
+                });
+            </script>
+            <!-- Jquery mostra/oculta Termos -->
+            <div class="BoxTermosUsoModalSDA" id="ocultoTermos">
+                <!-- Termos -->
+                <p>Termos de Uso</p>
+                <span class="boxFecharTermosSD"><span class="icoFTermosModalSD"></span><a href="#" title="Fechar" id="A1">fechar</a></span>
+                <span class="TxtTermosModalSD">
+                    <b>definições</b><br />
+                    <b>SITE:</b> é a empresa proprietária do portal zap.com.br.<br />
+                    <b>ZAP:</b> é o portal cujo endereço é http://www.zap.com.br, com todos os recursos e ferramentas relacionadas a este.<br />
+                    <b>USUÁRIO(S):</b> são as pessoas que acessam o ZAP.<br />
+                    <b>ANUNCIANTE(S):</b> são as pessoas ou empresas que veiculam seus anúncios ou publicidade no ZAP.<br />
+                    Este documento visa informar as responsabilidades, deveres e obrigações que todo USUÁRIO assume
+                </span>
+            </div>
+            <!-- Termos -->
+
+        </div>
+        <!-- Login/Cadastro -->
+
+        <!-- Formulário Avaliação + mensagens -->
+        <div class="LoggedModalSD" style="display: block">
+            <div class="BoxFormSDP1" id="formularioAvaliacao">
+                <!-- Formulário-Campos -->
+                <div class="FundoModalPadrao"><span class="icoFormDModalSD icoAvaliaProfSr"></span>A seguir diga sua opinião sobre os serviços prestados:</div>
+                <span class="labelFormModalSD labelFormDenunciaAj">Nome de Usuário</span>
+                <span id="lblNomeAvaliacao" class="TxtImpressoModalSD"></span>
+                <br clear="all" />
+                <span class="labelFormModalSD labelFormDenunciaAj">E-mail</span>
+                <span id="lblEmailAvaliacao" class="TxtImpressoModalSD"></span>
+                <br clear="all" />
+                <span class="labelFormModalSD labelFormDenunciaAj">Nota da avaliação *</span>
+                <div id="EstrelasModal" class="rating">
+                    <span class="accessRate"></span>
+                </div>
+                <span class="labelFormModalSD labelFormDenunciaAj">Título da avaliação *</span>
+                <input name="ctl00$ContentPlaceHolder1$txtTituloAvaliacao" type="text" maxlength="100" id="txtTituloAvaliacao" class="imputFormModalSD2 impitFormAvalSrvAj" />
+                <br clear="all" />
+                <span class="labelFormModalSD labelFormDenunciaAj2">Descreva sua experiência *</span>
+                <textarea name="ctl00$ContentPlaceHolder1$txtComentarioAvaliacao" rows="10" cols="20" id="txtComentarioAvaliacao" class="imputFormModalSD2 imputAj2ModalSD2">
+</textarea>
+                <br clear="all" />
+                <span class="txtApoioModalSD" style="float: left">* Todos os campos são de preenchimento obrigatório</span>
+                <span class="txtApoioModalSD" style="float: right">Máximo de 260 caractéres</span>
+                <div class="BtnsAcaoModalErroSD AjustePosBtnsAvlia">
+                    <input type="button" value="Cancelar" class="acessarButton acessarButtonAj" onclick="javascript: return (TratarApresentacaoModal('#AvaliacaoCancelada', '#formularioAvaliacao'));" />
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnEnviar" value="Enviar" onclick="javascript:return(ValidarCamposModalAvaliacao());" id="ctl00_ContentPlaceHolder1_btnEnviar" class="acessarButton acessarButtonAj" />
+                </div>
+            </div>
+            <!-- Formulário-Campos -->
+
+            <div class="BoxMsgSend1SD" id="ProcessandoAvaliacao" style="display: none">
+                <!-- Mensagem 1 ENVIANDO -->
+                <p>Aguarde, estamos processando as informações</p>
+                <img alt="Enviando" src="/img/servicos/enviandoSD.gif" />
+            </div>
+            <!-- Mensagem 1 ENVIANDO -->
+
+            <div class="BoxMsgSend2SD" id="AvaliacaoEnviada">
+                <!-- Mensagem 2 ENVIADA -->
+                <span class="icoEnviadoMsgModalSD"></span>
+                <p>
+                    <b>Sua avaliação foi enviada com sucesso.</b><br />
+                    Obrigado por responder a essa avaliação. As informações serão analisadas pela<br />
+                    nossa Equipe e uma vez aprovada, a avaliação será publicada na página do profissional.
+                </p>
+
+            </div>
+            <!-- Mensagem 2 ENVIADA -->
+
+            <div class="BoxMsgSend2SD" id="AvaliacaoCancelada" style="display: none">
+                <!-- Mensagem 3 ERRO -->
+                <span class="icoErroMsgModalSD"></span>
+                <p>
+                    <b>Deseja Cancelar essa avaliação?</b><br />
+                    As informações já preenchidas serão perdidas.
+                </p>
+                <div class="BtnsAcaoModalErroSD">
+                    <input type="button" value="Não" class="acessarButton acessarButtonAj" onclick="javascript: return (TratarApresentacaoModal('#formularioAvaliacao', '#AvaliacaoCancelada'));" />
+                    <input type="button" value="Sim" class="acessarButton acessarButtonAj" onclick="javascript: fechaModal('Avaliacao');">
+                </div>
+            </div>
+            <!-- Mensagem 3 ERRO -->
+
+        </div>
+        <!-- Formulário Avaliação + mensagens -->
+
+    </div>
+    <!-- Modal Avaliação -->
+
+
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnIDUsuario" id="hdnIDUsuario" />
+    <input type="hidden" id="hdnAllComments" value="0" />
+    <input type="hidden" id="hdnTotalComments" value="0" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnNomePrestador" id="hdnNomePrestador" value="Limpeza Técnica" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnEmailPrestador" id="hdnEmailPrestador" value="rccristiane@yahoo.com.br" />
+    </span>
+
+
+					<!-- Fecha Corpo da Página-->
+					
+					<!-- Patrocínio Real Media -->
+					
+					<!-- Fim Patrocínio Real Media -->
+
+					<!-- Ajude o Zap a Melhorar -->
+					<div class="zap_modal_inform" id="DivMensagens">
+						<div id="TituloDivMensagens" class="titulo"></div><a href="javascript:fechaModal('DivMensagens');" class="fechar">Fechar[x]</a>
+						<div class="corpo" id="CorpoDivMensagens"></div>	        
+					</div>
+					
+					
+					 
+					<!-- Fim Ajude o Zap a Melhorar -->
+
+					<!-- Início Sky -->
+					
+					
+					<div class="bug"></div>
+					<!-- Fim Sky -->
+			   </div>
+
+			<script language="javascript" type="text/javascript">
+			    function BarraHiResHome() {
+			        var res = screen.availWidth;
+			        if (res <= 800) {
+			            if (navigator.appName != 'Netscape') {
+			                try {
+			                    document.all.total.style.width = "766px";
+			                    document.all.BarraHiRes.style.display = "none";
+			                }
+			                catch (e) {
+			                    try {
+			                        document.getElementById("total").style.width = "766px";
+			                        document.getElementById("BarraHiRes").style.display = "none";
+			                    }
+			                    catch (e) {
+			                    }
+			                }
+
+			            } else
+			                if (parseInt(navigator.appVersion) >= 5) {
+			                    document.getElementById('BarraHiRes').style.display = "none";
+			                }
+			        }
+			    }
+			    BarraHiResHome();
+
+			    if (VerLogin != '') {
+			        abreModal(VerLogin);
+			    }
+			</script>
+		</div>
+	</div>
+
+	<!-- Início footer -->
+	
+<link rel="stylesheet" href="/css2/chat-direct-talk.css?versao=20150601.001"type="text/css" />
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="span5">
+                <ul class="nav nav-list pull-left">
+                    <li class="nav-header">Imóveis</li>
+                    <li><a id="ctl00_footer_hlMeuZap" href="../../../meuzap/meuzap-login.aspx" target="_blank">Meu ZAP</a></li>
+                    <li><a href="/anuncieb/anunciezap/anuncie-imoveis-home.aspx" onclick="javascript:contabilizarEventoGA('AnuncieC2C_SiteNovoImoveis','Chamada','Footer_Geral');">Anuncie Seu Imóvel</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/Favorito/Listar">Minha Lista</a></li>
+                    <li><a href="/imoveis/servicos">Serviços</a></li>
+                    <li><a href="http://revista.zap.com.br//imoveis/">Dicas & Notícias</a></li>
+                    <li><a href="/imoveis/simule-seu-financiamentob.aspx">Financiamento</a></li>
+                    <li><a href="/imoveis/fipe-zap-b/">FipeZAP</a></li>
+                    <li><a href="http://www.zapimoveis.com.br">Ir para a Home</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/mapa/">Mapa do Site</a></li>
+
+                    <li>
+                        <div class="smlist pull-left">
+                            <div class="sprite-sm sm-twitter"><a href="http://twitter.com/zapimoveis" target="_blank"></a></div>
+                            <div class="sprite-sm sm-facebook"><a href="http://www.facebook.com/zapimoveis" target="_blank"></a></div>
+                            <div class="sprite-sm sm-google"><a href="https://plus.google.com/+ZapImoveis" rel="publisher" target="_blank"></a></div>
+                            <div class="sprite-sm sm-youtube"><a href="http://www.youtube.com/ZAPImoveis" target="_blank"></a></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav nav-list pull-right">
+                    <li class="nav-header">Dúvidas</li> 
+                    <li><a href="http://www.zapimoveis.com.br/perguntas-frequentes">
+                        <span class="zapit">Central de atendimento<br />
+                            ao cliente</span></a></li>
+                </ul>
+            </div>
+            <div class="span3">
+                <div class="webad">
+                    <a href="http://www.zapimoveis.com.br/mobile?campanha_interna=hotsiteappmobile&origem=ImgFooter">
+                        <img src="/NovoSite/img/banner_mobile_apps_novos.png" class="bannermobile" width="184" height="113"/>
+                    </a>
+                </div>
+            </div>
+            <div class="span2">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Sobre o ZAP</li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=quemsomos">Quem Somos</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=dicasseguranca">Dicas de Segurança</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=termouso">Termos de Uso</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=politicaprivacidade">Política de Privacidade</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=politicaqualidade">Política de Qualidade</a></li>
+                    <li><a href="https://jobs.kenoby.com/zap" target="_blank">Trabalhe Conosco</a></li>
+                    <li><a href="http://www.zapimoveis.com.br/informacao?opcao=parceiros">Parceiros</a></li>
+                    <li><a id="lnkDownloadPublicidade" title="Faça o download do arquivo midiakit." href="http://www.zapimoveis.com.br/publicidade" target="_blank" >Publicidade</a></li>
+                    <li><a href="http://www.zappro.com.br/?utm_source=zapimoveis&amp;utm_medium=link-rodape&amp;utm_campaign=btn-zappro" target="_blank">ZAP Pro</a></li>
+                    <li><a href="http://sala-de-imprensa.zapimoveis.com.br/" target="_blank">Sala de imprensa</a></li>                </ul>
+            </div>
+            <div class="span2">
+                <span class="copyright">
+                    <span style="text-transform: uppercase; font-size: 14px;">Uma empresa do<!--A Newspaper Company--></span>
+                    <a href="http://www.grupoglobo.globo.com/" target="_blank">
+                        <img src="/img/logotipo_grupo_globo.png" width="127" height="16" alt="Grupo Globo" />
+                        grupoglobo.globo.com
+                    </a>
+                    Copyright 2018 ZAP.<br />
+                    Todos os direitos reservados.<!--All rights reserved.-->
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+	<!-- fim footer -->
+
+	<!------ Google Analytics (tracker) begin ------>
+	
+    
+	<!------ Google Analytics (tracker) end ------>
+
+	<iframe src="/ascx/modal_grade.htm" frameborder="0" id="modalGrade"></iframe>
+
+<script language='javascript'> ChatBot(); </script></form>    
+	<SCRIPT LANGUAGE=JavaScript>OAS_AD('x10');</SCRIPT>
+	<a name="f"></a>
+	<!-- UTILIZADO PARA A CONTABILIZAÇÃO DA NAVEGAÇÃO DA HOME DE IMÓVEIS -->
+
+	
+
+	<div id="ctl00_pnlConversionGoogleImoveis">
+	
+		<!-- ZAP Imoveis - Google Code for P&aacute;ginas Visitadas Conversion Page -->
+		<script type="text/javascript">
+		<!--
+    var google_conversion_id = 1068872678;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "7ob7CJLTaBDm59b9Aw";
+    var google_conversion_value = 0;
+    //-->
+		</script>
+		<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1068872678/?label=7ob7CJLTaBDm59b9Aw&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+		
+        <!-- Google Code for P&aacute;gina Visitadas Conversion Page -->
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 991656355;
+            var google_conversion_language = "en";
+            var google_conversion_format = "2";
+            var google_conversion_color = "ffffff";
+            var google_conversion_label = "hy1bCJXg4QQQo_Pt2AM";
+            var google_conversion_value = 0;
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/991656355/?value=0&amp;label=hy1bCJXg4QQQo_Pt2AM&amp;guid=ON&amp;script=0"/>
+            </div>
+        </noscript>
+	
+</div>
+
+    <div id="ctl00_pnlGoogleSmartPixel">
+	
+    <!-- Google Code for Smart Pixel Remarketing List -->
+		<script type="text/javascript">
+		    /* <![CDATA[ */
+		    var google_conversion_id = 1050634893;
+		    var google_conversion_language = "en";
+		    var google_conversion_format = "3";
+		    var google_conversion_color = "666666";
+		    var google_conversion_label = "09bQCJ3-ogIQjdX99AM";
+		    var google_conversion_value = 0;
+		    /* ]]> */
+		    var google_custom_params = {
+				anuncie: 'nao'
+		    };
+		    var google_remarketing_only = true;
+		</script>
+		<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1050634893/?label=09bQCJ3-ogIQjdX99AM&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+    
+</div>
+
+	
+	
+	<!--%%DATAHORA%%-->
+		
+        
+        
+
+		
+
+		
+		
+        
+
+        <!-- Begin comScore Tag -->
+        <script>
+            var _comscore = _comscore || [];
+            _comscore.push({ c1: "2", c2: "14617388" });
+            (function () {
+                var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+                s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+                el.parentNode.insertBefore(s, el);
+            })();
+        </script>
+        <noscript>
+          <img src="http://b.scorecardresearch.com/p?c1=2&c2=14617388&cv=2.0&cj=1" />
+        </noscript>
+        <!-- End comScore Tag -->
+
+        <div id="ctl00_pnlCrazyEgg">
+	
+			<!-- BEGIN: CrazyEgg -->
+            <script type="text/javascript">
+                setTimeout(function(){var a=document.createElement("script");
+                    var b=document.getElementsByTagName("script")[0];
+                    a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0014/3915.js?"+Math.floor(new Date().getTime()/3600000);
+                    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+            </script>
+            <!-- END: CrazyEgg -->
+		
+</div>
+	</body>
+</html>
