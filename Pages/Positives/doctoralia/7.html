@@ -3,7 +3,7 @@
 <html lang="pt-BR" >
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     
-    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXMHElAKXQ==","queueTime":0,"applicationTime":1239,"ttGuid":"B6C8F16CBEE8856F","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXMHElAKXQ==","queueTime":0,"applicationTime":108,"ttGuid":"CB8EE1A8072303B3","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
 <meta name="description" content="Marque uma consulta com Rodrigo Noia Mattos Montan - Veja as 4 opiniões dos pacientes, consultórios, especialidades, preços e convênios. Analista do Comportamento, Dependências, Mindfulness" /><meta name="keywords" content="Rodrigo Noia Mattos Montan, bom, melhor, saúde, médico, medicina privada, plano de saúde, clínica" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="@doctoralia" /><meta name="twitter:image" content="https://photos.doctoralia.com/636181211723518102_1.jpg" /><meta property="og:title" content="Rodrigo Noia Mattos Montan  - Psicólogo São Paulo" />
 <meta property="og:description" content="Marque uma consulta com Rodrigo Noia Mattos Montan - Veja as 4 opiniões dos pacientes, consultórios, especialidades, preços e convênios. Analista do Comportamento, Dependências, Mindfulness" /><meta property="og:type" content="website" />
 <meta property="og:image" content="https://photos.doctoralia.com/636181211723518102.JPG" />
@@ -259,9 +259,9 @@
             </div>
             <input type="hidden" class="schedule-type" name="Schedule.Type" value="PrivatePractice" />
             <input type="hidden" class="schedule-id" name="Schedule.Id" value="3339595" />
-            <input type="hidden" class="input-date" name="date" value="2018/04/03" />
-            <input type="hidden" class="next-date" value="2018/04/10" />
-            <input type="hidden" class="previous-date" value="2018/03/27" />
+            <input type="hidden" class="input-date" name="date" value="2018/04/05" />
+            <input type="hidden" class="next-date" value="2018/04/12" />
+            <input type="hidden" class="previous-date" value="2018/03/29" />
         </div>
 </form></div>
                 </div>
@@ -627,7 +627,7 @@ Baseado em 4 opiniões                        </p>
         </section>
     
 
-<form action="/noindex/doctor-phone" id="frmPhone" method="post"><input name="__RequestVerificationToken" type="hidden" value="sbYSUSM7mSp9QTfzmOXTssoilT7-jyFg3bjO5jiT4QMczdkm6iRYsJhRlXI_FRxvaNrDKH_mqvx5PzCIsd_E0WFIRtM1" /><input id="entityKey" name="entityKey" type="hidden" value="14896577" /><input id="placeType" name="placeType" type="hidden" value="" /><input id="placeKey" name="placeKey" type="hidden" value="" /></form>    <div id="phonePlacer"></div>
+<form action="/noindex/doctor-phone" id="frmPhone" method="post"><input name="__RequestVerificationToken" type="hidden" value="meLRd_scDg8Hx4_iOiz82swRf0Vy40JaxDDJQ5Q93rOmNpaT7SlT_JFIV9reMIbdRHydCb-WGJ4eT_Mui5po3ga0fMQ1" /><input id="entityKey" name="entityKey" type="hidden" value="14896577" /><input id="placeType" name="placeType" type="hidden" value="" /><input id="placeKey" name="placeKey" type="hidden" value="" /></form>    <div id="phonePlacer"></div>
 <div id="map" class="hidden">
     <div class="map-heading">Mapa de situação - <strong>Rodrigo Noia Mattos Montan</strong></div>
     <div class="map-body clearfix">
@@ -713,52 +713,52 @@ Baseado em 4 opiniões                        </p>
     <div class="container cross-link seo clearfix" role="navigation">
         <section>
 <h3>Médicos em Brasil</h3>                <ul>
-                        <li><a href="/medicos/especialidade/oftalmologistas-1305/curitiba-116724-1">Oftalmologistas Curitiba</a></li>
-                        <li><a href="/medicos/especialidade/oftalmologistas-1305/belo+horizonte-116720-1">Oftalmologistas Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293/brasilia-116707-1">Urologistas Brasília</a></li>
                         <li><a href="/medicos/especialidade/nutricionistas-2203/belo+horizonte-116720-1">Nutricionistas Belo Horizonte</a></li>
-                        <li><a href="/medicos/especialidade/homeopatas-1335/belo+horizonte-116720-1">Homeopatas Belo Horizonte</a></li>
-                        <li><a href="/medicos/especialidade/dentistas-1433/capinzal-131760-1">Dentistas Capinzal</a></li>
-                        <li><a href="/medicos/especialidade/dentistas-1433/ji-parana-157900-1">Dentistas Ji-Paraná</a></li>
-                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/sorocaba-116862-1">Fisioterapeutas Sorocaba</a></li>
-                        <li><a href="/medicos/especialidade/psicologos-1434/volta+redonda-116760-1">Psicólogos Volta Redonda</a></li>
-                        <li><a href="/medicos/especialidade/pediatras-1307/porto+seguro-117262-1">Pediatras Porto Seguro</a></li>
-                        <li><a href="/medicos/especialidade/ginecologistas-1300/juazeiro-117036-1">Ginecologistas Juazeiro</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/curitiba-116724-1">Cirurgiões plásticos Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/curitiba-116724-1">Cirurgiões vasculares Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/barueri-116777-1">Cirurgiões vasculares Barueri</a></li>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312/blumenau-116762-1">Psiquiatras Blumenau</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305/eunapolis-117067-1">Oftalmologistas Eunapolis</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/vitoria+da+conquista-116864-1">Dentistas Vitória da Conquista</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/santa+rosa-116787-1">Dentistas Santa Rosa</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/taquara-131845-1">Pediatras Taquara</a></li>
+                        <li><a href="/medicos/especialidade/fisioterapeutas-1901">Fisioterapeutas</a></li>
+                        <li><a href="/medicos/especialidade/dermatologistas-1314">Dermatologistas</a></li>
                         <li><a href="/medicos/especialidade/oftalmologistas-1305">Oftalmologistas</a></li>
-                        <li><a href="/medicos/especialidade/otorrinos-1308">Otorrinos</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340">Cirurgiões vasculares</a></li>
                     <li><span><a href="https://www.doctoralia.com.br/lista-de-medicos">Lista de médicos</a></span></li>
                 </ul>
         </section>
         <section>
                 <ul class="mt28">
-                        <li><a href="/medicos/especialidade/ginecologistas-1300/sao+paulo-116705-1">Ginecologistas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/dermatologistas-1314/rio+de+janeiro-116704-1">Dermatologistas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/rio+de+janeiro-116704-1">Ortopedistas - Traumatologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/sao+paulo-116705-1">Dentistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/sao+paulo-116705-1">Endocrinologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/rio+de+janeiro-116704-1">Cirurgiões vasculares Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/sao+paulo-116705-1">Cirurgiões plásticos São Paulo</a></li>
                         <li><a href="/medicos/especialidade/pediatras-1307/sao+paulo-116705-1">Pediatras São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/rio+de+janeiro-116704-1">Cirurgiões plásticos Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/dentistas-1433/rio+de+janeiro-116704-1">Dentistas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/otorrinos-1308/sao+paulo-116705-1">Otorrinos São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/sao+paulo-116705-1">Ortopedistas - Traumatologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/rio+de+janeiro-116704-1">Fisioterapeutas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/sao+paulo-116705-1">Psicólogos São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305/rio+de+janeiro-116704-1">Oftalmologistas Rio de Janeiro</a></li>
                         <li><a href="/medicos/especialidade/psiquiatras-1312/rio+de+janeiro-116704-1">Psiquiatras Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/urologistas-1293/sao+paulo-116705-1">Urologistas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/homeopatas-1335/rio+de+janeiro-116704-1">Homeopatas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/medicos+de+familia-1339/sao+paulo-116705-1">Médicos de família São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+da+mao-1329/brasilia-116707-1">Cirurgiões da mão Brasília</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+buco-maxilo-faciais-1866/goiania-116733-1">Cirurgiões buco-maxilo-faciais Goiânia</a></li>
-                        <li><a href="/medicos/especialidade/angiologistas-1311/rio+de+janeiro-116704-1">Angiologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/endoscopistas-1330/rio+de+janeiro-116704-1">Endoscopistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/acupunturistas-1309/brasilia-116707-1">Acupunturistas Brasília</a></li>
+                        <li><a href="/medicos/especialidade/coloproctologistas-1304/sao+paulo-116705-1">Coloproctologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/radioterapeutas-1319/belo+horizonte-116720-1">Radioterapeutas Belo Horizonte</a></li>
                 </ul>
         </section>
         <section>
 <h3>Especialistas</h3>                <ul>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/terapia+de+casal-24882/especialistas/rio+de+janeiro-116704-1">Terapia de Casal Rio de Janeiro</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/anamnese+psicologica-23973/especialistas/curitiba-116724-1">Anamnese Psicológica Curitiba</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/avaliacao+pedagogica-24959/especialistas/goiania-116733-1">Avaliação pedagógica Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/testes+psicometricos-25175/especialistas/rio+de+janeiro-116704-1">Testes Psicométricos Rio de Janeiro</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/terapia+de+familia-25844/especialistas/belo+horizonte-116720-1">Terapia de Família Belo Horizonte</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/teste+palografico+de+personalidade-24886/especialistas/brasilia-116707-1">Teste Palográfico de personalidade Brasília</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtornos+de+estresse-17528/especialistas/goiania-116733-1">Transtornos De Estresse Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtorno+de+deficit+de+atencao+com+hiperatividade+tdah-41017/especialistas/goiania-116733-1">Transtorno de Déficit de Atenção com Hiperatividade (TDAH) Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtorno+cognitivo+leve+tcl-53293/especialistas/brasilia-116707-1">Transtorno Cognitivo Leve (TCL) Brasília</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtornos+relacionados+ao+uso+de+alcool-17581/especialistas/goiania-116733-1">Transtornos Relacionados Ao Uso De Álcool Goiânia</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/procedimento+de+desenho-estoria-23978/especialistas/curitiba-116724-1">Procedimento de Desenho-Estória Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/terapia+cognitiva-29146/especialistas/curitiba-116724-1">Terapia Cognitiva Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/apoio+psicopedagogico-24763/especialistas/rio+de+janeiro-116704-1">Apoio Psicopedagógico Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/hipnose-24047/especialistas/goiania-116733-1">Hipnose Goiânia</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/orientacao+escolar-24960/especialistas/brasilia-116707-1">Orientação Escolar Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/terapia+sexual-24956/especialistas/brasilia-116707-1">Terapia sexual Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/trastorno+do+espectro+autista-54069/especialistas/brasilia-116707-1">Trastorno do Espectro Autista Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/retardo+mental-16978/especialistas/belo+horizonte-116720-1">Retardo Mental Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/anormalidades+induzidas+por+drogas-13711/especialistas/rio+de+janeiro-116704-1">Anormalidades Induzidas Por Drogas Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/amputacao+traumatica-13631/especialistas/sao+paulo-116705-1">Amputação Traumática São Paulo</a></li>
                 </ul>
         </section>
         <section>
@@ -772,9 +772,9 @@ Baseado em 4 opiniões                        </p>
                         <li><a href="https://www.doctoralia.com.br/medicos-credenciados">Convênios médicos</a></li>
             </ul>
 <span>Rede Doctoralia</span>            <ul>
+                        <li class="network"><a href="http://www.doctoralia.cl">Chile</a></li>
                         <li class="network"><a href="http://www.doctoralia.com.au">Austrália</a></li>
-                        <li class="network"><a href="http://www.doctoralia.it">Itália</a></li>
-                        <li class="network"><a href="http://www.doctoralia.com.mx">México</a></li>
+                        <li class="network"><a href="http://www.doctoralia.pe">Peru</a></li>
             </ul>
         </section>
     </div>
@@ -795,7 +795,7 @@ Baseado em 4 opiniões                        </p>
 </nav>
     
     <div class="copy">
-        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 03/04/2018</span>
+        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 05/04/2018</span>
     </div>
 </footer>
     </body>

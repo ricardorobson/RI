@@ -3,7 +3,7 @@
 <html lang="pt-BR" >
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     
-    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXMHElAKXQ==","queueTime":15,"applicationTime":244,"ttGuid":"CCD33CDDAD127AE9","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXMHElAKXQ==","queueTime":0,"applicationTime":104,"ttGuid":"BE5C6646DA157E19","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
 <meta name="description" content="Marque uma consulta com Bruno Schievenin Madi - Veja as  opiniões dos pacientes, consultórios, especialidades, preços e convênios. Psicologia Clínica, Psicologia da Personalidade, Psicologia Junguiana" /><meta name="keywords" content="Bruno Schievenin Madi, bom, melhor, saúde, médico, medicina privada, plano de saúde, clínica" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="@doctoralia" /><meta name="twitter:image" content="https://photos.doctoralia.com/636518747488566653_1.jpg" /><meta property="og:title" content="Bruno Schievenin Madi  - Psicólogo São Paulo" />
 <meta property="og:description" content="Marque uma consulta com Bruno Schievenin Madi - Veja as  opiniões dos pacientes, consultórios, especialidades, preços e convênios. Psicologia Clínica, Psicologia da Personalidade, Psicologia Junguiana" /><meta property="og:type" content="website" />
 <meta property="og:image" content="https://photos.doctoralia.com/636518747488566653.jpg" />
@@ -249,9 +249,9 @@
             </div>
             <input type="hidden" class="schedule-type" name="Schedule.Type" value="PrivatePractice" />
             <input type="hidden" class="schedule-id" name="Schedule.Id" value="3387610" />
-            <input type="hidden" class="input-date" name="date" value="2018/04/03" />
-            <input type="hidden" class="next-date" value="2018/04/10" />
-            <input type="hidden" class="previous-date" value="2018/03/27" />
+            <input type="hidden" class="input-date" name="date" value="2018/04/05" />
+            <input type="hidden" class="next-date" value="2018/04/12" />
+            <input type="hidden" class="previous-date" value="2018/03/29" />
         </div>
 </form></div>
                 </div>
@@ -363,7 +363,7 @@ Consult&#243;rio                                                                
                     <ul>
                             <li>
                                 <h4>Exames e procedimentos</h4>
-                                <ul class="blt"><li><a class="item" href="https://www.doctoralia.com.br/provamedica/analise+junguiana-25091">Análise Junguiana</a></li><li><span class="item">Consulta psicológica do adolescente</span></li><li><span class="item">Consulta psicológica do adulto</span></li><li><span class="item">Consulta psicológica do idoso</span></li><li><span class="item">Consulta psicológica domiciliar</span></li><li><span class="item">Consulta psicológica online</span></li><li><span class="item">Psicologia da Personalidade</span></li><li><span class="item">Psicologia do Desenvolvimento</span></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/psicoterapia-23668">Psicoterapia</a></li><li><span class="item">Psicoterapia Adulto</span></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/tipos+psicologicos+mbti-23976">Tipos Psicológicos MBTI</a></li></ul>
+                                <ul class="blt"><li><a class="item" href="https://www.doctoralia.com.br/provamedica/analise+junguiana-25091">Análise Junguiana</a></li><li><span class="item">Consulta psicológica do adolescente</span></li><li><span class="item">Consulta psicológica do adulto</span></li><li><span class="item">Consulta psicológica do idoso</span></li><li><span class="item">Consulta psicológica domiciliar</span></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/consulta+psicologica+online-29601">Consulta psicológica online</a></li><li><span class="item">Psicologia da Personalidade</span></li><li><span class="item">Psicologia do Desenvolvimento</span></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/psicoterapia-23668">Psicoterapia</a></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/psicoterapia+adulto-30114">Psicoterapia Adulto</a></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/tipos+psicologicos+mbti-23976">Tipos Psicológicos MBTI</a></li></ul>
                             </li>
                                                     <li>
                                 <h4>Doenças</h4>
@@ -665,7 +665,7 @@ Consult&#243;rio                                                                
 
     
 
-<form action="/noindex/doctor-phone" id="frmPhone" method="post"><input name="__RequestVerificationToken" type="hidden" value="K2VpHvwpfeDUOSdaoxn9BHNAwm1_WJCt1x5R_x0QwT0zC4rJjGocCp1rXgA-7TezP7qM-kKUPrfbkSEzdXRchnMNitE1" /><input id="entityKey" name="entityKey" type="hidden" value="14969931" /><input id="placeType" name="placeType" type="hidden" value="" /><input id="placeKey" name="placeKey" type="hidden" value="" /></form>    <div id="phonePlacer"></div>
+<form action="/noindex/doctor-phone" id="frmPhone" method="post"><input name="__RequestVerificationToken" type="hidden" value="hBH9GciSKiSoVPDG8_0gQufLa6maqYw3b5Wp7o-yi6sLXepefxM91qMBZTeKwgPHlyytr9LM64tTG4Li1aUJxMRmcJo1" /><input id="entityKey" name="entityKey" type="hidden" value="14969931" /><input id="placeType" name="placeType" type="hidden" value="" /><input id="placeKey" name="placeKey" type="hidden" value="" /></form>    <div id="phonePlacer"></div>
 <div id="map" class="hidden">
     <div class="map-heading">Mapa de situação - <strong>Bruno Schievenin Madi</strong></div>
     <div class="map-body clearfix">
@@ -746,52 +746,52 @@ Consult&#243;rio                                                                
     <div class="container cross-link seo clearfix" role="navigation">
         <section>
 <h3>Médicos em Brasil</h3>                <ul>
-                        <li><a href="/medicos/especialidade/psiquiatras-1312/goiania-116733-1">Psiquiatras Goiânia</a></li>
-                        <li><a href="/medicos/especialidade/psicologos-1434/goiania-116733-1">Psicólogos Goiânia</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/goiania-116733-1">Cirurgiões vasculares Goiânia</a></li>
-                        <li><a href="/medicos/especialidade/psicologos-1434/belo+horizonte-116720-1">Psicólogos Belo Horizonte</a></li>
-                        <li><a href="/medicos/especialidade/ginecologistas-1300/nova+odessa-157884-1">Ginecologistas Nova Odessa</a></li>
-                        <li><a href="/medicos/especialidade/otorrinos-1308/duque+de+caxias-116731-1">Otorrinos Duque de Caxias</a></li>
-                        <li><a href="/medicos/especialidade/dentistas-1433/picos-116845-1">Dentistas Picos</a></li>
-                        <li><a href="/medicos/especialidade/dentistas-1433/santo+antonio+de+posse-158019-1">Dentistas Santo Antônio de Posse</a></li>
-                        <li><a href="/medicos/especialidade/ginecologistas-1300/ananindeua-116941-1">Ginecologistas Ananindeua</a></li>
-                        <li><a href="/medicos/especialidade/endocrinologistas-1296/campos+dos+goytacazes-116793-1">Endocrinologistas Campos Dos Goytacazes</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/brasilia-116707-1">Cirurgiões vasculares Brasília</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/belo+horizonte-116720-1">Cirurgiões plásticos Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/curitiba-116724-1">Dentistas Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/belo+horizonte-116720-1">Fisioterapeutas Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/araras-116867-1">Ginecologistas Araras</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/guarulhos-116872-1">Cirurgiões vasculares Guarulhos</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/brusque-117358-1">Pediatras Brusque</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/caxambu-117216-1">Dentistas Caxambu</a></li>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312/caruaru-117081-1">Psiquiatras Caruaru</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/cachoeirinha-116903-1">Psicólogos Cachoeirinha</a></li>
+                        <li><a href="/medicos/especialidade/dermatologistas-1314">Dermatologistas</a></li>
                         <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306">Ortopedistas - Traumatologistas</a></li>
-                        <li><a href="/medicos/especialidade/otorrinos-1308">Otorrinos</a></li>
-                        <li><a href="/medicos/especialidade/fisioterapeutas-1901">Fisioterapeutas</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305">Oftalmologistas</a></li>
                     <li><span><a href="https://www.doctoralia.com.br/lista-de-medicos">Lista de médicos</a></span></li>
                 </ul>
         </section>
         <section>
                 <ul class="mt28">
-                        <li><a href="/medicos/especialidade/nutricionistas-2203/rio+de+janeiro-116704-1">Nutricionistas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/rio+de+janeiro-116704-1">Fisioterapeutas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/endocrinologistas-1296/rio+de+janeiro-116704-1">Endocrinologistas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/pediatras-1307/rio+de+janeiro-116704-1">Pediatras Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/sao+paulo-116705-1">Dentistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/homeopatas-1335/rio+de+janeiro-116704-1">Homeopatas Rio de Janeiro</a></li>
                         <li><a href="/medicos/especialidade/dermatologistas-1314/rio+de+janeiro-116704-1">Dermatologistas Rio de Janeiro</a></li>
                         <li><a href="/medicos/especialidade/ginecologistas-1300/rio+de+janeiro-116704-1">Ginecologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/rio+de+janeiro-116704-1">Endocrinologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293/rio+de+janeiro-116704-1">Urologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/nutricionistas-2203/sao+paulo-116705-1">Nutricionistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/sao+paulo-116705-1">Cirurgiões plásticos São Paulo</a></li>
                         <li><a href="/medicos/especialidade/oftalmologistas-1305/sao+paulo-116705-1">Oftalmologistas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/rio+de+janeiro-116704-1">Cirurgiões vasculares Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/rio+de+janeiro-116704-1">Cirurgiões plásticos Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/otorrinos-1308/sao+paulo-116705-1">Otorrinos São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/nefrologistas-1324/brasilia-116707-1">Nefrologistas Brasília</a></li>
-                        <li><a href="/medicos/especialidade/gastroenterologistas-1315/goiania-116733-1">Gastroenterologistas Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/sao+paulo-116705-1">Cirurgiões vasculares São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/anestesiologistas-1325/rio+de+janeiro-116704-1">Anestesiologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/neurologistas+infantis-2875/curitiba-116724-1">Neurologistas infantis Curitiba</a></li>
                         <li><a href="/medicos/especialidade/endocrinologistas+pediatricos-2874/curitiba-116724-1">Endocrinologistas pediátricos Curitiba</a></li>
-                        <li><a href="/medicos/especialidade/sexologos-2819/brasilia-116707-1">Sexólogos Brasília</a></li>
+                        <li><a href="/medicos/especialidade/podologos-2699/belo+horizonte-116720-1">Podólogos Belo Horizonte</a></li>
                 </ul>
         </section>
         <section>
 <h3>Especialistas</h3>                <ul>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/terapia+para+dificuldades+de+aprendizagem-32610/especialistas/goiania-116733-1">Terapia para dificuldades de aprendizagem Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/psicoterapia-23668/especialistas/goiania-116733-1">Psicoterapia Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/anamnese+psicologica-23973/especialistas/brasilia-116707-1">Anamnese Psicológica Brasília</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/terapia+emdr-24957/especialistas/rio+de+janeiro-116704-1">Terapia EMDR Rio de Janeiro</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/avaliacao+psicopedagogica-29275/especialistas/belo+horizonte-116720-1">Avaliação Psicopedagógica Belo Horizonte</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/atitude+frente+a+dor-23964/especialistas/sao+paulo-116705-1">Atitude Frente à Dor São Paulo</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtorno+por+uso+de+tabaco-17481/especialistas/belo+horizonte-116720-1">Transtorno Por Uso De Tabaco Belo Horizonte</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtorno+distimico-17477/especialistas/curitiba-116724-1">Transtorno Distímico Curitiba</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/insatisfacao+profissional-54066/especialistas/brasilia-116707-1">Insatisfação profissional Brasília</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/comportamentos+de+risco-52788/especialistas/rio+de+janeiro-116704-1">Comportamentos de risco Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/dificuldade+em+comunicacao-30123/especialistas/sao+paulo-116705-1">Dificuldade em comunicação São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/analise+transacional-25173/especialistas/sao+paulo-116705-1">Análise Transacional São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/reiki-30398/especialistas/rio+de+janeiro-116704-1">Reiki Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/grupo+terapeutico+para+ansiedade-32696/especialistas/sao+paulo-116705-1">Grupo terapêutico para ansiedade São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/consulta+psicologica+online-29601/especialistas/brasilia-116707-1">Consulta psicológica online Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/psicoterapia+adulto-30114/especialistas/belo+horizonte-116720-1">Psicoterapia Adulto Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtornos+do+comportamento+infantil-17537/especialistas/curitiba-116724-1">Transtornos Do Comportamento Infantil Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtornos+de+estresse+pos-traumaticos-17529/especialistas/sao+paulo-116705-1">Transtornos De Estresse Pós-Traumáticos São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/alteracoes+do+humor-52786/especialistas/brasilia-116707-1">Alterações do humor Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtornos+da+linguagem-17505/especialistas/sao+paulo-116705-1">Transtornos Da Linguagem São Paulo</a></li>
                 </ul>
         </section>
         <section>
@@ -805,9 +805,9 @@ Consult&#243;rio                                                                
                         <li><a href="https://www.doctoralia.com.br/medicos-credenciados">Convênios médicos</a></li>
             </ul>
 <span>Rede Doctoralia</span>            <ul>
-                        <li class="network"><a href="http://www.doctoralia.it">Itália</a></li>
-                        <li class="network"><a href="http://www.doctoralia.co">Colômbia</a></li>
-                        <li class="network"><a href="http://www.doctoralia.co.uk">Reino Unido</a></li>
+                        <li class="network"><a href="http://www.doctoralia-fr.com">França</a></li>
+                        <li class="network"><a href="http://www.doctoralia.pe">Peru</a></li>
+                        <li class="network"><a href="http://www.doctoralia.com.pt">Portugal</a></li>
             </ul>
         </section>
     </div>
@@ -828,7 +828,7 @@ Consult&#243;rio                                                                
 </nav>
     
     <div class="copy">
-        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 03/04/2018</span>
+        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 05/04/2018</span>
     </div>
 </footer>
     </body>

@@ -2,75 +2,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:v="urn:schemas-microsoft-com:vml">
 <head id="Head1"><title>
-	Produtos TeleListas.net - Conheça nossas soluções e atraia mais clientes
+	TeleListas.net: Promoções - participe e ganhe prêmios
 </title><meta http-equiv="content-language" content="pt-br; charset=iso-8859-1" /><meta name="language" content="pt-br" /><meta name="distribution" content="Global" /><meta name="author" content="Informações: webmaster@telelistas.net" /><meta name="Copyright" content="(c) 2000 - 2018 TeleListas.net" /><link rel="SHORTCUT ICON" href="/favicon.ico" />
-<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
-<META NAME="description" CONTENT="Conheça os produtos TeleListas.net e descubra qual é a melhor maneira de atingir seus futuros clientes: Anúncio Gratuito, Anúncio Premium, TeleListas Chamadas, TeleListas Sites e TeleListas Ophertas.">
-<META NAME="keywords" CONTENT="telelistas telelistas busca celular chamada chamadas publicidade anúncio divulgação criação hospedagem sites site lista telefônica listas telefônicas busca telefones endereços telelista 102 páginas amarelas guias empresas serviços produtos profissionais classificadas telefone telefones ligação ligações pré-pago crédito créditos cliente clientes investimento gratuito ofertas oferta ophertas">
-
-<link href="https://static.telelistas.net/css/style.css" rel="stylesheet" type="text/css">
+<META NAME="description" CONTENT="Participe de promoções exclusivas e concorra sem sorteio a incríveis prêmios: CDs, DVDs, Ingressos, etc. E mais: telefones e endereços de empresas e pessoas de todo o Brasil, mapas digitais, pesquisa de preços, guia de restaurantes, medicina, etc.">
+<META NAME="keywords" CONTENT="promoção promoções prêmios concurso lista telefônica listas telefônicas busca telefones endereços 102 telelista páginas amarelas guia consulta pesquisa empresas serviços produtos pessoas classificadas mapas preços">
+<link href="https://www.telelistas.net/css/style.css" rel="stylesheet" type="text/css">
 <link href="https://www.telelistas.net/css/style_form.css" rel="stylesheet" type="text/css">
-<script src="https://static.telelistas.net/js/slides-script.js"></script>
 <script src="https://static.telelistas.net/js/por_script.js"></script>
-<script src="https://static.telelistas.net/js/tabcontent.js"></script>
-<script type="text/javascript">
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-
-/*Funcoes utilizadas para no funcionamento do Menu*/
-
-/*fim funcoes menu*/
-var imgMais="https://static.telelistas.net/img/bot_wap_mais.gif";
-var imgMenos="https://static.telelistas.net/img/bot_wap_menos.gif";
-function MostraEsconde(div,idImg){
-	var el= document.getElementById(div);
-	var elImg=document.getElementById(idImg);
-	if(el.style.display=="" || el.style.display=="block"){
-		el.style.display="none";
-		elImg.src=imgMais;
-	}
-	else{
-		el.style.display="block";
-		elImg.src=imgMenos;
-	}
-}
-
-function limpaCampo(el) {
-	if (el.value == 'Digite aqui seu e-mail')
-		el.value = '';
-}
-
-//-->
-</script>
-<style type="text/css">
-
-.addthis
-{
-position:absolute;
-right:0;
-bottom:0;
-width:180px;
-margin-bottom:-35px;
-*margin-bottom:-40px;
-}
-
-.addthis h2
-{
-display:block;
-font-size:11px;
-color:#315d84;
-font-family:Verdana, Arial, Helvetica, sans-serif;
-font-weight:normal;
-font-style:italic;
-margin:0 0 8px 2px;
-}
-
-</style>
 <script type="text/javascript" src="https://static.telelistas.net/js/AjaxWrapper-1.0.1.min.js"></script>
 <script type="text/javascript" src="https://static.telelistas.net/js/Placeholders.min.js"></script>
 <script type="text/javascript" src="https://static.telelistas.net/js/google_h.js"></script>
@@ -218,9 +156,8 @@ function NormalizaEspacos(obj){
 		else
 		  var _bai = '';
 		//jQuery.get('//log.telelistas.net/api/log?o=0&l=' + _loc + '&c=' + _cdl + '&b=' + _bai + '&a=' + _atv + '&n='+ _nom + '&p="' + window.location.href + '"');
-		//var log = 'https://log.telelistas.net/log?o=0&t=0&u=' + _uf + '&l="' + _loc + '"&b="' + _bai + '"&a="' + _atv + '"&n="'+ _nom + '"&p="' + window.location.href + '"&r="' + document.referrer  + '"&ua="' + navigator.userAgent + '"';
-    return true;
- 		var log = 'https://log.telelistas.net/log?o=0';
+		var log = 'https://log.telelistas.net/log?o=0&t=0&u=' + _uf + '&l="' + _loc + '"&b="' + _bai + '"&a="' + _atv + '"&n="'+ _nom + '"';
+		return true;
     jQuery.get(log, function(){
       var newform = '';
       var i;
@@ -398,6 +335,7 @@ Outras buscas &nbsp;</label>
 <strong>Nº</strong></label>
 <input id="numero" readonly class="formint_numero" name="numero" onblur="NormalizaEspacos(this);" onchange="NormalizaEspacos(this);" tabindex="2" title="Numero" type="text" value="" />
 </span><span class="field_formint_estado">
+
 <label class="label_formint" for="EstadosEnd">
 <strong>UF</strong></label>
 <select name='uf_busca' id='uf_busca' onChange="alteraUF(this, 'end_localidade_select', $('end_cod_localidade'), $('end_loc'));" disabled title='Estado' class='formint_estado_b'><option value='br'>BR</option><option value='ac'>AC</option><option value='al'>AL</option><option value='am'>AM</option><option value='ap'>AP</option><option value='ba'>BA</option><option value='ce'>CE</option><option value='df'>DF</option><option value='es'>ES</option><option value='go'>GO</option><option value='ma'>MA</option><option value='mg'>MG</option><option value='ms'>MS</option><option value='mt'>MT</option><option value='pa'>PA</option><option value='pb'>PB</option><option value='pe'>PE</option><option value='pi'>PI</option><option value='pr'>PR</option><option value='rj'>RJ</option><option value='rn'>RN</option><option value='ro'>RO</option><option value='rr'>RR</option><option value='rs'>RS</option><option value='sc'>SC</option><option value='se'>SE</option><option value='sp'>SP</option><option value='to'>TO</option></select>
@@ -447,7 +385,7 @@ Outras buscas &nbsp;</label>
 <strong>UF</strong></label>
 <select name='uf_busca' id='uf_busca' onChange="alteraUFInterna(this, 'pes_localidade_select', document.getElementById('pes_cod_localidade'), document.getElementById('pes_loc'), 'pes_bairro_select', document.getElementById('pes_cod_bairro'), document.getElementById('pes_bairro'));" title='Estado' tabindex='2' class='formint_estado'><option value='br'>BR</option><option value='ac'>AC</option><option value='al'>AL</option><option value='am'>AM</option><option value='ap'>AP</option><option value='ba'>BA</option><option value='ce'>CE</option><option value='df'>DF</option><option value='es'>ES</option><option value='go'>GO</option><option value='ma'>MA</option><option value='mg'>MG</option><option value='ms'>MS</option><option value='mt'>MT</option><option value='pa'>PA</option><option value='pb'>PB</option><option value='pe'>PE</option><option value='pi'>PI</option><option value='pr'>PR</option><option value='rj'>RJ</option><option value='rn'>RN</option><option value='ro'>RO</option><option value='rr'>RR</option><option value='rs'>RS</option><option value='sc'>SC</option><option value='se'>SE</option><option value='sp'>SP</option><option value='to'>TO</option></select>
 </span><span class="field_formint_cidade">
- <label class="label_formint" for="pes_localidade_select">
+<label class="label_formint" for="pes_localidade_select">
 <strong>Cidade</strong></label>
 <div id="pes_loc">
 <select id="pes_localidade_select" class="busca_interna" name="localidade_select" tabindex="3">
@@ -481,176 +419,305 @@ Outras buscas &nbsp;</label>
 </td>
 </tr>
 <tr>
-<td colspan="5" height="10">
+<td colspan="5" height="10"></td>
+</tr>
+<tr>
+<td width="10">&nbsp;</td>
+<td width="152" align="center" valign="top">
+<table width="152" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" valign="top">
+
+
+<div id="menu_portal">
+<ul>
+<li class="menucaption">Guias Especiais</li>
+<li><a href="https://www.telelistas.net/guias/hotel" title="Guia de Viagens" target="_self">Turismo</a></li>
+<li><a href="https://www.telelistas.net/guias/restaurante" title="Guia de Restaurantes" target="_self">Restaurantes</a></li>
+<li><a href="https://www.telelistas.net/guias/automoveis" title="Guia de Automóveis" target="_self">Automóveis</a></li>
+<li><a href="https://www.telelistas.net/guias/laboratorio" title="Guia de Medicina e Saúde" target="_self">Medicina e Saúde</a></li>
+<li><a href="https://www.telelistas.net/templates/resultado_busca.aspx?q=24&orgm=0&cod_localidade=&atividade=24&nome=&uf_busca=br" title="Guia 24 Horas" target="_self">24 Horas</a></li>
+<li><a href="https://www.telelistas.net/guias/orgaos-publicos" title="Guia do Cidadão">Cidadão</a></li>
+<li><a href="//ddd.telelistas.net/ddd" title="DDD" rel="follow" target="_blank">DDD</a></li>
+<li><a href="//ddi.telelistas.net/ddi" title="DDI" rel="follow" target="_blank">DDI</a></li>
+<li><a href="//cep.telelistas.net/cep" title="CEP" rel="follow" target="_blank">CEP</a></li>
+<li><a href="https://www.telelistas.net/templates/telefones_uteis.aspx" title="Telefones Úteis">Telefones Úteis</a></li>
+</ul>
+</div>
+
+
+</td>
+</tr>
+<tr>
+<td height="10"></td>
+</tr>
+<tr>
+<td align="center" valign="top">
+
+<div id="menu_portal2">
+<ul>
+<li class="menucaption">Meu TeleListas</li>
+<li><a rel="nofollow" href="/templates/promocoes.aspx" title="Promoções TeleListas.net" target="_self">Promoções</a></li>
+<li><a href="/templates/form_login.aspx?ReturnUrl=%2fsecurityfiles%2fmeu_telelistas.aspx" title="Meu Cadastro" target="_self" rel="nofollow">Login e Cadastro</a></li>
+<li><a rel="nofollow" href="/templates/busca_celular.aspx" title="Busca no Celular" target="_self">Busca no Celular</a></li>
+<li><a rel="nofollow" href="/templates/telesite.aspx" title="TeleListas no seu site" target="_self">Busca no seu site</a></li>
+<li><a href="/templates/form_fale.aspx" title="Fale Conosco" target="_self" rel="nofollow">Fale Conosco</a></li>
+</ul>
+</div>
+<!--[if !IE]>topo do infoplus com servicos e abas<![endif]-->
+
+<!--[if !IE]>topo do infoplus com servicos e abas<![endif]-->
+
 </td>
 </tr>
 </table>
 </td>
 <td width="10"></td>
-<td width="980" align="center" valign="top">
+<td width="798" align="left" valign="top">
 
-<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
-<tr align="left">
-<td width="980" valign="top">
-<div style="position:relative;">
-<a href="/" target="_self">Home</a>
-<img src="https://static.telelistas.net/img/por_seta_caminho.gif"><span class="texto_caminho">TeleListas Produtos</span>
+<table width="798" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="798" colspan="7" align="left" valign="top"><a href="/" target="_self">Home</a>
+<img src="https://static.telelistas.net/img/por_seta_caminho.gif"><span class="texto_caminho">Promo&ccedil;&otilde;es</span></td>
+</tr>
+<tr align="left" valign="bottom">
+<td width="798" height="40" colspan="7"><img src="https://static.telelistas.net/img/por_tit_promocao.gif" width="468" height="40"></td>
+</tr>
+<tr>
+<td height="1" colspan="7" background="https://static.telelistas.net/img/por_tracoh.gif"></td>
+</tr>
+<tr>
+<td width="468" align="left" valign="top">
+<table width="468" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="163" rowspan="3" align="left" valign="top"><img src="https://static.telelistas.net/img/por_servpromo_topo.gif" width="163" height="132"></td>
+<td width="305" height="107" align="left" valign="middle" class="text_medio">Fique por dentro das
+promoções que o <b>TeleListas.net</b> preparou especialmente para você.
+Nunca foi tão fácil ganhar prêmios! </td></tr>
+<tr>
+<td height="24" align="left" valign="middle" bgcolor="f3f3f3"></td>
+</tr>
+<tr>
+<td height="1" bgcolor="E8E8E8"></td>
+</tr>
+<tr valign="middle">
+<td height="10" colspan="2" align="left"></td>
+</tr>
+<tr valign="top">
+<td height="113" colspan="2">
 
-<div addthis:title='TeleListas Produtos' addthis:url="https://www.telelistas.net/templates/anuncie.aspx" class="addthis_toolbox addthis_default_style addthis">
-<h2>Compartilhe esta informação</h2>
-<a class='addthis_button_twitter'></a>
-<a class='addthis_button_facebook'></a>
-<a class='addthis_button_orkut'></a>
-<a class='addthis_button_email'></a>
-<a class='addthis_button_favorites'></a>
-<span class='addthis_separator'>|</span>
-<a class='addthis_button_expanded' href='http://www.addthis.com/bookmark.php?v=250&username=telelistas'>MAIS</a> </div>
-<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#username=telelistas"></script>
-<script type='text/javascript'> 
-				var addthis_share = {
-				templates: { twitter: '{{title}} {{url}} via @telelistas' }
-				}
-			</script>
-<script type='text/javascript'> 
-				var addthis_config = {
-    			data_track_clickback: true
-				}
-			</script>
+<table width="468" border="0" cellspacing="0" cellpadding="0">
+</table>
+ </td>
+</tr>
+</table> </td>
+<td width="5"></td>
+<td width="1" background="https://static.telelistas.net/img/por_tracov.gif"></td>
+<td width="5"></td>
+<td width="310" align="left" valign="top">
 
-</div>
+<table width="120" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="5"></td>
+</tr>
+<tr>
+<td height="1" class="lateral_linha"></td>
+</tr>
+<tr>
+<td>
+<table width="310" border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td align="left" valign="top" class="lateral_escuro">
+<img src="https://static.telelistas.net/img/por_bullet_lateral.gif" width="11" height="6"><span class="text_medio"><b>Resultados</b></span> </td>
+</tr>
+<tr>
+<td align="left" valign="top" class="lateral_escuro">
+<form name="frmpromocoes">
+<select style="width:298px;" name="resultados" class="anteriores" onChange="javascript:location.href='promo_resultado.aspx?idcntd='+ document.frmpromocoes.resultados.value +'&idpst='+1626;" onfocus="javascript:skipcycle=true; document.frmpromocoes.resultados.value=''" onblur="javascript:skipcycle=false;document.frmpromocoes.resultados.value=''">
+<option selected value="">Selecione</option>
+</select>
+</form></td>
+</tr>
+</table> </td>
+</tr>
+<tr>
+<td height="1" class="lateral_linha"></td>
+</tr>
+</table>
+
+
+<table width="310" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="5"></td>
+</tr>
+<tr>
+<td height="1" class="lateral_linha"></td>
+</tr>
+<tr>
+<td>
 </td>
 </tr>
 <tr>
-<td height="40" class="text_medio_vermelho"><a name="#topo"><img src="https://static.telelistas.net/img/por_tit_telelistas_produtos.gif" alt="Produtos Telelistas.net" width="468" height="40" border="0" align="middle" /></a></td>
+<td height="1" class="lateral_linha"></td>
+</tr>
+</table>
+
+
+<table width="310" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="5"></td>
 </tr>
 <tr>
-<td height="1" background="https://static.telelistas.net/img/por_tracoh.gif"></td>
+<td height="1"></td>
 </tr>
+<tr>
+<td>
+<table width="310" border="0" cellpadding="0" cellspacing="1" bgcolor="E8E8E8">
+<tr>
+<td><table width="308" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+<tr>
+<td align="center"><img src="https://static.telelistas.net/img/por_promoparceiros.gif"></td>
+</tr>
+<tr>
+<td height="2"></td>
+</tr>
+<tr>
+<td align="center">
+<script type="text/javascript" charset="utf-8">
+var slideshow_width='110px' //SET IMAGE WIDTH
+var slideshow_height='60px' //SET IMAGE HEIGHT
+var pause=2000 //SET PAUSE BETWEEN SLIDE (3000=3 seconds)
+var imageslinks=new Array(2);
+var fadeimages=new Array(2);
+//SET IMAGE PATHS. Extend or contract array as needed
+
+	fadeimages[0]="//cms.telelistas.net/img/parceiros/8607/logo_travessa.jpg";
+	imageslinks[0]="http://www.travessa.com.br";
+
+	fadeimages[1]="//cms.telelistas.net/img/parceiros/11514/logo%20mega%20turismo_31.05.JPG";
+	imageslinks[1]="http://www.megaturismo.com.br/MegaTurismo/index.aspx";
+
+
+////NO need to edit beyond here/////////////
+
+var preloadedimages=new Array(2)
+for (p=0;p<fadeimages.length;p++){
+preloadedimages[p]=new Image()
+preloadedimages[p].src=fadeimages[p]
+}
+
+var ie4=document.all
+var dom=document.getElementById
+
+if (imageslinks.length > 0){
+	if (ie4||dom)
+	document.write('<div style="position:relative;width:'+slideshow_width+';height:'+slideshow_height+';overflow:hidden"><div id="canvas0" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';top:0;left:0;filter:alpha(opacity=10);-moz-opacity:10"></div><div id="canvas1" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';top:0;left:0;filter:alpha(opacity=10);-moz-opacity:10"></div></div>')
+	else
+	document.write('<a href="'+imageslinks[0]+'" target="_blank"><img name="defaultslide" src="'+fadeimages[0]+'"></a>')
+}
+
+var curpos=10
+var degree=10
+var curcanvas="canvas0"
+var curimageindex=0
+//var nextimageindex=1
+var nextimageindex=0
+
+
+function fadepic(){
+if (curpos<100){
+curpos+=10
+if (tempobj.filters)
+tempobj.filters.alpha.opacity=curpos
+else if (tempobj.style.MozOpacity)
+tempobj.style.MozOpacity=curpos/100
+}
+else{
+clearInterval(dropslide)
+nextcanvas=(curcanvas=="canvas0")? "canvas0" : "canvas1"
+tempobj=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
+tempobj.innerHTML='<a href="'+imageslinks[nextimageindex]+'" target="_blank"><img src="'+fadeimages[nextimageindex]+'" border="0"></a>'
+nextimageindex=(nextimageindex<fadeimages.length-1)? nextimageindex+1 : 0
+setTimeout("rotateimage()",pause)
+}
+}
+
+function rotateimage(){
+if (ie4||dom){
+resetit(curcanvas)
+var crossobj=tempobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+crossobj.style.zIndex++
+var temp='setInterval("fadepic()",50)'
+dropslide=eval(temp)
+curcanvas=(curcanvas=="canvas0")? "canvas1" : "canvas0"
+}
+else
+document.images.defaultslide.src=fadeimages[curimageindex]
+curimageindex=(curimageindex<fadeimages.length-1)? curimageindex+1 : 0
+}
+
+function resetit(what){
+curpos=10
+var crossobj=ie4? eval("document.all."+what) : document.getElementById(what)
+if (crossobj.filters)
+crossobj.filters.alpha.opacity=curpos
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=curpos/100
+}
+
+function startit(){
+if (imageslinks.length > 0){
+var crossobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+crossobj.innerHTML='<a href="'+imageslinks[curimageindex]+'" target="_blank"><img src="'+fadeimages[curimageindex]+'" border="0"></a>'
+rotateimage()
+}
+}
+
+if (ie4||dom)
+window.onload=startit
+else
+setInterval("rotateimage()",pause)
+
+</script></td>
+</tr>
+<tr>
+<td height="2"></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+
+
+<table width="120" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="10"></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<table width="310" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td align="left" valign="top">
-
-<div id="produtos">
-<div class="produtosCategoria">
-<div class="titulo">
-<h3>Anúncio Gratuito</h3>
-</div>
-<div class="gratuito"><a class="gratuito" href="https://areadeclientes.linkmercado.com.br/cadastramento" content="http://wwws.telelistas.net/cadastramento/" target="_blank">
-<p>Cadastre gratuitamente sua empresa e apareça no TeleListas.net, no TeleListas.net Mobile (wap e aplicativos) e em nossos parceiros.</p></a>
-</div>
-<div class="titulo">
-<h3>Anúncios Prime</h3>
-</div>
-<div class="premium"><a class="premium" href="https://areadeclientes.telelistas.net/anuncie-telelistas-net" target="_blank"><p>Faça seu anúncio online e apareça com destaque no TeleListas.net.<br />
-Anúncios a partir de R$50,00/mês. </p></a>
-</div>
-
-<div class="titulo">
-<h3>Link Promocional</h3>
-</div>
-<div class="linkpromo">
-<a class="linkpromo" href="//www.telelistas.net/templates/telelistas_link_promocional.aspx" target="_blank">
-<p>Anunciantes do TeleListas.net tem a chance de obter ainda mais clientes adicionando a audiência do Google à sua comunicação.</p></a>
-</div>
-<div class="titulo">
-<h3>TeleListas Sites</h3>
-</div>
-<div class="sites">
-<a class="sites" href="//www.telelistas.net/sites" target="_blank">
-<p>A maneira mais fácil, rápida e barata de ter seu site na Internet. Site com domínio próprio e email profissional.</p></a>
-</div>
-<div class="titulo">
-<h3>TeleListas Ophertas</h3>
-</div>
-<div class="ophertas">
-<a class="ophertas" href="https://areadeclientes.telelistas.net/cadastramento" target="_blank">
-<p>Divulgue as ofertas e promoções de sua empresa e conquiste novos clientes.<br /> <br /> <br />
-<span style="font-size:9px; line-height: 11px;">(Serviço gratuito por tempo limitado)</span>
-</p>
-</a>
-</div>
-</div>
-<div class="produtosContent">
-<div style="height:230px; margin-bottom:30px;" class="solicitecontato">
-<p style="text-align:left; line-height: 20px;">Se você tem interesse em algum dos produtos ou deseja mais informações:<br />
-<span style="font-size:12px">Ligue para:<br />
-4062-0835 (Capitais)<br />
-4052-0835 (Goiânia e Palmas)<br />
-(21) 3031-8091 (Outras localidades) ou </span>
-</p>
-<a class="contato" href="//www.telelistas.net/templates/form_anuncie_resultado.aspx">
-</a>
-</div>
-<div class="produtostelelistas" id="slider">
-<ul class="produtos-info" id="content_produtos">
-
-<li><a href="//www.telelistas.net/templates/aempresa_testemunhal.aspx?sec=0"><img style="display:block" src="https://static.telelistas.net/img/Banner_depoimento_carrossel_01.jpg" alt="Master Clima Ar-condicionado" width="315" height="375" border="0" /></a>
-</li>
-<li><a href="//www.telelistas.net/templates/aempresa_testemunhal.aspx?sec=0"><img style="display:block" src="https://static.telelistas.net/img/Banner_depoimento_carrossel_02.jpg" alt="A Ideal Prestadora de Servi&ccedil;os" width="315" height="375" border="0" /></a>
-</li>
-<li><a href="//www.telelistas.net/templates/aempresa_testemunhal.aspx?sec=0"><img style="display:block" src="https://static.telelistas.net/img/Banner_depoimento_carrossel_03.jpg" alt="Advogados Associados Tomaz da Concei&ccedil;&atilde;o" width="315" height="375" border="0" /></a>
-</li>
-<li><a href="//www.telelistas.net/templates/aempresa_testemunhal.aspx?sec=0"><img style="display:block" src="https://static.telelistas.net/img/Banner_depoimento_carrossel_04.jpg" alt="Finger M&oacute;veis Planejados" width="315" height="375" border="0" /></a>
-</li>
-<li><a href="//www.telelistas.net/templates/aempresa_testemunhal.aspx?sec=0"><img style="display:block" src="https://static.telelistas.net/img/Banner_depoimento_carrossel_05.jpg" alt="Maria Tereza Lopes" width="315" height="375" border="0" /></a>
-</li>
-<li><a href="//www.telelistas.net/templates/aempresa_testemunhal.aspx?sec=0"><img style="display:block" src="https://static.telelistas.net/img/Banner_depoimento_carrossel_06.jpg" alt="MBOffice Ambientes Corporativos" width="315" height="375" border="0" /></a>
-</li>
-</ul>
-</div>
-<div class="navega">
-<ul class="ofertas-naveg pagination" id="pagination">
-<li onclick="slideshow.pos(0)"></li>
-<li onclick="slideshow.pos(1)"></li>
-<li onclick="slideshow.pos(2)"></li>
-<li onclick="slideshow.pos(3)"></li>
-<li onclick="slideshow.pos(4)"></li>
-<li onclick="slideshow.pos(5)"></li>
-<li onclick="pausar();" class="pausar" id="pausar">pausar</li>
-<li onclick="recomecar();" class="recomecar invisible" id="recomecar">recomeçar</li>
-</ul>
-</div>
-
-</div>
-
-</div>
-<script type="text/javascript"> 
-				var countries=new ddtabcontent("countrytabs")
-				countries.setpersist(false)
-				countries.setselectedClassTarget("link") //"link" or "linkparent"
-				countries.init()
-		  	  </script>
-<br class="clear" />
 </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="7" width="798">&nbsp;</td>
 </tr>
 </table>
 
 </td>
-<td width="9"></td>
+<td width="10"></td>
 </tr>
-<script type="text/javascript">
-function pausar(){
-	document.getElementById("pausar").className += " invisible";
-document.getElementById("recomecar").className = document.getElementById("recomecar").className.replace( /(?:^|\s)invisible(?!\S)/ , '' );
-	slideshow.stopmove();
-	}
-
-function recomecar(){
-		document.getElementById("recomecar").className += " invisible";
-document.getElementById("pausar").className = document.getElementById("pausar").className.replace( /(?:^|\s)invisible(?!\S)/ , '' );
-	slideshow.move(+1);
-	}
-
-
-var slideshow=new TINY.slider.slide('slideshow',{
-	id:'slider',
-	auto:10,
-	resume:true,
-	vertical:false,
-	navid:'pagination',
-	activeclass:'current',
-	position:0
-});
-</script>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
 <tr>
 <td height="1" colspan="7" align="center"></td>
 </tr>
@@ -739,7 +806,7 @@ Conexão Mercado
 <li><img src="https://static.telelistas.net/img/bullet-rodape.gif" width="10" height="13" border="0" align="top" /><a class="rodape" href="http://cep.telelistas.net/cep/br" target="_blank" rel="follow">CEP</a></li>
 </ul>
 <span class="tit-list" style="margin-top:20px;">TeleListas Ophertas</span>
- <ul class="listaCapitais">
+<ul class="listaCapitais">
 <li><a rel="follow" href="//www.ophertas.net/belo+horizonte-mg">Belo Horizonte</a></li>
 <li><a rel="follow" href="//www.ophertas.net/curitiba-pr">Curitiba</a></li>
 <li><a rel="follow" href="//www.ophertas.net/brasilia-df">Distrito Federal</a></li>
@@ -765,7 +832,7 @@ Conexão Mercado
 </div>
 <div style="clear:both;"></div>
 </div>
-<div class="text_copy">© TeleListas 2018. <input type="hidden" id="internal_ip" value="192.168.3.38" /></div>
+<div class="text_copy">© TeleListas 2018. <input type="hidden" id="internal_ip" value="192.168.3.18" /></div>
 <div class="privacidade"><a class="privacidade" rel="nofollow" href="/templates/politica_privacidade.aspx" target="_self" style="padding-left:0px;">Política de Privacidade</a></div>
 </td>
 </tr>

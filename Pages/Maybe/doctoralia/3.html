@@ -3,7 +3,7 @@
 <html lang="pt-BR" >
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     
-    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXYSFl4KXxAJAQtNQQ==","queueTime":0,"applicationTime":845,"ttGuid":"A045015448ABBCCA","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXYSFl4KXxAJAQtNQQ==","queueTime":0,"applicationTime":1016,"ttGuid":"F2EDD25FE14AE9A0","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
 <meta name="description" content="Encontra os melhores Psicólogos de Dix-Amico em São Paulo entre os disponíveis. Consulte opiniões de pacientes, preços e reserva hora on-line com seu Psicólogos de Dix-Amico em São Paulo." /><meta name="keywords" content="Psicologia, Psicólogo, Psicólogos, Psicólogos Dix-Amico em São Paulo, bom, melhor, especialistas, diretório médicos, saúde, médico, medicina privada, plano de saúde" /><meta property="og:title" content="Psicólogos Dix-Amico em São Paulo" />
 <meta property="og:description" content="Encontra os melhores Psicólogos de Dix-Amico em São Paulo entre os disponíveis. Consulte opiniões de pacientes, preços e reserva hora on-line com seu Psicólogos de Dix-Amico em São Paulo." /><meta property="og:type" content="website" />
 <meta property="og:image" content="https://www.doctoralia.com.br/content/images/logo/fb_doctoralia_logo_1500x768.png" />
@@ -192,12 +192,12 @@
                     <div>
                         <div class="clearfix">
                             <h3>
-                                <a href="https://www.doctoralia.com.br/medico/mito+danielle-14907542">Dra. Danielle Mito</a>
+                                <a href="https://www.doctoralia.com.br/medico/pacheco+andre-14930067">André Pacheco</a>
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
-                                                    <p>Psicologia</p>
-                                                <p class="address">Rua Augusta</p>
-                        <p class="address">01305-901 S&#227;o Paulo</p>
+                                                    <p>Psicologia, Psican&#225;lise</p>
+                                                <p class="address">R. Ca&#231;apava, 49 (conj. 82)</p>
+                        <p class="address">01408-010 S&#227;o Paulo</p>
                     </div>
                 </td>
                 <td class="doctor-table">
@@ -278,8 +278,50 @@
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
                                                     <p>Psicologia, Psican&#225;lise</p>
-                                                <p class="address">Rua Belmiro de Almeida, 26 - Sala 1</p>
+                                                    <p class="address">Desenvolviver Atendimento Psicol&#243;gico</p>
+                        <p class="address">Rua Belmiro de Almeida, 26</p>
                         <p class="address">04127040 S&#227;o Paulo</p>
+                    </div>
+                </td>
+                <td class="doctor-table">
+                    <table>
+                        
+
+<tbody class=" ">
+</tbody>
+
+
+
+
+
+
+
+
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+<div class="schedule scheduleListItem">
+    <table>
+        <tbody>
+            <tr>
+                <td class="doctor-rating">
+                    <div>
+                        <div class="clearfix">
+                            <h3>
+                                <a href="https://www.doctoralia.com.br/medico/cardoso+vivian-14886591">Vivian Cardoso</a>
+                            </h3>
+<span class="rating-avg"><span class="p100"></span></span>                        </div>
+                                                    <p>Psicologia</p>
+                                                <p class="address">Avenida Le&#244;ncio de Magalhaes, 1100 (sala 3)</p>
+                        <p class="address">02042001 S&#227;o Paulo</p>
                     </div>
                 </td>
                 <td class="doctor-table">
@@ -319,9 +361,49 @@
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
                                                     <p>Psicologia, Psican&#225;lise</p>
-                                                    <p class="address">Desenvolviver Atendimento Psicol&#243;gico</p>
-                        <p class="address">Rua Belmiro de Almeida, 26</p>
+                                                <p class="address">Rua Belmiro de Almeida, 26 - Sala 1</p>
                         <p class="address">04127040 S&#227;o Paulo</p>
+                    </div>
+                </td>
+                <td class="doctor-table">
+                    <table>
+                        
+
+<tbody class=" ">
+</tbody>
+
+
+
+
+
+
+
+
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+<div class="schedule scheduleListItem">
+    <table>
+        <tbody>
+            <tr>
+                <td class="doctor-rating">
+                    <div>
+                        <div class="clearfix">
+                            <h3>
+                                <a href="https://www.doctoralia.com.br/medico/nogueira+nishioka+felipe-14826209">Felipe Nogueira Nishioka</a>
+                            </h3>
+<span class="rating-avg"><span class="p100"></span></span>                        </div>
+                                                    <p>Psicologia, Psican&#225;lise</p>
+                                                <p class="address">R. Antonio Bicudo, 327 (Pr&#243;ximo ao Metr&#244; Faria Lima)</p>
+                        <p class="address">05418-010 S&#227;o Paulo</p>
                     </div>
                 </td>
                 <td class="doctor-table">
@@ -439,88 +521,6 @@
                     <div>
                         <div class="clearfix">
                             <h3>
-                                <a href="https://www.doctoralia.com.br/medico/cardoso+vivian-14886591">Vivian Cardoso</a>
-                            </h3>
-<span class="rating-avg"><span class="p100"></span></span>                        </div>
-                                                    <p>Psicologia</p>
-                                                <p class="address">Avenida Le&#244;ncio de Magalhaes, 1100 (sala 3)</p>
-                        <p class="address">02042001 S&#227;o Paulo</p>
-                    </div>
-                </td>
-                <td class="doctor-table">
-                    <table>
-                        
-
-<tbody class=" ">
-</tbody>
-
-
-
-
-
-
-
-
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-<div class="schedule scheduleListItem">
-    <table>
-        <tbody>
-            <tr>
-                <td class="doctor-rating">
-                    <div>
-                        <div class="clearfix">
-                            <h3>
-                                <a href="https://www.doctoralia.com.br/medico/nogueira+nishioka+felipe-14826209">Felipe Nogueira Nishioka</a>
-                            </h3>
-<span class="rating-avg"><span class="p100"></span></span>                        </div>
-                                                    <p>Psicologia, Psican&#225;lise</p>
-                                                <p class="address">R. Antonio Bicudo, 327 (Pr&#243;ximo ao Metr&#244; Faria Lima)</p>
-                        <p class="address">05418-010 S&#227;o Paulo</p>
-                    </div>
-                </td>
-                <td class="doctor-table">
-                    <table>
-                        
-
-<tbody class=" ">
-</tbody>
-
-
-
-
-
-
-
-
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-<div class="schedule scheduleListItem">
-    <table>
-        <tbody>
-            <tr>
-                <td class="doctor-rating">
-                    <div>
-                        <div class="clearfix">
-                            <h3>
                                 <a href="https://www.doctoralia.com.br/medico/checoli+figueiredo+priscila-14876740">Priscila Checoli Figueiredo</a>
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
@@ -568,47 +568,6 @@
                                                     <p>Psicologia, Psican&#225;lise</p>
                                                 <p class="address">Rua Marapuama, 64 (Travessa da rua Pio XI, altura do n&#250;mero 300- Fran&#180;s Cafe)</p>
                         <p class="address">05060-030 S&#227;o Paulo</p>
-                    </div>
-                </td>
-                <td class="doctor-table">
-                    <table>
-                        
-
-<tbody class=" ">
-</tbody>
-
-
-
-
-
-
-
-
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-<div class="schedule scheduleListItem">
-    <table>
-        <tbody>
-            <tr>
-                <td class="doctor-rating">
-                    <div>
-                        <div class="clearfix">
-                            <h3>
-                                <a href="https://www.doctoralia.com.br/medico/pacheco+andre-14930067">André Pacheco</a>
-                            </h3>
-<span class="rating-avg"><span class="p100"></span></span>                        </div>
-                                                    <p>Psicologia, Psican&#225;lise</p>
-                                                <p class="address">R. Ca&#231;apava, 49 (conj. 82)</p>
-                        <p class="address">01408-010 S&#227;o Paulo</p>
                     </div>
                 </td>
                 <td class="doctor-table">
@@ -762,51 +721,48 @@
                     </tbody>
                 </table>
             </div>
-                <input type="hidden" name="Agendas[0].AgendaId" value="3346322" />
+                <input type="hidden" name="Agendas[0].AgendaId" value="3367841" />
                 <input type="hidden" name="Agendas[0].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[0].DoctorKey" value="14907542" />
+                <input type="hidden" name="Agendas[0].DoctorKey" value="14930067" />
                 <input type="hidden" name="Agendas[1].AgendaId" value="3318863" />
                 <input type="hidden" name="Agendas[1].PlaceType" value="PrivatePractice" />
                 <input type="hidden" name="Agendas[1].DoctorKey" value="14866392" />
-                <input type="hidden" name="Agendas[2].AgendaId" value="3276866" />
-                <input type="hidden" name="Agendas[2].PlaceType" value="PrivatePractice" />
+                <input type="hidden" name="Agendas[2].AgendaId" value="19434" />
+                <input type="hidden" name="Agendas[2].PlaceType" value="Centre" />
                 <input type="hidden" name="Agendas[2].DoctorKey" value="14792655" />
-                <input type="hidden" name="Agendas[3].AgendaId" value="19434" />
-                <input type="hidden" name="Agendas[3].PlaceType" value="Centre" />
-                <input type="hidden" name="Agendas[3].DoctorKey" value="14792655" />
-                <input type="hidden" name="Agendas[4].AgendaId" value="3316051" />
+                <input type="hidden" name="Agendas[3].AgendaId" value="3332474" />
+                <input type="hidden" name="Agendas[3].PlaceType" value="PrivatePractice" />
+                <input type="hidden" name="Agendas[3].DoctorKey" value="14886591" />
+                <input type="hidden" name="Agendas[4].AgendaId" value="3276866" />
                 <input type="hidden" name="Agendas[4].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[4].DoctorKey" value="14846378" />
-                <input type="hidden" name="Agendas[5].AgendaId" value="3365178" />
+                <input type="hidden" name="Agendas[4].DoctorKey" value="14792655" />
+                <input type="hidden" name="Agendas[5].AgendaId" value="3297720" />
                 <input type="hidden" name="Agendas[5].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[5].DoctorKey" value="14915476" />
-                <input type="hidden" name="Agendas[6].AgendaId" value="3332474" />
+                <input type="hidden" name="Agendas[5].DoctorKey" value="14826209" />
+                <input type="hidden" name="Agendas[6].AgendaId" value="3316051" />
                 <input type="hidden" name="Agendas[6].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[6].DoctorKey" value="14886591" />
-                <input type="hidden" name="Agendas[7].AgendaId" value="3297720" />
+                <input type="hidden" name="Agendas[6].DoctorKey" value="14846378" />
+                <input type="hidden" name="Agendas[7].AgendaId" value="3365178" />
                 <input type="hidden" name="Agendas[7].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[7].DoctorKey" value="14826209" />
+                <input type="hidden" name="Agendas[7].DoctorKey" value="14915476" />
                 <input type="hidden" name="Agendas[8].AgendaId" value="3326144" />
                 <input type="hidden" name="Agendas[8].PlaceType" value="PrivatePractice" />
                 <input type="hidden" name="Agendas[8].DoctorKey" value="14876740" />
                 <input type="hidden" name="Agendas[9].AgendaId" value="3326812" />
                 <input type="hidden" name="Agendas[9].PlaceType" value="PrivatePractice" />
                 <input type="hidden" name="Agendas[9].DoctorKey" value="14876740" />
-                <input type="hidden" name="Agendas[10].AgendaId" value="3367841" />
+                <input type="hidden" name="Agendas[10].AgendaId" value="3270965" />
                 <input type="hidden" name="Agendas[10].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[10].DoctorKey" value="14930067" />
-                <input type="hidden" name="Agendas[11].AgendaId" value="3270965" />
+                <input type="hidden" name="Agendas[10].DoctorKey" value="14784630" />
+                <input type="hidden" name="Agendas[11].AgendaId" value="3322045" />
                 <input type="hidden" name="Agendas[11].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[11].DoctorKey" value="14784630" />
-                <input type="hidden" name="Agendas[12].AgendaId" value="3322045" />
-                <input type="hidden" name="Agendas[12].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[12].DoctorKey" value="14849363" />
-                <input type="hidden" name="Agendas[13].AgendaId" value="9348" />
-                <input type="hidden" name="Agendas[13].PlaceType" value="Centre" />
-                <input type="hidden" name="Agendas[13].DoctorKey" value="14833847" />
-            <input type="hidden" class="input-date" name="date" value="2018/04/03" />
-            <input type="hidden" class="next-date" value="2018/04/10" />
-            <input type="hidden" class="previous-date" value="2018/03/27" />
+                <input type="hidden" name="Agendas[11].DoctorKey" value="14849363" />
+                <input type="hidden" name="Agendas[12].AgendaId" value="9348" />
+                <input type="hidden" name="Agendas[12].PlaceType" value="Centre" />
+                <input type="hidden" name="Agendas[12].DoctorKey" value="14833847" />
+            <input type="hidden" class="input-date" name="date" value="2018/04/05" />
+            <input type="hidden" class="next-date" value="2018/04/12" />
+            <input type="hidden" class="previous-date" value="2018/03/29" />
         </div>
                 <div class="clearfix"></div>
 </form>                            <script type="text/javascript">
@@ -841,52 +797,52 @@
     <div class="container cross-link seo clearfix" role="navigation">
         <section>
 <h3>Médicos em Brasil</h3>                <ul>
-                        <li><a href="/medicos/especialidade/dentistas-1433/belo+horizonte-116720-1">Dentistas Belo Horizonte</a></li>
-                        <li><a href="/medicos/especialidade/endocrinologistas-1296/goiania-116733-1">Endocrinologistas Goiânia</a></li>
-                        <li><a href="/medicos/especialidade/oftalmologistas-1305/curitiba-116724-1">Oftalmologistas Curitiba</a></li>
-                        <li><a href="/medicos/especialidade/homeopatas-1335/curitiba-116724-1">Homeopatas Curitiba</a></li>
-                        <li><a href="/medicos/especialidade/oftalmologistas-1305/governador+valadares-116769-1">Oftalmologistas Governador Valadares</a></li>
-                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/sao+bernardo+do+campo-116875-1">Fisioterapeutas São Bernardo do Campo</a></li>
-                        <li><a href="/medicos/especialidade/endocrinologistas-1296/sao+jose+dos+campos-116771-1">Endocrinologistas São José dos Campos</a></li>
-                        <li><a href="/medicos/especialidade/pediatras-1307/crato-117058-1">Pediatras Crato</a></li>
-                        <li><a href="/medicos/especialidade/otorrinos-1308/campinas-116730-1">Otorrinos Campinas</a></li>
-                        <li><a href="/medicos/especialidade/psiquiatras-1312/porto+alegre-116717-1">Psiquiatras Porto Alegre</a></li>
-                        <li><a href="/medicos/especialidade/endocrinologistas-1296">Endocrinologistas</a></li>
-                        <li><a href="/medicos/especialidade/urologistas-1293">Urologistas</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310">Cirurgiões plásticos</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293/goiania-116733-1">Urologistas Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/curitiba-116724-1">Fisioterapeutas Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/brasilia-116707-1">Ortopedistas - Traumatologistas Brasília</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/curitiba-116724-1">Endocrinologistas Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/barretos-116866-1">Ginecologistas Barretos</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/volta+redonda-116760-1">Endocrinologistas Volta Redonda</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/cubatao-117178-1">Ortopedistas - Traumatologistas Cubatão</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/taubate-116997-1">Ginecologistas Taubaté</a></li>
+                        <li><a href="/medicos/especialidade/dermatologistas-1314/campinas-116730-1">Dermatologistas Campinas</a></li>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312/taguatinga-116917-1">Psiquiatras Taguatinga</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305">Oftalmologistas</a></li>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312">Psiquiatras</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307">Pediatras</a></li>
                     <li><span><a href="https://www.doctoralia.com.br/lista-de-medicos">Lista de médicos</a></span></li>
                 </ul>
         </section>
         <section>
                 <ul class="mt28">
-                        <li><a href="/medicos/especialidade/dermatologistas-1314/sao+paulo-116705-1">Dermatologistas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/psicologos-1434/rio+de+janeiro-116704-1">Psicólogos Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/dentistas-1433/rio+de+janeiro-116704-1">Dentistas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/ginecologistas-1300/rio+de+janeiro-116704-1">Ginecologistas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/rio+de+janeiro-116704-1">Cirurgiões vasculares Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/otorrinos-1308/sao+paulo-116705-1">Otorrinos São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/homeopatas-1335/sao+paulo-116705-1">Homeopatas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/rio+de+janeiro-116704-1">Fisioterapeutas Rio de Janeiro</a></li>
                         <li><a href="/medicos/especialidade/psiquiatras-1312/sao+paulo-116705-1">Psiquiatras São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/pediatras-1307/sao+paulo-116705-1">Pediatras São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/psicanalistas-2789/curitiba-116724-1">Psicanalistas Curitiba</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+de+cabeca+e+pescoco-1326/belo+horizonte-116720-1">Cirurgiões de cabeça e pescoço Belo Horizonte</a></li>
-                        <li><a href="/medicos/especialidade/patologistas+clinicos-1316/rio+de+janeiro-116704-1">Patologistas clinicos Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+de+cabeca+e+pescoco-1326/brasilia-116707-1">Cirurgiões de cabeça e pescoço Brasília</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/sao+paulo-116705-1">Cirurgiões plásticos São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/homeopatas-1335/sao+paulo-116705-1">Homeopatas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/rio+de+janeiro-116704-1">Endocrinologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/sao+paulo-116705-1">Cirurgiões vasculares São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/rio+de+janeiro-116704-1">Ginecologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/dermatologistas-1314/rio+de+janeiro-116704-1">Dermatologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/otorrinos-1308/sao+paulo-116705-1">Otorrinos São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/rio+de+janeiro-116704-1">Dentistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293/rio+de+janeiro-116704-1">Urologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/neurofisiologistas-2639/rio+de+janeiro-116704-1">Neurofisiologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+pediatricos-1322/curitiba-116724-1">Cirurgiões pediátricos Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/especialistas+em+administracao+em+saude-1344/rio+de+janeiro-116704-1">Especialistas em Administração em Saúde Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/oncologistas-1328/sao+paulo-116705-1">Oncologistas São Paulo</a></li>
                 </ul>
         </section>
         <section>
 <h3>Especialistas</h3>                <ul>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/embolizacao+de+malformacoes+arteriovenosas-14481/especialistas/belo+horizonte-116720-1">Embolizacao De Malformacoes Arteriovenosas Belo Horizonte</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/linfedema+elefantiase+dos+membros+inferiores-15397/especialistas/belo+horizonte-116720-1">Linfedema (Elefantiase Dos Membros Inferiores) Belo Horizonte</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/reversao+de+vasectomia-29511/especialistas/belo+horizonte-116720-1">Reversão de vasectomia Belo Horizonte</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/avaliacao+pedagogica-24959/especialistas/goiania-116733-1">Avaliação pedagógica Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/colposcopia-24798/especialistas/brasilia-116707-1">Colposcopia Brasília</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/teste+ergometrico-24785/especialistas/goiania-116733-1">Teste Ergométrico Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/ejaculacao+precoce-41132/especialistas/rio+de+janeiro-116704-1">Ejaculação precoce Rio de Janeiro</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtornos+do+crescimento-17539/especialistas/brasilia-116707-1">Transtornos Do Crescimento Brasília</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/aneurisma+coronario-13663/especialistas/belo+horizonte-116720-1">Aneurisma Coronário Belo Horizonte</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/distrofias+musculares-14442/especialistas/rio+de+janeiro-116704-1">Distrofias Musculares Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/mastopexia-23906/especialistas/belo+horizonte-116720-1">Mastopexia Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/ecg+eletrocardiograma-19509/especialistas/rio+de+janeiro-116704-1">ECG (eletrocardiograma)  Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/recontorno+estetico+dental-30135/especialistas/curitiba-116724-1">Recontorno estético dental Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/implante+de+marcapasso+intracavitario+com+unica+camera-14080/especialistas/sao+paulo-116705-1">Implante de marcapasso intracavitario com unica camera São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/tratamento+cirurgico+do+halux+rigidus-13890/especialistas/rio+de+janeiro-116704-1">Tratamento Cirurgico Do Halux Rigidus Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/laserterapia-30133/especialistas/belo+horizonte-116720-1">Laserterapia Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/onicomicose-16594/especialistas/sao+paulo-116705-1">Onicomicose São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/dermatite+de+contato-14294/especialistas/curitiba-116724-1">Dermatite De Contato Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/amputados-53787/especialistas/belo+horizonte-116720-1">Amputados Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/doenca+de+hashimoto-14530/especialistas/goiania-116733-1">Doença De Hashimoto Goiânia</a></li>
                 </ul>
         </section>
         <section>
@@ -900,9 +856,9 @@
                         <li><a href="https://www.doctoralia.com.br/medicos-credenciados">Convênios médicos</a></li>
             </ul>
 <span>Rede Doctoralia</span>            <ul>
-                        <li class="network"><a href="http://www.doctoralia.co.uk">Reino Unido</a></li>
-                        <li class="network"><a href="http://www.doctoralia.com.au">Austrália</a></li>
-                        <li class="network"><a href="http://www.doctoralia.com.pt">Portugal</a></li>
+                        <li class="network"><a href="http://www.doctoralia.pe">Peru</a></li>
+                        <li class="network"><a href="http://www.doctoralia.com.mx">México</a></li>
+                        <li class="network"><a href="http://www.doctoralia.es">Espanha</a></li>
             </ul>
         </section>
     </div>
@@ -923,7 +879,7 @@
 </nav>
     
     <div class="copy">
-        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 03/04/2018</span>
+        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 05/04/2018</span>
     </div>
 </footer>
     </body>

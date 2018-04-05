@@ -198,9 +198,8 @@ function NormalizaEspacos(obj){
 		else
 		  var _bai = '';
 		//jQuery.get('//log.telelistas.net/api/log?o=0&l=' + _loc + '&c=' + _cdl + '&b=' + _bai + '&a=' + _atv + '&n='+ _nom + '&p="' + window.location.href + '"');
-		//var log = 'https://log.telelistas.net/log?o=0&t=0&u=' + _uf + '&l="' + _loc + '"&b="' + _bai + '"&a="' + _atv + '"&n="'+ _nom + '"&p="' + window.location.href + '"&r="' + document.referrer  + '"&ua="' + navigator.userAgent + '"';
-    return true;
- 		var log = 'https://log.telelistas.net/log?o=0';
+		var log = 'https://log.telelistas.net/log?o=0&t=0&u=' + _uf + '&l="' + _loc + '"&b="' + _bai + '"&a="' + _atv + '"&n="'+ _nom + '"';
+		return true;
     jQuery.get(log, function(){
       var newform = '';
       var i;
@@ -353,7 +352,7 @@ Outras buscas &nbsp;</label>
 <div id="pch_loc" style="display: initial;">
 <select id="pch_localidade_select" class="busca_interna" name="localidade_select" tabindex="4">
 <option value="">Selecione</option>
- </select>
+</select>
 </div>
 </span><span class="field_formint_bairro">
 <label class="label_formint" for="pch_bairro_select">
@@ -502,7 +501,7 @@ Outras buscas &nbsp;</label>
 <li><a rel="nofollow" href="/templates/promocoes.aspx" title="Promoções TeleListas.net" target="_self">Promoções</a></li>
 <li><a href="/templates/form_login.aspx?ReturnUrl=%2fsecurityfiles%2fmeu_telelistas.aspx" title="Meu Cadastro" target="_self" rel="nofollow">Login e Cadastro</a></li>
 <li><a rel="nofollow" href="/templates/busca_celular.aspx" title="Busca no Celular" target="_self">Busca no Celular</a></li>
-<li><a rel="nofollow" href="/templates/telesite.aspx" title="TeleListas no seu site" target="_self">Busca no seu site</a></li>
+ <li><a rel="nofollow" href="/templates/telesite.aspx" title="TeleListas no seu site" target="_self">Busca no seu site</a></li>
 <li><a href="/templates/form_fale.aspx" title="Fale Conosco" target="_self" rel="nofollow">Fale Conosco</a></li>
 </ul>
 </div>
@@ -571,7 +570,7 @@ Outras buscas &nbsp;</label>
 <option value="">Selecione</option>
 <option value="0">Alteração de Informações</option>
 <option value="6">Auxílio ao Usuário</option>
-<option value="10">Cadastro de Currículos</option>
+ <option value="10">Cadastro de Currículos</option>
 <option value="1">Cobrança/Financeiro</option>
 <option value="2">Dúvidas</option>
 <option value="8">Exclusão de Dados</option>
@@ -586,7 +585,7 @@ Outras buscas &nbsp;</label>
 </td>
 </tr>
 </table></td>
-</tr>
+ </tr>
 <tr>
 <td width="276" height="10"></td>
 </tr>
@@ -661,7 +660,7 @@ Outras buscas &nbsp;</label>
 <option value="rs">Rio Grande do Sul</option>
 <option value="ro">Rond&ocirc;nia</option>
 <option value="rr">Roraima</option>
-<option value="sc">Santa Catarina</option>
+ <option value="sc">Santa Catarina</option>
 <option value="se">Sergipe</option>
 <option value="sp">S&atilde;o Paulo</option>
 <option value="to">Tocantins</option>
@@ -895,7 +894,7 @@ de Privacidade</a></td>
 </tr>
 </table>
 
-
+ 
 <table width="310" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td height="5"></td>
@@ -1088,7 +1087,7 @@ Conexão Mercado
 </div>
 <div style="clear:both;"></div>
 </div>
-<div class="text_copy">© TeleListas 2018. <input type="hidden" id="internal_ip" value="192.168.3.19" /></div>
+<div class="text_copy">© TeleListas 2018. <input type="hidden" id="internal_ip" value="192.168.3.13" /></div>
 <div class="privacidade"><a class="privacidade" rel="nofollow" href="/templates/politica_privacidade.aspx" target="_self" style="padding-left:0px;">Política de Privacidade</a></div>
 </td>
 </tr>

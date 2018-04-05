@@ -2,13 +2,73 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:v="urn:schemas-microsoft-com:vml">
 <head id="Head1"><title>
-	TeleListas.net - Soluções de Comunicação em Vendas para sua Empresa
+	TeleListas.net - Busca Celular
 </title><meta http-equiv="content-language" content="pt-br; charset=iso-8859-1" /><meta name="language" content="pt-br" /><meta name="distribution" content="Global" /><meta name="author" content="Informações: webmaster@telelistas.net" /><meta name="Copyright" content="(c) 2000 - 2018 TeleListas.net" /><link rel="SHORTCUT ICON" href="/favicon.ico" />
-<META NAME="description" CONTENT="Informações sobre o Grupo TeleListas, nossas filiais, Circuito Cultural TeleListas, clipping, releases e imagens de divulgação.">
-<META NAME="keywords" CONTENT="TeleListas telelista lista telefônica listas telefônicas busca telefones endereços 102 páginas amarelas guias consulta pesquisa empresas serviços produtos pessoas profissionais classificadas mapas preços">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<META NAME="description" CONTENT="Realize suas buscas no celular com o nosso aplicativo ou com as versões WAP ou WEB Móvel. Encontre empresas, profissionais, pessoas e mapas de localização a qualquer hora e em qualquer lugar.">
+<META NAME="keywords" CONTENT="busca celular telefone movel aplicativo mapas localização endereços guia avenidas ruas bairro cidades web wap iphone blackberry nokia android windows mobile ">
 <link href="https://www.telelistas.net/css/style.css" rel="stylesheet" type="text/css">
 <link href="https://www.telelistas.net/css/style_form.css" rel="stylesheet" type="text/css">
 <script src="https://static.telelistas.net/js/por_script.js"></script>
+<script src="https://static.telelistas.net/js/tabcontent.js"></script>
+<script type="text/javascript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+/*Funcoes utilizadas para no funcionamento do Menu*/
+
+/*fim funcoes menu*/
+var imgMais="https://static.telelistas.net/img/bot_wap_mais.gif";
+var imgMenos="https://static.telelistas.net/img/bot_wap_menos.gif";
+function MostraEsconde(div,idImg){
+	var el= document.getElementById(div);
+	var elImg=document.getElementById(idImg);
+	if(el.style.display=="" || el.style.display=="block"){
+		el.style.display="none";
+		elImg.src=imgMais;
+	}
+	else{
+		el.style.display="block";
+		elImg.src=imgMenos;
+	}
+}
+
+function limpaCampo(el) {
+	if (el.value == 'Digite aqui seu e-mail')
+		el.value = '';
+}
+
+//-->
+</script>
+<style type="text/css">
+
+.addthis
+{
+position:absolute;
+right:0;
+bottom:0;
+width:180px;
+margin-bottom:-35px;
+*margin-bottom:-40px;
+}
+
+.addthis h2
+{
+display:block;
+font-size:11px;
+color:#315d84;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:normal;
+font-style:italic;
+margin:0 0 8px 2px;
+}
+
+</style>
 <script type="text/javascript" src="https://static.telelistas.net/js/AjaxWrapper-1.0.1.min.js"></script>
 <script type="text/javascript" src="https://static.telelistas.net/js/Placeholders.min.js"></script>
 <script type="text/javascript" src="https://static.telelistas.net/js/google_h.js"></script>
@@ -156,9 +216,8 @@ function NormalizaEspacos(obj){
 		else
 		  var _bai = '';
 		//jQuery.get('//log.telelistas.net/api/log?o=0&l=' + _loc + '&c=' + _cdl + '&b=' + _bai + '&a=' + _atv + '&n='+ _nom + '&p="' + window.location.href + '"');
-		//var log = 'https://log.telelistas.net/log?o=0&t=0&u=' + _uf + '&l="' + _loc + '"&b="' + _bai + '"&a="' + _atv + '"&n="'+ _nom + '"&p="' + window.location.href + '"&r="' + document.referrer  + '"&ua="' + navigator.userAgent + '"';
-    return true;
- 		var log = 'https://log.telelistas.net/log?o=0';
+		var log = 'https://log.telelistas.net/log?o=0&t=0&u=' + _uf + '&l="' + _loc + '"&b="' + _bai + '"&a="' + _atv + '"&n="'+ _nom + '"';
+		return true;
     jQuery.get(log, function(){
       var newform = '';
       var i;
@@ -281,7 +340,6 @@ Outras buscas &nbsp;</label>
 </div>
 </div>
 </div>
-
 <div id="caixa_interna">
 <div id="cx_palavrachave_int" style="display: block;">
 <form action="https://www.telelistas.net/templates/resultado_busca.aspx" name="frmPalavrachave" onsubmit="return validaFormPalavraChave(this);" style="padding: 0;
@@ -403,7 +461,7 @@ Outras buscas &nbsp;</label>
 </div>
 </span><span class="field_formint_buttom_int" style="padding: 12px 0px 0px 0px;">
 <input alt="Buscar" border="0" class="botao_famarelo" tabindex="5" src="https://static.telelistas.net/img/por_bot_buscar_int.gif" title="Buscar" type="image" />
-</span>
+</span> 
 &nbsp;&nbsp;&nbsp;&nbsp;</form>
 </div>
 <script type="text/javascript">
@@ -426,6 +484,9 @@ Outras buscas &nbsp;</label>
 <td width="10">&nbsp;</td>
 <td width="152" align="center" valign="top">
 <table width="152" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="10"></td>
+</tr>
 <tr>
 <td align="center" valign="top">
 
@@ -478,127 +539,150 @@ Outras buscas &nbsp;</label>
 
 <table width="798" border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="798" colspan="5" align="left" valign="top"><a href="/" target="_self">Home</a>
-<img src="https://static.telelistas.net/img/por_seta_caminho.gif"><span class="texto_caminho">Quem Somos</span></td>
-</tr>
-<tr>
-<td width="798" height="40" colspan="5"><img src="https://static.telelistas.net/img/por_tit_aempresa.gif" width="468" height="40"></td>
-</tr>
-<tr>
-<td height="1" colspan="5" background="https://static.telelistas.net/img/por_tracoh.gif"></td>
-</tr>
-<tr>
-<td width="468" align="left" valign="top">
-<table width="468" border="0" cellspacing="0" cellpadding="0">
-<tr valign="middle">
-<td height="10" align="left"><table width="468" border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="176" height="132" rowspan="3"><img src="https://static.telelistas.net/img/por_servempresa_topo1.gif" width="176" height="132"></td>
-<td width="10" height="107"></td>
-<td width="267" class="text_medio">O TeleListas.net &eacute; o maior portal de busca por empresas, servi&ccedil;os, produtos e pessoas da internet brasileira.</td>
-<td width="15" class="text_medio">&nbsp;</td>
-</tr>
-<tr>
-<td height="24" colspan="3" bgcolor="f3f3f3"></td>
-</tr>
-<tr>
-<td height="1" colspan="3" bgcolor="E8E8E8"></td>
-</tr>
-</table></td>
-</tr>
-<tr valign="middle">
-<td height="10" align="left"></td>
-</tr>
-<tr valign="top">
-<td height="113">
+<td width="798" align="left" valign="top">
+<div style="position:relative;">
+<a href="/" target="_self">Home</a>
+<img src="https://static.telelistas.net/img/por_seta_caminho.gif"><span class="texto_caminho">Busca
+no Celular</span>
 
-<table width="468" border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td colspan="5" class="text_super"><table width="468" border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="10">&nbsp;</td>
-<td width="448" class="text_super"><img src="https://static.telelistas.net/img/por_bullet_setamenor.gif" width="16" height="10"><b>Sobre a
-Empresa</b></td>
-<td width="10">&nbsp;</td>
-</tr>
-</table></td>
-</tr>
-<tr>
-<td height="10" colspan="5"></td>
-</tr>
-<tr>
-<td height="10" colspan="5" class="text_medio"><table width="468" border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="10"></td>
-<td height="10" class="text_medio">O TeleListas.net é o portal de buscas por empresas, serviços, produtos e pessoas mais completo e atualizado da internet brasileira, com mais de 30 milhões de telefones e informações de todo de território nacional. Por esse motivo, somos fonte de consulta de sites como o Google Maps, Bing Maps, Apple Maps entre outros. <br /><br />
-Temos uma média de 12 milhões de visitas por mês (dados 07/2017) e figuramos hoje entre as 50 propriedades mais importantes da Internet brasileira, segundo a ComScore (Fev/14). Nossos aplicativos para celular estão disponíveis para Android, iOS, Windows Phone e, já superam os 650 mil downloads desde o seu lançamento. Nossa missão é ser um site de informações para conectar pessoas e empresas, empresas com outras empresas, pessoas entre si, e pessoas com entidades que possam fornecer os recursos e serviços que buscam.<br /><br />
-<strong>Associações</strong><br />
-A TeleListas.net faz parte de importantes associa&ccedil;&otilde;es mundiais do segmento como: SIINDA (Search &amp; Information Industry Association), a LSA (Local Search Association) e o IAB (International Advertising Bureau).</td>
-</tr>
-</table></td>
-</tr>
-</table>
+<div addthis:title='TeleListas.net - Busca no Celular' addthis:url='http://www.telelistas.net/templates/busca_celular.aspx' class="addthis_toolbox addthis_default_style addthis">
+<h2>Compartilhe esta informação</h2>
+<a class='addthis_button_twitter'></a>
+<a class='addthis_button_facebook'></a>
+<a class='addthis_button_orkut'></a>
+<a class='addthis_button_email'></a>
+<a class='addthis_button_favorites'></a>
+<span class='addthis_separator'>|</span>
+<a class='addthis_button_expanded' href='http://www.addthis.com/bookmark.php?v=250&username=telelistas'>MAIS</a> </div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=telelistas"></script>
+<script type='text/javascript'> 
+				var addthis_share = {
+				templates: { twitter: '{{title}} {{url}} via @telelistas' }
+				}
+			</script>
+<script type='text/javascript'> 
+				var addthis_config = {
+    			data_track_clickback: true
+				}
+			</script>
 
-</td>
-</tr>
-</table>
-</td>
-<td width="5"></td>
-<td width="1" background="https://static.telelistas.net/img/por_tracov.gif"></td>
-<td width="5"></td>
-<td width="310" align="center" valign="top">
-
-<table width="305" border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td height="5"></td>
-</tr>
-<tr>
-<td height="1" class="lateral_linha"></td>
-</tr>
-<tr>
-<td>
-<table width="315" border="0" cellspacing="0" cellpadding="5">
-<tr>
-<td align="left" valign="top" class="lateral_claro"><img src="https://static.telelistas.net/img/por_bullet_lateral.gif" width="11" height="6"><a href="/templates/aempresa.aspx?sec=0" class="lateral_bold" rel="nofollow">Quem Somos</a>
-<table width="305" border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td height="3" colspan="2"></td>
-</tr>
-<tr>
-<td width="15">
-</td>
-<td><a href="/templates/aempresa_testemunhal.aspx?sec=0" class="text_pequeno" rel="nofollow">Casos de Sucesso</a></td>
-</tr>
-<tr>
-<td height="3" colspan="2"></td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-<td height="1" class="lateral_linha"></td>
-</tr>
-<tr>
-<td height="5">
-<div style="padding:15px 0 0 15px; background:#fff; font:11px/18px Arial, Helvetica, sans-serif; color:#416488; text-align:left; margin-top:0;">
-<p style="margin:0;"><strong style="font-size:12px;">Sala de Imprensa:</strong><br />
-<a style="color:#416488;" href="mailto:imprensa@telelistas.net">imprensa@telelistas.net</a>
-</p>
 </div>
 </td>
 </tr>
-</table>
-</td>
-</tr>
-</table>
-
-</td>
+<tr>
+<td width="798" height="40" class="text_medio_vermelho"><a name="#topo"><img src="https://static.telelistas.net/img/por_tit_busca_celular.gif" width="468" height="40" border="0" align="middle"></a></td>
 </tr>
 <tr>
-<td colspan="5" width="599">&nbsp;</td>
+<td height="1" background="https://static.telelistas.net/img/por_tracoh.gif"></td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div id="mobile">
+<div id="mobileHeader">
+<h2 class="master">Veja qual a maneira mais fácil de acessar<br />
+o TeleListas.net no seu telefone</h2>
+<p class="ilustraMao"><img src="https://static.telelistas.net/img/mobile-ilustra-mao.jpg" alt="conheça os aplicativos da TeleListas para dispositivos móveis" width="166" height="162" /></p>
+<div class="tabs">
+<ul id="countrytabs" class="shadetabs">
+<li class="navSmart"><a href="#" rel="country1" class="selected" title="Aplicativos para Smartphones">Aplicativos para Smartphones</a></li>
+<li class="navWap"><a href="#" rel="country2" title="WAP e WEB Móvel">WAP e WEB Móvel</a></li>
+<li class="navQRcode"><a href="#" rel="country3" title="QR Code"><span>QR Code</span></a></li>
+</ul>
+</div>
+</div>
+<div id="country1" class="tabcontent">
+<div class="mobilePics">
+<div class="telaMobile">
+<object width="216" height="326" type="application/x-shockwave-flash" data="https://static.telelistas.net/img/telas-iphone.swf">
+<param value="high" name="quality" />
+<param name="wmode" value="transparent" />
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" />
+<param value="https://static.telelistas.net/img/telas-iphone.swf" name="movie" />
+</object>
+</div>
+</div>
+<div class="mobileContent">
+<p>Já disponível para
+<a href="http://itunes.apple.com/br/app/telelistas-net-mobile/id388833763?mt=8" title="baixe a versão para iPhone na iTunes Store" target="_blank"><strong>iPhone</strong></a>, <a href="https://market.android.com/details?id=com.cellcity.telelistas&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5jZWxsY2l0eS50ZWxlbGlzdGFzIl0" title="baixe o aplicativo no Android Market" target="_blank"><strong>Android</strong></a> e <a href="http://www.windowsphone.com/pt-BR/apps/31375378-f7ef-40d5-b58e-6bea324a4f15" title="baixe o aplicativo no Marketplace" target="_blank"><strong>Windows Phone</strong></a>.</p>
+<div class="appDownload">
+<a class="appDownload" href="http://itunes.apple.com/br/app/telelistas-net-mobile/id388833763?mt=8" title="baixe o aplicativo na iTunes Store" target="_blank">Baixe gratuitamente o aplicativo para iPhone, iPod Touch ou iPad.</a>
+<a class="andDownload" href="https://market.android.com/details?id=com.cellcity.telelistas&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5jZWxsY2l0eS50ZWxlbGlzdGFzIl0" title="baixe o aplicativo no Android Market" target="_blank">Baixe gratuitamente o aplicativo para Android</a>
+<a class="windDownload" href="https://www.microsoft.com/pt-br/store/p/telelistasnet/9mx4mm9nskzb" title="baixe o aplicativo no Marketplace" target="_blank">Baixe o aplicativo para Windows Phone.</a></div>
+<div class="listanokia">
+<a class="listanokia"> </a></div>
+<p>Quer ter contatos de empresas e profissionais de todo o Brasil, sempre à mão, a qualquer hora e em qualquer lugar? Então o nosso aplicativo Mobile é para você. Nele você pode pesquisar por atividade, nome ou local do estabelecimento, gerando, inclusive, o mapa e as instruções de como chegar. Você terá acesso a toda a base de dados da TeleListas.net, que inclui empresas, profissionais, pessoas e mapas de localização.</p>
+<h3>Funcionalidades:</h3>
+<div id="pertodemim" class="funcionalidades">
+<h3>Perto de Mim em um clique</h3>
+<p>Use o GPS do seu celular para encontrar, perto de você, restaurantes, bares, bancos, caixas automáticos, farmácias, empresas de táxi, opções de diversão e cultura, hospitais, entre outros. <br />Disponível nas versões para iPhone, Android e Windows Phone.</p>
+</div>
+<div id="ophertas" class="funcionalidades">
+<h3>Ophertas</h3>
+<p>Clique e encontre perto de você, promoções e descontos em produtos e serviços.
+<br />
+Disponível nas versões para iPhone, Android e Windows Phone.</p>
+</div>
+<div id="historicoFavs" class="funcionalidades">
+<h3>Histórico de Busca e Favoritos</h3>
+<p>Acesse rapidamente buscas realizadas anteriormente e empresas favoritadas.<br />
+Disponível nas versões para iPhone, Android e Windows Phone.</p>
+</div>
+<div id="reviewShare" class="funcionalidades">
+<h3>Comente e Compartilhe</h3>
+<p>Deixe sua opinião e dicas nos resultados de busca e compartilhe com amigos pelo Facebook.<br />
+Disponível nas versões para iPhone, Android e Windows Phone. </p>
+</div>
+</div>
+<br class="clear" />
+</div>
+<div id="country2" class="tabcontent">
+<div class="mobilePics">
+<p class="telaMobile"><img src="https://static.telelistas.net/img/mobile-tela-wap.jpg" alt="Tela WAP" width="216" height="326" /></p>
+</div>
+<div class="mobileContent">
+<h3>Como acessar?</h3>
+<ol>
+<li>Localize em seu celular o ícone referente à navegação WAP ou WEB Móvel. Selecione e aguarde o carregamento da página.</li>
+<li>Localize a opção que permite “digitar endereço” ou “ir para a URL”.</li>
+<li>Digite o endereço: <strong class="wapAddress">m.telelistas.net</strong> </li>
+</ol>
+<p>A navegação é simples e se assemelha à caixa de busca do seu TeleListas.net.</p>
+</div>
+<br class="clear" />
+</div>
+<div id="country3" class="tabcontent qr">
+<div class="mobilePics">
+<p><img src="https://static.telelistas.net/img/mobile-qr-code.jpg" alt="QR Code" width="151" height="152" /></p>
+</div>
+<div class="mobileContent">
+<h3>Acesse via QR Code</h3>
+<p><strong>QR Code. O que é?</strong><br />
+O QR Code é um código de barras bidimensional. Basta apontar a câmera do seu celular para o código e automaticamente você é redirecionado para o m.telelistas.net ou algum outro conteúdo ou site que forneça acesso através dessa tecnologia.</p>
+<p><strong>Como funciona?</strong><br />
+Alguns celulares brasileiros com câmera e acesso à internet já trazem um aplicativo que consegue ler o QR Code. Se o seu aparelho tem câmera e internet, mas não traz o leitor do código embutido, você pode baixar o aplicativo de alguns desses sites abaixo:</p>
+<p><strong>Baixe o leitor no seu computador e transfira para o celular:</strong><br />
+<a href="http://www.i-nigma.com" target="_blank">I-Nigma</a><br />
+<a href="http://www.imatrix.lt" target="_blank">I-Matrix</a><br />
+<a href="http://reader.kaywa.com/" target="_blank">Kaywa</a> (em português!)<br />
+<a href="http://www.quickmark.com.tw/En/basic/download.asp" target="_blank">Quick Mark</a><br />
+<a href="http://www.neoreader.com/download.html" target="_blank">Neo Reader</a></p>
+<p><strong>Baixando direto do seu celular:</strong><br />
+<a href="http://get.neoreader.com" target="_blank">Neo Reader</a><br />
+<a href="http://www.i-nigma.mobi/" target="_blank">I-Nigma</a></p>
+<p class="experimente"><strong>Experimente!</strong></p>
+</div>
+<br class="clear" />
+</div>
+</div>
+<script type="text/javascript"> 
+				var countries=new ddtabcontent("countrytabs")
+				countries.setpersist(false)
+				countries.setselectedClassTarget("link") //"link" or "linkparent"
+				countries.init()
+		  	  </script>
+<br class="clear" />
+</td>
 </tr>
 </table>
 
@@ -691,7 +775,7 @@ Conexão Mercado
 <li><img src="https://static.telelistas.net/img/bullet-rodape.gif" width="10" height="13" border="0" align="top" /><a class="rodape" href="http://ddd.telelistas.net/ddd" target="_blank" rel="follow">DDD</a></li>
 <li><img src="https://static.telelistas.net/img/bullet-rodape.gif" width="10" height="13" border="0" align="top" /><a class="rodape" href="http://ddi.telelistas.net/ddi" target="_blank" rel="follow">DDI</a></li>
 <li><img src="https://static.telelistas.net/img/bullet-rodape.gif" width="10" height="13" border="0" align="top" /><a class="rodape" href="http://cep.telelistas.net/cep/br" target="_blank" rel="follow">CEP</a></li>
-</ul>
+ </ul>
 <span class="tit-list" style="margin-top:20px;">TeleListas Ophertas</span>
 <ul class="listaCapitais">
 <li><a rel="follow" href="//www.ophertas.net/belo+horizonte-mg">Belo Horizonte</a></li>
@@ -719,7 +803,7 @@ Conexão Mercado
 </div>
 <div style="clear:both;"></div>
 </div>
-<div class="text_copy">© TeleListas 2018. <input type="hidden" id="internal_ip" value="192.168.3.38" /></div>
+<div class="text_copy">© TeleListas 2018. <input type="hidden" id="internal_ip" value="192.168.3.34" /></div>
 <div class="privacidade"><a class="privacidade" rel="nofollow" href="/templates/politica_privacidade.aspx" target="_self" style="padding-left:0px;">Política de Privacidade</a></div>
 </td>
 </tr>

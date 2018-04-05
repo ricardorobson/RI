@@ -3,10 +3,10 @@
 <html lang="pt-BR" >
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     
-    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXMHElAKXQ==","queueTime":0,"applicationTime":141,"ttGuid":"F3DCDAD9DFC37691","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
-<meta name="description" content="Marque uma consulta com Dra. Luciana Dias Nascimento - Veja as 2 opiniões dos pacientes, consultórios, especialidades, preços e convênios. Depressão, Distúrbios Alimentares, Neuropsicologia" /><meta name="keywords" content="Dra. Luciana Dias Nascimento, bom, melhor, saúde, médico, medicina privada, plano de saúde, clínica" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="@doctoralia" /><meta name="twitter:image" content="https://photos.doctoralia.com/636571486345257929_1.jpg" /><meta property="og:title" content="Dra. Luciana Dias Nascimento  - Psicóloga Salvador" />
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXMHElAKXQ==","queueTime":0,"applicationTime":101,"ttGuid":"86460CBDD25D73CC","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="description" content="Marque uma consulta com Dra. Luciana Dias Nascimento - Veja as 2 opiniões dos pacientes, consultórios, especialidades, preços e convênios. Depressão, Distúrbios Alimentares, Neuropsicologia" /><meta name="keywords" content="Dra. Luciana Dias Nascimento, bom, melhor, saúde, médico, medicina privada, plano de saúde, clínica" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="@doctoralia" /><meta name="twitter:image" content="https://photos.doctoralia.com/636584615701460066_1.jpg" /><meta property="og:title" content="Dra. Luciana Dias Nascimento  - Psicóloga Salvador" />
 <meta property="og:description" content="Marque uma consulta com Dra. Luciana Dias Nascimento - Veja as 2 opiniões dos pacientes, consultórios, especialidades, preços e convênios. Depressão, Distúrbios Alimentares, Neuropsicologia" /><meta property="og:type" content="website" />
-<meta property="og:image" content="https://photos.doctoralia.com/636571486345257929.jpeg" />
+<meta property="og:image" content="https://photos.doctoralia.com/636584615701460066.JPG" />
 <meta property="og:url" content="https://www.doctoralia.com.br/medico/dias+nascimento+luciana-14998830" />
 <meta property="og:site_name" content="Doctoralia" />
 <meta property="og:locale" content="pt_BR" />
@@ -42,7 +42,7 @@
         ga('send', 'pageview');
     </script>
                 <script type="application/ld+json">
-                {"@context" : "http://schema.org","@type" : "Physician","name" : "Dra. Luciana Dias Nascimento","photo" : "//photos.doctoralia.com/636571486345257929.jpeg","image" : "//photos.doctoralia.com/636571486345257929.jpeg","address" : "Brasil, Salvador, Pituba, Rua Minas Gerais, 436 - 5º andar","aggregateRating" : {"@type" : "AggregateRating","bestRating" : "5","worstRating" : "1","ratingValue" : "5","reviewCount" : "2"},"review" : [{"@type" : "Review","datePublished" : "2018-03-13","reviewRating" : {"bestRating" : "5","worstRating" : "1","ratingValue" : "5"},"author" : {"@type" : "Person","name" : "Paciente"}},{"@type" : "Review","datePublished" : "2018-03-08","reviewRating" : {"bestRating" : "5","worstRating" : "1","ratingValue" : "5"},"author" : {"@type" : "Person","name" : "Paciente"}}]}
+                {"@context" : "http://schema.org","@type" : "Physician","name" : "Dra. Luciana Dias Nascimento","photo" : "//photos.doctoralia.com/636584615701460066.JPG","image" : "//photos.doctoralia.com/636584615701460066.JPG","address" : "Brasil, Salvador, Pituba, Rua Minas Gerais, 436 - 5º andar","aggregateRating" : {"@type" : "AggregateRating","bestRating" : "5","worstRating" : "1","ratingValue" : "5","reviewCount" : "2"},"review" : [{"@type" : "Review","datePublished" : "2018-03-13","reviewRating" : {"bestRating" : "5","worstRating" : "1","ratingValue" : "5"},"author" : {"@type" : "Person","name" : "Paciente"}},{"@type" : "Review","datePublished" : "2018-03-08","reviewRating" : {"bestRating" : "5","worstRating" : "1","ratingValue" : "5"},"author" : {"@type" : "Person","name" : "Paciente"}}]}
             </script>
             <script type="application/ld+json">
                 {"@context" : "http://schema.org","@type" : "LocalBusiness","address" : "Brasil, Salvador, Pituba, Rua Minas Gerais, 436 - 5º andar","name" : "Holos - Saúde E Desenvolviemnto Pessoal Ltda","geo" : {"@type" : "GeoCoordinates","latitude" : "-13,0079926","longitude" : "-38,4617513"}}
@@ -148,8 +148,8 @@
     
     <header class="box d premium">
         <figure class="photo d">
-                <a href="//photos.doctoralia.com/636571486345257929.jpeg" data-openpic="lightbox-journey">                
-                    <img alt="Dra. Luciana Dias Nascimento" height="191" src="//photos.doctoralia.com/636571486345257929_2.jpg" width="160" />
+                <a href="//photos.doctoralia.com/636584615701460066.JPG" data-openpic="lightbox-journey">                
+                    <img alt="Dra. Luciana Dias Nascimento" height="191" src="//photos.doctoralia.com/636584615701460066_2.jpg" width="160" />
                 </a>
         </figure>
         
@@ -246,9 +246,9 @@
             </div>
             <input type="hidden" class="schedule-type" name="Schedule.Type" value="Centre" />
             <input type="hidden" class="schedule-id" name="Schedule.Id" value="22097" />
-            <input type="hidden" class="input-date" name="date" value="2018/04/03" />
-            <input type="hidden" class="next-date" value="2018/04/10" />
-            <input type="hidden" class="previous-date" value="2018/03/27" />
+            <input type="hidden" class="input-date" name="date" value="2018/04/05" />
+            <input type="hidden" class="next-date" value="2018/04/12" />
+            <input type="hidden" class="previous-date" value="2018/03/29" />
         </div>
 </form></div>
                 </div>
@@ -324,7 +324,7 @@ Baseado em 2 opiniões                        </p>
                 <a href="https://www.doctoralia.com.br/medico/dias+nascimento+luciana-14998830/opiniao" class="btn btn-secondary opinate" rel="nofollow">Opinar<i class="icon"></i></a>
             </div>
     </div>
-<div class="review-item"><div class="review"><span class="rating-avg"><span class="p100"></span></span><time datetime="2018-03-13">13/03/2018</time><div class="good"><i class="icon"></i><p><dfn>O melhor</dfn>: &quot;Suas intervenções sempre me levaram pra caminhos que nunca pensei em chegar.&quot;</p></div></div><div class="reviewer"><i class="icon"></i><p class="where">Paciente que marcou consulta com Dra. Luciana Dias Nascimento em <a href="https://www.doctoralia.com.br/centro-medico/holos+-+saude+e+desenvolviemnto+pessoal+ltda-2549094" rel="nofollow">Holos - Saúde E Desenvolviemnto Pessoal Ltda</a></p></div><div class="review-response"><i class="icon"></i><figure class="c photo"><img src="//photos.doctoralia.com/636571486345257929_1.jpg"></img></figure><h5>Dra. Luciana Dias Nascimento respondeu a esta opinião</h5><p>Satisfação em ter contribuído.</p></div></div><div class="review-item"><div class="review"><span class="rating-avg"><span class="p100"></span></span><time datetime="2018-03-08">08/03/2018</time><div class="good"><i class="icon"></i><p><dfn>O melhor</dfn>: &quot;Muito solicita e atenciosa. Pude tratar minha depressão com essa excelente profissional. Sou grata a Deus e a ela.&quot;</p></div></div><div class="reviewer"><i class="icon"></i><p class="where">Paciente que marcou consulta com Dra. Luciana Dias Nascimento em <a href="https://www.doctoralia.com.br/centro-medico/holos+-+saude+e+desenvolviemnto+pessoal+ltda-2549094" rel="nofollow">Holos - Saúde E Desenvolviemnto Pessoal Ltda</a></p></div><div class="review-response"><i class="icon"></i><figure class="c photo"><img src="//photos.doctoralia.com/636571486345257929_1.jpg"></img></figure><h5>Dra. Luciana Dias Nascimento respondeu a esta opinião</h5><p>Gratidão!</p></div></div>
+<div class="review-item"><div class="review"><span class="rating-avg"><span class="p100"></span></span><time datetime="2018-03-13">13/03/2018</time><div class="good"><i class="icon"></i><p><dfn>O melhor</dfn>: &quot;Suas intervenções sempre me levaram pra caminhos que nunca pensei em chegar.&quot;</p></div></div><div class="reviewer"><i class="icon"></i><p class="where">Paciente que marcou consulta com Dra. Luciana Dias Nascimento em <a href="https://www.doctoralia.com.br/centro-medico/holos+-+saude+e+desenvolviemnto+pessoal+ltda-2549094" rel="nofollow">Holos - Saúde E Desenvolviemnto Pessoal Ltda</a></p></div><div class="review-response"><i class="icon"></i><figure class="c photo"><img src="//photos.doctoralia.com/636584615701460066_1.jpg"></img></figure><h5>Dra. Luciana Dias Nascimento respondeu a esta opinião</h5><p>Satisfação em ter contribuído.</p></div></div><div class="review-item"><div class="review"><span class="rating-avg"><span class="p100"></span></span><time datetime="2018-03-08">08/03/2018</time><div class="good"><i class="icon"></i><p><dfn>O melhor</dfn>: &quot;Muito solicita e atenciosa. Pude tratar minha depressão com essa excelente profissional. Sou grata a Deus e a ela.&quot;</p></div></div><div class="reviewer"><i class="icon"></i><p class="where">Paciente que marcou consulta com Dra. Luciana Dias Nascimento em <a href="https://www.doctoralia.com.br/centro-medico/holos+-+saude+e+desenvolviemnto+pessoal+ltda-2549094" rel="nofollow">Holos - Saúde E Desenvolviemnto Pessoal Ltda</a></p></div><div class="review-response"><i class="icon"></i><figure class="c photo"><img src="//photos.doctoralia.com/636584615701460066_1.jpg"></img></figure><h5>Dra. Luciana Dias Nascimento respondeu a esta opinião</h5><p>Gratidão!</p></div></div>
             
         </section>
             <span id="curriculum" class="anchor"></span>
@@ -479,7 +479,7 @@ Baseado em 2 opiniões                        </p>
         </section>
     
 
-<form action="/noindex/doctor-phone" id="frmPhone" method="post"><input name="__RequestVerificationToken" type="hidden" value="qKtuE7RSCK-KwNDm0DpfEjLQrgsfA8Z__qXXfbBKUcCZRvJy0_PQF5-YwJKuRckdRub-19zgH66XAQ5cSSzlBeuFjAw1" /><input id="entityKey" name="entityKey" type="hidden" value="14998830" /><input id="placeType" name="placeType" type="hidden" value="" /><input id="placeKey" name="placeKey" type="hidden" value="" /></form>    <div id="phonePlacer"></div>
+<form action="/noindex/doctor-phone" id="frmPhone" method="post"><input name="__RequestVerificationToken" type="hidden" value="ozBtvypD_WSf4KzaZ8ZLUlrwSlCOWZ9QJRfkHZtxthDsBIQIQA2dq2HQzENsLN3NyAiv8zEOvOtzqXGwpplFyhLJVbw1" /><input id="entityKey" name="entityKey" type="hidden" value="14998830" /><input id="placeType" name="placeType" type="hidden" value="" /><input id="placeKey" name="placeKey" type="hidden" value="" /></form>    <div id="phonePlacer"></div>
 <div id="map" class="hidden">
     <div class="map-heading">Mapa de situação - <strong>Dra. Luciana Dias Nascimento</strong></div>
     <div class="map-body clearfix">
@@ -497,7 +497,7 @@ Baseado em 2 opiniões                        </p>
         <div class="sticky-topbar entity-doctor magic">
             <header class="box">
             <div class="entity-actions">
-<img height="82" src="//photos.doctoralia.com/636571486345257929_2.jpg" width="69" />                <div class="entity-actions-right">
+<img height="82" src="//photos.doctoralia.com/636584615701460066_2.jpg" width="69" />                <div class="entity-actions-right">
                     <h1><a href="#top">Dra. Luciana Dias Nascimento</a></h1>
                     <br>
                     
@@ -564,52 +564,52 @@ Baseado em 2 opiniões                        </p>
     <div class="container cross-link seo clearfix" role="navigation">
         <section>
 <h3>Médicos em Brasil</h3>                <ul>
-                        <li><a href="/medicos/especialidade/ginecologistas-1300/brasilia-116707-1">Ginecologistas Brasília</a></li>
-                        <li><a href="/medicos/especialidade/dentistas-1433/belo+horizonte-116720-1">Dentistas Belo Horizonte</a></li>
-                        <li><a href="/medicos/especialidade/dermatologistas-1314/curitiba-116724-1">Dermatologistas Curitiba</a></li>
-                        <li><a href="/medicos/especialidade/oftalmologistas-1305/curitiba-116724-1">Oftalmologistas Curitiba</a></li>
-                        <li><a href="/medicos/especialidade/dentistas-1433/criciuma-116905-1">Dentistas Criciúma</a></li>
-                        <li><a href="/medicos/especialidade/oftalmologistas-1305/alagoinhas-117034-1">Oftalmologistas Alagoinhas</a></li>
-                        <li><a href="/medicos/especialidade/ginecologistas-1300/montes+claros-116874-1">Ginecologistas Montes Claros</a></li>
-                        <li><a href="/medicos/especialidade/otorrinos-1308/macae-116776-1">Otorrinos Macaé</a></li>
-                        <li><a href="/medicos/especialidade/psicologos-1434/carapicuiba-117180-1">Psicólogos Carapicuíba</a></li>
-                        <li><a href="/medicos/especialidade/pediatras-1307/ouro+preto-116794-1">Pediatras Ouro Preto</a></li>
-                        <li><a href="/medicos/especialidade/psicologos-1434">Psicólogos</a></li>
-                        <li><a href="/medicos/especialidade/psiquiatras-1312">Psiquiatras</a></li>
-                        <li><a href="/medicos/especialidade/homeopatas-1335">Homeopatas</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/brasilia-116707-1">Ortopedistas - Traumatologistas Brasília</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/brasilia-116707-1">Endocrinologistas Brasília</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/brasilia-116707-1">Cirurgiões plásticos Brasília</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/belo+horizonte-116720-1">Cirurgiões vasculares Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/itupeva-117481-1">Psicólogos Itupeva</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/crato-117058-1">Psicólogos Crato</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/manaus-116763-1">Ortopedistas - Traumatologistas Manaus</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/pompeu-132880-1">Dentistas Pompéu</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/cruzeiro-117070-1">Dentistas Cruzeiro</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/linhares-116954-1">Pediatras Linhares</a></li>
+                        <li><a href="/medicos/especialidade/dermatologistas-1314">Dermatologistas</a></li>
+                        <li><a href="/medicos/especialidade/otorrinos-1308">Otorrinos</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293">Urologistas</a></li>
                     <li><span><a href="https://www.doctoralia.com.br/lista-de-medicos">Lista de médicos</a></span></li>
                 </ul>
         </section>
         <section>
                 <ul class="mt28">
-                        <li><a href="/medicos/especialidade/dentistas-1433/rio+de+janeiro-116704-1">Dentistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/rio+de+janeiro-116704-1">Cirurgiões vasculares Rio de Janeiro</a></li>
                         <li><a href="/medicos/especialidade/pediatras-1307/rio+de+janeiro-116704-1">Pediatras Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/psiquiatras-1312/sao+paulo-116705-1">Psiquiatras São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/sao+paulo-116705-1">Fisioterapeutas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293/rio+de+janeiro-116704-1">Urologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305/rio+de+janeiro-116704-1">Oftalmologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/dermatologistas-1314/rio+de+janeiro-116704-1">Dermatologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/otorrinos-1308/rio+de+janeiro-116704-1">Otorrinos Rio de Janeiro</a></li>
                         <li><a href="/medicos/especialidade/psicologos-1434/rio+de+janeiro-116704-1">Psicólogos Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/urologistas-1293/sao+paulo-116705-1">Urologistas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/sao+paulo-116705-1">Cirurgiões vasculares São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/ginecologistas-1300/sao+paulo-116705-1">Ginecologistas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/nutricionistas-2203/rio+de+janeiro-116704-1">Nutricionistas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/endocrinologistas-1296/sao+paulo-116705-1">Endocrinologistas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/homeopatas-1335/sao+paulo-116705-1">Homeopatas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/optometristas-1865/rio+de+janeiro-116704-1">Optometristas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/psicanalistas-2789/brasilia-116707-1">Psicanalistas Brasília</a></li>
-                        <li><a href="/medicos/especialidade/optometristas-1865/belo+horizonte-116720-1">Optometristas Belo Horizonte</a></li>
-                        <li><a href="/medicos/especialidade/geneticistas-1332/curitiba-116724-1">Geneticistas Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/sao+paulo-116705-1">Ortopedistas - Traumatologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/rio+de+janeiro-116704-1">Ginecologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/anestesiologistas-1325/goiania-116733-1">Anestesiologistas Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+da+mao-1329/belo+horizonte-116720-1">Cirurgiões da mão Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/neurocirurgioes-1318/belo+horizonte-116720-1">Neurocirurgiões Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/neurofisiologistas-2639/belo+horizonte-116720-1">Neurofisiologistas Belo Horizonte</a></li>
                 </ul>
         </section>
         <section>
 <h3>Especialistas</h3>                <ul>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/preparacao+para+o+puerperio-29404/especialistas/rio+de+janeiro-116704-1">Preparação para o puerpério Rio de Janeiro</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/psicoterapia-23668/especialistas/rio+de+janeiro-116704-1">Psicoterapia Rio de Janeiro</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/tratamento+da+esquizofrenia+e+outros+transtornos+psicoticos-31099/especialistas/sao+paulo-116705-1">Tratamento da esquizofrenia e outros transtornos psicóticos São Paulo</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/avaliacao+psicopedagogica-29275/especialistas/sao+paulo-116705-1">Avaliação Psicopedagógica São Paulo</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/apoio+psicopedagogico-24763/especialistas/goiania-116733-1">Apoio Psicopedagógico Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/teste+palografico+de+personalidade-24886/especialistas/rio+de+janeiro-116704-1">Teste Palográfico de personalidade Rio de Janeiro</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/agitacao+psicomotora-13594/especialistas/brasilia-116707-1">Agitação Psicomotora Brasília</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/alienacao+parental-53973/especialistas/brasilia-116707-1">Alienação Parental Brasília</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/alienacao+parental-53973/especialistas/sao+paulo-116705-1">Alienação Parental São Paulo</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtornos+da+percepcao-17513/especialistas/sao+paulo-116705-1">Transtornos Da Percepção São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/inventario+de+ansiedade+traco-estado-23966/especialistas/rio+de+janeiro-116704-1">Inventário de Ansiedade Traço-Estado Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/anamnese+psicologica-23973/especialistas/curitiba-116724-1">Anamnese Psicológica Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/arteterapia-29309/especialistas/rio+de+janeiro-116704-1">Arteterapia Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/terapia+sexual-24956/especialistas/rio+de+janeiro-116704-1">Terapia sexual Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/laudo+pericial-29034/especialistas/sao+paulo-116705-1">Laudo Pericial São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/terapia+de+familia-25844/especialistas/brasilia-116707-1">Terapia de Família Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/hipercolesterolemia+niveis+elevados+de+colesterol-15493/especialistas/goiania-116733-1">Hipercolesterolemia (Níveis elevados de colesterol) Goiânia</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/compulsao+alimentar-52714/especialistas/brasilia-116707-1">Compulsão alimentar Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtorno+da+personalidade+esquizoide-17467/especialistas/sao+paulo-116705-1">Transtorno Da Personalidade Esquizóide São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/enurese+noturna-14910/especialistas/rio+de+janeiro-116704-1">Enurese Noturna Rio de Janeiro</a></li>
                 </ul>
         </section>
         <section>
@@ -623,9 +623,9 @@ Baseado em 2 opiniões                        </p>
                         <li><a href="https://www.doctoralia.com.br/medicos-credenciados">Convênios médicos</a></li>
             </ul>
 <span>Rede Doctoralia</span>            <ul>
-                        <li class="network"><a href="http://www.doctoralia.pe">Peru</a></li>
+                        <li class="network"><a href="http://www.doctoralia.cl">Chile</a></li>
+                        <li class="network"><a href="http://www.doctoralia-fr.com">França</a></li>
                         <li class="network"><a href="http://www.doctoralia.it">Itália</a></li>
-                        <li class="network"><a href="http://www.doctoralia.co.uk">Reino Unido</a></li>
             </ul>
         </section>
     </div>
@@ -646,7 +646,7 @@ Baseado em 2 opiniões                        </p>
 </nav>
     
     <div class="copy">
-        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 03/04/2018</span>
+        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 05/04/2018</span>
     </div>
 </footer>
     </body>

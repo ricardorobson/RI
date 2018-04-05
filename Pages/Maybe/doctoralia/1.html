@@ -3,7 +3,7 @@
 <html lang="pt-BR" >
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     
-    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXYSFl4KXxAJAQtNQQ==","queueTime":0,"applicationTime":1010,"ttGuid":"256FF6623F83C95F","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXYSFl4KXxAJAQtNQQ==","queueTime":0,"applicationTime":1045,"ttGuid":"74679357AB38FCEA","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
 <meta name="description" content="Encontre os melhores Psicólogos de Allianz Saúde entre os disponíveis. Veja opiniões de pacientes, preços e marque uma consulta on-line." /><meta name="keywords" content="Psicologia, Psicólogo, Psicólogos, Psicólogos Allianz Saúde, bom, melhor, especialistas, diretório médicos, saúde, médico, medicina privada, plano de saúde" /><meta property="og:title" content="Psicólogos Allianz Saúde" />
 <meta property="og:description" content="Encontre os melhores Psicólogos de Allianz Saúde entre os disponíveis. Veja opiniões de pacientes, preços e marque uma consulta on-line." /><meta property="og:type" content="website" />
 <meta property="og:image" content="https://www.doctoralia.com.br/content/images/logo/fb_doctoralia_logo_1500x768.png" />
@@ -233,47 +233,6 @@
                     <div>
                         <div class="clearfix">
                             <h3>
-                                <a href="https://www.doctoralia.com.br/medico/trindade+dos+santos+silva+simone-14927969">Simone Trindade dos Santos Silva</a>
-                            </h3>
-<span class="rating-avg"><span class="p100"></span></span>                        </div>
-                                                    <p>Psicologia</p>
-                                                <p class="address">R. Dr Jos&#233; de Queiroz Aranha, 19 CJ 322</p>
-                        <p class="address">04106060 S&#227;o Paulo</p>
-                    </div>
-                </td>
-                <td class="doctor-table">
-                    <table>
-                        
-
-<tbody class=" ">
-</tbody>
-
-
-
-
-
-
-
-
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-<div class="schedule scheduleListItem">
-    <table>
-        <tbody>
-            <tr>
-                <td class="doctor-rating">
-                    <div>
-                        <div class="clearfix">
-                            <h3>
                                 <a href="https://www.doctoralia.com.br/medico/braga+priscila-14787991">Priscila Braga</a>
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
@@ -356,6 +315,47 @@
                     <div>
                         <div class="clearfix">
                             <h3>
+                                <a href="https://www.doctoralia.com.br/medico/pacheco+andre-14930067">André Pacheco</a>
+                            </h3>
+<span class="rating-avg"><span class="p100"></span></span>                        </div>
+                                                    <p>Psicologia, Psican&#225;lise</p>
+                                                <p class="address">R. Ca&#231;apava, 49 (conj. 82)</p>
+                        <p class="address">01408-010 S&#227;o Paulo</p>
+                    </div>
+                </td>
+                <td class="doctor-table">
+                    <table>
+                        
+
+<tbody class=" ">
+</tbody>
+
+
+
+
+
+
+
+
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+<div class="schedule scheduleListItem">
+    <table>
+        <tbody>
+            <tr>
+                <td class="doctor-rating">
+                    <div>
+                        <div class="clearfix">
+                            <h3>
                                 <a href="https://www.doctoralia.com.br/medico/coimbra+nice-14953858">Nice Coimbra</a>
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
@@ -397,12 +397,12 @@
                     <div>
                         <div class="clearfix">
                             <h3>
-                                <a href="https://www.doctoralia.com.br/medico/mito+danielle-14907542">Dra. Danielle Mito</a>
+                                <a href="https://www.doctoralia.com.br/medico/trindade+dos+santos+silva+simone-14927969">Simone Trindade dos Santos Silva</a>
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
                                                     <p>Psicologia</p>
-                                                <p class="address">Rua Augusta</p>
-                        <p class="address">01305-901 S&#227;o Paulo</p>
+                                                <p class="address">R. Dr Jos&#233; de Queiroz Aranha, 19 CJ 322</p>
+                        <p class="address">04106060 S&#227;o Paulo</p>
                     </div>
                 </td>
                 <td class="doctor-table">
@@ -479,12 +479,12 @@
                     <div>
                         <div class="clearfix">
                             <h3>
-                                <a href="https://www.doctoralia.com.br/medico/figueiredo+faria+katia-14896275">Kátia Figueiredo Faria</a>
+                                <a href="https://www.doctoralia.com.br/medico/da+s+e+silva+thomas-12900494">Thomás da S. e Silva</a>
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
                                                     <p>Psicologia</p>
-                                                <p class="address">Rua Ramiro Barcelos, 685  (sala 705 - Edif&#237;cio Work Center - Pr&#243;ximo ao Hospital Moinhos de Vento)</p>
-                        <p class="address">90550-141 Porto Alegre</p>
+                                                <p class="address">Rua Princesa Isabel, 280, sala 903 (Esquina Rua Gon&#231;alves Chaves)</p>
+                        <p class="address">96015590 Pelotas</p>
                     </div>
                 </td>
                 <td class="doctor-table">
@@ -520,12 +520,12 @@
                     <div>
                         <div class="clearfix">
                             <h3>
-                                <a href="https://www.doctoralia.com.br/medico/abdon+abrahao+flavia-14795570">Flávia Abdon Abrahão</a>
+                                <a href="https://www.doctoralia.com.br/medico/araujo+de+oliveira+mayara-14904078">Mayara Araújo de Oliveira</a>
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
-                                                    <p>Psicologia, Terapias Complementares e Alternativas</p>
-                                                <p class="address">Rua Guido Martins Moreira,314 watsapp 12 98836-6572</p>
-                        <p class="address">12328340 Jacare&#237;</p>
+                                                    <p>Psicologia</p>
+                                                <p class="address">Avenida Lins de Vasconcelos, 3282- (Pr&#243;ximo ao metr&#244; Vila Mariana)</p>
+                        <p class="address">04112-002 S&#227;o Paulo</p>
                     </div>
                 </td>
                 <td class="doctor-table">
@@ -602,88 +602,6 @@
                     <div>
                         <div class="clearfix">
                             <h3>
-                                <a href="https://www.doctoralia.com.br/medico/ferreira+rabelo+carolina-14880730">Dra. Carolina Ferreira Rabelo</a>
-                            </h3>
-<span class="rating-avg"><span class="p100"></span></span>                        </div>
-                                                    <p>Psicologia, Psicopedagogia</p>
-                                                <p class="address">Centro M&#233;dico Marra</p>
-                        <p class="address">72015020 Bras&#237;lia</p>
-                    </div>
-                </td>
-                <td class="doctor-table">
-                    <table>
-                        
-
-<tbody class=" ">
-</tbody>
-
-
-
-
-
-
-
-
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-<div class="schedule scheduleListItem">
-    <table>
-        <tbody>
-            <tr>
-                <td class="doctor-rating">
-                    <div>
-                        <div class="clearfix">
-                            <h3>
-                                <a href="https://www.doctoralia.com.br/medico/saito+gabriel-14866392">Gabriel Saito</a>
-                            </h3>
-<span class="rating-avg"><span class="p100"></span></span>                        </div>
-                                                    <p>Psicologia, Psican&#225;lise</p>
-                                                <p class="address">Largo do Paissandu, 72, conj. 1202 </p>
-                        <p class="address">01034901 S&#227;o Paulo</p>
-                    </div>
-                </td>
-                <td class="doctor-table">
-                    <table>
-                        
-
-<tbody class=" ">
-</tbody>
-
-
-
-
-
-
-
-
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-<div class="schedule scheduleListItem">
-    <table>
-        <tbody>
-            <tr>
-                <td class="doctor-rating">
-                    <div>
-                        <div class="clearfix">
-                            <h3>
                                 <a href="https://www.doctoralia.com.br/medico/lima+danilla-13839218">Danilla Lima</a>
                             </h3>
                         </div>
@@ -725,94 +643,53 @@
                     <div>
                         <div class="clearfix">
                             <h3>
-                                <a href="https://www.doctoralia.com.br/medico/szeckir+jordana-14900823">Dra. Jordana Szeckir</a>
-                            </h3>
-<span class="rating-avg"><span class="p100"></span></span>                        </div>
-                                                    <p>Psicologia</p>
-                                                <p class="address">Consult&#243;rio Rua Apiac&#225;s, 756 conj.83</p>
-                        <p class="address">05017-020 S&#227;o Paulo</p>
-                    </div>
-                </td>
-                <td class="doctor-table">
-                    <table>
-                        
-
-<tbody class=" ">
-</tbody>
-
-
-
-
-
-
-
-
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-<div class="schedule scheduleListItem">
-    <table>
-        <tbody>
-            <tr>
-                <td class="doctor-rating">
-                    <div>
-                        <div class="clearfix">
-                            <h3>
-                                <a href="https://www.doctoralia.com.br/medico/nardoni+fernanda-14905729">Fernanda Nardoni</a>
-                            </h3>
-<span class="rating-avg"><span class="p100"></span></span>                        </div>
-                                                    <p>Psicologia</p>
-                                                <p class="address">Rua Maranh&#227;o, 620 (Pr&#243;ximo &#224;s esta&#231;&#245;es de metr&#244; Higien&#243;polis-Mackenzie, Paulista e Santa Cec&#237;lia) </p>
-                        <p class="address">01240-000 S&#227;o Paulo</p>
-                    </div>
-                </td>
-                <td class="doctor-table">
-                    <table>
-                        
-
-<tbody class=" ">
-</tbody>
-
-
-
-
-
-
-
-
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-<div class="schedule scheduleListItem">
-    <table>
-        <tbody>
-            <tr>
-                <td class="doctor-rating">
-                    <div>
-                        <div class="clearfix">
-                            <h3>
-                                <a href="https://www.doctoralia.com.br/medico/correa+brito+fernanda-14792655">Fernanda Correa Brito</a>
+                                <a href="https://www.doctoralia.com.br/medico/santos+amanda-14902692">Amanda Santos</a>
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
                                                     <p>Psicologia, Psican&#225;lise</p>
-                                                <p class="address">Rua Belmiro de Almeida, 26 - Sala 1</p>
-                        <p class="address">04127040 S&#227;o Paulo</p>
+                                                <p class="address">Rua Ana Pereira Melo, 253 (Pr&#243;ximo ao Shopping Uni&#227;o)</p>
+                        <p class="address">06023 080 Osasco</p>
+                    </div>
+                </td>
+                <td class="doctor-table">
+                    <table>
+                        
+
+<tbody class=" ">
+</tbody>
+
+
+
+
+
+
+
+
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+<div class="schedule scheduleListItem">
+    <table>
+        <tbody>
+            <tr>
+                <td class="doctor-rating">
+                    <div>
+                        <div class="clearfix">
+                            <h3>
+                                <a href="https://www.doctoralia.com.br/medico/saito+gabriel-14866392">Gabriel Saito</a>
+                            </h3>
+<span class="rating-avg"><span class="p100"></span></span>                        </div>
+                                                    <p>Psicologia, Psican&#225;lise</p>
+                                                <p class="address">Largo do Paissandu, 72, conj. 1202 </p>
+                        <p class="address">01034901 S&#227;o Paulo</p>
                     </div>
                 </td>
                 <td class="doctor-table">
@@ -890,12 +767,12 @@
                     <div>
                         <div class="clearfix">
                             <h3>
-                                <a href="https://www.doctoralia.com.br/medico/da+s+e+silva+thomas-12900494">Thomás da S. e Silva</a>
+                                <a href="https://www.doctoralia.com.br/medico/sedlmaier+ana+luisa-14866654">Dra. Ana Luisa Sedlmaier</a>
                             </h3>
 <span class="rating-avg"><span class="p100"></span></span>                        </div>
                                                     <p>Psicologia</p>
-                                                <p class="address">Rua Princesa Isabel, 280, sala 903 (Esquina Rua Gon&#231;alves Chaves)</p>
-                        <p class="address">96015590 Pelotas</p>
+                                                <p class="address">Rua Virg&#237;nia, 452</p>
+                        <p class="address">30710290 Belo Horizonte</p>
                     </div>
                 </td>
                 <td class="doctor-table">
@@ -931,12 +808,176 @@
                     <div>
                         <div class="clearfix">
                             <h3>
-                                <a href="https://www.doctoralia.com.br/medico/shimura+hugo-14846378">Hugo Shimura</a>
+                                <a href="https://www.doctoralia.com.br/medico/cardoso+vivian-14886591">Vivian Cardoso</a>
                             </h3>
-                        </div>
+<span class="rating-avg"><span class="p100"></span></span>                        </div>
+                                                    <p>Psicologia</p>
+                                                <p class="address">Avenida Le&#244;ncio de Magalhaes, 1100 (sala 3)</p>
+                        <p class="address">02042001 S&#227;o Paulo</p>
+                    </div>
+                </td>
+                <td class="doctor-table">
+                    <table>
+                        
+
+<tbody class=" ">
+</tbody>
+
+
+
+
+
+
+
+
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+<div class="schedule scheduleListItem">
+    <table>
+        <tbody>
+            <tr>
+                <td class="doctor-rating">
+                    <div>
+                        <div class="clearfix">
+                            <h3>
+                                <a href="https://www.doctoralia.com.br/medico/szeckir+jordana-14900823">Dra. Jordana Szeckir</a>
+                            </h3>
+<span class="rating-avg"><span class="p100"></span></span>                        </div>
+                                                    <p>Psicologia</p>
+                                                <p class="address">Consult&#243;rio Rua Apiac&#225;s, 756 conj.83</p>
+                        <p class="address">05017-020 S&#227;o Paulo</p>
+                    </div>
+                </td>
+                <td class="doctor-table">
+                    <table>
+                        
+
+<tbody class=" ">
+</tbody>
+
+
+
+
+
+
+
+
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+<div class="schedule scheduleListItem">
+    <table>
+        <tbody>
+            <tr>
+                <td class="doctor-rating">
+                    <div>
+                        <div class="clearfix">
+                            <h3>
+                                <a href="https://www.doctoralia.com.br/medico/correa+brito+fernanda-14792655">Fernanda Correa Brito</a>
+                            </h3>
+<span class="rating-avg"><span class="p100"></span></span>                        </div>
                                                     <p>Psicologia, Psican&#225;lise</p>
-                                                <p class="address">R. Domingo de Morais, 2187 - cj. 308 (a 350m do metr&#244; Santa Cruz)</p>
-                        <p class="address">04035-000 S&#227;o Paulo</p>
+                                                <p class="address">Rua Belmiro de Almeida, 26 - Sala 1</p>
+                        <p class="address">04127040 S&#227;o Paulo</p>
+                    </div>
+                </td>
+                <td class="doctor-table">
+                    <table>
+                        
+
+<tbody class=" ">
+</tbody>
+
+
+
+
+
+
+
+
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+<div class="schedule scheduleListItem">
+    <table>
+        <tbody>
+            <tr>
+                <td class="doctor-rating">
+                    <div>
+                        <div class="clearfix">
+                            <h3>
+                                <a href="https://www.doctoralia.com.br/medico/costa+sarah-13835852">Sarah Costa</a>
+                            </h3>
+<span class="rating-avg"><span class="p100"></span></span>                        </div>
+                                                    <p>Psicologia</p>
+                                                <p class="address">RUA OSCAR FREIRE,1919 - Especialista em Dor pelo Inst. Israelita de Ensino e Pesquisa Albert Einstein.</p>
+                        <p class="address">05409-011 S&#227;o Paulo</p>
+                    </div>
+                </td>
+                <td class="doctor-table">
+                    <table>
+                        
+
+<tbody class=" ">
+</tbody>
+
+
+
+
+
+
+
+
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+<div class="schedule scheduleListItem">
+    <table>
+        <tbody>
+            <tr>
+                <td class="doctor-rating">
+                    <div>
+                        <div class="clearfix">
+                            <h3>
+                                <a href="https://www.doctoralia.com.br/medico/pinheiro+leandro-14809096">Leandro Pinheiro</a>
+                            </h3>
+<span class="rating-avg"><span class="p100"></span></span>                        </div>
+                                                    <p>Psicologia, Psican&#225;lise</p>
+                                                <p class="address">Rua Rodrigues Caldas 726 (sala 1206)</p>
+                        <p class="address">30190-120 Belo Horizonte</p>
                     </div>
                 </td>
                 <td class="doctor-table">
@@ -968,63 +1009,66 @@
                 <input type="hidden" name="Agendas[0].AgendaId" value="3384508" />
                 <input type="hidden" name="Agendas[0].PlaceType" value="PrivatePractice" />
                 <input type="hidden" name="Agendas[0].DoctorKey" value="12718135" />
-                <input type="hidden" name="Agendas[1].AgendaId" value="3358541" />
+                <input type="hidden" name="Agendas[1].AgendaId" value="3273557" />
                 <input type="hidden" name="Agendas[1].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[1].DoctorKey" value="14927969" />
-                <input type="hidden" name="Agendas[2].AgendaId" value="3273557" />
+                <input type="hidden" name="Agendas[1].DoctorKey" value="14787991" />
+                <input type="hidden" name="Agendas[2].AgendaId" value="2139622" />
                 <input type="hidden" name="Agendas[2].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[2].DoctorKey" value="14787991" />
-                <input type="hidden" name="Agendas[3].AgendaId" value="2139622" />
+                <input type="hidden" name="Agendas[2].DoctorKey" value="12718135" />
+                <input type="hidden" name="Agendas[3].AgendaId" value="3367841" />
                 <input type="hidden" name="Agendas[3].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[3].DoctorKey" value="12718135" />
+                <input type="hidden" name="Agendas[3].DoctorKey" value="14930067" />
                 <input type="hidden" name="Agendas[4].AgendaId" value="3374267" />
                 <input type="hidden" name="Agendas[4].PlaceType" value="PrivatePractice" />
                 <input type="hidden" name="Agendas[4].DoctorKey" value="14953858" />
-                <input type="hidden" name="Agendas[5].AgendaId" value="3346322" />
+                <input type="hidden" name="Agendas[5].AgendaId" value="3358541" />
                 <input type="hidden" name="Agendas[5].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[5].DoctorKey" value="14907542" />
+                <input type="hidden" name="Agendas[5].DoctorKey" value="14927969" />
                 <input type="hidden" name="Agendas[6].AgendaId" value="3300659" />
                 <input type="hidden" name="Agendas[6].PlaceType" value="PrivatePractice" />
                 <input type="hidden" name="Agendas[6].DoctorKey" value="14832496" />
-                <input type="hidden" name="Agendas[7].AgendaId" value="3339373" />
+                <input type="hidden" name="Agendas[7].AgendaId" value="2283995" />
                 <input type="hidden" name="Agendas[7].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[7].DoctorKey" value="14896275" />
-                <input type="hidden" name="Agendas[8].AgendaId" value="3279234" />
+                <input type="hidden" name="Agendas[7].DoctorKey" value="12900494" />
+                <input type="hidden" name="Agendas[8].AgendaId" value="3344342" />
                 <input type="hidden" name="Agendas[8].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[8].DoctorKey" value="14795570" />
+                <input type="hidden" name="Agendas[8].DoctorKey" value="14904078" />
                 <input type="hidden" name="Agendas[9].AgendaId" value="3323323" />
                 <input type="hidden" name="Agendas[9].PlaceType" value="PrivatePractice" />
                 <input type="hidden" name="Agendas[9].DoctorKey" value="14873276" />
-                <input type="hidden" name="Agendas[10].AgendaId" value="3351684" />
+                <input type="hidden" name="Agendas[10].AgendaId" value="2345440" />
                 <input type="hidden" name="Agendas[10].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[10].DoctorKey" value="14880730" />
-                <input type="hidden" name="Agendas[11].AgendaId" value="3318863" />
+                <input type="hidden" name="Agendas[10].DoctorKey" value="13839218" />
+                <input type="hidden" name="Agendas[11].AgendaId" value="3358966" />
                 <input type="hidden" name="Agendas[11].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[11].DoctorKey" value="14866392" />
-                <input type="hidden" name="Agendas[12].AgendaId" value="2345440" />
+                <input type="hidden" name="Agendas[11].DoctorKey" value="14902692" />
+                <input type="hidden" name="Agendas[12].AgendaId" value="3318863" />
                 <input type="hidden" name="Agendas[12].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[12].DoctorKey" value="13839218" />
-                <input type="hidden" name="Agendas[13].AgendaId" value="3342349" />
-                <input type="hidden" name="Agendas[13].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[13].DoctorKey" value="14900823" />
-                <input type="hidden" name="Agendas[14].AgendaId" value="3345359" />
+                <input type="hidden" name="Agendas[12].DoctorKey" value="14866392" />
+                <input type="hidden" name="Agendas[13].AgendaId" value="19434" />
+                <input type="hidden" name="Agendas[13].PlaceType" value="Centre" />
+                <input type="hidden" name="Agendas[13].DoctorKey" value="14792655" />
+                <input type="hidden" name="Agendas[14].AgendaId" value="3321967" />
                 <input type="hidden" name="Agendas[14].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[14].DoctorKey" value="14905729" />
-                <input type="hidden" name="Agendas[15].AgendaId" value="3276866" />
+                <input type="hidden" name="Agendas[14].DoctorKey" value="14866654" />
+                <input type="hidden" name="Agendas[15].AgendaId" value="3332474" />
                 <input type="hidden" name="Agendas[15].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[15].DoctorKey" value="14792655" />
-                <input type="hidden" name="Agendas[16].AgendaId" value="19434" />
-                <input type="hidden" name="Agendas[16].PlaceType" value="Centre" />
-                <input type="hidden" name="Agendas[16].DoctorKey" value="14792655" />
-                <input type="hidden" name="Agendas[17].AgendaId" value="2283995" />
+                <input type="hidden" name="Agendas[15].DoctorKey" value="14886591" />
+                <input type="hidden" name="Agendas[16].AgendaId" value="3342349" />
+                <input type="hidden" name="Agendas[16].PlaceType" value="PrivatePractice" />
+                <input type="hidden" name="Agendas[16].DoctorKey" value="14900823" />
+                <input type="hidden" name="Agendas[17].AgendaId" value="3276866" />
                 <input type="hidden" name="Agendas[17].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[17].DoctorKey" value="12900494" />
-                <input type="hidden" name="Agendas[18].AgendaId" value="3316051" />
+                <input type="hidden" name="Agendas[17].DoctorKey" value="14792655" />
+                <input type="hidden" name="Agendas[18].AgendaId" value="2343010" />
                 <input type="hidden" name="Agendas[18].PlaceType" value="PrivatePractice" />
-                <input type="hidden" name="Agendas[18].DoctorKey" value="14846378" />
-            <input type="hidden" class="input-date" name="date" value="2018/04/03" />
-            <input type="hidden" class="next-date" value="2018/04/10" />
-            <input type="hidden" class="previous-date" value="2018/03/27" />
+                <input type="hidden" name="Agendas[18].DoctorKey" value="13835852" />
+                <input type="hidden" name="Agendas[19].AgendaId" value="3300713" />
+                <input type="hidden" name="Agendas[19].PlaceType" value="PrivatePractice" />
+                <input type="hidden" name="Agendas[19].DoctorKey" value="14809096" />
+            <input type="hidden" class="input-date" name="date" value="2018/04/05" />
+            <input type="hidden" class="next-date" value="2018/04/12" />
+            <input type="hidden" class="previous-date" value="2018/03/29" />
         </div>
                 <div class="clearfix"></div>
 </form>                            <script type="text/javascript">
@@ -1059,52 +1103,52 @@
     <div class="container cross-link seo clearfix" role="navigation">
         <section>
 <h3>Médicos em Brasil</h3>                <ul>
-                        <li><a href="/medicos/especialidade/oftalmologistas-1305/belo+horizonte-116720-1">Oftalmologistas Belo Horizonte</a></li>
-                        <li><a href="/medicos/especialidade/urologistas-1293/goiania-116733-1">Urologistas Goiânia</a></li>
-                        <li><a href="/medicos/especialidade/oftalmologistas-1305/goiania-116733-1">Oftalmologistas Goiânia</a></li>
-                        <li><a href="/medicos/especialidade/psicologos-1434/curitiba-116724-1">Psicólogos Curitiba</a></li>
-                        <li><a href="/medicos/especialidade/urologistas-1293/vitoria+da+conquista-116864-1">Urologistas Vitória da Conquista</a></li>
-                        <li><a href="/medicos/especialidade/dentistas-1433/lauro+de+freitas-117051-1">Dentistas Lauro de Freitas</a></li>
-                        <li><a href="/medicos/especialidade/pediatras-1307/rondonopolis-116750-1">Pediatras Rondonopolis</a></li>
-                        <li><a href="/medicos/especialidade/ginecologistas-1300/caratinga-117479-1">Ginecologistas Caratinga</a></li>
-                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/volta+redonda-116760-1">Cirurgiões plásticos Volta Redonda</a></li>
-                        <li><a href="/medicos/especialidade/dentistas-1433/jaguarao-116956-1">Dentistas Jaguarão</a></li>
+                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/belo+horizonte-116720-1">Fisioterapeutas Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/nutricionistas-2203/belo+horizonte-116720-1">Nutricionistas Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/brasilia-116707-1">Ortopedistas - Traumatologistas Brasília</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/belo+horizonte-116720-1">Cirurgiões vasculares Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/presidente+prudente-117100-1">Psicólogos Presidente Prudente</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/araraquara-116873-1">Dentistas Araraquara</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/cambe-116842-1">Pediatras Cambe</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305/juiz+de+fora-116734-1">Oftalmologistas Juiz de Fora</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/uberlandia-116759-1">Cirurgiões plásticos Uberlândia</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/imperatriz-117561-1">Dentistas Imperatriz</a></li>
+                        <li><a href="/medicos/especialidade/otorrinos-1308">Otorrinos</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293">Urologistas</a></li>
                         <li><a href="/medicos/especialidade/oftalmologistas-1305">Oftalmologistas</a></li>
-                        <li><a href="/medicos/especialidade/dermatologistas-1314">Dermatologistas</a></li>
-                        <li><a href="/medicos/especialidade/fisioterapeutas-1901">Fisioterapeutas</a></li>
                     <li><span><a href="https://www.doctoralia.com.br/lista-de-medicos">Lista de médicos</a></span></li>
                 </ul>
         </section>
         <section>
                 <ul class="mt28">
-                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/sao+paulo-116705-1">Cirurgiões plásticos São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/psiquiatras-1312/sao+paulo-116705-1">Psiquiatras São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/endocrinologistas-1296/sao+paulo-116705-1">Endocrinologistas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/sao+paulo-116705-1">Ortopedistas - Traumatologistas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/otorrinos-1308/sao+paulo-116705-1">Otorrinos São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312/rio+de+janeiro-116704-1">Psiquiatras Rio de Janeiro</a></li>
                         <li><a href="/medicos/especialidade/dentistas-1433/rio+de+janeiro-116704-1">Dentistas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/homeopatas-1335/rio+de+janeiro-116704-1">Homeopatas Rio de Janeiro</a></li>
-                        <li><a href="/medicos/especialidade/urologistas-1293/rio+de+janeiro-116704-1">Urologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/nutricionistas-2203/sao+paulo-116705-1">Nutricionistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/sao+paulo-116705-1">Cirurgiões vasculares São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/dermatologistas-1314/sao+paulo-116705-1">Dermatologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305/sao+paulo-116705-1">Oftalmologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/sao+paulo-116705-1">Ortopedistas - Traumatologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/sao+paulo-116705-1">Ginecologistas São Paulo</a></li>
                         <li><a href="/medicos/especialidade/pediatras-1307/sao+paulo-116705-1">Pediatras São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/sao+paulo-116705-1">Fisioterapeutas São Paulo</a></li>
-                        <li><a href="/medicos/especialidade/especialistas+em+dor-2840/brasilia-116707-1">Especialistas em Dor Brasília</a></li>
-                        <li><a href="/medicos/especialidade/medicos+peritos-1346/goiania-116733-1">Médicos peritos Goiânia</a></li>
-                        <li><a href="/medicos/especialidade/anestesiologistas-1325/brasilia-116707-1">Anestesiologistas Brasília</a></li>
-                        <li><a href="/medicos/especialidade/generalistas-2876/brasilia-116707-1">Generalistas Brasília</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293/sao+paulo-116705-1">Urologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/mastologistas-1301/curitiba-116724-1">Mastologistas Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/infectologistas-1323/brasilia-116707-1">Infectologistas Brasília</a></li>
+                        <li><a href="/medicos/especialidade/anatomopatologistas-1298/sao+paulo-116705-1">Anátomopatologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/gastroenterologistas-1315/rio+de+janeiro-116704-1">Gastroenterologistas Rio de Janeiro</a></li>
                 </ul>
         </section>
         <section>
 <h3>Especialistas</h3>                <ul>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/rinoplastia-15418/especialistas/goiania-116733-1">Rinoplastia Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/grupo+terapeutico+para+emagrecimento-32697/especialistas/belo+horizonte-116720-1">Grupo terapêutico para emagrecimento Belo Horizonte</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/herniorrafia+recidivante-14906/especialistas/belo+horizonte-116720-1">Herniorrafia Recidivante Belo Horizonte</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/rinoplastia-15418/especialistas/belo+horizonte-116720-1">Rinoplastia Belo Horizonte</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/reabilitacao+vestibular-30319/especialistas/rio+de+janeiro-116704-1">Reabilitação vestibular Rio de Janeiro</a></li>
-                        <li><a href="https://www.doctoralia.com.br/provamedica/bioimpedancia-23979/especialistas/goiania-116733-1">Bioimpedância Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtornos+de+ansiedade+generalizados-52658/especialistas/goiania-116733-1">Transtornos de Ansiedade Generalizados Goiânia</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/figado+gorduroso-15179/especialistas/sao+paulo-116705-1">Fígado Gorduroso São Paulo</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/fraturas+dos+dentes-15237/especialistas/curitiba-116724-1">Fraturas Dos Dentes Curitiba</a></li>
-                        <li><a href="https://www.doctoralia.com.br/enfermidade/cirrose+hepatica-14017/especialistas/rio+de+janeiro-116704-1">Cirrose Hepática Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/intercorrencia+obstetrica+na+gravidez+em+gestante+de+alto+risco-14218/especialistas/rio+de+janeiro-116704-1">Intercorrencia obstetrica na gravidez em gestante de alto risco Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/protese+de+porcelana-29007/especialistas/brasilia-116707-1">Protese de Porcelana Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/calcio-19542/especialistas/sao+paulo-116705-1">Cálcio São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/densitometria+ossea-19502/especialistas/goiania-116733-1">Densitometria óssea Goiânia</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/cirurgia+refrativa-32038/especialistas/belo+horizonte-116720-1">Cirurgia refrativa Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/trat+cirurgico+sindrome+pos+flebitica+por+qualquer+tecnica+um+membro-14096/especialistas/sao+paulo-116705-1">Trat Cirurgico Sindrome Pos Flebitica Por Qualquer Tecnica (Um Membro) São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtorno+da+conduta-17461/especialistas/curitiba-116724-1">Transtorno Da Conduta Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/hemangioma-15351/especialistas/sao+paulo-116705-1">Hemangioma São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/doencas+retais-14756/especialistas/sao+paulo-116705-1">Doenças Retais São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/bronquiolite-13870/especialistas/sao+paulo-116705-1">Bronquiolite São Paulo</a></li>
                 </ul>
         </section>
         <section>
@@ -1119,8 +1163,8 @@
             </ul>
 <span>Rede Doctoralia</span>            <ul>
                         <li class="network"><a href="http://www.doctoralia-fr.com">França</a></li>
-                        <li class="network"><a href="http://www.doctoralia.com.au">Austrália</a></li>
-                        <li class="network"><a href="http://www.doctoralia.pe">Peru</a></li>
+                        <li class="network"><a href="http://www.doctoralia.it">Itália</a></li>
+                        <li class="network"><a href="http://www.doctoralia.com.mx">México</a></li>
             </ul>
         </section>
     </div>
@@ -1141,7 +1185,7 @@
 </nav>
     
     <div class="copy">
-        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 03/04/2018</span>
+        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 05/04/2018</span>
     </div>
 </footer>
     </body>
