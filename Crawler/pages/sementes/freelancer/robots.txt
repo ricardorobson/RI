@@ -1,0 +1,11 @@
+# www.robotstxt.org/
+	# http://code.google.com/web/controlcrawlindex/
+	
+	User-agent: *
+	Disallow: /project/view/*?
+Disallow: /algemene-voorwaarden-pop
+Disallow: /het-team
+Disallow: /en
+Disallow: /pt
+Disallow: /en/*
+Disallow: /pt/*

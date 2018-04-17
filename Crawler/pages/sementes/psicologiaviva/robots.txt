@@ -1,0 +1,31 @@
+<script> 
+/*var url = window.location.href;
+url = url.replace("http://www.psicologiaviva.com.br/", "");
+if(url == "http://psicologiaviva.com.br/"){
+    window.location.href = "http://www.psicologiaviva.com.br/";
+}
+url = url.replace("http://psicologiaviva.com.br", "");*/
+
+var url = window.location.href;
+url = url.replace("https://www.psicologiaviva.com.br/", "");
+var baseUrl = "https://www.psicologiaviva.com.br/consultorioonline/";
+if(url.indexOf('https://consultorio.psicologiaviva.com.br/')>-1){
+  url = url.replace("https://consultorio.psicologiaviva.com.br/", "");
+  baseUrl = "https://consultorio.psicologiaviva.com.br/consultorioonline/"
+}
+    if(url !="" && url !="psicologos/" && url !="home/" && url !="obrigado-empresa/" && url !="empresarial" && url !="feed/" && url !="blog/" && url !="quem-somos/" && url !="programa-de-bem-estar-e-equilibrio-emocional/" && url !="rede-social/" && url !="como-funcionar/" && url !="faqs/" && url !="consultor/" && url !="processo-de-selecao/" && url !="planos-e-precos/"  && url !="perfis-consultores/" && url !="documentacao/" && url !="comofunciona/" && url !="ufaq-category/psicologos/" && url !="testewebcam/" && url !="dicasemanuais/" && url !="paciente/"){      
+
+        if(url.indexOf('blog') == -1 && url.indexOf('calculadora') == -1 && url.indexOf('cupom') == -1 && url.indexOf('token') == -1 && url.indexOf('porto-seguro-socorro') == -1 && url.indexOf('porto-seguro-automoveis') == -1 && url.indexOf('materiais-gratuitos') == -1 && url.indexOf('convenio') == -1 && url.indexOf('produto') == -1 && url.indexOf('loja') == -1 && url.indexOf('finalizar') == -1 && url.indexOf('carrinho') == -1 && url.indexOf('s=') == -1 && url.indexOf('orientacaobreve/') == -1 && url.indexOf('empresarial') == -1 && url.indexOf('consultor/') == -1 && url.indexOf('wp-admin/') == -1 && url.indexOf('rede-social/') == -1 && url.indexOf('grupos/') == -1 && url.indexOf('user/') == -1  && url.indexOf('consultores/') == -1 && url.indexOf('consulta/') == -1 && url.indexOf('?members_page') == -1 && url.indexOf('videos-tutorias/') == -1 && url.indexOf('atividades/') == -1 && url.indexOf('testewebcam/') == -1 && url.indexOf('fidelidade/') == -1 && url.indexOf('wp-includes/') == -1 && url.indexOf('members/') == -1 && url.indexOf('dicas-para-seu-atendimento-online-no-portal-psicologia-viva/') == -1 && url.indexOf('convenios-para-empresas/') == -1 && url.indexOf('psicologia-viva-empresarial/') == -1 && url.indexOf('termos-de-uso/') == -1 && url.indexOf('contatos/') == -1 && url.indexOf('brazil/') == -1 && url.indexOf('convenios-ativos/') == -1 && url.indexOf('eficacia-de-orientacao-psicologica-online/') == -1 && url.indexOf('seja-um-afiliado/') == -1 && url.indexOf('planos-para-clinicas/') == -1){  
+            window.location.href = baseUrl+url;
+     }
+    }
+    
+</script>
+
+<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/c75ac981-1e36-47d4-afb3-452e0fe6310d-loader.js" ></script>
+
+
+
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
