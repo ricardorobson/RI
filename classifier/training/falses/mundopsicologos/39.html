@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta name="google-site-verification" content="s32CC9KBp2vRpndTzJq3TfWfl6ATxlZRyLmzNaBNBXw" />
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+        <title>Perguntas a Psicólogos - MundoPsicologos.com</title>
+                    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    
+    <meta name="robots" content="index,follow" />
+            <link rel="canonical" href="https://br.mundopsicologos.com/perguntas" />
+    
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Perguntas a Psicólogos - MundoPsicologos.com" />
+        <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://br.mundopsicologos.com/perguntas" />
+    <meta property="og:image" content="https://br.mundopsicologos.com/site/own/site_cover.png" />
+    <meta property="og:site_name" content="br" />
+    <!-- Twitter Card -->
+            <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@BRpsicologos" />
+        <meta name="twitter:title" content="Perguntas a Psicólogos - MundoPsicologos.com" />
+                <meta name="twitter:image" content=" https://br.mundopsicologos.com/site/own/site_cover.png " />
+    
+    <!-- The Grid -->
+
+            <link media="screen" type="text/css" rel="stylesheet" href="/10005910/css/gen/psicologos/front_master.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/js/vendor/jquery-ui/themes/base/jquery-ui.min.css" />
+            <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-35714415-1', 'auto');
+        ga('create', 'UA-11698778-10', 'auto', 'countryTracker');
+        ga('create', 'UA-11698778-2', 'auto', 'globalTracker');
+
+        if (typeof window.Storage !== 'undefined' && localStorage.getItem('ie-usr-type')) {
+            ga('set', 'dimension4', localStorage.getItem('ie-usr-type'));
+            ga('globalTracker.set', 'dimension4', localStorage.getItem('ie-usr-type'));
+            ga('countryTracker.set', 'dimension4', localStorage.getItem('ie-usr-type'));
+        }
+
+                                        ga('require', 'GTM-N4PGQ3J');
+            ga('send', 'pageview');
+            ga('globalTracker.send', 'pageview');
+            ga('countryTracker.send', 'pageview');
+        
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1394448900661738');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1394448900661738&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    </head>
+
+
+    <body class="page-list"          id="qanda_home"          data-meta="qanda-front"    >
+        <div id="smart_banner" class="ie-smart-banner">
+    <div class="ie-smart-banner-close">
+        <span id="smart_banner_close" class="ie-smart-banner-close-btn">&#10006;</span>
+    </div>
+    <div class="ie-smart-banner-content">
+        <div class="ie-smart-banner-content-img">
+            <img src="https://cdn20.br.mundopsicologos.com/site/own/app_user_icon.jpg"  width="44" height="44">
+        </div>
+        <div class="ie-smart-banner-name">MundoPsicologos.com</div>
+        <div class="ie-smart-banner-stars">
+            <span class="icon-star-full"></span>
+            <span class="icon-star-full"></span>
+            <span class="icon-star-full"></span>
+            <span class="icon-star-full"></span>
+            <span class="icon-star-half"></span>
+        </div>
+        <div class="ie-smart-banner-sub">
+            <span class="ie-only ie-only_android">GRÁTIS - No Google Play</span>
+            <span class="ie-only ie-only_ios">GRÁTIS - Na App Store</span>
+        </div>
+    </div>
+    <div class="ie-smart-banner-cta">
+        <a href="https://play.google.com/store/apps/details?id=com.intercomempresas.user.phsycologists" target="_blank" class="ie-smart-banner-btn ie-only ie-only_android"
+           onclick="window.gaqTrackEvent('mobile', 'smart_banner', 'install_android')">
+            Instalar
+        </a>
+        <a href="https://itunes.apple.com/app/apple-store/id1151071425?pt=101826870&ct=smartbanner&mt=8" target="_blank" class="ie-smart-banner-btn ie-only ie-only_ios"
+            onclick="window.gaqTrackEvent('mobile', 'smart_banner', 'install_ios')">
+            Instalar
+        </a>
+    </div>
+</div>
+
+        <div class="container" >
+            <header>
+    <div id="header" class="menu-top">
+        <div class="company-access">
+            <div class="js_login_box">
+                <a id ="profile-login" href="/profile/login" rel="nofollow" title="Acesso usuários">
+                    <span class="icon-user-access"></span>
+                    Acesso usuários
+                </a>
+            </div>
+            <a href="/front/user_account/login" rel="nofollow" title="Acesso consultório">
+                <span class="icon-company-access"></span>
+                Acesso consultório
+            </a>
+            <a href="/register_web" rel="nofollow" title="Cadastrar seu consultório">
+                Cadastre grátis seu consultório
+            </a>
+        </div>
+    </div>
+    <div class="menu-site">
+        <div class="menu-hamburguer" id="js_mob_hamburguer" data-role="hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+                    <div class="project-logo">
+                    <a href="/" title="psicólogos" rel="home">
+                <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_color.svg" alt="psicólogos" title="psicólogos" class="desktop-logo"/>
+                <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_white.svg" alt="psicólogos" title="psicólogos" class="mob-logo"/>
+            </a>
+                    </div>
+                <nav id="js_mob-menu" class="menu-options">
+            <a href="/"
+               title="Psicólogos"
+               rel="home"
+               class="home ">
+                <span class="icon-home2"></span>
+                Início
+            </a>
+            <a id="js_companies_list_btn"
+               href="/consultorios"
+               title="Consultórios de MundoPsicologos.com"
+               class="">
+                <span class="icon-list-2"></span>
+                Psicólogos
+            </a>
+                        <a href="/artigos"
+               title="Tudo sobre psicologia"
+               class="">
+                <span class="icon-article"></span>
+                Artigos
+            </a>
+                                        <a href="/perguntas" title="Perguntas" class="active">
+                    <span class="icon-question-bubble"></span>
+                    Perguntas
+                </a>
+                                                    <a href="/comunidade" title="Fórum" class="">
+                    <span class="icon-community2"></span>
+                    Fórum
+                </a>
+                                    <div class="loginBox">
+                <a href="/profile/login"
+                   rel="nofollow"
+                   title="Acesso usuários">
+                    <span class="icon-user-access"></span>
+                    Acesso usuários
+                </a>
+                <a href="/front/user_account/login"
+                   rel="nofollow"
+                   title="Acesso consultório">
+                    <span class="icon-company-access"></span>
+                    Acesso consultório
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+                <aside class="home-qanda">
+        <div class="content">
+            <div class="row">
+                <aside data-role="breadcrumb" class="new-breadcrumb">
+                        <ul>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <span>
+                    <a href="/"
+                       title="Psicólogos" itemprop="url">
+                        <span itemprop="title">Psicólogos</span>
+                    </a> &nbsp;&gt;
+                </span>
+
+                        </li>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <strong itemprop="title">Perguntas</strong>
+                <meta itemprop="url" content="https://br.mundopsicologos.com/perguntas" />
+                        </li>
+            </ul>
+                </aside>
+                <div class="question-in row" data-open-answer="">
+    <div class="eightcol">
+        <div class="question-form">
+            <h2>
+                Explique seu caso à nossa comunidade de psicólogos!
+            </h2>
+            <span>Qual é a sua dúvida? Psicólogos especializados no assunto respondem à sua pergunta</span>
+            <form id="qanda_question_form" action="/qanda/save_question" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <label class="pholder absolute">Escreva a sua pergunta</label>
+                    <input tabindex="2" id="qqu_title" name="qqu_title" autocomplete="off" title="Escreva a sua pergunta" placeholder="Escreva a sua pergunta" />
+                    <div class="js_duplicate_question duplicate_question">
+                        <div class="js_similar_qanda text-align-L">Verifique se há perguntas similares já respondidas:</div>
+                        <ul></ul>
+                    </div>
+                </fieldset>
+                <div id="questfrm2" class="i-block">
+                    <fieldset class="float-L">
+                        <label class="pholder absolute" for="qqu_description">Detalhe e comente a sua pergunta</label>
+                        <textarea tabindex="3" id="qqu_description" name="qqu_description" title="" placeholder="Detalhe e comente a sua pergunta"></textarea>
+                    </fieldset>
+                    <div class="float-R tip-box">
+                        <ul><li><strong>Escreva de forma correta:</strong> evite erros de ortografia e não redija tudo em maiúsculas</li><li><strong>Expresse-se de forma clara:</strong> use uma linguagem direta e com exemplos concretos</li><li><strong>Seja respeitoso:</strong>não use vocabulário inadequado e mantenha as boas maneiras</li><li><strong>Evite SPAM:</strong> não coloque informação pessoal (telefone, e-mail, etc.) nem publicidade</li></ul><br />Se o que você deseja é pedir informação como cliente, clique <a href="/consultorios">aqui</a>
+                    </div>
+
+                    <div class="clean question-opts">
+                        <span class="i-block">Como você deseja enviar sua pergunta?</span>
+                        <ul>
+                            <li class="clean">
+                                <input id="public" type="radio"  name="question_type" value="1" checked="checked" class="rad-btn float-L" />
+                                <label for="public" class="float-L">
+                                    <strong class="i-block">Pública: em nossa seção de Perguntas</strong>
+                                    Sua pergunta e as respostas serão publicadas no portal. Você receberá retorno rápido
+                                </label>
+                            </li>
+                            <li class="clean">
+                                <input id="private" type="radio" name="question_type" value="2" class="rad-btn float-L" />
+                                <label for="private" class="float-L">
+                                    <strong class="i-block">Privada: diretamente a um psicólogo</strong>
+                                    Enviaremos sua dúvida a expertos no tema, que se oferecerão para acompanhar o seu caso. Por isso, serão necessários alguns dados.
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clean">
+                        <fieldset id="qanda_img"></fieldset>
+                        <fieldset id="qanda_img_embed"></fieldset>
+                        <span class="icon-trash" id="qanda_image_remove">Excluir</span>
+                    </div>
+
+                    <div class="clean question-data">
+                        <fieldset class="clean">
+                            <label class="pholder absolute">Nome</label>
+                            <span class="icon-user"></span>
+                            <input id="usr_name" name="usr_name" placeholder="Nome" title="Nome" />
+                            <div class="txt-adv">Nome (será publicado)</div>
+                        </fieldset>
+                        <fieldset class="clean">
+                            <label class="pholder absolute">E-mail</label>
+                            <span class="icon-envelope"></span>
+                            <input id="usr_email" name="usr_email" type="email" placeholder="E-mail" title="E-mail" />
+                            <div class="txt-adv">E-mail em que receberá as respostas</div>
+                        </fieldset>
+                    </div>
+
+                    <div class="question-data privacy-data" id="private_info">
+                        <fieldset class="clean">
+                            <label class="pholder absolute">Telefone</label>
+                            <span class="icon-phone"></span>
+                            <input id="usr_phone" name="usr_phone" type="tel" placeholder="Telefone" title="Telefone" />
+                            <div class="txt-adv">Para que possam atender-lhe por telefone</div>
+                        </fieldset>
+
+                        <fieldset class="clean">
+                            <label class="pholder absolute">Localidade</label>
+                            <span class="icon-location"></span>
+                            <input id="population_autocomplete"
+                                   name="population_autocomplete"
+                                   data-no-focus="true"
+                                   class="ui-autocomplete-input"
+                                   data-autocomplete='{"country": "29", "template": "1"}'
+                                   autocomplete="off"
+                                   type="text"
+                                   placeholder="Localidade"
+                                   title="Localidade" />
+                            <input type="hidden" name="ae2_id" id="ae2_id" value="" />
+                            <input type="hidden" name="pop_id" id="pop_id" value="" />
+                            <div class="txt-adv">Para escolher expertos da sua região</div>
+                        </fieldset>
+
+                        <fieldset class="clean">
+                            <label class="pholder absolute">Serviço</label>
+                            <!-- <span class="icon-list"></span> -->
+                            <select id="usr_category" name="usr_category" title="Serviço">
+                                <option value = "-1">Serviço</option>
+                                                                    <option id="3445" value="3445">
+                                        Abordagem psicológica
+                                    </option>
+                                                                    <option id="3424" value="3424">
+                                        Alcoolismo
+                                    </option>
+                                                                    <option id="3412" value="3412">
+                                        Anorexia
+                                    </option>
+                                                                    <option id="3414" value="3414">
+                                        Ansiedade
+                                    </option>
+                                                                    <option id="3457" value="3457">
+                                        Atendimento de urgência
+                                    </option>
+                                                                    <option id="3456" value="3456">
+                                        Atendimento domiciliar
+                                    </option>
+                                                                    <option id="3413" value="3413">
+                                        Bulimia
+                                    </option>
+                                                                    <option id="3430" value="3430">
+                                        Déficit de atenção
+                                    </option>
+                                                                    <option id="3411" value="3411">
+                                        Depressão
+                                    </option>
+                                                                    <option id="3423" value="3423">
+                                        Drogas
+                                    </option>
+                                                                    <option id="3421" value="3421">
+                                        Fobia
+                                    </option>
+                                                                    <option id="3431" value="3431">
+                                        Fracasso escolar
+                                    </option>
+                                                                    <option id="3442" value="3442">
+                                        Gestalt terapia
+                                    </option>
+                                                                    <option id="3435" value="3435">
+                                        Hipnose
+                                    </option>
+                                                                    <option id="3420" value="3420">
+                                        Pânico
+                                    </option>
+                                                                    <option id="3407" value="3407">
+                                        Problemas psicológicos
+                                    </option>
+                                                                    <option id="3434" value="3434">
+                                        Psicanálise
+                                    </option>
+                                                                    <option id="3444" value="3444">
+                                        Psicologia infantil
+                                    </option>
+                                                                    <option id="3410" value="3410">
+                                        Psicoterapias
+                                    </option>
+                                                                    <option id="3443" value="3443">
+                                        Sexualidade
+                                    </option>
+                                                                    <option id="3415" value="3415">
+                                        Stress
+                                    </option>
+                                                                    <option id="3436" value="3436">
+                                        Terapia cognitiva
+                                    </option>
+                                                                    <option id="3438" value="3438">
+                                        Terapia de casal
+                                    </option>
+                                                                    <option id="3447" value="3447">
+                                        Teste vocacional
+                                    </option>
+                                                                    <option id="3446" value="3446">
+                                        Testes psicológicos
+                                    </option>
+                                                                    <option id="3417" value="3417">
+                                        TOC
+                                    </option>
+                                                                    <option id="3418" value="3418">
+                                        Transtorno bipolar
+                                    </option>
+                                                                    <option id="3422" value="3422">
+                                        Traumas
+                                    </option>
+                                                            </select>
+                            <div class="txt-adv">Para escolher aos expertos mais adequados</div>
+                        </fieldset>
+                    </div>
+
+                                            <div id="g_recaptcha" class="g-recaptcha"
+                             data-sitekey="6LcxGRkUAAAAADf4_vpjjo5xf_CR7KRJzR4QArez">
+                        </div>
+                    
+                    <fieldset class="clean up-offsets">
+                        <label for="accept_cond">
+                            <input class="float-L rad-btn" type="checkbox" id="accept_cond" name="accept_cond" required/>
+                            Li e aceito as <a href="/aviso_legal" target="_blank" rel="nofollow">Condições legais</a> e a <a href="/proteccion_datos" target="_blank" rel="nofollow">Política de Proteção de Dados</a> (receberá ofertas por e-mail e poderá pedir o cancelamento das comunicações a qualquer momento).
+                        </label>
+                    </fieldset>
+                    <fieldset class="text-align-L">
+                        <button id="send_quest" type="submit" class="std-btn btn-big">
+                            Perguntar
+                        </button>
+                    </fieldset>
+                    <input type="hidden" id="js_upload_form" />
+                </div>
+            </form>
+                            <div class="mt-20">
+                    <div class="top-tags-qanda clean">
+    <h3>
+        Assuntos mais populares
+    </h3>
+    <ul>
+                    <li>
+                <a href="/perguntas/tag/medo">medo</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/filho">filho</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/panico">pânico</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/trabalho">trabalho</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/relacao">relação</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/sexual">sexual</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/casamento">casamento</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/depressao">depressão</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/familia">família</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/perda">perda</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/separacao">separação</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/ansiedade">ansiedade</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/bipolar">bipolar</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/vocacional">vocacional</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/comportamento">comportamento</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/crianca">criança</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/angustiada">angustiada</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/traicao">traição</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/trauma">trauma</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/libido">libido</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/terapia">terapia</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/vida">vida</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/mae">mãe</a>,            </li>
+                    <li>
+                <a href="/perguntas/tag/marido">marido</a>.            </li>
+            </ul>
+    <a href="javascript:void(0);" class="hide_dsktp hide_tblt top-tags-qanda-link" id="show_home_tags">
+        Ver mais
+    </a>
+</div>
+                </div>
+                    </div>
+    </div>
+    <div class="last fourcol">
+        <ul class="qanda-stats">
+            <li class="p-circle n-prof">
+                <strong>7550</strong>
+                <span>psicólogos à sua disposição</span>
+            </li>
+            <li class="p-circle n-questions">
+                <strong>3650</strong>
+                <span>perguntas feitas</span>
+            </li>
+            <li class="p-circle n-answers">
+                <strong>21850</strong>
+                <span>respostas dadas</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    function catchImageId(object, data) {
+        var $form = $("#qanda_question_form");
+        if ($form.find('#iid').length > 0) {
+            $form.find('#iid').val(data.result['iid']);
+        } else {
+            $form.append('<input type="hidden" id="iid" name="iid" value="' + data.result['iid'] + '" />');
+        }
+    }
+
+            (function (d) {
+            var sc = d.createElement('script'); sc.async = true; sc.src = 'https://www.google.com/recaptcha/api.js';
+            var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
+        }(document));
+    </script>
+            </div>
+        </div>
+    </aside>
+    <section class="wrapper">
+        <div class="row listing-cols">
+                        <div class="sixcol">
+                <h3 class="qanda-modules-ttl">
+                    <strong>Últimas perguntas</strong>
+                                            <span class="float-R">
+                            <a href="/perguntas/perguntas_respostas" data-role="last_questions">
+                                Ver todas as perguntas
+                            </a>
+                        </span>
+                                    </h3>
+                <div class="qanda-module lst-qanda">
+                    <input type="hidden" id="qanda_last_questions_limit"  value="0" />
+                    <div id="qanda_last_questions_content">
+                        <ul>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">1</span>
+            <a href="/perguntas/o-que-devo-fazer-para-mudar-isso" data-role="go-qanda-question-with-answer" title="O que devo fazer para mudar isso?">
+                O que devo fazer para mudar isso?
+            </a>
+                            <span>
+                    2 respostas, última resposta em Hoje
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">2</span>
+            <a href="/perguntas/como-funciona-a-psicanalise" data-role="go-qanda-question-with-answer" title="Como funciona a psicanálise?">
+                Como funciona a psicanálise?
+            </a>
+                            <span>
+                    1 resposta, última resposta em Hoje
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">3</span>
+            <a href="/perguntas/tem-cura" data-role="go-qanda-question-with-answer" title="Tem cura?">
+                Tem cura?
+            </a>
+                            <span>
+                    1 resposta, última resposta em Hoje
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">4</span>
+            <a href="/perguntas/noivo-com-prostitutas" data-role="go-qanda-question" title="Noivo com prostitutas">
+                Noivo com prostitutas
+            </a>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">5</span>
+            <a href="/perguntas/por-que-me-sinto-tao-inutil" data-role="go-qanda-question-with-answer" title="Por que me sinto tão inútil?">
+                Por que me sinto tão inútil?
+            </a>
+                            <span>
+                    1 resposta, última resposta em Hoje
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">6</span>
+            <a href="/perguntas/estou-cansanda-ja-nao-sei-o-que-fazer" data-role="go-qanda-question-with-answer" title="Estou cansanda, já não sei o que fazer">
+                Estou cansanda, já não sei o que fazer
+            </a>
+                            <span>
+                    1 resposta, última resposta em Hoje
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">7</span>
+            <a href="/perguntas/tenho-fobia-social" data-role="go-qanda-question-with-answer" title="Tenho fobia social">
+                Tenho fobia social
+            </a>
+                            <span>
+                    3 respostas, última resposta em Hoje
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">8</span>
+            <a href="/perguntas/quando-a-ansiedade-afasta-tudo-e-todos" data-role="go-qanda-question-with-answer" title="Quando a ansiedade afasta tudo e todos">
+                Quando a ansiedade afasta tudo e todos
+            </a>
+                            <span>
+                    1 resposta, última resposta em Hoje
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">9</span>
+            <a href="/perguntas/meu-filho-de-9-anos-sente-muito-ciumes-de-mim" data-role="go-qanda-question-with-answer" title="Meu filho de 9 anos sente muito ciúmes de mim">
+                Meu filho de 9 anos sente muito ciúmes de mim
+            </a>
+                            <span>
+                    1 resposta, última resposta em Hoje
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">10</span>
+            <a href="/perguntas/terminei-com-meu-namorado-por-medo-de-uma-depressao-futura" data-role="go-qanda-question-with-answer" title="Terminei com meu namorado por medo de uma depressão futura">
+                Terminei com meu namorado por medo de uma depressão futura
+            </a>
+                            <span>
+                    1 resposta, última resposta em Hoje
+                </span>
+                    </li>
+    </ul>
+                    </div>
+                </div>
+            </div>
+            
+                        <div class="sixcol last">
+                <h3 class="qanda-modules-ttl">
+                    <strong>Perguntas Top</strong>
+                                            <span class="float-R">
+                            <a href="/perguntas/perguntas_respostas" data-role="top_questions">
+                                Ver todas as perguntas
+                            </a>
+                        </span>
+                                    </h3>
+                <div class="qanda-module top-qanda">
+                    <input type="hidden" id="qanda_top_questions_limit" value="0" />
+                    <div id="qanda_top_questions_content" >
+                        <ul>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">1</span>
+            <a href="/perguntas/eu-queria-saber-quanto-esta-mais-ou-menos-uma-consulta-para-um-adolescente" data-role="go-qanda-question-with-answer" title="Eu queria saber, quanto está mais ou menos uma consulta? Para um adolescente!">
+                Eu queria saber, quanto está mais ou menos uma consulta? Para um adolescente!
+            </a>
+                            <span>
+                    86 respostas, última resposta em 28 Mar 2018
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">2</span>
+            <a href="/perguntas/como-decidir-entre-a-razao-e-o-coracao" data-role="go-qanda-question-with-answer" title="Como decidir entre a razão e o coração?">
+                Como decidir entre a razão e o coração?
+            </a>
+                            <span>
+                    24 respostas, última resposta em 17 Out 2017
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">3</span>
+            <a href="/perguntas/meu-marido-le-contos-sexuais-incestos-temos-uma-filha-o-que-fazer" data-role="go-qanda-question-with-answer" title="Meu marido lê contos sexuais incestos. Temos uma filha. O que fazer?">
+                Meu marido lê contos sexuais incestos. Temos uma filha. O que fazer?
+            </a>
+                            <span>
+                    14 respostas, última resposta em 6 Out 2017
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">4</span>
+            <a href="/perguntas/como-lidar-com-minha-filha-lesbica" data-role="go-qanda-question-with-answer" title="Como lidar com minha filha lésbica?">
+                Como lidar com minha filha lésbica?
+            </a>
+                            <span>
+                    29 respostas, última resposta em 6 Fev 2018
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">5</span>
+            <a href="/perguntas/sentir-raiva-das-pessoas-sem-motivo-e-normal" data-role="go-qanda-question-with-answer" title="Sentir raiva das pessoas sem motivo é normal?">
+                Sentir raiva das pessoas sem motivo é normal?
+            </a>
+                            <span>
+                    16 respostas, última resposta em 21 Nov 2017
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">6</span>
+            <a href="/perguntas/o-curso-de-psicologia-tem-aula-de-anatomia" data-role="go-qanda-question-with-answer" title="O curso de psicologia tem aula de anatomia?">
+                O curso de psicologia tem aula de anatomia?
+            </a>
+                            <span>
+                    31 respostas, última resposta em 6 Out 2017
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">7</span>
+            <a href="/perguntas/minha-filha-de-11-anos-esta-roubando-dinheiro-dentro-de-casa" data-role="go-qanda-question-with-answer" title="Minha filha de 11 anos está roubando dinheiro dentro de casa">
+                Minha filha de 11 anos está roubando dinheiro dentro de casa
+            </a>
+                            <span>
+                    16 respostas, última resposta em 23 Out 2017
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">8</span>
+            <a href="/perguntas/o-que-fazer-para-voltar-a-ter-tesao-com-o-meu-marido" data-role="go-qanda-question-with-answer" title="O que fazer para voltar a ter tesão com o meu marido?">
+                O que fazer para voltar a ter tesão com o meu marido?
+            </a>
+                            <span>
+                    16 respostas, última resposta em 10 Nov 2017
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">9</span>
+            <a href="/perguntas/e-necessario-colocar-uma-crianca-com-3-anos-na-escola" data-role="go-qanda-question-with-answer" title="É necessário colocar uma criança com 3 anos na escola?">
+                É necessário colocar uma criança com 3 anos na escola?
+            </a>
+                            <span>
+                    16 respostas, última resposta em 3 Out 2017
+                </span>
+                    </li>
+            <li class="qanda-item">
+            <span class="q-bullet icon-icon-arrow-right">10</span>
+            <a href="/perguntas/nao-sinto-mais-desejo-sexual-pelo-meu-marido-o-que-eu-faco" data-role="go-qanda-question-with-answer" title="Não sinto mais desejo sexual pelo meu marido. O que eu faço?">
+                Não sinto mais desejo sexual pelo meu marido. O que eu faço?
+            </a>
+                            <span>
+                    16 respostas, última resposta em 27 Mar 2018
+                </span>
+                    </li>
+    </ul>
+                    </div>
+                </div>
+            </div>
+            
+                        <div class="twelvecol">
+                <div class="top-active">
+                    <div class="qanda-top-companys">
+    <h3>
+        Consultórios mais ativos
+    </h3>
+    <ul>
+                    <li class="top-companys">
+                                    <a href="https://br.mundopsicologos.com/consultorios/maite-hammoud">
+                        <img src="https://cdn20.br.mundopsicologos.com/site/company/62/286481/logo/maite-hammoud_li1.png" alt="" class="float-L" />
+                        <div class="float-L">
+                            Maitê Hammoud
+                            <span class="i-block">
+                                (1265 respostas)
+                            </span>
+                            <span class="i-block">
+                                                                    (25956 Votos positivos)
+                                                            </span>
+                        </div>
+                    </a>
+                            </li>
+                    <li class="top-companys">
+                                    <a href="https://br.mundopsicologos.com/consultorios/leonardo-viana-de-vasconcelos-martins">
+                        <img src="https://cdn20.br.mundopsicologos.com/site/company/e3/182854/logo/leonardo-viana-de-vasconcelos-martins_li1.png" alt="" class="float-L" />
+                        <div class="float-L">
+                            Leonardo Viana de Vasconcelos Martins
+                            <span class="i-block">
+                                (1038 respostas)
+                            </span>
+                            <span class="i-block">
+                                                                    (19453 Votos positivos)
+                                                            </span>
+                        </div>
+                    </a>
+                            </li>
+                    <li class="top-companys">
+                                    <a href="https://br.mundopsicologos.com/consultorios/ussenade-maria-de-oliveira">
+                        <img src="https://cdn20.br.mundopsicologos.com/site/company/94/273957/logo/ussenade-maria-de-oliveira_li1.png" alt="" class="float-L" />
+                        <div class="float-L">
+                            Ussénade Maria de Oliveira
+                            <span class="i-block">
+                                (624 respostas)
+                            </span>
+                            <span class="i-block">
+                                                                    (18379 Votos positivos)
+                                                            </span>
+                        </div>
+                    </a>
+                            </li>
+                    <li class="top-companys">
+                                    <a href="https://br.mundopsicologos.com/consultorios/sandra-elena-carosio">
+                        <img src="https://cdn20.br.mundopsicologos.com/site/company/79/255381/logo/sandra-elena-carosio_li1.png" alt="" class="float-L" />
+                        <div class="float-L">
+                            Sandra Elena Carosio
+                            <span class="i-block">
+                                (476 respostas)
+                            </span>
+                            <span class="i-block">
+                                                                    (15771 Votos positivos)
+                                                            </span>
+                        </div>
+                    </a>
+                            </li>
+                    <li class="top-companys">
+                                    <a href="https://br.mundopsicologos.com/consultorios/fernanda-veronesi-de-menezes">
+                        <img src="https://cdn20.br.mundopsicologos.com/site/company/71/323356/logo/fernanda-veronesi-de-menezes_li1.png" alt="" class="float-L" />
+                        <div class="float-L">
+                            Fernanda Veronesi de Menezes
+                            <span class="i-block">
+                                (475 respostas)
+                            </span>
+                            <span class="i-block">
+                                                                    (1386 Votos positivos)
+                                                            </span>
+                        </div>
+                    </a>
+                            </li>
+                    <li class="top-companys">
+                                    <a href="https://br.mundopsicologos.com/consultorios/aline-ms-de-coster-psicoterapia-analitica">
+                        <img src="https://cdn20.br.mundopsicologos.com/site/company/dc/293072/logo/aline-ms-de-coster-psicoterapia-analitica_li1.png" alt="" class="float-L" />
+                        <div class="float-L">
+                            Aline MS De Coster Psicoterapia Analítica
+                            <span class="i-block">
+                                (469 respostas)
+                            </span>
+                            <span class="i-block">
+                                                                    (16200 Votos positivos)
+                                                            </span>
+                        </div>
+                    </a>
+                            </li>
+                    <li class="top-companys">
+                                    <a href="https://br.mundopsicologos.com/consultorios/elisa-canellas-lengler">
+                        <img src="https://cdn20.br.mundopsicologos.com/site/company/9b/321313/logo/elisa-canellas-lengler_li1.png" alt="" class="float-L" />
+                        <div class="float-L">
+                            Elisa Canellãs Lengler
+                            <span class="i-block">
+                                (447 respostas)
+                            </span>
+                            <span class="i-block">
+                                                                    (7744 Votos positivos)
+                                                            </span>
+                        </div>
+                    </a>
+                            </li>
+                    <li class="top-companys">
+                                    <a href="https://br.mundopsicologos.com/consultorios/clinica-afetto-psicologia">
+                        <img src="https://cdn20.br.mundopsicologos.com/site/company/db/323531/logo/clinica-afetto-psicologia_li1.png" alt="" class="float-L" />
+                        <div class="float-L">
+                            Clínica Afetto Psicologia
+                            <span class="i-block">
+                                (355 respostas)
+                            </span>
+                            <span class="i-block">
+                                                                    (1041 Votos positivos)
+                                                            </span>
+                        </div>
+                    </a>
+                            </li>
+            </ul>
+    <div class="clean">&nbsp;</div>
+</div>
+                </div>
+            </div>
+            
+            <div class="qanda-search-box">
+    <h3>Procure entre as perguntas já publicadas</h3>
+    <p>
+        Encontre respostas entre as mais de 3650 perguntas feitas em MundoPsicologos.com
+    </p>
+    <form action="/perguntas/search" method="get">
+        <input name="searchq" id="qanda_search" type="text" />
+        <button type="submit" id="qanda_search_submit" class="icon-featured"></button>
+    </form>
+</div>
+
+                    </div>
+
+        <!-- lead chat -->
+                    <div class="row">
+                <div class="lead-chat" id="js_register_call_us">
+                    <div>
+                        <a href='https://br.mundopsicologos.com/landing/deixe-seus-problemas-para-tras-47' target="_blank">
+                            <span class="icon-comment"></span>
+                            Fale com um psicólogo
+                        </a>
+                    </div>
+                </div>
+            </div>
+                <!-- lead chat -->
+    </section>
+
+            <footer id="footer">
+    <aside class="footer">
+        <div class="wrapper">
+            <div class="footer-site">
+                <div class="project-logo">
+                    <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_white.svg" alt="psicólogos" title="psicólogos" width="150" height="31"/>
+                </div>
+                <ul>
+                    <li>
+                        <a href="/quienes" rel="nofollow" title="Quem somos">
+                            Quem somos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/aviso_legal" rel="nofollow" title="Condições legais">
+                            Condições legais
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/proteccion_datos" rel="nofollow" title="Proteção de dados">
+                            Proteção de dados
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/guia_comunidades" rel="nofollow" title="Condições de Participação do Fórum">
+                            Condições de Participação do Fórum
+                        </a>
+                    </li>
+                </ul>
+                <ul class="last">
+                                            <li>
+                            <a href="/potenciales" rel="nofollow" title="Plano Premium">
+                                Plano Premium
+                            </a>
+                        </li>
+                                        <li>
+                        <a href="/register_web" rel="nofollow" title="Cadastrar seu consultório">
+                            Cadastrar seu consultório
+                        </a>
+                    </li>
+                    <li><a href="/front/user_account/login" rel="nofollow" title="Acesso consultório">
+                            Acesso consultório
+                        </a>
+                    </li>
+                </ul>
+                                    <div class="social">
+                        <span>Siga-nos:</span>
+                                                    <a class="icon-facebook" onclick="gaqTrackEvent('socialButtons', 'footer_web', 'facebook');"
+                               href="https://www.facebook.com/MundopsicologosBrasil" target="_blank" rel="noopener"></a>
+                                                                            <a class="icon-twitter" onclick="gaqTrackEvent('socialButtons', 'footer_web', 'twitter');"
+                               href="https://twitter.com/BRpsicologos" target="_blank" rel="noopener"></a>
+                                            </div>
+                            </div>
+            <div class="footer-seo">
+                                                            <span>Últimos consultórios de psicologia</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/pamela-rosa-psicologa" title="Pâmela Rosa Psicóloga">Pâmela Rosa Psicóloga</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/lais-tamara-dos-santos-psicologa" title="Lais Tamara dos Santos Psicóloga">Lais Tamara dos Santos Psicóloga</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/kelvio-silva-psicologo" title="Kélvio Silva Psicólogo">Kélvio Silva Psicólogo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/marcela-romero-psicologa" title="Marcela Romero Psicóloga">Marcela Romero Psicóloga</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/tamara-alves-psicologa" title="Tamara Alves Psicóloga">Tamara Alves Psicóloga</a>
+                                </li>
+                                                    </ul>
+                    
+                                            <span>Estados Top</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/sao-paulo" title="Psicólogos São Paulo">Psicólogos São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/rio-de-janeiro" title="Psicólogos Rio de Janeiro">Psicólogos Rio de Janeiro</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/parana" title="Psicólogos Paraná">Psicólogos Paraná</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/santa-catarina" title="Psicólogos Santa Catarina">Psicólogos Santa Catarina</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/minas-gerais" title="Psicólogos Minas Gerais">Psicólogos Minas Gerais</a>
+                                </li>
+                                                    </ul>
+                    
+                    
+                                            <span>Serviços por estado</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/ansiedade/sao-paulo" title="Angústia São Paulo">Angústia São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/depressao/sao-paulo" title="Depressão São Paulo">Depressão São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/stress/sao-paulo" title="Estresse São Paulo">Estresse São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologia-clinica/sao-paulo" title="Psicólogo clínico São Paulo">Psicólogo clínico São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/traumas/sao-paulo" title="Traumas São Paulo">Traumas São Paulo</a>
+                                </li>
+                                                    </ul>
+                    
+                                            <span>Pesquisas recentes</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/fobia" title="Fobia">
+                                        Fobia
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicoterapias" title="Psicoterapias">
+                                        Psicoterapias
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologia-clinica" title="Psicologia clínica">
+                                        Psicologia clínica
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/depressao" title="Psicólogos Depressão">
+                                        Psicólogos Depressão
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/ansiedade" title="Psicólogos Ansiedade">
+                                        Psicólogos Ansiedade
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/terapia-de-casal" title="Terapia de casal">
+                                        Terapia de casal
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                </div>
+        </div>
+    </aside>
+    <aside class="footer-bottom">
+        <div class="wrapper">
+            <ul>
+                                    <li>
+                        <span class="flg-ar"></span>
+                        <a href="https://www.mundopsicologos.com.ar">Mundopsicologos.com.ar</a>
+                    </li>
+                                    <li>
+                        <span class="flg-br"></span>
+                        <a href="https://br.mundopsicologos.com">MundoPsicologos.com</a>
+                    </li>
+                                    <li>
+                        <span class="flg-cl"></span>
+                        <a href="https://www.psicologosonline.cl">PsicologosOnline.cl</a>
+                    </li>
+                                    <li>
+                        <span class="flg-co"></span>
+                        <a href="https://www.psicologos.com.co">Psicologos.com.co</a>
+                    </li>
+                                    <li>
+                        <span class="flg-es"></span>
+                        <a href="https://www.mundopsicologos.com">MundoPsicologos.com</a>
+                    </li>
+                                    <li>
+                        <span class="flg-fr"></span>
+                        <a href="https://www.psychologue.net">Psychologue.net</a>
+                    </li>
+                                    <li>
+                        <span class="flg-it"></span>
+                        <a href="https://www.guidapsicologi.it">GuidaPsicologi.it</a>
+                    </li>
+                                    <li>
+                        <span class="flg-mx"></span>
+                        <a href="https://www.psico.mx">Psico.mx</a>
+                    </li>
+                
+                            </ul>
+        </div>
+    </aside>
+</footer>
+
+            <div id="ie_m_overlay" class="ie-modal-overlay"></div>
+<div id="ie_m" class="ie-modal-wrapper">
+    <div class="ie-modal">
+        <span class="ie-modal-close icon-x ie_m_close"></span>
+        <div id="ie_m_title" class="ie-modal-title"></div>
+        <div id="ie_m_container" class="ie-modal-content"></div>
+        <div id="ie_m_loader" class="ie-modal-loader">
+            <div class="ie-modal-loader-item"></div>
+        </div>
+    </div>
+</div>            <div id="user_type_intercept" style="display: none;">
+    <p style="font-size: 20px; font-weight: 700; margin: 40px 0 0;" class="ie-text--primary">Quer falar com um psicólogo?</p>
+    <p style="font-size: 18px; line-height: 1.4;">Envie sua mensagem para receber ajuda dos nossos profissionais</p>
+    <div style="margin: 60px auto 20px;">
+        <a class="new-std-btn ie_m_close" target="_blank" style="display: inline-block; min-width: 200px; padding: 13px 20px; height: 45px;"
+           href="https://br.mundopsicologos.com/landing/deixe-seus-problemas-para-tras-47">
+            Enviar mensagem
+        </a>
+    </div>
+    <p style="font-size: 14px; color: #7B7F7F; line-height: 1.4; margin-bottom: 40px;">Seu contato é privado e sem compromisso</p>
+</div>
+                    </div>
+                        
+    <script type="text/javascript" src="/10005910/site/own/_configurations.js"></script>
+    <script type="text/javascript" src="/10005910/js/jquery-iempresas.js"></script>
+    <script type="text/javascript" src="/10005910/js/global.js"></script>
+            <script type="text/javascript" src="/10005910/js/iempresas.js"></script>
+    
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC2ZF8"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MC2ZF8');</script>
+    <!-- End Google Tag Manager -->
+    
+    <script type="text/javascript">
+        //<![CDATA[
+        $.extend(App.pageVar, {
+            couId: "29",
+            proId: "92"
+        });
+        //]]>
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MundoPsicologos.com",
+      "url": "https://br.mundopsicologos.com",
+      "logo": "https://br.mundopsicologos.com/site/own/logo_color.png",
+      "sameAs": [
+                    "https://www.facebook.com/MundopsicologosBrasil",
+                            "https://twitter.com/BRpsicologos"
+                      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://br.mundopsicologos.com/search?search={search}",
+        "query-input": "required name=search"
+      }
+    }
+    </script>
+
+    
+    <script>
+    (function (d) {
+        var sc = d.createElement('script'); sc.async = true; sc.src = '/10005910/js/source-control.js';
+        var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
+    }(document));
+</script>
+        
+
+        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a9443b4dd8","applicationID":"4706831,16053980","transactionName":"YAFXbEcDCEMHVkANWllLdk1GFgldSXxxCUVFAUZZRj4lXwhBRgtZWwFHZHMQCV4SaXIWWlkQZFlbBgcKFV1bE31YCVA=","queueTime":0,"applicationTime":570,"atts":"TEZUGg8ZG00=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

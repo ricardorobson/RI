@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<head>
+&#9;&#9;<title>&#9;&#9;&#9;&#9;&#9;
+&#9;&#9;&#9;&#9;&#9;Cadastro Paciente
+&#9;&#9;&#9;&#9;
+&#9;&#9;</title>
+
+&#9;<!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8; IE=9" /> <![endif]-->
+&#9;
+&#9;<!-- link rel="StyleSheet" href="/consultorioonline/res-plc/css/azul/pele.css" type="text/css" charset="UTF-8" />
+	<link rel="StyleSheet" href="/consultorioonline/res-plc/css/plc.comuns.css" type="text/css" charset="UTF-8" /-->
+&#9;&#9;
+&#9;<script type="text/javascript" charset="UTF-8">
+		function setValuesInPlcGeral() {
+			plcGeral.contextPath = "/consultorioonline";
+			plcGeral.formPattern = "Man";
+		}
+	</script>
+&#9;
+&#9;<script src="/consultorioonline/res-plc/javascript/plc.comuns.js" type="text/javascript" charset="UTF-8"></script>&#9;&#9;
+&#9;
+&#9;<script type="text/javascript">
+	  plc.jq(function(){
+			plc.jq("a.ui-state-default").hover(
+				function(){ plc.jq(this).addClass("ui-state-hover"); },
+				function(){ plc.jq(this).removeClass("ui-state-hover"); }
+			)
+			plc.jq("span.ui-state-default").hover(
+				function(){ plc.jq(this).addClass("ui-state-hover"); },
+				function(){ plc.jq(this).removeClass("ui-state-hover"); }
+			)
+			plc.jq("button.ui-state-default").hover(
+				function(){ plc.jq(this).addClass("ui-state-hover"); },
+				function(){ plc.jq(this).removeClass("ui-state-hover"); }
+			)
+		});
+	</script>
+&#9;
+&#9;<script type="text/javascript" charset="utf-8">
+	//<![CDATA[
+
+		jQuery(document).ready(function (){
+					
+			jQuery("#corpo\\:formulario\\:botaoAcaoPesquisar").click(function(){
+				jQuery("input").each(function(i){
+					if ((jQuery(this).hasClass('af_inputText_content') || (jQuery(this).hasClass('af_inputDate_content')))&& jQuery(this).val() != null && jQuery(this).val() != ''){
+						jQuery('#cadpacienteArg').append('<input type="hidden" id="impressao:'+jQuery(this).attr('id')+'" value="'+jQuery(this).val()+'" class="campo_impressao"/>');
+					}
+				});
+			});
+		});
+				
+	//]]>
+	</script><script type="text/javascript" src="/consultorioonline/f/javax.faces.resource/jsf.js;jsessionid=024A95DA9EBE2E22E225F8903E51F673?ln=javax.faces"></script></head><body onload="iniciarPagina();">
+&#9;&#9;<div id="app">
+&#9;&#9;
+&#9;&#9;&#9;<div id="plc-corpo" class="ui-widget ui-widget-content plc-corpo                    plc-corpo-popup "><script type="text/javascript">var _AdfWindowOpenError='Foi detectado um bloqueador de janela pop-up no seu browser. Esses bloqueadores interferem na opera\xe7\xe3o desta aplica\xe7\xe3o. Desative seu bloqueador de pop-ups ou permita popups a partir deste site.';</script><script type="text/javascript" src="/consultorioonline/adf/jsLibs/Locale2_0_0_beta_2.js;jsessionid=024A95DA9EBE2E22E225F8903E51F673"></script><script type="text/javascript" src="/consultorioonline/adf/jsLibs/Common2_0_0_beta_2.js;jsessionid=024A95DA9EBE2E22E225F8903E51F673"></script><form id="corpo:formulario" name="corpo:formulario" method="POST" onkeypress="return _submitOnEnter(event,'corpo:formulario');" action="/consultorioonline/f/n/cadpacienteman;jsessionid=024A95DA9EBE2E22E225F8903E51F673?cid=1">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;<script type="text/javascript">
+										//<![CDATA[
+											plc.jq(document).unbind('keydown');
+										//]]>	
+									</script>
+&#9;<div>
+&#9;&#9;
+&#9;<div class="plc-msg" id="plc-mensagem">
+&#9;&#9;&#9;<div class="ui-corner-all plc-msg-erro alert alert-dismissable alert-danger" style="display:none"></div>
+&#9;&#9;&#9;<div class="ui-corner-all plc-msg-sucesso alert alert-dismissable alert-success" style="display:none"></div>
+&#9;&#9;&#9;<div class="ui-corner-all plc-msg-advertencia alert alert-dismissable alert-warning" style="display:none"></div>
+&#9;&#9;&#9;<div class="ui-corner-all plc-msg-livre alert alert-dismissable alert-info" style="display:none"></div>
+&#9;&#9;</div>
+
+&#9;&#9; <script type="text/javascript">
+		 	plc.jq(function(){
+                var erro = [];plc.mensagem('erro', erro);var sucesso = [];plc.mensagem('sucesso', sucesso);var advertencia = [];plc.mensagem('advertencia', advertencia);var livre = [];plc.mensagem('livre', livre);
+                });
+          </script>
+&#9;</div>
+&#9;&#9;<div id="plc-corpo-acao" class="plc-corpo-acao">
+&#9;&#9;&#9;<!-- Acoes Genericas -->
+<div id="plc-corpo-acao-generico" class="plc-corpo-acao-generico"><script type="text/javascript">var _pprUpDatemode=false;function _adfspu(f,v,e,s,o){_pprUpdateMode=true;if(!o)o=new Object();if(e)o.event=e;if(s)o.source=s;_submitPartialChange(f,v,o);}</script><button id="corpo:formulario:botaoAcaoRecuperaPorDemanda" name="corpo:formulario:botaoAcaoRecuperaPorDemanda" type="button" onclick="return _chain('mojarra.ab(\'corpo:formulario:botaoAcaoRecuperaPorDemanda\',event,\'action\',\'@form\',\'@form\',{\'onevent\':plc.oneventJsf,\'onerror\':plc.manipulaErroAjax,\'skipValidation\':\'true\'});return false','TrPage._autoSubmit(\'corpo:formulario\',\'corpo:formulario:botaoAcaoRecuperaPorDemanda\',null,1);return false;',this,null,true)" onmouseout="this.className='botao_menu ui-state-default plc-botao'" onmouseover="this.className='botao_menu2 ui-state-hover plc-botao'" class="ui-helper-hidden af_commandButton" style="display:none"><table><tr></tr></table></button><button id="corpo:formulario:botaoAcaoGravar" name="corpo:formulario:botaoAcaoGravar" type="button" title="ctrl+f12" onclick="return _chain('return _chain(\'beforeSubmit(); return execExclusaoGravacao(); \',\'mojarra.ab(\\\'corpo:formulario:botaoAcaoGravar\\\',event,\\\'action\\\',\\\'@form\\\',\\\'@form\\\',{\\\'onevent\\\':plc.oneventJsf,\\\'onerror\\\':plc.manipulaErroAjax});return false\',this,null,true)','TrPage._autoSubmit(\'corpo:formulario\',\'corpo:formulario:botaoAcaoGravar\',null,1);return false;',this,null,true)" onmouseout="this.className='botao_menu ui-state-default plc-botao'" onmouseover="this.className='botao_menu2 ui-state-hover plc-botao'" class="botao_menu ui-state-default plc-botao af_commandButton" style="display:none"><table><tr><td><div class="plc-corpo-acao-i"><span class="ico iGravar"></span></div></td><td><div class="plc-corpo-acao-t">Gravar</div></td></tr></table></button>
+<script id="avaliar:corpo:formulario:botaoAcaoGravar" type="text/javascript">
+function execExclusaoGravacao() { return executarExclusaoGravacao('botaoAcaoGravar','Tem certeza de que deseja excluir os registros selecionados?');}plc.hotkey('ctrl+f12', 'botaoAcaoGravar');</script>
+<button id="corpo:formulario:botaoAcaoAbrir_EXIBE_ALERTA_ALTERACAO" name="corpo:formulario:botaoAcaoAbrir_EXIBE_ALERTA_ALTERACAO" type="button" title="ctrl+f8" onclick="document.location='https://www.psicologiaviva.com.br/consultorioonline/f/n/cadpacientesel?modoJanelaPlc=popup'" onmouseout="this.className='botao_menu ui-state-default plc-botao'" onmouseover="this.className='botao_menu2 ui-state-hover plc-botao'" class="botao_menu ui-state-default plc-botao af_commandButton"><table><tr><td><div class="plc-corpo-acao-i"><span class="ico iAbrir"></span></div></td><td><div class="plc-corpo-acao-t">Abrir</div></td></tr></table></button>
+<script id="avaliar:corpo:formulario:botaoAcaoAbrir_EXIBE_ALERTA_ALTERACAO" type="text/javascript">
+plc.hotkey('ctrl+f8', 'botaoAcaoAbrir_EXIBE_ALERTA_ALTERACAO');</script>
+
+&#9;&#9;&#9;&#9;<a id="linkPermanente" href="/consultorioonline/f/n/cadpacienteman?" type="button" title="Reabre com link pr&oacute;prio">
+&#9;&#9;&#9;&#9;&#9;<img class="plc-icone-acao-fixo" src="/consultorioonline/res-plc/midia/form-permalink.png">
+&#9;&#9;&#9;&#9;</a><!-- /Mostra botao? -->
+&#9;<div id="plc-ajuda" class="plc-painel" style="visibility: hidden">
+&#9;&#9;<h1 style="text-align:center;">Ajuda
+&#9;&#9;&#9;<span class="fechar" onclick="janelaPainel(document.getElementById('plc-ajuda'));">X</span>
+&#9;&#9;</h1>
+&#9;</div>
+&#9;&#9;<div style="visibility:hidden;width:1px;height:1px;"><button id="corpo:formulario:plc-acao-desconecta0" name="corpo:formulario:plc-acao-desconecta0" type="button" title="ctrl+end" onclick="return _chain('mojarra.ab(\'corpo:formulario:plc-acao-desconecta0\',event,\'action\',\'@form\',\'@form\',{\'onevent\':plc.oneventJsf,\'onerror\':plc.manipulaErroAjax,\'skipValidation\':\'true\'});return false','submitForm(\'corpo:formulario\',1,{source:\'corpo:formulario:plc-acao-desconecta0\'});return false;',this,null,true)" onmouseout="this.className='botao_menu ui-state-default plc-botao'" onmouseover="this.className='botao_menu2 ui-state-hover plc-botao'" class="botao_menu ui-state-default plc-botao af_commandButton" style="display:none"><table><tr><td><div class="plc-corpo-acao-t">Desconectar</div></td></tr></table></button>
+<script id="avaliar:corpo:formulario:plc-acao-desconecta0" type="text/javascript">
+plc.hotkey('ctrl+end', funcaoDesconectar);</script>
+<input type="hidden" id="corpo:formulario:idTreeView" name="corpo:formulario:idTreeView"><button id="corpo:formulario:editObjectTreeView" name="corpo:formulario:editObjectTreeView" type="button" title="ctrl+f2" onclick="return _chain('mojarra.ab(\'corpo:formulario:editObjectTreeView\',event,\'action\',\'@form\',\'@form\',{\'onevent\':plc.oneventJsf,\'onerror\':plc.manipulaErroAjax,\'skipValidation\':\'true\'});return false','TrPage._autoSubmit(\'corpo:formulario\',\'corpo:formulario:editObjectTreeView\',null,1);return false;',this,null,true)" onmouseout="this.className='botao_menu ui-state-default plc-botao'" onmouseover="this.className='botao_menu2 ui-state-hover plc-botao'" class="botao_menu ui-state-default plc-botao af_commandButton" style="display:none"><table><tr><td><div class="plc-corpo-acao-t">Editar</div></td></tr></table></button>
+<script id="avaliar:corpo:formulario:editObjectTreeView" type="text/javascript">
+plc.hotkey('ctrl+f2', 'editObjectTreeView');</script>
+&#9;&#9;&#9;
+&#9;&#9;</div>
+</div>
+&#9;&#9;&#9;<!-- Acoes da aplicacao-->
+<!-- Hotjar Tracking Code for http://www.psicologiaviva.com.br -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:274333,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+&#9;&#9;&#9;<div id="plc-corpo-acao-personalisado" class="plc-corpo-acao-generico">
+&#9;&#9;&#9;&#9;<!--PONTO_INSERCAO-->
+&#9;&#9;&#9;<script>
+			//document.getElementById("plc-menu-sistema").style.display = "none";
+			document.getElementById("linkPermanente").style.display = "none";
+		
+			</script>
+&#9;&#9;&#9;</div>
+&#9;&#9;&#9;<!-- Acoes do caso de uso (se houver) -->
+&#9;&#9;</div>&#9;
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;<!-- INI --><!-- Usado para impressao -->
+&#9;&#9;&#9;<div id="plc-form-basico" class="plc-form-basico-topo">
+&#9;&#9;&#9;&#9;<div id="cadpacienteMan">  
+    
+        <script type="text/javascript">
+            //<![CDATA[
+if(window.location.host != "localhost:8081" && window.location.host != "localhost:8080" && window.location.host != "localhost:8082"){
+    if(window.location.protocol == "http:"){
+    //    window.location.href = window.location.href.replace("http:", "https:"); 
+    }
+}
+//]]>
+</script>
+
+<script>
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1322267537854021',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+
+     FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+// Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    //console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me?fields=id,email,name', function(response) {      
+      document.getElementById('id_j_username').value = response.email;
+      document.getElementById('j_password').value = response.id;
+       document.getElementById('j_username_cad').value = response.email;
+       document.getElementById('j_password_cad').value = response.id;
+       document.getElementById('j_password_cad2').value = response.id;
+            document.getElementById('name').value = response.name;
+            if(response.id!=null){
+              document.getElementById('login').click();
+            }
+
+    });
+  }
+
+  function checkLoginState() {
+    FB.api('/me?fields=id,email,name', function(response) {      
+      document.getElementById('corpo:formulario:nome').value = response.name;
+      document.getElementById('corpo:formulario:email').value = response.email;
+       document.getElementById('corpo:formulario:senha').value = response.id;
+       document.getElementById('corpo:formulario:senha2').value = response.id;
+      document.getElementById('agree').click();
+            if(response.id!=null){
+              document.getElementById('criarConta').click();
+            }
+
+    });
+  } 
+
+    
+</script>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9&appId=1322267537854021";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+function statusChangeCallback(response) {
+    //console.log('statusChangeCallback');
+    //console.log(response);
+    if(response.id!=null){
+              document.getElementById('login').click();
+            }
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      //testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  }
+</script>
+
+&#9;&#9; <script type="text/javascript">
+						//<![CDATA[
+
+						
+						function verificaAgenda() {
+							jQuery.ajax({
+								   type: "GET",
+								   url: "/consultorioonline/f/n/cadpacienteman?modoJanelaPlc=popup&sucesso=s",
+								   success: function(msg){
+								   }
+								 });
+						}
+						
+						 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4158167-1', 'auto');
+  ga('send', 'pageview');
+  
+  		//]]>
+		</script>
+&#9;&#9;
+&#9;&#9;
+    
+    
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/consultorioonline/res-plc/image/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/consultorioonline/res-plc/image/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/consultorioonline/res-plc/image/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../image/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="/consultorioonline/res-plc/image/favicon.ico">
+
+        <link rel="stylesheet" href="/consultorioonline/res-plc/plugins/selectize/css/selectize.css">
+        <link rel="stylesheet" href="/consultorioonline/res-plc/plugins/flot/css/flot.css">
+        <link rel="stylesheet" href="/consultorioonline/res-plc/main.css">
+        <link rel="stylesheet" href="/consultorioonline/res-plc/stylesheet/bootstrap.css">
+        <link rel="stylesheet" href="/consultorioonline/res-plc/stylesheet/layout.css">
+        <link rel="stylesheet" href="/consultorioonline/res-plc/stylesheet/uielement.css">
+        <script type="text/javascript" src="/consultorioonline/res-plc/javascript/cidades-estados-1.0-utf8.js"></script>
+        
+        <script>
+        document.getElementById("plc-ajuda").style.display = "none";
+        document.getElementById("linkPermanente").style.display = "none";
+        document.getElementById("plc-corpo-acao-generico").style.display = "none";
+        </script>
+        
+        <style>
+        
+        .panel {
+    background-color: #f3f3ff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+
+        </style>
+        
+     <script type="text/javascript">
+        //<![CDATA[
+
+        function getQueryVariable(variable) {
+              var query = window.location.search.substring(1);
+              var vars = query.split("&");
+              for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                  return pair[1];
+                }
+              } 
+            } 
+            var dataConsulta = getQueryVariable("dataConsulta");
+    
+            var loginProfissional = getQueryVariable("loginProfissional");
+            var loginFinaliza = getQueryVariable("loginFinaliza");
+            var loginFinalizaBreve = getQueryVariable("loginFinalizaBreve");
+            var AA = getQueryVariable("AA");
+        //]]>
+        </script>
+        
+        <body style="background-color:#EDEDEE">
+         <section id="main" role="main">
+            <section class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <div class="text-center" style="margin-bottom:20px;">
+                            <div class="text-center" style="margin-top: 20px"><a href="/consultorioonline/">
+                                <img src="/consultorioonline/res-plc/image/logo/logo-login.png" alt="Psicologia Viva"></a>
+                            </div>
+                            <h3 class="semibold text-muted mt-5">Criar nova conta</h3>
+                            <h2 class="semibold text-muted mt-5">Paciente</h2>
+                        </div>
+                         <p id="temConta" class="text-center"><font size="5px">
+                            <span class="text-muted">J&aacute; tem uma conta? <a class="semibold" id="linkLogin" href="/consultorioonline/">Entre agora</a></span></font>
+                        </p>
+                        <!-- div style="display:none" id="botaoOK">
+                            <a href="javascript:window.history.go(-1)"> <button type="button" class="btn btn-primary">Voltar</button></a>
+                        </div-->
+                        <div id="panel" class="panel" name="form-register">
+                        <!-- Register form -->
+  
+  
+         
+  <fb:login-button scope="public_profile,email" style="display: block" id="entrarFb" login_text="Cadastrar com o Facebook" onlogin="checkLoginState();"></fb:login-button> 
+
+                        <div class="alert alert-dismissable alert-info">
+                                    <strong>* Campos Obrigat&oacute;rios</strong> 
+                                </div>
+                                 <div class="col-sm-12 panel">
+                            <div class="panel-body panel">
+                                <div class="form-group">
+                                    <label class="control-label">* Nome Completo</label>
+                                    <div class="has-icon pull-left"><input id="corpo:formulario:nome" type="text" name="corpo:formulario:nome" class="form-control" maxlength="40" size="40">
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">* E-mail</label>
+                                    <div class="has-icon pull-left"><input id="corpo:formulario:email" type="text" name="corpo:formulario:email" class="form-control" maxlength="40" size="40">  
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">* Senha</label>
+                                    <div class="has-icon pull-left"><input id="corpo:formulario:senha" type="password" name="corpo:formulario:senha" value="" maxlength="20" size="20" class="form-control">
+                                        <i class="ico-key2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Repita sua Senha</label>
+                                    <div class="has-icon pull-left"><input id="corpo:formulario:senha2" type="password" name="corpo:formulario:senha2" value="" class="form-control">
+                                        <i class="ico-asterisk form-control-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">* Celular</label>
+                                    <div class="has-icon pull-left"><input id="corpo:formulario:telefone" type="text" name="corpo:formulario:telefone" class="form-control">
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                 <div class="form-group">
+                                    <label class="control-label">Caso perten&ccedil;a a um conv&ecirc;nio, insira o c&oacute;digo abaixo:</label>
+                                    <div class="has-icon pull-left"><input id="corpo:formulario:convenio" type="text" name="corpo:formulario:convenio" class="form-control" maxlength="20" size="15">
+                                        <i class="ico-tags3 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                 <!-- div class="form-group">
+                                    <label class="control-label">* CPF</label>
+                                    <div class="has-icon pull-left">
+                                         <h:inputText styleClass="form-control" value="" required="true" requiredMessage="CPF é Obrigatório"  id="cpf"/>
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                 <div class="form-group">
+                                    <label class="control-label">* Data Nascimento</label>
+                                    <div class="has-icon pull-left">
+                                         <h:inputText styleClass="form-control" value="" required="true" requiredMessage="Data de Nascimento é Obrigatório"  id="dataNascimento"/>
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">* Telefone</label>
+                                    <div class="has-icon pull-left">
+                                         <h:inputText styleClass="form-control" value="" required="true" requiredMessage="Telefone é Obrigatório" id="telefone"/>
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                </div-->
+                                
+                                  </div>
+                                  </div>
+                                  
+                                      <div class="col-sm-6 panel">
+                        <!-- Register form -->
+                            <!--div class="panel-body panel">
+                                
+                                <div class="form-group">
+                                    <label class="control-label">* Cep</label>  
+                                    <div class="has-icon pull-left">
+                                         <h:inputText styleClass="form-control" value="" required="true" requiredMessage="CEP é Obrigatório" id="cep"/>
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                 <div class="form-group">
+                                    <label class="control-label">* Endereço</label>
+                                    <div class="has-icon pull-left">
+                                         <h:inputText styleClass="form-control" value="" data-cep="logradouro" required="true" requiredMessage="Endereço é Obrigatório" size="40" maxlength="40"  id="endereco"/>
+                                          <input type="text" id="logradouro"   onchange="javascript:document.getElementById('corpo:formulario:endereco').value = jQuery('#logradouro').val();" style="display:none" data-cep="logradouro"></input>
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                 <div class="form-group">
+                                    <label class="control-label">* Número</label>
+                                    <div class="has-icon pull-left">
+                                         <h:inputText styleClass="form-control" value="" required="true" requiredMessage="Numero é Obrigatório" size="10" maxlength="10"  id="numero"/>
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                 <div class="form-group">
+                                    <label class="control-label">Complemento</label>
+                                    <div class="has-icon pull-left">
+                                         <h:inputText styleClass="form-control" value="" size="40" maxlength="40"  id="completo"/>
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                 <div class="form-group">
+                                    <label class="control-label">* Bairro</label>
+                                    <div class="has-icon pull-left">
+                                         <h:inputText styleClass="form-control" value="" data-cep="bairro" size="40" maxlength="40" required="true" requiredMessage="Bairro é Obrigatório"  id="bairro"/>
+                                          <input type="text" id="bairro2"   onchange="javascript:document.getElementById('corpo:formulario:bairro').value = jQuery('#bairro2').val();" style="display:none" data-cep="bairro"></input>
+                                        <i class="ico-user2 form-control-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                        <label class="control-label" for="estadoCidade">* Estado</label>
+                                          <h:inputText name="estado3" id="estado3" value="" data-cep="uf" styleClass="form-control" />
+                                          <input type="text" id="estado2"   onchange="javascript:document.getElementById('corpo:formulario:estado3').value = jQuery('#estado2').val(); document.getElementById('corpo:formulario:estado3').onchange();" style="display:none" data-cep="uf"></input>
+                                          <label class="control-label" for="estadoCidade">* Cidade</label>
+                                          <h:inputText name="cidade3" id="cidade3" value="" data-cep="cidade" required="true" requiredMessage="Cidade é Obrigatório" styleClass="form-control" />
+                                          <input type="text" id="cidade2"   onchange="javascript:document.getElementById('corpo:formulario:cidade3').value = jQuery('#cidade2').val();" style="display:none" data-cep="cidade"></input>
+                                          <script language="JavaScript" type="text/javascript" charset="utf-8">
+                                            new dgCidadesEstados({
+                                              cidade: document.getElementById('corpo:formulario:cidade3'),
+                                              estado: document.getElementById('corpo:formulario:estado3'),
+                                              change: true
+                                            })
+                                          </script>
+                                    </div>
+                               
+                            </div-->
+                            
+                             </div>
+                          
+                        </div>  
+                        
+                        <div class="col-sm-12 panel" id="panel2" style="margin-top: -50px">
+                             
+                                          <!-- p class="semibold text-muted">Para confirmar e ativar sua nova conta, vamos enviar o código de ativação para o seu e-mail.</p-->
+                                <div class="form-group">
+                                    <div class="checkbox custom-checkbox text-muted">  
+                                        <input type="checkbox" name="agree" id="agree" value="1" onclick="ativaBotao()">  
+                                        <label for="agree">&nbsp;&nbsp;Eu aceito os <a href="javascript:termo();" class="semibold">Termos de servi&ccedil;o</a></label>   
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox custom-checkbox text-muted">  
+                                        <input type="checkbox" name="news" id="news" value="1">  
+                                        <label for="news">&nbsp;&nbsp;Gostaria de receber novidades do Psicologia Viva.</label>   
+                                    </div>
+                                </div>             
+                                <br>
+                                
+                                 <div class="panel-footer">
+                                <button type="button" id="criarConta" onclick="document.getElementById('corpo:formulario:botaoAcaoGravar').click();" class="btn btn-block btn-success">CRIAR CONTA</button>
+                                
+                                <p class="text-center">
+                            <span class="text-muted">J&aacute; tem uma conta? <a class="semibold" href="/consultorioonline/">Entre agora</a></span>
+                        </p>
+                            </div>
+                            
+                              </div>
+                    </div> 
+                </div> 
+            </section>
+        </section>
+        </body>
+         <script type="text/javascript" src="/consultorioonline/res-plc/javascript/vendor.js"></script>
+        <script type="text/javascript" src="/consultorioonline/res-plc/javascript/core-min.js"></script>
+        <!-- script type="text/javascript" src="/consultorioonline/res-plc/javascript/backend/app-min.js"></script-->
+
+        <script type="text/javascript" src="/consultorioonline/res-plc/javascript/pace.min.js"></script>
+        <script type="text/javascript" src="/consultorioonline/res-plc/plugins/selectize/js/selectize.js"></script>
+        <script type="text/javascript" src="/consultorioonline/res-plc/plugins/flot/js/jquery.flot.js"></script>
+        <script type="text/javascript" src="/consultorioonline/res-plc/plugins/flot/js/jquery.flot.resize.js"></script>
+        <script type="text/javascript" src="/consultorioonline/res-plc/plugins/flot/js/jquery.flot.categories.js"></script>
+        <script type="text/javascript" src="/consultorioonline/res-plc/plugins/flot/js/jquery.flot.time.js"></script>
+        <script type="text/javascript" src="/consultorioonline/res-plc/plugins/flot/js/jquery.flot.tooltip.js"></script>
+        <script type="text/javascript" src="/consultorioonline/res-plc/plugins/flot/js/jquery.flot.spline.js"></script>
+        <script type="text/javascript" src="/consultorioonline/res-plc/javascript/jquery/jquery-2.1.1.min.js"></script>
+        <!-- script type="text/javascript" src="/consultorioonline/res-plc/javascript/backend/pages/dashboard-v1.js"></script-->
+        <script type="text/javascript" src="/consultorioonline/res-plc/javascript/jquery/jquery.maskedinput.js"></script>
+         <script type="text/javascript" src="/consultorioonline/res-plc/javascript/cep-min.js"></script>
+         <!--script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/c75ac981-1e36-47d4-afb3-452e0fe6310d-loader.js" ></script-->
+        <script>
+
+        $(document).ready(function(){
+            
+            $("#corpo\\:formulario\\:nome").keyup(function(){
+                var valor = $("#corpo\\:formulario\\:nome").val().replace(/[^a-zA-Z\s]+/g,'');
+                $("#corpo\\:formulario\\:nome").val(valor);
+            });
+        });
+        
+        function ativaBotao(){
+            if(document.getElementById("criarConta").disabled){
+                document.getElementById("criarConta").disabled=false;
+                jQuery('button[id$="criarConta"]').attr("class", "btn btn-block btn-success");
+            }else{
+                document.getElementById("criarConta").disabled=true;
+                jQuery('button[id$="criarConta"]').attr("class", "btn btn-block btn-success2");
+            }
+        }
+        ativaBotao();
+
+        
+        jQuery("#corpo\\:formulario\\:cpf").mask("999.999.999-99");
+        jQuery("#corpo\\:formulario\\:telefone").mask("(99) 9999?99999");
+        jQuery("#corpo\\:formulario\\:cep").mask("99999-999");
+        jQuery("#corpo\\:formulario\\:dataNascimento").mask("99/99/9999");  
+
+
+        function termo() {
+            janelaModal("/consultorioonline/termoPaciente.html","850","450");
+        }
+        $('html,body').animate({scrollTop: 0},'slow');
+        </script>
+        
+      <script type="text/javascript">
+        //<![CDATA[
+            if(dataConsulta !=null){
+                if(loginFinalizaBreve!=null){
+                        jQuery('a[id$="linkLogin"]').attr("href", "/consultorioonline/?dataConsulta="+dataConsulta+"&loginProfissional="+loginProfissional+"&loginFinalizaBreve="+loginFinalizaBreve+"&loginFinaliza="+loginFinaliza+"&AA="+AA+"");
+                    }else{
+                        jQuery('a[id$="linkLogin"]').attr("href", "/consultorioonline/?dataConsulta="+dataConsulta+"&loginProfissional="+loginProfissional+"&loginFinaliza="+loginFinaliza+"&loginFinaliza="+loginFinaliza+"&AA="+AA+"");
+                    }
+                }
+
+            $('#corpo\\:formulario\\:cep').cep();
+
+            //]]>
+
+            </script>
+&#9;&#9;&#9;&#9;</div>
+&#9;&#9;&#9;</div>
+&#9;&#9;&#9;&#9;
+&#9;<div id="plc-auxiliar" class="plc-auxiliar">
+&#9;&#9;&#9;<input type="hidden" id="detCorrPlc" name="detCorrPlc">
+&#9;&#9;&#9;<input type="hidden" id="detCorrPlcPaginado" name="detCorrPlcPaginado">&#9;&#9;
+&#9;&#9;&#9;&#9;&#9;&#9;
+&#9;&#9;<input type="hidden" name="exibeEdDocPlc">
+&#9;&#9;
+&#9;&#9;<input id="corpo:formulario:indExcDetPlc" type="hidden" name="indExcDetPlc"><input type="hidden" id="corpo:formulario:alertaAlteracaoPlc" name="corpo:formulario:alertaAlteracaoPlc">
+&#9;&#9;&#9;<input type="hidden" id="modoJanelaPlc" name="modoJanelaPlc" value="popup">&#9;&#9;&#9;
+&#9;</div>
+&#9; &#9;<script type="text/javascript">
+	 	//<![CDATA[
+		setTimeout(setUpOnFocusHandlers, 0);
+		setCampoFocus('');
+	 	setTimeout(moverFoco, 0);
+	 	setTimeout(function(){
+			escrevePlcAfter(plc.jq('span'),'p_AFRequired','Campo obrigatório', '/consultorioonline/res-plc/midia/ico_obrig.png')
+		}, 0);
+		//]]>		
+		</script>
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;<script type="text/javascript">
+										//<![CDATA[
+											initializesForm();
+										//]]>	
+									</script>&#9;
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;<!-- FIM --><input type="hidden" name="org.apache.myfaces.trinidad.faces.FORM" value="corpo:formulario"><input type="hidden" name="_noJavaScript" value="false"><input type="hidden" name="javax.faces.ViewState" value="!12bvok9h5s"><script type="text/javascript">function _corpo_formularioValidator(f,s){return true;}</script><script type="text/javascript">_submitFormCheck();</script></form>
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;<div class="clear"> </div>
+&#9;&#9;&#9;</div>&#9;
+&#9;&#9;</div></body>

@@ -1,0 +1,1035 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="pt_BR">
+<head>
+<link rel="manifest" href="/manifest.json">
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script>
+	var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+        /* Your other init options here */
+   		    appId: "ed8cdce2-4892-40bb-b55f-2b57efdbf3f0",
+            notifyButton: {
+           enable: true, /* Required to use the notify button */
+           displayPredicate: function() {
+               return OneSignal.isPushNotificationsEnabled()
+                   .then(function(isPushEnabled) {
+                       /* The user is subscribed, so we want to return "false" to hide the notify button */
+                       return !isPushEnabled;
+                   });
+           },
+           autoRegister: false,
+           size: 'medium', /* One of 'small', 'medium', or 'large' */
+           theme: 'default', /* One of 'default' (red-white) or 'inverse" (white-red) */
+           position: 'bottom-left', /* Either 'bottom-left' or 'bottom-right' */
+           offset: {
+               bottom: '30px',
+               left: '30px', /* Only applied if bottom-left */
+               right: '30px' /* Only applied if bottom-right */
+           },
+           prenotify: true, /* Show an icon with 1 unread message for first-time site visitors */
+           showCredit: false, /* Hide the OneSignal logo */
+           welcomeNotification: {
+               "title": "Zenklub",
+               "message": "Obrigado por subscrever nossas ofertas"
+           },
+           text: {
+               'tip.state.unsubscribed': 'Subscreva nossas ofertas',
+               'tip.state.subscribed': "Você está inscrito em nossas ofertas",
+               'tip.state.blocked': "Você bloqueou nossas ofertas",
+               'message.prenotify': 'Clique aqui para receber notificações de nossas ofertas',
+               'message.action.subscribed': "Obrigado por subscrever nossas ofertas",
+               'message.action.resubscribed': "Você está inscrito em nossas ofertas",
+               'message.action.unsubscribed': "Não vai voltar a receber nossas notificações de ofertas",
+               'dialog.main.title': 'Gerenciar Notificações',
+               'dialog.main.button.subscribe': 'SUBSCREVER',
+               'dialog.main.button.unsubscribe': 'REMOVER',
+               'dialog.blocked.title': 'Adicionar Notificações',
+               'dialog.blocked.message': "Siga estas instruções para habilitar a subscrição de ofertas:"
+           }
+        }
+    }]);
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" />
+<title>Zenklub | Benef&#237;cios para seus colaboradores</title>
+<meta name="description" />
+<link rel="canonical" href="https://zenklub.com.br/empresas/" />
+
+<script>
+    (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    { 'GTM-MSV8CM3': true });
+</script>
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+<link href="/Content/layout-new-css?v=lKwxasguBNdje_2nU5dKgmQmvRmUOWHL5goP5Hj7BeA1" rel="stylesheet" />
+<script defer type="text/javascript" src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PW7SM8');
+</script>
+
+<script>
+        country = 'br';
+        window.globalUri = 'https://zenklub.com.br/';
+        window.globalApiUri = 'https://api.zenklub.com/'; ;
+    </script>
+</head>
+<body class="companies" data-country="br" data-language-html="pt_BR" data-language-app="pt-BR">
+<noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PW7SM8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+<div class="navbar transparent">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="hidden-md hidden-lg visible-sm visible-xs navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+<span class="sr-only"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="https://zenklub.com.br/">
+<img class="logoDefault" src="https://zenklub.com.br/Images/logo_zenklub.png" alt="Zenklub" />
+<img class="logoTrainee" src="https://zenklub.com.br/Images/logo_zenklubstart.png" alt="Zenklub" />
+</a>
+</div>
+<div class="collapse navbar-collapse header-collapse">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/busca">Ver especialistas</a></li>
+<li><a href="/empresas">Empresas</a></li>
+<li><a href="https://mkt.zenklub.com.br/testes/" target="_blank">Fa&#231;a o teste</a></li>
+<li><a href="https://zenklub.typeform.com/to/JyFw1e?ref=home" target="_blank">Indicação Grátis</a></li>
+<li>
+<a href="https://zenklub.com.br/Account/Register" rel="nofollow">Cadastrar</a>
+</li>
+<li>
+<a href="https://zenklub.com.br/Account/Login" rel="nofollow">Entrar</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="divUserSubmenu" style="display:none;">
+<ul>
+<li onclick="javascript: document.getElementById('logoutFormFromMenu').submit()">
+<form action="/Account/LogOff" class="navbar-right" id="logoutFormFromMenu" method="post">
+</form> </li>
+</ul>
+</div>
+
+
+<div class="header">
+
+<div class="container">
+
+<div class="row">
+<h1>Impacte a produtividade e o potencial dos seus colaboradores</h1>
+<p class="pSubtitle">Os melhores psicólogos e coaches, a um clique de distância</p>
+<button class="btn btn-zenklub-green btnRegisterCompany">Experimente agora</button>
+<p class="pSubtitleNews">"Muita gente tem recorrido à terapia para sanar conflitos internos e externos relativos à vida profissional"</p>
+<a target="_blank" href="http://profissionalenegocios.com.br/busca-por-satisfacao-no-trabalho-esta-entre-os-assuntos-mais-recorrentes-em-sessoes-de-terapia-de-acordo-com-amostragem/">
+<img data-src="/Images/home/press/pen.png" class="press-image active lazyload" alt="Zenklub em Profissional & Negócios" />
+</a>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="advantages">
+
+<div class="container">
+
+<h2></h2>
+<span class="subtitle"></span>
+
+<div>
+<div class="advTitle col-xs-12 col-md-4 col-lg-4">
+<div class="advTitleContainer advTitleContFirst">
+<span class="title titleFirst titleBigger">1 em cada 5</span>
+
+</div>
+<span class="text">brasileiros tem problemas emocionais, o que gera uma perda de R$ 130 bilhões para empresas</span>
+</div>
+<div class="advTitle col-xs-12 col-md-4 col-lg-4">
+<div class="advTitleContainer">
+<span class="title titleFirst titleBigger">Depressão & stress</span>
+
+
+</div>
+<span class="text">São a epidemia do século XXI e as doenças mais incapacitantes do mundo</span>
+</div>
+<div class="advTitle col-xs-12 col-md-4 col-lg-4">
+<div class="advTitleContainer">
+<span class="title titleFirst titleBigger">1<sup>0</sup> lugar</span>
+
+</div>
+<span class="text">Inteligência emocional é o indicador mais forte do nível de desempenho dos colaboradores</span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="advList advDesk">
+
+<div class="advFor advForEmployee" data-item="advForEmployee">
+<div>
+<h1>Para o seu <br /><strong>colaborador</strong></h1>
+<p>Usando tecnologia aliada ao toque humano, estamos a ajudar os seus colaboradores a obter uma melhor saúde e qualidade de vida.</p>
+</div>
+</div>
+
+<div class="advFor advForDesk advForCompany advForDesk" data-item="advForCompany">
+<div>
+<h1>Para a sua <br /><strong>empresa</strong></h1>
+<p>Ao ouvir e responder às necessidades emocionais dos seus colaboradores, sua empresa aumenta a chance deles alcançarem seu verdadeiro potencial, o que é ótimo para eles e ótimo para si.</p>
+</div>
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 advForText">
+
+<div class="forCont forPeopleContent" data-item="advForEmployee">
+
+<div class="forMarkers">
+ <div class="forMarkersCircle fmcA" data-index="0"></div>
+<div class="forMarkersCircle fmcB" data-index="1"></div>
+<div class="forMarkersCircle fmcC" data-index="2"></div>
+<div class="forMarkersCircle fmcD" data-index="3"></div>
+</div>
+
+
+<div class="forText">
+<ul class="progressbar">
+<li class="step fmcA" data-index="0">
+<h1>Mais de 100 profissionais e 30 especialidades</h1>
+<span>A maioria dos melhores psicólogos não está associada a nenhum plano ou rede de saúde, o que dificulta encontrar o psicólogo certo para você. No Zenklub você tem acesso aos melhores psicólogos e coaches do país, de onde você estiver.</span>
+</li>
+<li class="step fmcB" data-index="1">
+<h1>Seus dados são confidenciais</h1>
+<span>Somos uma empresa independente que respeita e preserva a sua privacidade. Usamos tecnologia encriptada e de última geração para sua segurança ou seja, suas consultas são apenas entre você e o seu psicólogo.</span>
+</li>
+<li class="step fmcC" data-index="2">
+<h1>Acesso sem barreiras</h1>
+<span>Agora você pode encaixar um tempo na sua vida para cuidar de você mesmo. Esqueça o trânsito ou salas de espera e não se preocupe se viaja muito ou está morando no exterior. O Zenklub está disponível a qualquer hora e de qualquer lugar do mundo.</span>
+</li>
+<li class="step fmcD" data-index="3">
+<h1>Seja a sua melhor versão</h1>
+<span>Conte com nossos profissionais para se desenvolver pessoal e profissionalmente. Temos disponíveis profissionais especializados nas mais variadas modalidades. Encontre aquele que vai ajudar você a mudar sua carreira ou ajudá-lo a enfrentar suas crises de ansiedade.</span>
+</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="forCont forCompanyContent" data-item="advForCompany">
+
+<div class="forMarkers">
+<div class="forMarkersCircle fmcA" data-index="0"></div>
+<div class="forMarkersCircle fmcB" data-index="1"></div>
+<div class="forMarkersCircle fmcC" data-index="2"></div>
+<div class="forMarkersCircle fmcD" data-index="3"></div>
+</div>
+
+
+<div class="forText">
+<ul class="progressbar">
+<li class="step fmcA" data-index="0">
+<h1>Seus colaboradores a 150%</h1>
+<span>Diversas pesquisas provam que inteligência emocional é chave para um ambiente de trabalho saudável e de alta performance. Com o Zenklub, seus colaboradores têm o suporte necessário para estarem sempre ao mais alto nível.</span>
+</li>
+<li class="step fmcB" data-index="1">
+<h1>Resultados mensuráveis</h1>
+<span>Seus colaboradores têm a confidencialidade que merecem para abordar qualquer assunto e você pode acompanhar progresso das suas equipes. Através da nossa plataforma você tem acesso a indicadores gerenciais e estatísticos.</span>
+</li>
+<li class="step fmcC" data-index="2">
+<h1>Benefício diferenciado</h1>
+<span>Fortaleça a imagem da sua empresa e os seus programas de saúde oferecendo um serviço que impacta significativamente a saúde dos seus colaboradores. Diferencie-se dos seus concorrentes desenvolvendo o seu talento humano.</span>
+</li>
+<li class="step fmcD" data-index="3">
+<h1>Mensalidade única</h1>
+<span>Os seus colaboradores são o seu ativo mais importante. Terapia / coaching pode ser muito caro. Ofereça este importante benefício aos seus colaboradores subsidiando um valor único por mês, tornando o valor das consultas muito mais acessível para eles.</span>
+</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="advList advMob">
+
+<div class="advFor advForEmployee" data-item="advForEmployee">
+<div>
+<h1>Para o seu <br /><strong>colaborador</strong></h1>
+<p>Usando tecnologia aliada ao toque humano, estamos a ajudar os seus colaboradores a obter uma melhor saúde e qualidade de vida.</p>
+</div>
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 advForText">
+
+<div class="forCont forPeopleContent forActive" data-item="forPeopleContent">
+
+<div class="forMarkers">
+<div class="forMarkersCircle fmcA" data-index="0"></div>
+<div class="forMarkersCircle fmcB" data-index="1"></div>
+<div class="forMarkersCircle fmcC" data-index="2"></div>
+<div class="forMarkersCircle fmcD" data-index="3"></div>
+</div>
+
+
+<div class="forText">
+<ul class="progressbar">
+<li class="step fmcA" data-index="0">
+<h1>Mais de 100 profissionais e 30 especialidades</h1>
+<span>A maioria dos melhores psicólogos não está associada a nenhum plano ou rede de saúde, o que dificulta encontrar o psicólogo certo para você. No Zenklub você tem acesso aos melhores psicólogos e coaches do país, de onde você estiver.</span>
+</li>
+<li class="step fmcB" data-index="1">
+<h1>Seus dados são confidenciais</h1>
+<span>Somos uma empresa independente que respeita e preserva a sua privacidade. Usamos tecnologia encriptada e de última geração para sua segurança ou seja, suas consultas são apenas entre você e o seu psicólogo.</span>
+</li>
+<li class="step fmcC" data-index="2">
+<h1>Acesso sem barreiras</h1>
+<span>Agora você pode encaixar um tempo na sua vida para cuidar de você mesmo. Esqueça o trânsito ou salas de espera e não se preocupe se viaja muito ou está morando no exterior. O Zenklub está disponível a qualquer hora e de qualquer lugar do mundo.</span>
+</li>
+<li class="step fmcD" data-index="3">
+<h1>Seja a sua melhor versão</h1>
+<span>Conte com nossos profissionais para se desenvolver pessoal e profissionalmente. Temos disponíveis profissionais especializados nas mais variadas modalidades. Encontre aquele que vai ajudar você a mudar sua carreira ou ajudá-lo a enfrentar suas crises de ansiedade.</span>
+</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="advFor advForCompany" data-item="advForCompany">
+<div>
+<h1>Para a sua <br /><strong>empresa</strong></h1>
+<p>Ao ouvir e responder às necessidades emocionais dos seus colaboradores, sua empresa aumenta a chance deles alcançarem seu verdadeiro potencial, o que é ótimo para eles e ótimo para si.</p>
+</div>
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 advForText">
+
+<div class="forCont forCompanyContent forActive" data-item="forCompanyContent">
+
+<div class="forMarkers">
+<div class="forMarkersCircle fmcA" data-index="0"></div>
+<div class="forMarkersCircle fmcB" data-index="1"></div>
+<div class="forMarkersCircle fmcC" data-index="2"></div>
+<div class="forMarkersCircle fmcD" data-index="3"></div>
+</div>
+
+
+<div class="forText">
+<ul class="progressbar">
+<li class="step fmcA" data-index="0">
+<h1>Seus colaboradores a 150%</h1>
+<span>Diversas pesquisas provam que inteligência emocional é chave para um ambiente de trabalho saudável e de alta performance. Com o Zenklub, seus colaboradores têm o suporte necessário para estarem sempre ao mais alto nível.</span>
+</li>
+<li class="step fmcB" data-index="1">
+<h1>Resultados mensuráveis</h1>
+<span>Seus colaboradores têm a confidencialidade que merecem para abordar qualquer assunto e você pode acompanhar progresso das suas equipes. Através da nossa plataforma você tem acesso a indicadores gerenciais e estatísticos.</span>
+</li>
+<li class="step fmcC" data-index="2">
+<h1>Benefício diferenciado</h1>
+<span>Fortaleça a imagem da sua empresa e os seus programas de saúde oferecendo um serviço que impacta significativamente a saúde dos seus colaboradores. Diferencie-se dos seus concorrentes desenvolvendo o seu talento humano.</span>
+</li>
+<li class="step fmcD" data-index="3">
+<h1>Mensalidade única</h1>
+<span>Os seus colaboradores são o seu ativo mais importante. Terapia / coaching pode ser muito caro. Ofereça este importante benefício aos seus colaboradores subsidiando um valor único por mês, tornando o valor das consultas muito mais acessível para eles.</span>
+</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="benefits">
+<div class="container">
+
+<h2>Benefícios de investir em saúde</h2>
+<span class="subtitle">Não é um gasto quando traz retorno</span>
+
+<div class="row">
+
+<div class="benefItem col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<a>
+<img data-src="/Images/companies/benefits/benefit01.png" alt="Diminuição de turnover" class="lazyload" />
+<div class="layer">
+<div class="text"></div>
+<div class="text hover">
+<span>Diminuição de turnover</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="benefItem col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<a>
+<img data-src="/Images/companies/benefits/benefit02.png" alt="Melhora do clima organizacional" class="lazyload" />
+<div class="layer">
+<div class="text"></div>
+<div class="text hover">
+<span>Melhora do clima organizacional</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="benefItem col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<a>
+<img data-src="/Images/companies/benefits/benefit03.png" alt="Retenção dos melhores colaboradores" class="lazyload" />
+<div class="layer">
+<div class="text"></div>
+<div class="text hover">
+<span>Retenção dos melhores colaboradores</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="benefItem col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<a>
+<img data-src="/Images/companies/benefits/benefit04.png" alt="Colaboradores mais saudáveis" class="lazyload" />
+<div class="layer">
+<div class="text"></div>
+<div class="text hover">
+<span>Colaboradores mais saudáveis</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="benefItem col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<a>
+<img data-src="/Images/companies/benefits/benefit05.png" alt="Melhor desempenho individual" class="lazyload" />
+<div class="layer">
+<div class="text"></div>
+<div class="text hover">
+<span>Melhor desempenho individual</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="benefItem benefBig col-xs-12 col-sm-6 col-md-4 col-lg-6">
+<a>
+<img data-src="/Images/companies/benefits/benefit06.png" alt="Equipes mais produtivas" class="lazyload" />
+<div class="layer">
+<div class="text"></div>
+<div class="text hover">
+<span>Equipes mais produtivas</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="benefItem col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<a>
+<img data-src="/Images/companies/benefits/benefit07.png" alt="Redução de gastos com doença" class="lazyload" />
+<div class="layer">
+<div class="text"></div>
+<div class="text hover">
+<span>Redução de gastos com doença</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="benefItem benefBig col-xs-12 col-sm-6 col-md-4 col-lg-6">
+<a>
+<img data-src="/Images/companies/benefits/benefit08.png" alt="Captação dos melhores talentos" class="lazyload" />
+<div class="layer">
+<div class="text"></div>
+<div class="text hover">
+<span>Captação dos melhores talentos</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="benefItem b7 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<a>
+<img data-src="/Images/companies/benefits/benefit09.png" alt="Diminuição de absenteísmo" class="lazyload" />
+<div class="layer">
+ <div class="text"></div>
+<div class="text hover">
+<span>Diminuição de absenteísmo</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="benefItem b7 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<a>
+<img data-src="/Images/companies/benefits/benefit10.png" alt="Promova o bem-estar dos seus colaboradores" class="lazyload" />
+<div class="layer">
+<div class="text"></div>
+<div class="text hover">
+<span>Promova o bem-estar dos seus colaboradores</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container-fixed register">
+
+<div class="container">
+
+<div class="row">
+
+<div class="register-now">
+
+<h2>Quero mais informações</h2>
+
+
+<form action="/empresas" class="pos-relative ju-content" id="form-new-company" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="xAfL9Ps3IhHfNdE76Qie7x2GFdxpxd4IHaPRdfNBxR-8WvKlMVgpQGxSUy9wkELUaB1Th9cAufcu6AhgH331z3HY5mjpcS3Ndy7hDNAvFo41" /> 
+
+<input class="form-control" data-val="true" data-val-required="O campo é necessário." id="name" maxlength="128" name="Name" placeholder="Nome completo" type="text" value="" /><span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span> 
+<input class="form-control" data-val="true" data-val-email="O campo não é um email válido." data-val-length="O campo deverá ter no máximo 254 caracteres." data-val-length-max="254" data-val-required="O campo é necessário." id="email" maxlength="128" name="Email" placeholder="E-mail" type="text" value="" /><span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span> <div class="controls form-inline">
+
+<div style="float: left; width: 49%;">
+<input class="form-control" data-val="true" data-val-required="O campo é necessário." id="company" maxlength="128" name="Company" placeholder="Empresa" type="text" value="" />
+<span class="field-validation-valid" data-valmsg-for="Company" data-valmsg-replace="true"></span>
+</div>
+
+<div style="float: right; width: 49%;">
+<input class="form-control" data-val="true" data-val-required="O campo é necessário." id="phone" name="Phone" placeholder="Telefone" type="text" value="" />
+<span class="field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+</div>
+</div>
+
+<input type="submit" value="Enviar" class="btn btn-blue btn-block">
+
+<div id="loading-register" class="loading-fluid" style=" display: none;">
+<div class="loading-content">
+<svg width="68px" height="68px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-gear"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><path d="M75,50.5l5-1.5c-0.1-2.2-0.4-4.3-0.9-6.3l-5.2-0.1c-0.2-0.6-0.4-1.1-0.6-1.7l4-3.3c-0.9-1.9-2-3.8-3.2-5.5L69.2,34 c-0.4-0.5-0.8-0.9-1.2-1.3l2.4-4.6c-1.6-1.4-3.3-2.7-5.1-3.8l-3.7,3.6c-0.5-0.3-1.1-0.5-1.6-0.8l0.5-5.2c-2-0.7-4-1.3-6.2-1.6 l-2.1,4.8c-0.6-0.1-1.2-0.1-1.8-0.1l-1.5-5c-2.2,0.1-4.3,0.4-6.3,0.9l-0.1,5.2c-0.6,0.2-1.1,0.4-1.7,0.6l-3.3-4 c-1.9,0.9-3.8,2-5.5,3.2l1.9,4.9c-0.5,0.4-0.9,0.8-1.3,1.2l-4.6-2.4c-1.4,1.6-2.7,3.3-3.8,5.1l3.6,3.7c-0.3,0.5-0.5,1.1-0.8,1.6 l-5.2-0.5c-0.7,2-1.3,4-1.6,6.2l4.8,2.1c-0.1,0.6-0.1,1.2-0.1,1.8l-5,1.5c0.1,2.2,0.4,4.3,0.9,6.3l5.2,0.1c0.2,0.6,0.4,1.1,0.6,1.7 l-4,3.3c0.9,1.9,2,3.8,3.2,5.5l4.9-1.9c0.4,0.5,0.8,0.9,1.2,1.3l-2.4,4.6c1.6,1.4,3.3,2.7,5.1,3.8l3.7-3.6c0.5,0.3,1.1,0.5,1.6,0.8 l-0.5,5.2c2,0.7,4,1.3,6.2,1.6l2.1-4.8c0.6,0.1,1.2,0.1,1.8,0.1l1.5,5c2.2-0.1,4.3-0.4,6.3-0.9l0.1-5.2c0.6-0.2,1.1-0.4,1.7-0.6 l3.3,4c1.9-0.9,3.8-2,5.5-3.2L66,69.2c0.5-0.4,0.9-0.8,1.3-1.2l4.6,2.4c1.4-1.6,2.7-3.3,3.8-5.1l-3.6-3.7c0.3-0.5,0.5-1.1,0.8-1.6 l5.2,0.5c0.7-2,1.3-4,1.6-6.2l-4.8-2.1C74.9,51.7,75,51.1,75,50.5z M50,65c-8.3,0-15-6.7-15-15c0-8.3,6.7-15,15-15s15,6.7,15,15 C65,58.3,58.3,65,50,65z" fill="#1da4dc"></path></svg>
+<p>Por favor aguarde...</p>
+</div>
+</div>
+</form>
+</div>
+
+
+<div class="register-success" style="display:none;">
+
+<h2>Registro feito com sucesso!</h2>
+<p>Nas próximas 24 horas alguém do nosso time entrará em contato com você.</p>
+</div>
+
+
+</div>
+
+</div>
+
+<footer>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 footer-block">
+<span class="section-title">Zenklub</span>
+<hr class="visible-xs" />
+<ul>
+<li><a href="https://blog.zenklub.com.br" target="_blank" title="Blog">Blog</a></li>
+<li><a href="/busca">Especialistas</a></li>
+<li><a href="/temas">Temas</a></li>
+<li><a href="/especialidades">Especialidades</a></li>
+<li><a href="/quem-somos">Quem Somos</a></li>
+<li><a href="/sou-profissional">Sou profissional</a></li>
+<li><a href="/supervisao-online">Supervisão online</a></li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 footer-block">
+<span class="section-title">Suporte</span>
+<hr class="visible-xs" />
+<ul>
+<li>Whatsapp: (11) 98312-4195</li>
+<li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5f363139301f253a3134332a3d713c3032">[email&#160;protected]</a></li>
+<li>Fernanda Martins Ribeiro da Costa</li>
+<li>(CRP 06/65475)</li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 footer-block">
+<div class="protocol-social">
+<a href="http://cadastrosite.cfp.org.br/cadastro/protocoloConsulta.cfm?search=106334673" target="_blank" rel="nofollow" title="Conselho Federal Psicologia Cadastro Site">
+<img src="/Images/psi_protocol.png" alt="Cadastro PSI" />
+</a>
+<span class="section-title">Pagamento Seguro</span>
+<ul class="payment">
+<li title="Mastercard"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></li>
+<li title="Visa"><i class="fa fa-cc-visa" aria-hidden="true"></i></li>
+</ul>
+</div>
+</div>
+<div class="footerLegal">
+<a href="/faq">Perguntas Frequentes</a>&nbsp;|&nbsp;
+<a href="/privacidade" rel="nofollow">Pol&#237;tica de Privacidade</a>&nbsp;|&nbsp;
+<a href="/termos" rel="nofollow">Termos de Uso</a>
+</div>
+</footer>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
+<script data-cfasync="false" src="/cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js"></script><script src="/bundles/jquery?v=QjnM8-D4Bc1hole9BZccPNIeK6-vCmbBJYpWKO89Zic1"></script>
+<script src="/bundles/bootstrap?v=5_XjNC2HlozdeH2Wmxqw8tlcTZgrddAVRdxitkWBjSo1"></script>
+<script src="/bundles/jqueryval?v=liFQDLl2DYXeEfda_Lo9HxMCJUnZ2Adg-vEhq6ZMqpo1"></script>
+<script>
+
+        $(document).ready(function () {
+
+            
+            $('#form-new-company').submit(function (e) {
+
+                e.stopPropagation();
+
+                $(this).find('.error-message').hide(); 
+
+                //if ($(this).valid())
+                $('#loading-register').show();
+
+            });
+
+            // Click on register company button.
+            $('.btnRegisterCompany').on('click', function () {
+
+                var formPos = 600;
+
+                if ($(window).width() < 768) {
+                    formPos = 2600;
+                }
+
+                //console.log('Top: ' + $('#form-new-company').offset().top);
+                //console.log('Pos C: ' + formTopPosition);
+
+                /*console.log('header: ' + $('div.header').offset().top);
+                console.log('advantages: ' + $('div.advantages').offset().top);
+                console.log('advList: ' + $('div.advList.advDesk').offset().top);
+                console.log('benefits: ' + $('div.benefits').offset().top);
+                console.log('register: ' + $('div.register').offset().top);*/
+
+                $('html, body').animate({ scrollTop: $('#form-new-company').offset().top + formPos }, 1000);
+                setTimeout(function () { $('html, body').animate({ scrollTop: $('#form-new-company').offset().top - 240 }, 1000); }, 500);
+
+            });
+
+            // Show texts on scroll.
+            $(document).on('scroll', function (e) {
+
+                e.stopImmediatePropagation();
+
+                // Mobile only.
+                if ($(window).width() < 768) {
+
+                    // Windows's size and position.
+                    var winH = $(window).height();
+                    var winT = $(window).scrollTop();
+                    var winB = $(window).scrollTop() + winH;
+
+                    // Check each item.
+                    $('div.benefItem').each(function (i) {
+
+                        // Items's size and position.
+                        var itemH = $(this).outerHeight();
+                        var itemT = $(this).offset().top;
+                        var itemB = $(this).offset().top + itemH;
+
+                        // Item reference.
+                        var layer = $(this).find('div.layer')[0];
+
+                        // Item's position related to visible area.
+                        var elInner = itemT > winT && itemB < winB;
+                        var elGreaterThan = itemT < winT && itemB > winB;
+                        var elIsMainItem = 0;
+
+                        // Show or hide.
+                        if (elInner || elGreaterThan) {
+                            $(layer).fadeIn('slow');
+                        } else {
+                            $(layer).fadeOut('fast');
+                        }
+
+                    });
+
+                }
+
+            });
+
+        });
+
+        $(function () {
+
+          // Set active section on advantages.
+          setActiveAdvantage();
+
+          // Start advantages presentation.
+          advantagesPresent(0);
+          advantagesMobPresent(0, 'forPeopleContent');
+          advantagesMobPresent(0, 'forCompanyContent');
+
+          // On mouse over benefits cards.
+          $('body.companies .benefits .benefItem').hover(
+
+            function () {
+              ($(this).find('.layer')).show()
+            },
+            function () {
+              ($(this).find('.layer')).hide()
+            }
+          );
+
+        });
+
+        // Click on advantages section.
+        $('body.companies .advList.advDesk .advFor').on('click', function (e) {
+
+          // Change active section.
+          setActiveAdvantage($(this).attr('data-item'));
+
+          // Reset presentation.
+          clearTimeout(advTimeout);
+          advantagesPresent();
+
+        });
+
+        // Click on advantages markers.
+        $('body.companies .advList .forMarkersCircle').on('click', function (e) {
+
+          var dtIndex = $(this).attr('data-index');
+          var advList = $(this).closest('.advList');
+
+          if (advList && advList.hasClass('advMob')) {
+
+            var parent = $(this).closest('.forCont');
+            var ref = parent.attr('data-item');
+
+            if (ref == 'forPeopleContent') {
+              clearTimeout(advMobEmpTimeout);
+            } else {
+              clearTimeout(advMobComTimeout);
+            }
+
+            advantagesMobPresent(dtIndex, ref);
+
+          } else {
+
+            clearTimeout(advTimeout);
+            advantagesPresent(dtIndex);
+
+          }
+
+        });
+
+        // Manage presentation on advantages section.
+        function advantagesPresent(index) {
+
+          // Current index.
+          var curIndex = index ? parseInt(index) : 0;
+
+          // Get active section.
+          var activeSection = getActiveAdvantage();
+
+          // Root path.
+          var rootPath = 'body.companies .advList.advDesk .' + activeSection;
+          var rootPathText = 'body.companies .advList.advDesk .advForText .forCont[data-item="' + activeSection + '"]';
+
+          // Elements reference.
+          var container = $(rootPath);
+          var markers = $(rootPathText + ' .forMarkers');
+          var markersCircle = $(rootPathText + ' .forMarkers .forMarkersCircle');
+          var texts = $(rootPathText + ' .forText');
+          var ul = $(rootPathText + ' ul');
+          var li = $(rootPathText + ' ul li');
+
+          // Hide all itens.
+          li.hide();
+
+          // Reset index if needed.
+          if (li.length < curIndex + 1) {
+            curIndex = 0;
+            clearTimeout(advTimeout);
+          }
+
+          // Current text reference.
+          var liActive = $(rootPathText + ' ul li[data-index="' + curIndex + '"]');
+
+          // Show current text and trigger next.
+          if (liActive.length > 0) {
+
+            liActive.fadeIn('slow');
+
+            // Current marker reference.
+            var liMarker = $(rootPathText + ' .forMarkers .forMarkersCircle[data-index="' + curIndex + '"]')
+
+            if (liMarker.length > 0) {
+              markersCircle.removeClass('circleActive');
+              liMarker.addClass('circleActive');
+            }
+
+            advTimeout = setTimeout(function () { advantagesPresent(curIndex + 1); }, 5000);
+
+          } else {
+
+            advantagesPresent(0);
+            clearTimeout(advTimeout);
+
+          }
+
+        }
+
+        // Get active advantage section.
+        function getActiveAdvantage() {
+
+          var def = 'advForEmployee';
+          var cur = $('body.companies .advList.advDesk .advFor.forActive');
+          var ret = def;
+
+          if (cur.length > 0) {
+
+            ret = cur.attr('data-item');
+
+          } else {
+
+            setActiveAdvantage(def);
+
+          }
+
+          return ret;
+
+        }
+
+        // Set active advantage section.
+        function setActiveAdvantage(item) {
+
+          var arItems = ['advForEmployee', 'advForCompany'];
+          var elContainer = 'body.companies .advList.advDesk .advFor';
+
+          // Force one.
+          if (!item || arItems.indexOf(item) == -1) {
+
+            item = arItems[0];
+
+          }
+
+          // Remove active class from all.
+          $(elContainer).removeClass('forActive');
+
+          // Set new active.
+          $(elContainer + '.' + item).addClass('forActive');
+          setActiveAdvTexts(item);
+
+        }
+
+        // Set active advantages text block.
+        function setActiveAdvTexts(item) {
+
+          var arItems = ['advForEmployee', 'advForCompany'];
+          var elContainer = 'body.companies .advList.advDesk .forCont';
+          var cur = '';
+
+          // Force one.
+          if (!item || arItems.indexOf(item) == -1) {
+
+            item = arItems[0];
+
+          }
+
+          // Get current.
+          if ($(elContainer + '.forActive').length > 0) {
+            cur = $(elContainer + '.forActive').attr('data-item');
+          }
+
+          // Set active.
+          if (!cur || cur != item) {
+
+            $(elContainer).removeClass('forActive');
+            $(elContainer + '[data-item="' + item + '"]').addClass('forActive');
+
+          }
+
+        }
+
+        // Manage presentation on advantages section (mobile).
+        function advantagesMobPresent(index, ref) {
+
+          // Current index.
+          var curIndex = index ? parseInt(index) : 0;
+
+          // Root path.
+          var rootPath = 'body.companies .advList.advMob .' + ref;
+          var rootPathText = 'body.companies .advList.advMob .advForText .forCont[data-item="' + ref + '"]';
+
+          // Elements reference.
+          var container = $(rootPath);
+          var markers = $(rootPathText + ' .forMarkers');
+          var markersCircle = $(rootPathText + ' .forMarkers .forMarkersCircle');
+          var texts = $(rootPathText + ' .forText');
+          var ul = $(rootPathText + ' ul');
+          var li = $(rootPathText + ' ul li');
+
+          // Hide all itens.
+          li.hide();
+
+          // Reset index if needed.
+          if (li.length < curIndex + 1) {
+            curIndex = 0;
+            //clearTimeout(advTimeout);
+          }
+
+          // Current text reference.
+          var liActive = $(rootPathText + ' ul li[data-index="' + curIndex + '"]');
+
+          // Show current text and trigger next.
+          if (liActive.length > 0) {
+
+            liActive.fadeIn('slow');
+
+            // Current marker reference.
+            var liMarker = $(rootPathText + ' .forMarkers .forMarkersCircle[data-index="' + curIndex + '"]')
+
+            if (liMarker.length > 0) {
+              markersCircle.removeClass('circleActive');
+              liMarker.addClass('circleActive');
+            }
+
+            if (ref == 'forPeopleContent') {
+              advMobEmpTimeout = setTimeout(function () { advantagesMobPresent(curIndex + 1, ref); }, 5000);
+            } else {
+              advMobComTimeout = setTimeout(function () { advantagesMobPresent(curIndex + 1, ref); }, 5000);
+            }
+
+          } else {
+
+            advantagesMobPresent(0, ref);
+            //clearTimeout(advTimeout);
+
+          }
+
+        }
+
+        </script>
+<script src="/Scripts/lazysizes.min.js" data-cfasync="false" async=""></script>
+<script>
+        // When document is ready.
+        $(document).ready(function () {
+
+            // Show/hide submenu when user's menu is clicked.
+            $('li.liLoggedUserMenu').on('click', function () { toggleUserMenu(); });
+
+            // Hide submenu when mouse leave submenu.
+            $('#divUserSubmenu').on('mouseleave', function () { toggleUserMenu(); });
+
+            // Hide submenu when click on submenu.
+            $('#divUserSubmenu li').on('click', function () { toggleUserMenu(); });
+
+            // Force to hide submenu on body click.
+            /*$('.header').on('click', function () {
+                if ($('#divUserSubmenu').is(':visible'))
+                    toggleUserMenu(true);
+            });*/
+
+
+
+        });
+
+        // Show or hide user's menu.
+        function toggleUserMenu(forceHide) {
+
+            // Elements.
+            var navbar = $('.navbar');
+            var menu = $('.navbar .liLoggedUserMenu');
+            var submenu = $('#divUserSubmenu');
+            var faDown = $('.caretUserMenuDown');
+            var faUp = $('.caretUserMenuUp');
+
+            // Show or hide.
+            if (forceHide || submenu.is(':visible')) {
+
+                menu.removeClass('menuOpen');
+                faUp.hide();
+                faDown.show();
+                submenu.slideUp('fast');
+
+            } else {
+
+                // Reset position.
+                submenu.offset({ top: 0, left: 0 });
+
+                // Width size.
+                var menW = menu.outerWidth();
+                var subW = submenu.outerWidth();
+                var finalW = menW > subW ? menW : subW;
+
+                // Top position.
+                var menH = menu.height();
+                var menT = menu.offset().top;
+                var finalT = menT + menH + 15;
+
+                // Left position.
+                var winW = $(window).width();
+                var menL = menu.offset().left;
+                //var finalL = menL + (menW - subW);
+                var finalL = menL;
+
+                if ((finalL + subW) > winW) {
+                    var menR = menL + menW;
+                    finalL = menR - subW;
+                    //finalL = menL - (winW - (menL + menW));
+                }
+
+                menu.addClass('menuOpen');
+                faDown.hide();
+                faUp.show();
+                submenu.css('width', finalW);
+                //submenu.offset({ top: finalT, left: finalL });
+                submenu.css('left', finalL);
+                submenu.css('top', finalT);
+                submenu.slideDown('fast');
+
+            }
+
+        }
+
+        $('.navbar-collapse').on('show.bs.collapse', function () {
+            $('.navbar').toggleClass('in');
+        });
+
+        $('.navbar-collapse').on('hide.bs.collapse', function () {
+            $('.navbar').toggleClass('in');
+        });
+
+        var date = new Date();
+        var minutesToUTC = date.getTimezoneOffset();
+
+        
+            $('.url-timezone').each(function (i) {
+            $(this).attr('href', $(this).attr('href') + "?minutesToUTC=" + minutesToUTC);
+        });
+    </script>
+</body>
+</html>

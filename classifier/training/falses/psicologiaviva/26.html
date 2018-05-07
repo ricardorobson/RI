@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Psicologia Viva</title>
+  <meta name="author" content="FCJ ParticipaÃ§Ãµes e E-Consultar">
+  <meta name="description" content="Psicologia Viva, consultÃ³rio online">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+ <link href="https://fonts.googleapis.com/css?family=Dosis:400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/consultorioonline/res-plc/libs/swiper/css/swiper.min.css" media="screen and (max-width:500px)">
+        <link rel="stylesheet" href="/consultorioonline/res-plc/libs/jquery/jquery-ui.min.css">
+        <link rel="stylesheet" href="/consultorioonline/res-plc/main.css">
+
+		  <script type="text/javascript">
+        //<![CDATA[
+
+        function getQueryVariable(variable) {
+              var query = window.location.search.substring(1);
+              var vars = query.split("&");
+              for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                  return pair[1];
+                }
+              } 
+            } 
+            var dataConsulta = getQueryVariable("dataConsulta");
+    
+            var loginProfissional = getQueryVariable("loginProfissional");
+            var loginFinaliza = getQueryVariable("loginFinaliza");
+            var loginFinalizaBreve = getQueryVariable("loginFinalizaBreve");
+            var AA = getQueryVariable("AA");
+        //]]>
+        </script>
+<script>
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1322267537854021',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+
+     FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+// Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    //console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me?fields=id,email,name', function(response) {      
+      document.getElementById('id_j_username').value = response.email;
+      document.getElementById('j_password').value = response.id;
+      // document.getElementById('j_username_cad').value = response.email;
+       //document.getElementById('j_password_cad').value = response.id;
+       //document.getElementById('j_password_cad2').value = response.id;
+           // document.getElementById('name').value = response.name;
+            if(response.id!=null){
+              document.getElementById('login').click();
+            }
+
+    });
+  }
+
+  function checkLoginState() {
+    FB.api('/me?fields=id,email,name', function(response) {      
+      document.getElementById('id_j_username').value = response.email;
+      document.getElementById('j_password').value = response.id;
+       //document.getElementById('j_username_cad').value = response.email;
+       //document.getElementById('j_password_cad').value = response.id;
+       //document.getElementById('j_password_cad2').value = response.id;
+           // document.getElementById('name').value = response.name;
+            if(response.id!=null){
+              document.getElementById('login').click();
+            }
+
+    });
+  } 
+
+    
+</script>
+
+</head>
+
+<body>
+
+
+
+<section class="pv-modalBg"></section>
+<section class="pv-modal pv-modal-small">
+  <form class="pv-formSignin is-active js-formSignin" method="post" action="j_security_check">
+    <h1 class="pv-subtitle">JÃ¡ sou cadastrado</h1>
+    <div>
+      <!--a href="" class="pv-button pv-button--full pv-button--social pv-button--linkedin">Entrar com o Linkedin</a-->
+      <!--a href="" class="pv-button pv-button--full pv-button--social pv-button--facebook u-mt20">Entrar com o Facebook</a-->
+      <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9&appId=1322267537854021";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+function statusChangeCallback(response) {
+    //console.log('statusChangeCallback');
+    //console.log(response);
+    if(response.id!=null){
+              document.getElementById('login').click();
+            }
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      //testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  }
+</script>
+<!--div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div-->
+<!-- a onclick="javascript:document.getElementById('login').click();" class="pv-button pv-button--full pv-button--social pv-button--facebook u-mt20">Entrar com o Facebook</a-->
+    <fb:login-button scope="public_profile,email" style="display: block" id="entrarFb" login_text="Entrar com o Facebook" onlogin="checkLoginState();"></fb:login-button> 
+
+      <!--a href="" class="pv-button pv-button--full pv-button--social pv-button--google u-mt20">Entrar com o Google</a-->
+    </div>
+
+    <div class="pv-divider"><small>ou</small></div>
+
+    <div>Acesse sua conta</div>
+
+    <div class="u-mt10">
+      <input class="pv-input" type="text"  name="j_username" id="id_j_username" required placeholder="Digite seu email">
+    </div>
+
+    <div class="u-mt20">
+      <input class="pv-input" type="password" name="j_password" id="j_password" required placeholder="Digite sua senha">
+    </div>
+
+    <div class="pv-buttonText u-mt20">
+      <div class="pv-checkbox">
+        <input id="checkbox-logged" type="checkbox" name="logged">
+        <label for="checkbox-logged">Lembrar de mim</label>
+      </div>
+
+      <a href="/consultorioonline/res-plc/login/esquecisenha.html" class="pv-link pv-link--dark" >Esqueci minha senha</a>
+    </div>
+
+    <div>
+      <button type="submit" class="pv-button pv-button--primary pv-button--full u-mt20" id="login">Login</button>
+    </div>
+
+    <div class="pv-divider"></div>
+
+    <div class="pv-buttonText u-hidden-mobile">
+      <span>Ainda nÃ£o possui cadastro?<p></p></span>
+    </div>
+    <div class="pv-buttonText u-hidden-mobile">
+      <div id="cadPaciente" href="/consultorioonline/f/n/cadpacienteman?modoJanelaPlc=popup" onclick="window.location='/consultorioonline/f/n/cadpacienteman?modoJanelaPlc=popup'"  class="pv-button pv-button--line js-signup">Sou Cliente/Paciente - Cadastrar</div>
+    </div>
+    <p></p>
+    <div class="pv-buttonText u-hidden-mobile">
+      <div href="/consultorioonline/f/n/caduserman?modoJanelaPlc=popup" onclick="window.location='/consultorioonline/f/n/caduserman?modoJanelaPlc=popup'"   class="pv-button pv-button--line js-signup">Sou PsicÃ³logo - Cadastrar<p></p></div>
+    </div>
+    
+  </form>
+
+  <!--<div class="pv-divider"></div>-->
+
+  <form class="pv-formSignup js-formSignup" action="j_security_check">
+  <fb:login-button scope="public_profile,email" style="display: none" id="entrarFb" onlogin="checkLoginState();">
+  <a href="" onclick="javascript:document.getElementById('login').click();" class="pv-button pv-button--full pv-button--social pv-button--facebook u-mt20">Entrar com o Facebook</a>
+</fb:login-button>
+  <!--a href="" class="pv-button pv-button--full pv-button--social pv-button--facebook u-mt20">Cadastrar com o Facebook</a-->
+  <!--a href="" class="pv-button pv-button--full pv-button--social pv-button--linkedin">Entrar com o Linkedin</a-->
+    <!--h1 class="pv-subtitle">Criar uma conta</h1>
+
+    <div class="u-mt10">
+      <input class="pv-input" type="text" placeholder="Nome" id="name" name="name">
+    </div>
+
+    <div class="u-mt20">
+      <input class="pv-input is-error" type="email" id="j_username_cad" name="j_username_cad" placeholder="Email">
+    </div>
+
+    <div class="u-mt20">
+      <input class="pv-input" type="password" name="j_password_cad" id="j_password_cad" placeholder="Senha">
+    </div>
+
+    <div class="u-mt20">
+      <input class="pv-input" type="password" name="j_password_cad2" id="j_password_cad2" placeholder="Confirmar senha">
+    </div>
+
+
+    <div class="pv-checkbox u-mt20">
+      <input id="checkbox-terms" type="checkbox" name="terms">
+      <label for="checkbox-terms">Eu aceito os Termos de serviÃ§os</label>
+    </div>
+
+    <div class="pv-checkbox u-mt10">
+      <input id="checkbox-news" type="checkbox" name="news">
+      <label for="checkbox-news">Gostaria de receber novidades do Psicologia Viva</label>
+    </div>
+
+    <div>
+      <button type="submit" class="pv-button pv-button--primary pv-button--full u-mt20" id="cadastrar">Cadastrar</button>
+    </div-->
+
+    <!--div class="pv-divider u-hidden-mobile"></div>
+
+    <div class="pv-buttonText u-hidden-mobile">
+      <span>Fazer login</span>
+      <div href="" class="pv-button pv-button--line js-signup">Login</div>
+    </div-->
+  </form>
+</section>
+
+<script src="/consultorioonline/res-plc/libs/jquery/jquery.min.js"></script>
+<script src="/consultorioonline/res-plc/libs/jquery/jquery-ui.min.js"></script>
+<script src="/consultorioonline/res-plc/libs/swiper/js/swiper.min.js"></script>
+<!--<script src="libs/vue/dist/vue.min.js"></script>-->
+<!--<script src="libs/lodash/lodash.min.js"></script>-->
+<script src="/consultorioonline/res-plc/bundle.js"></script>
+<script src="/consultorioonline/res-plc/axios.min.js"></script>
+<script src="/consultorioonline/res-plc/psychologist.js"></script>
+
+<script type="text/javascript">
+        //<![CDATA[
+            if(dataConsulta !=null){
+                if(loginFinalizaBreve!=null){
+                        jQuery('div[id$="cadPaciente"]').attr("href", "/consultorioonline/f/n/cadpacienteman?modoJanelaPlc=popup&dataConsulta="+dataConsulta+"&loginProfissional="+loginProfissional+"&loginFinalizaBreve="+loginFinalizaBreve+"&loginFinaliza="+loginFinaliza+"&AA="+AA+"");
+						jQuery('div[id$="cadPaciente"]').attr("onclick", "window.location='/consultorioonline/f/n/cadpacienteman?modoJanelaPlc=popup&dataConsulta="+dataConsulta+"&loginProfissional="+loginProfissional+"&loginFinalizaBreve="+loginFinalizaBreve+"&loginFinaliza="+loginFinaliza+"&AA="+AA+"'");
+                    }else{
+                        jQuery('div[id$="cadPaciente"]').attr("href", "/consultorioonline/f/n/cadpacienteman?modoJanelaPlc=popup&dataConsulta="+dataConsulta+"&loginProfissional="+loginProfissional+"&loginFinaliza="+loginFinaliza+"&loginFinaliza="+loginFinaliza+"&AA="+AA+"");
+						jQuery('div[id$="cadPaciente"]').attr("onclick", "window.location='/consultorioonline/f/n/cadpacienteman?modoJanelaPlc=popup&dataConsulta="+dataConsulta+"&loginProfissional="+loginProfissional+"&loginFinaliza="+loginFinaliza+"&loginFinaliza="+loginFinaliza+"&AA="+AA+"'");
+                    }
+                }
+
+            //$('#corpo\\:formulario\\:cep').cep();
+
+            //]]>
+
+            </script>

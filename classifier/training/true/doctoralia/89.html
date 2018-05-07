@@ -1,0 +1,1093 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXMHElAKXQ==","queueTime":0,"applicationTime":215,"ttGuid":"4C1D933069ED09A4","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="description" content="Marque uma consulta com Dr. Caio Fasoli Rebouças - Veja as  opiniões dos pacientes, consultórios, especialidades, preços e convênios. Doenças Psicossomáticas, Psicodiagnóstico, Psicologia Junguiana" /><meta name="keywords" content="Dr. Caio Fasoli Rebouças, bom, melhor, saúde, médico, medicina privada, plano de saúde, clínica" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="@doctoralia" /><meta name="twitter:image" content="https://photos.doctoralia.com/636396409530304666_1.jpg" /><meta property="og:title" content="Dr. Caio Fasoli Rebouças  - São Paulo" />
+<meta property="og:description" content="Marque uma consulta com Dr. Caio Fasoli Rebouças - Veja as  opiniões dos pacientes, consultórios, especialidades, preços e convênios. Doenças Psicossomáticas, Psicodiagnóstico, Psicologia Junguiana" /><meta property="og:type" content="website" />
+<meta property="og:image" content="https://photos.doctoralia.com/636396409530304666.jpg" />
+<meta property="og:url" content="https://www.doctoralia.com.br/medico/fasoli+reboucas+caio-14927255" />
+<meta property="og:site_name" content="Doctoralia" />
+<meta property="og:locale" content="pt_BR" />
+
+    <meta name="robots" content="all" />
+
+
+<meta property="fb:admins" content="100002164932184">
+<link rel="shortcut icon" href="/favicon.ico?v=20141103" />
+    <link rel="canonical" href="https://www.doctoralia.com.br/medico/fasoli+reboucas+caio-14927255" />
+
+    
+    <title>Dr. Caio Fasoli Rebouças  - São Paulo</title>
+
+    <link href="/content/doctor-details__v__k18vFvEhub0INILm_vP1KCumwlRZSwMBHvLPO4tVhPY1" rel="stylesheet"/>
+
+        <!--[if IE 8]>
+        <link href="/content/ie8.css" rel="stylesheet"/>
+
+    <![endif]-->
+    
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-1127942-6', 'auto', { 'allowLinker': true  });
+        ga('require', 'linker');
+        ga('linker:autoLink', ['app.doctoralia.com']);
+                    ga(function (tracker) { document.cookie = '_uaClientID_=' + tracker.get('clientId') + '; path=/'; });
+        ga('send', 'pageview');
+    </script>
+                <script type="application/ld+json">
+                {"@context" : "http://schema.org","@type" : "Physician","name" : "Dr. Caio Fasoli Rebouças","photo" : "//photos.doctoralia.com/636396409530304666.jpg","image" : "//photos.doctoralia.com/636396409530304666.jpg","address" : "Brasil, São Paulo, Pinheiros, Rua Engenheiro Alcides Barbosa, 29","aggregateRating" : {"@type" : "AggregateRating","bestRating" : "5","worstRating" : "1","ratingValue" : "5","reviewCount" : "1"},"review" : [{"@type" : "Review","datePublished" : "2018-01-18","reviewRating" : {"bestRating" : "5","worstRating" : "1","ratingValue" : "5"},"author" : {"@type" : "Person","name" : "Marcio A."}}]}
+            </script>
+            <script type="application/ld+json">
+                {"@context" : "http://schema.org","@type" : "LocalBusiness","address" : "Brasil, São Paulo, Pinheiros, Rua Engenheiro Alcides Barbosa, 29","name" : "Consultório","geo" : {"@type" : "GeoCoordinates","latitude" : "-23,5643578","longitude" : "-46,676863999999"}}
+            </script>
+            <script type="application/ld+json">
+                {"@context" : "http://schema.org","@type" : "LocalBusiness","address" : "Brasil, São Paulo, Belenzinho, Rua Herval, 358 (sala 2)","name" : "Consultório","geo" : {"@type" : "GeoCoordinates","latitude" : "-23,5407229","longitude" : "-46,5886358"}}
+            </script>
+
+</head>
+<body data-fb-culture="pt_BR" data-fb-appid="138687599526585" data-login-redirect="">
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WNHGKJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+        var dataLayerContainer = {};
+        dataLayerContainer['gtm-pageType'] = 'profile_visit';
+        dataLayerContainer['gtm-specialization'] = 'Psicologia';
+        dataLayerContainer['gtm-region'] = 'São Paulo SP';
+        dataLayerContainer['gtm-city'] = 'São Paulo';
+        dataLayerContainer['gtm-disease'] = '';
+        dataLayerContainer['gtm-service'] = '';
+        dataLayerContainer['gtm-medication'] = '';
+        dataLayerContainer['gtm-is-mobile'] = '0';
+                dataLayer = [dataLayerContainer];
+
+
+            
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WNHGKJ');
+            
+    </script>
+
+    <div class="wrap" id="top">
+        <header class="heading-bar">
+    <div class="container-l">
+        <a href="https://www.doctoralia.com.br/" class="logo" title="Doctoralia">
+            <img src="/content/images/d4/logo.png" alt="Doctoralia" width="180" height="48" />
+        </a>
+                    <fieldset class="search">
+<form action="/search" data-search-bar="" method="post">                            <input type="text" name="SearchTerms" autocomplete="off" placeholder="" maxlength="150" class="textBox" data-searchterms-input />
+                            <input type="submit" class="btn btn-ico" value="" data-ga-event="click" data-ga-category="search" data-ga-action="header" data-ga-label="professional" />
+</form>                    </fieldset>
+                    <nav class="visitor">
+                        <div class="register-multiple-container">
+                            <div class="register-multiple hidden">
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register?openSection=2" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-doctor"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Doctor Sign up">
+                                    Profissional da saúde
+                                </a>
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register?openSection=3" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-center"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Facilty Sign up">
+                                    Centro médico
+                                </a>
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register/patient/1" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-patient"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Patient Sign up">
+                                    Paciente
+                                </a>
+                            </div>
+                        </div>
+                        <a rel="nofollow" data-register-link href="https://www.doctoralia.com.br/users/register">
+                            Cadastre-se
+                            <i class="ico-triangle-down"></i>
+                        </a>
+                        <i></i>
+                        <a rel="nofollow" href="https://app.doctoralia.com.br/usuarios/login">
+                            Entrar
+                        </a>
+                    </nav>
+    </div>
+</header>
+    <div class="search-typeahead-container-center">
+        <div class="search-typeahead-container">
+            <div class="search-textbox-typeahead hidden"></div>
+        </div>
+    </div>
+
+        
+    
+
+        <div class="container fixed">
+<ul class="breadcrumb"><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.doctoralia.com.br/" itemprop="url"><span itemprop="title">Home</span></a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.doctoralia.com.br/medicos" itemprop="url"><span itemprop="title">Médicos</span></a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a data-ga-action="click" data-ga-category="pu-profile-breadcrumb" data-ga-event="click" data-ga-label="specialty" href="https://www.doctoralia.com.br/medicos/especialidade/psicologos-1434" itemprop="url"><span itemprop="title">Psicólogos</span></a></li><li class="active" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a data-ga-action="click" data-ga-category="pu-profile-breadcrumb" data-ga-event="click" data-ga-label="specialty_city" href="https://www.doctoralia.com.br/medicos/especialidade/psicologos-1434/sao+paulo-116705-1" itemprop="url"><span itemprop="title">Psicólogos São Paulo</span></a></li></ul>
+                <p class="share">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.doctoralia.com.br%2fmedico%2ffasoli%2breboucas%2bcaio-14927255" rel="nofollow" target="_blank" title="Facebook"></a>
+<a class="twitter" data-lang="en" href="http://twitter.com/share?url=https%3a%2f%2fwww.doctoralia.com.br%2fmedico%2ffasoli%2breboucas%2bcaio-14927255&amp;text=Recomendo+Dr.+Caio+Fasoli+Rebou%c3%a7as%2c+psic%c3%b3logo&amp;via=Doctoralia_br" rel="nofollow" target="_blank" title="Twitter"></a>
+
+                </p>
+        </div>
+
+        <div id="main">
+            <svg style="display:none;">
+    <symbol id="icoComment">
+        <path d="M3.2002,13 C2.5402,13 2.0002,12.46 2.0002,11.8 L2.0002,3.2 C2.0002,2.54 2.5402,2 3.2002,2 L18.8002,2 C19.4602,2 20.0002,2.54 20.0002,3.2 L20.0002,11.8 C20.0002,12.46 19.4602,13 18.8002,13 L14.0002,13 L14.0002,16 L10.3302,13 L3.2002,13 Z M2.9602,0 C1.3302,0 0.0002,1.33 0.0002,2.96 L0.0002,12.04 C0.0002,13.67 1.3302,15 2.9602,15 L9.8902,15 L16.0002,20 L16.0002,15 L19.0402,15 C20.6702,15 22.0002,13.67 22.0002,12.04 L22.0002,2.96 C22.0002,1.33 20.6702,0 19.0402,0 L2.9602,0 Z" fill="#FFFFFF"></path>
+    </symbol>
+</svg>
+
+
+
+
+<style id="slider-style"></style>
+
+<div>
+    
+    <header class="box d premium">
+        <figure class="photo d">
+                <a href="//photos.doctoralia.com/636396409530304666.jpg" data-openpic="lightbox-journey">                
+                    <img alt="Dr. Caio Fasoli Rebouças" height="191" src="//photos.doctoralia.com/636396409530304666_2.jpg" width="160" />
+                </a>
+        </figure>
+        
+        <div class="header-content">
+            <div class="title">
+                <h1>Dr. Caio Fasoli Rebouças</h1>
+                    <div id="doctorSpecialities" class="description">
+                        <p>Psicólogo, Terapeuta alternativo</p><p class="subspecialities">Competência em: Psicologia Junguiana, Psicodiagnóstico, Psicologia Jurídica, Transtornos em Crianças e Adolescentes, Doenças Psicossomáticas, Psicoterapia Corporal</p>
+                    </div>
+            </div>
+            
+            <div class="contribution">
+<div>
+    <span class="ratingXL">
+        <a href="#reviews" rel="nofollow" data-sticky>
+            <span class="rating-avg-large"><span class="p100"></span></span>
+        </a>
+    </span>
+    <a href="#reviews" class="reviews" rel="nofollow" data-sticky>
+        <span>1</span> opinião
+    </a>
+</div>
+                                    <a class="answers" href="#answers" rel="nofollow" data-sticky>5 perguntas respondidas</a>
+            </div>
+            
+                <p class="regnum">Número de Identificação Profissional: 06/99296</p>
+
+            
+<div class="actions">
+        <div class="btn btn-primary book" data-button="#locationsMenu">
+            <a id="locationsMenu" href="#booking" rel="nofollow">Marcar consulta</a>
+            <i class="icon"></i>
+        </div>
+            <div class="btn btn-secondary contact hidden" data-button=".lnkContact">
+            <a class="lnkContact" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-ga-action="clicked" data-ga-category="contact-form" data-ga-label="clicked" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as" rel="nofollow">Enviar mensagem</a>
+            <i class="icon"></i>
+        </div>
+        <div id="frmContact" class="contactForm hidden"></div>
+            <div class="btn btn-secondary viewnumber phone-trigger " data-ga-action="header">
+            <a href="#" rel="nofollow">Ver telefone</a>
+            <i class="icon"></i>
+        </div>
+    
+    <div class="btn btn-tertiary favorites no" data-fav="0" data-fav-type="2" data-fav-key="14927255" data-ga-event="click" data-ga-category="click-favorite" data-ga-action="add" data-ga-action-remove="remove" data-ga-action-add="add">
+        <a rel="nofollow" href="#">Favorito</a>
+        <i class="icon"></i>
+    </div>
+        <div class="btn btn-tertiary reviews" data-button-link="#addReviewMenu">
+            <a id="addReviewMenu" rel="nofollow" href="https://www.doctoralia.com.br/medico/fasoli+reboucas+caio-14927255/opiniao">Opinar</a>
+            <i class="icon"></i>
+        </div>
+    </div>
+
+        </div>
+    </header>
+
+
+    <nav role="navigation" class="onpage">
+        <ul>
+
+                <li class=active><a href="#booking" data-sticky>Marcação de consultas</a></li>
+                            <li><a href="#location" data-sticky>Consultório</a></li>
+                            <li><a href="#reviews" data-sticky>Opiniões</a></li>
+                            <li><a href="#curriculum" data-sticky>Experiência</a></li>
+                            <li><a href="#services" data-sticky>Serviços</a></li>
+                            <li><a href="#articles" data-sticky>Artigos</a></li>
+                            <li><a href="#answers" data-sticky>Respostas</a></li>
+                            <li><a href="#photos" data-sticky>Fotos</a></li>
+        </ul>
+    </nav>
+
+        <span id="booking" class="anchor"></span>
+        <section class="box booking">
+            <h2>Marcação de consultas</h2>
+                <div class="booking-filter">
+                    <i class="icon">1</i>
+                    <h3>Em qual consultório você quer ser atendido?</h3>
+                    <form>
+                        <select id="doctorPlaces" name="where" class="field">
+                                        <option value="3358083" data-placetype="PrivatePractice">Rua Engenheiro Alcides Barbosa, 29 01430010 Pinheiros S&#227;o Paulo</option>
+                                        <option value="3358084" data-placetype="PrivatePractice">Rua Herval, 358 (sala 2) 03062000 Belenzinho S&#227;o Paulo</option>
+
+                        </select>
+                                    <span class="doctorplacesaddress" id="dpa-3358083" >
+                                        <label for="doctorPlaces"><a class="more" data-address="Rua Engenheiro Alcides Barbosa, 29" data-apikey="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-city-key="116705" data-full-address="Brasil, São Paulo, Pinheiros, Rua Engenheiro Alcides Barbosa, 29" data-key="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-label="1" data-language="pt" data-lat="-23.5643578" data-lng="-46.676863999999" data-marker-icon="/content/images/d4/marker-no-shadow.png" data-name="Dr. Caio Fasoli Rebouças" data-show-map="" data-target="#map" href="#" rel="nofollow">Veja o consultório no mapa</a></label>
+                                    </span>
+                                    <span class="doctorplacesaddress" id="dpa-3358084" style=display:none;>
+                                        <label for="doctorPlaces"><a class="more" data-address="Rua Herval, 358 (sala 2)" data-apikey="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-city-key="116705" data-full-address="Brasil, São Paulo, Belenzinho, Rua Herval, 358 (sala 2)" data-key="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-label="2" data-language="pt" data-lat="-23.5407229" data-lng="-46.5886358" data-marker-icon="/content/images/d4/marker-no-shadow.png" data-name="Dr. Caio Fasoli Rebouças" data-show-map="" data-target="#map" href="#" rel="nofollow">Veja o consultório no mapa</a></label>
+                                    </span>
+
+                    </form>
+                </div>
+            
+            <div class="booking-time">
+ <i class="icon">2</i>                 <h3>Que dia e hora estão bem para você?</h3>
+                <div class="calendar">
+
+<div id="schedule-list-container-3358083">
+<form action="/schedules/legacy/schedulesingle?lite=False&amp;ismodal=False" class="schedule-list-form" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace-with" data-ajax-success="InitializeGATracking();" data-ajax-update="#schedule-list-container-3358083" id="form0" method="post">        <div id="appointment-schedule-list" class="schedule scheduleList clearfix">
+            <div class="clearfix opacity loading-layer">
+                <table>
+                    <thead>
+                    </thead>
+                </table>
+            </div>
+            <input type="hidden" class="schedule-type" name="Schedule.Type" value="PrivatePractice" />
+            <input type="hidden" class="schedule-id" name="Schedule.Id" value="3358083" />
+            <input type="hidden" class="input-date" name="date" value="2018/04/05" />
+            <input type="hidden" class="next-date" value="2018/04/12" />
+            <input type="hidden" class="previous-date" value="2018/03/29" />
+        </div>
+</form></div>
+                </div>
+                <aside>
+                    <div class="note">
+                        <h4>Marque uma consulta! <strong>É fácil, rápido e seguro</strong>.</h4>
+                        <p>O agendamento da consulta é um serviço gratuito da Doctoralia.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    
+        <span id="location" class="anchor"></span>
+        <section class="box general" id="locationMap">
+            <h2>Consultório</h2>
+            
+                        <div class="map-wrapper">
+                            <div class="clearfix">
+                                <div id="map-image" class="map map-wide map-premium">
+                                        <a class="map-link" href="#" rel="nofollow" data-ga-event="click" data-ga-category="map-profile" data-ga-action="click-zoom" data-ga-label="premium" data-here-maps-locale="br" data-here-maps-id="B51IO8SSwZrw3Wezghem" data-here-maps-code="MHPJJ-ZNe5_T2X-Gh1KFFQ" data-here-maps-pois="[[-23.5643578,-46.676863999999],[-23.5407229,-46.5886358]]" data-expand-map data-language="pt" data-apikey="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk">
+                                            <span class="label">Ampliar</span>
+                                        </a>
+                                </div>
+                                <div id="map-expanded" class="hidden map expanded map-premium">
+                                    <div id="map-expanded-canvas" class="canvas" data-marker-icon="/content/images/d4/marker-no-shadow.png"></div>
+                                    <span class="hidden" data-minimize>Minimizar mapa</span>
+                                    <div id="map-overlay" class="overlay"><span class="label">Ampliar</span></div>
+                                </div>
+                            </div>
+                        </div>
+                                                                                                                                                                                <div class="location d">
+                                                                    <mark>1</mark>
+                                                                    <article>
+                                                                        <h3>
+Consult&#243;rio                                                                        </h3>
+                                                                                <p class="address">
+                                                                                    <span class="street">Rua Engenheiro Alcides Barbosa, 29 (Pinheiros)</span>
+                                                                                    <span class="location">
+                                                                                         01430010 São Paulo, São Paulo SP
+                                                                                            | <a class="more" data-address="Rua Engenheiro Alcides Barbosa, 29" data-apikey="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-city-key="116705" data-full-address="Brasil, São Paulo, Pinheiros, Rua Engenheiro Alcides Barbosa, 29" data-ga-action="click-see-map" data-ga-category="map-profile" data-ga-event="click" data-ga-label="premium" data-key="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-label="1" data-language="pt" data-lat="-23.5643578" data-lng="-46.676863999999" data-marker-icon="/content/images/d4/marker-no-shadow.png" data-name="Dr. Caio Fasoli Rebouças" data-show-map="" data-target="#map" href="#" rel="nofollow">Veja o consultório no mapa</a>
+                                                                                    </span>
+                                                                                </p>
+                                                                                                                                                    <div class="actions" data-phone-container>
+                                                                                    <a href="#booking" data-sticky data-placeid="3358083" data-placetype="PrivatePractice" class="btn btn-primary book" rel="nofollow">Marcar consulta<i class="icon"></i></a>
+
+                                                                                <a class="btn btn-secondary viewnumber" data-entity-key="14927255" data-ga-action="practice" data-ga-category="click_telf" data-ga-event="click" data-ga-label="premium" data-phone-modal="" data-phone-type="1" data-place-key="3358083" data-place-type="0" href="#" rel="nofollow" title="Ver telefone"><b>(11)</b>...Ver telefone<i class="icon"></i></a>
+                                                                            </div>
+                                                                    </article>
+                                                                        <aside >
+                                                                                                                                                                                                                                                                                                                    <p class="insurances"><b class="attends">Atende: </b><span class="t3">Pacientes particulares (sem convênios médicos)</span></p>
+                                                                        </aside>
+                                                                </div>
+                                                                <div class="location d">
+                                                                    <mark>2</mark>
+                                                                    <article>
+                                                                        <h3>
+Consult&#243;rio                                                                        </h3>
+                                                                                <p class="address">
+                                                                                    <span class="street">Rua Herval, 358 (sala 2) (Belenzinho)</span>
+                                                                                    <span class="location">
+                                                                                         03062000 São Paulo, São Paulo SP
+                                                                                            | <a class="more" data-address="Rua Herval, 358 (sala 2)" data-apikey="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-city-key="116705" data-full-address="Brasil, São Paulo, Belenzinho, Rua Herval, 358 (sala 2)" data-ga-action="click-see-map" data-ga-category="map-profile" data-ga-event="click" data-ga-label="premium" data-key="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-label="2" data-language="pt" data-lat="-23.5407229" data-lng="-46.5886358" data-marker-icon="/content/images/d4/marker-no-shadow.png" data-name="Dr. Caio Fasoli Rebouças" data-show-map="" data-target="#map" href="#" rel="nofollow">Veja o consultório no mapa</a>
+                                                                                    </span>
+                                                                                </p>
+                                                                                                                                                    <div class="actions" data-phone-container>
+                                                                                    <a href="#booking" data-sticky data-placeid="3358084" data-placetype="PrivatePractice" class="btn btn-primary book" rel="nofollow">Marcar consulta<i class="icon"></i></a>
+
+                                                                                <a class="btn btn-secondary viewnumber" data-entity-key="14927255" data-ga-action="practice" data-ga-category="click_telf" data-ga-event="click" data-ga-label="premium" data-phone-modal="" data-phone-type="1" data-place-key="3358084" data-place-type="0" href="#" rel="nofollow" title="Ver telefone"><b>(11)</b>...Ver telefone<i class="icon"></i></a>
+                                                                            </div>
+                                                                    </article>
+                                                                        <aside >
+                                                                                                                                                                                                                                                                                                                    <p class="insurances"><b class="attends">Atende: </b><span class="t3">Pacientes particulares (sem convênios médicos)</span></p>
+                                                                        </aside>
+                                                                </div>
+</section>
+            <span id="reviews" class="anchor"></span>
+        <section class="box reviews">
+            <h2>Opiniões para Dr. Caio Fasoli Rebouças</h2>
+    <div class="review-overview">
+            <div class="global">
+                <h3>5</h3>
+
+                <span class="rating-avg-large"><span class="p100"></span></span>
+                        <p>
+Baseado em 1 opinião                        </p>
+            </div>
+            <div class="detailed">
+                <p class="punctuality" title="5"><i class="icon"></i>Pontualidade <span class="rating-avg"><span class="p100"></span></span></p>
+                <p class="attention" title="5"><i class="icon"></i>Atenção <span class="rating-avg"><span class="p100"></span></span></p>
+                <p class="facilities" title="5"><i class="icon"></i>Instalações <span class="rating-avg"><span class="p100"></span></span></p>
+            </div>
+            <div class="action">
+                <p>Você foi atendido/a por Dr. Caio Fasoli Rebouças?</p>
+                <a href="https://www.doctoralia.com.br/medico/fasoli+reboucas+caio-14927255/opiniao" class="btn btn-secondary opinate" rel="nofollow">Opinar<i class="icon"></i></a>
+            </div>
+    </div>
+<div class="review-item"><div class="review"><span class="rating-avg"><span class="p100"></span></span><time datetime="2018-01-18">18/01/2018</time><div class="good"><i class="icon"></i><p><dfn>O melhor</dfn>: &quot;Caio é um excelente psicoterapeuta. Acolhedor, sensível, preciso e, essencialmente humano. Altamente recomendado.&quot;</p></div><p class="motive"><dfn>Motivo da visita:</dfn> Psicoterapia</p></div><div class="reviewer"><i class="icon"></i><p class="where">Marcio A. marcou consulta com Dr. Caio Fasoli Rebouças em Rua Engenheiro Alcides Barbosa, 29</p></div><div class="review-response"><i class="icon"></i><figure class="photo"><img src="//photos.doctoralia.com/636396409530304666_1.jpg"></img></figure><h5>Dr. Caio Fasoli Rebouças respondeu a esta opinião</h5><p>É extremamente gratificante receber uma opinião positiva, espero apenas aquilo que espero sempre com todos meus pacientes, que possa auxilia-lo em sua jornada.</p></div></div>
+            
+        </section>
+            <span id="curriculum" class="anchor"></span>
+        <section class="box curriculum">
+            <h2>Experiência</h2>
+
+
+                <section class="education">
+                    <i class="icon"></i>
+                    <h3>Formação</h3>
+                    <ul><li>Psicologia<span class="institution">Pontifícia Universidade Católica de São Paulo</span><span class="year">2009</span></li><li>Especialização em Psicologia Juridica<span class="institution">Estudos Avançados</span><span class="year">2012</span></li></ul>
+                </section>
+                            <section class="history">
+                    <i class="icon"></i>
+                    <h3>Sobre mim</h3>
+
+
+                        <p class="regnum"><b>Número de Identificação Profissional:</b> 06/99296</p>
+
+<div><!--StartFragment--><span>A psicologia sempre me atraiu, me lembro vividamente de, com 8 anos, dizer ao meu pai, após uma feira das profissões em minha escola, que seria psicólogo. <br>
+
+<!--StartFragment--><span>Me formei em 2009 e mergulhei na clínica, esse havia sido sempre meu objetivo. <br></span>Especializado em psicoterapia infantil e de adultos, sigo a abordagem Junguiana.<br>Seguem os serviços que ofereço:<br><br>Psicoterapia de auto conhecimento<br>Psicoterapia Focada<br>Aplicação de Rorschach<br>Psicodiagnóstico<br>Psicoterapia em casos de violência/abusos, bem como em casos de suspeita.<br><br>Para maiores informações segue o meu site:&nbsp;http://caioreboucas.com.br/</span><!--EndFragment--></div>                </section>
+                            <section class="expertise">
+                    <i class="icon"></i>
+                    <h3>Experiência em</h3>
+                    <ul>
+                            <li>
+                                <h4>Exames e procedimentos</h4>
+                                <ul class="blt"><li><a class="item" href="https://www.doctoralia.com.br/provamedica/analise+junguiana-25091">Análise Junguiana</a></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/anamnese+psicologica-23973">Anamnese Psicológica</a></li><li><span class="item">Aplicação de testes e escalas</span></li><li><span class="item">Atendimento psicológico à mulheres em situação de violência doméstica</span></li><li><span class="item">Consulta psicológica da criança</span></li><li><span class="item">Consulta psicológica do adolescente</span></li><li><span class="item">Consulta psicológica do adulto</span></li><li><span class="item">Desenvolvimento a resiliência</span></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/experiencia+somatica-30397">Experiência Somática</a></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/metodo+de+rorschach-23677">Método de Rorschach</a></li><li><span class="item">Psicologia Corporal</span></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/psicoterapia-23668">Psicoterapia</a></li></ul>
+                            </li>
+                                                    <li>
+                                <h4>Doenças</h4>
+                                <ul class="blt"><li><a href="https://www.doctoralia.com.br/enfermidade/angustia-54627">Angústia</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/ansiedade-54042">Ansiedade</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/ataque+de+panico-52677">Ataque de pânico</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/bullying-52787">Bullying</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/comportamentos+de+risco-52788">Comportamentos de risco</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/conflitos+de+relacionamento-54628">Conflitos de relacionamento</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/depressao-41108">Depressão</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/dificuldades+escolares-54017">Dificuldades escolares</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/dificuldades+no+relacionamento-52852">Dificuldades no relacionamento</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/estresse-15078">Estresse</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/transtornos+de+estresse+pos-traumaticos-17529">Transtornos De Estresse Pós-Traumáticos</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/violencia+sexual-52801">Violência sexual</a></li></ul>
+                            </li>
+                    </ul>
+                </section>
+            
+
+                <section class="languages">
+                    <i class="icon"></i>
+                    <h3>Idiomas</h3>
+                    <ul><li>Português</li><li>Inglês </li></ul>
+                </section>
+
+
+<section class="webs-social-network">
+    <i class="icon"></i>
+    <h3>Webs</h3>
+
+        <ul class="website-links blt">
+                    <li>
+                        <a target="_blank" href="http://www.caioreboucas.com.br/">Meu website</a>
+                    </li>
+                    </ul>
+            <hr />
+            <ul class="social-networks">
+                <li><a target="_blank" class="sn-linkedin" href="https://www.linkedin.com/in/caio-rebou%C3%A7as-5a522574/">LinkedIn</a></li>
+        </ul>
+
+</section>        </section>
+
+            <span id="services" class="anchor"></span>
+        <section class="box services">
+
+            <div class="details ">
+                <h2>Serviços</h2>
+                    <div class="filter">
+                        <label for="servicesFilter">Digite para pesquisar um serviço:</label>
+                        <input type="text" id="servicesFilter" placeholder="Comece digitando o exame ou tratamento" />
+                    </div>
+                <div class="expandable-text" data-dralia="expandable" id="servicesExpandable"><div class="expandable-text-content">                        <ul class="heading clearfix">
+                            <li>
+                                                                    <div class="tooltip">
+                                        Preço
+                                        <i class="icon"></i>
+                                        <div class="tooltip-info">
+                                            <span class="arrow"></span>
+                                            <div>Preços aproximados para pacientes particulares (sem plano de saúde).</div>
+                                        </div>
+                                    </div>
+                            </li>
+                        </ul>
+                    <ul id="servicesList" class="body">
+                            <li data-service="">
+                                <span class="name no-service mark" data-name="primeira consulta psicologia">Primeira consulta Psicologia</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Primeira%20consulta%20Psicologia" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service mark" data-name="retorno de consultas psicologia">Retorno de consultas Psicologia</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Retorno%20de%20consultas%20Psicologia" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service mark" data-name="primeira consulta terapias complementares e alternativas">Primeira consulta Terapias Complementares e Alternativas</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Primeira%20consulta%20Terapias%20Complementares%20e%20Alternativas" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="aconselhamento psicologico">Aconselhamento Psicológico</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Aconselhamento%20Psicol%C3%B3gico" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="aconselhamento psicologico para portadores de hiv">Aconselhamento psicológico para portadores de HIV</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Aconselhamento%20psicol%C3%B3gico%20para%20portadores%20de%20HIV" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="analise da escolha&#160;profissional">Análise da escolha profissional</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=An%C3%A1lise%20da%20escolha%C2%A0profissional" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="analise junguiana">Análise Junguiana</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=An%C3%A1lise%20Junguiana" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="anamnese psicologica">Anamnese Psicológica</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Anamnese%20Psicol%C3%B3gica" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="aplicacao de dinamicas em grupos">Aplicação de Dinamicas em Grupos</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Aplica%C3%A7%C3%A3o%20de%20Dinamicas%20em%20Grupos" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="aplicacao de testes e escalas">Aplicação de testes e escalas</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Aplica%C3%A7%C3%A3o%20de%20testes%20e%20escalas" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="apoio a inclusao escolar">Apoio à Inclusão Escolar</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Apoio%20%C3%A0%20Inclus%C3%A3o%20Escolar" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="atendimento em crise suicida">Atendimento em crise suicida</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Atendimento%20em%20crise%20suicida" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="atendimento na clinica social">Atendimento na Clínica Social</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Atendimento%20na%20Cl%C3%ADnica%20Social" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="atendimento psicologico a mulheres em situacao de violencia domestica">Atendimento psicológico à mulheres em situação de violência doméstica</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Atendimento%20psicol%C3%B3gico%20%C3%A0%20mulheres%20em%20situa%C3%A7%C3%A3o%20de%20viol%C3%AAncia%20dom%C3%A9stica" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="atitude frente a dor">Atitude Frente à Dor</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Atitude%20Frente%20%C3%A0%20Dor" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="avaliacao psicologica">Avaliação Psicológica</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Avalia%C3%A7%C3%A3o%20Psicol%C3%B3gica" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="consulta psicologica da crianca">Consulta psicológica da criança</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Consulta%20psicol%C3%B3gica%20da%20crian%C3%A7a" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="consulta psicologica do adolescente">Consulta psicológica do adolescente</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Consulta%20psicol%C3%B3gica%20do%20adolescente" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="consulta psicologica do adulto">Consulta psicológica do adulto</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Consulta%20psicol%C3%B3gica%20do%20adulto" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="consulta psicologica online">Consulta psicológica online</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Consulta%20psicol%C3%B3gica%20online" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="desenvolvimento a resiliencia">Desenvolvimento a resiliência</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Desenvolvimento%20a%20resili%C3%AAncia" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="dificuldade em comunicacao">Dificuldade em comunicação</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Dificuldade%20em%20comunica%C3%A7%C3%A3o" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="experiencia somatica">Experiência Somática</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Experi%C3%AAncia%20Som%C3%A1tica" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="ludoterapia individual">Ludoterapia Individual</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Ludoterapia%20Individual" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="metodo de rorschach">Método de Rorschach</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=M%C3%A9todo%20de%20Rorschach" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="orientacao escolar">Orientação Escolar</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Orienta%C3%A7%C3%A3o%20Escolar" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="orientacao profissional">Orientação profissional</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Orienta%C3%A7%C3%A3o%20profissional" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="procedimento de desenho-estoria">Procedimento de Desenho-Estória</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Procedimento%20de%20Desenho-Est%C3%B3ria" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicologia aplicada a saude">Psicologia Aplicada à Saúde</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Psicologia%20Aplicada%20%C3%A0%20Sa%C3%BAde" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicologia corporal">Psicologia Corporal</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Psicologia%20Corporal" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicologia da personalidade">Psicologia da Personalidade</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Psicologia%20da%20Personalidade" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicologia do desenvolvimento">Psicologia do Desenvolvimento</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Psicologia%20do%20Desenvolvimento" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicologia positiva">Psicologia Positiva</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Psicologia%20Positiva" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicoterapia">Psicoterapia</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Psicoterapia" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicoterapia adulto">Psicoterapia Adulto</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Psicoterapia%20Adulto" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicoterapia com imigrantes">Psicoterapia com imigrantes</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Psicoterapia%20com%20imigrantes" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicoterapia crianca">Psicoterapia Criança</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Psicoterapia%20Crian%C3%A7a" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicoterapia somatica">Psicoterapia somática</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Psicoterapia%20som%C3%A1tica" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="saude escolar">Saúde Escolar</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Sa%C3%BAde%20Escolar" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="tecnicas de respiracao">Técnicas de respiração</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=T%C3%A9cnicas%20de%20respira%C3%A7%C3%A3o" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="tecnicas para desenvolver a autoconfianca">Técnicas para Desenvolver a Autoconfiança</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=T%C3%A9cnicas%20para%20Desenvolver%20a%20Autoconfian%C3%A7a" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="terapia de casal">Terapia de Casal</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Terapia%20de%20Casal" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="terapia de familia">Terapia de Família</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Terapia%20de%20Fam%C3%ADlia" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="terapia familiar">Terapia Familiar</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Terapia%20Familiar" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="teste htp (house, tree, person)">Teste HTP (House, tree, person)</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Teste%20HTP%20%28House%2C%20tree%2C%20person%29" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="testes projetivos">Testes Projetivos</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Testes%20Projetivos" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="testes psicometricos">Testes Psicométricos</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Testes%20Psicom%C3%A9tricos" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="tratamento da ansiedade">Tratamento da ansiedade</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Tratamento%20da%20ansiedade" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="tratamento do tdah">Tratamento do TDAH</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Tratamento%20do%20TDAH" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="tratamento do transtorno de estresse pos traumatico">Tratamento do transtorno de estresse pôs traumático</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Tratamento%20do%20transtorno%20de%20estresse%20p%C3%B4s%20traum%C3%A1tico" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="tratamento psicanalitico para adultos">Tratamento psicanalítico para adultos</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Tratamento%20psicanal%C3%ADtico%20para%20adultos" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="tratamento psicanalitico para criancas e adolescentes">Tratamento psicanalítico para crianças e adolescentes</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as&amp;service=Tratamento%20psicanal%C3%ADtico%20para%20crian%C3%A7as%20e%20adolescentes" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                    </ul>
+</div><div class="display" data-dralia-expandable="more"><a href="#">Ver mais</a></div><div class="hidden display" data-dralia-expandable="less"><a href="#">Ver menos</a></div></div>                <p id="servicesNoResults" class="hidden">Nenhum resultado encontrado.</p>
+            </div>
+                <aside>
+                    <p>Se você deseja saber os preços de outros serviços ou tem alguma questão sobre os preços, entre em contato com o profissional.</p>
+<div class="btn btn-secondary contact hidden" data-button=".lnkContact">
+    <a class="lnkContact" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-ga-action="clicked" data-ga-category="contact-form" data-ga-label="clicked" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as" rel="nofollow">Enviar mensagem</a>
+    <i class="icon"></i>
+</div>                </aside>
+        </section>
+        <span id="articles" class="anchor"></span>
+        <section class="box descriptions">
+            <h2>
+                Artigos escritos por Dr. Caio Fasoli Rebouças
+            </h2>
+                <div class="description-wrapper">
+                    <h3>
+                        Desenvolvimento a resili&#234;ncia
+                    </h3>
+                    <div class="description-text">
+                        Um termo que vem ganhando for&#231;a atualmente entre os te&#243;ricos da psicologia, a resili&#234;ncia &#233; uma habilidade que vem se mostrado cada vez mais necess&#225;ria para lidar com a vida.<br>Diferentemente da &quot;resist&#234;ncia&quot; a pessoa resiliente percebe as dificuldades, mas escolhe se focar nos pontos positivos e nas possibilidades de cada situa&#231;&#227;o. Al&#233;m de se tratar de uma pessoa que desenvolve maior conex&#227;o com seus sentimentos, gerando maior auto consci&#234;ncia.<br>Duvide daquela pessoa que diz tudo estar &quot;&#243;timo&quot; sempre, reconhecer as dificuldades &#233; importante para conseguir super&#225;-las.<br>Busque um terapeuta j&#225; que o desenvolvimento da resili&#234;ncia requer uma reeduca&#231;&#227;o do nosso modo de pensar e de ver o mundo.
+                    </div>
+                </div>
+                <div class="description-wrapper">
+                    <h3>
+                        Consulta psicol&#243;gica da crian&#231;a
+                    </h3>
+                    <div class="description-text">
+                        Diferente da terapia &quot;cl&#225;ssica&quot; que faz uso intenso da fala como meio de atingir insights e mudan&#231;as, a terapia infantil se utiliza mais de meios indiretos para obter informa&#231;&#245;es bem como atingir mudan&#231;as.<br>O trabalho &#233; realizado atrav&#233;s da &quot;linguagem&quot; da crian&#231;a, isto &#233;, com desenhos, jogos e brincadeiras, essa t&#233;cnica &#233; chamada de ludoterapia e atrav&#233;s dela &#233; poss&#237;vel identificar quest&#245;es emocionais e de desenvolvimento, bem como realizar interven&#231;&#245;es significativas na vida da crian&#231;a.
+                    </div>
+                </div>
+                            <p class="goto">
+                    <i class="icon"></i>
+                    <a href="https://www.doctoralia.com.br/medico/fasoli+reboucas+caio-14927255/artigos">Veja os 9 artigos</a> escritos por Dr. Caio Fasoli Rebouças
+                </p>
+        </section>
+            <span id="answers" class="anchor"></span>
+        <section class="box answers">
+            <h2>Respostas de Dr. Caio Fasoli Rebouças</h2>
+
+<div class="answers-overview ">
+    
+    <div class="answered">
+        <p>
+            <b>5</b>
+            Respostas
+        </p>
+    </div>
+    <div class="acknowledged">
+        <p>
+            <b>3</b>
+            Especialistas de acordo
+        </p>
+    </div>
+    <div class="grateful">
+        <p>
+            <b>2</b>
+            Pacientes agradecidos
+        </p>
+    </div>
+</div>
+
+<div class="answers-info clearfix">
+    <div class="text">Dr. Caio Fasoli Rebouças está respondendo perguntas que os usuários enviam à Doctoralia.</div>
+    <div class="help">
+        <span class="ico-info-black"></span>
+        <span class="more-info italic">Descubra mais</span>
+        <div class="tooltip-info">
+            <span class="arrow"></span>
+            <div><p>As perguntas se enviam das páginas sobre <a href="https://www.doctoralia.com.br/enfermidades">doenças</a>, <a href="https://www.doctoralia.com.br/provasmedicas">exames médicos</a> ou <a href="https://www.doctoralia.com.br/medicamentos">medicamentos</a>.</p>
+<p>Todos os especialistas da Doctoralia podem responder as perguntas que enviam os usuários.</p>
+<p><strong>Não é possível fazer uma pergunta a um médico em concreto</strong>.</p></div>
+        </div>
+    </div>
+</div>
+
+    <div class="question">
+        <p class="ask-about">Pergunta sobre <a href="https://www.doctoralia.com.br/provamedica/fitoterapia+chinesa-24792">Fitoterapia chinesa</a></p>
+        <a class="text" href="https://www.doctoralia.com.br/provamedica/fitoterapia+chinesa-24792/pergunta/faco-tratamento-para-transtorno-de-ansiedade-e-panico-mas-percebi-que-mesmo-tomando-remedios-1284860">"Faço tratamento para transtorno de ansiedade e pânico.  Mas percebi que mesmo tomando remédios antidepressivo e ansioliticos a ansiedade ataca o estômago.  Quero saber se posso tomar remédios fitoterapicos como espinheira santa junto com antidepressivos?"</a>
+        <i class="pointer"></i>
+    </div>    <div class="answer-wrapper">
+        <div class="answer">
+            <p class="text">Entendo que a pergunta n&#227;o foi direcionada a &#225;rea da terapia, mas sinto que &#233; necess&#225;rio colocar que para tratar qualquer quest&#227;o emocional ou psicol&#243;gica, como ansiedade e panico, rem&#233;dios apenas n&#227;o dar&#227;o conta, j&#225; que eles agem sobre o sintoma e n&#227;o a causa.<br><br>&#201; importante que, concomitantemente, com o tratamento medicinal, voc&#234; realize algum tipo de acompanhamento psicol&#243;gico para tratar da causa e diminuir (ou at&#233; mesmo cessar) essa  quest&#227;o.<br><br>Boa sorte!</p>
+            <ul class="actions">
+                <li class="thanks">
+                    <a class="btn btn-minor thanks" data-answer-thanks="864601" data-answer-thanks-insurance="false" href="#" title="Se esta resposta lhe foi útil, por favor agradeça ao especialista com um click."><i class="icon"></i>Obrigado</a>
+                    <span class="counter">1</span>
+                </li>
+                <li><a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.doctoralia.com.br%2fprovamedica%2ffitoterapia%2bchinesa-24792%2fpergunta%2ffaco-tratamento-para-transtorno-de-ansiedade-e-panico-mas-percebi-que-mesmo-tomando-remedios-1284860%3fanswer%3d864601" rel="nofollow" target="_blank" title="Facebook"></a></li>
+                    <li class="experts-agree"><i class="icon"></i>1 especialista está de acordo</li>
+            </ul>
+            <i class="pointer"></i>
+        </div>
+        <div class="doctor">
+            <dl>
+                    <dt class="photo">
+<img alt="Dr. Caio Fasoli Rebouças" height="75" src="//photos.doctoralia.com/636396409530304666_2.jpg" width="63" />
+                    </dt>
+                <dd>
+                    <h3>Dr. Caio Fasoli Rebouças</h3>
+                        <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                            <i class="icon"></i>
+                            <b>Profissional Premium: Tem um perfil mais completo.</b>
+                        </dfn>
+                    <!-- todo -->
+                        <p class="specialities">Psicólogo, Terapeuta alternativo</p>
+                                            <p class="city">São Paulo</p>
+                </dd>
+
+            </dl>
+        </div>
+
+    </div>    <div class="clearfix"></div>
+    <div class="question">
+        <p class="ask-about">Pergunta sobre <a href="https://www.doctoralia.com.br/enfermidade/obesidade-16557">Obesidade</a></p>
+        <a class="text not-first" href="https://www.doctoralia.com.br/enfermidade/obesidade-16557/pergunta/ola-mudei-de-cidade-a-7-anos-e-nesse-tempo-engordei-50kg-morando-sem-familiares-perto-e-adquiri-o-1225485">"Olá! Mudei de cidade a 7 anos e nesse tempo engordei 50kg morando sem familiares perto e adquiri o mal-habito de fumar. Gostaria de saber o que fazer para perder esse peso e também esse hábito, tenho 28 anos e não me sinto feliz com essas circunstâncias.
+Hipnose pode ajudar?"</a>
+        <i class="pointer"></i>
+    </div>    <div class="answer-wrapper">
+        <div class="answer">
+            <p class="text">Como o colega Doutor Eduardo Guimar&#227;es afirmou, cigarro e transtornos alimentares, como comer compulsivamente s&#227;o normalmente associados a quadros de ansiedade, seria interessante que voc&#234; tivesse acompanhamento psicol&#243;gico aliado a uma reeduca&#231;&#227;o alimentar.<br>O fato que voc&#234; associa a sua separa&#231;&#227;o com a fam&#237;lia ao seu ganho de peso refor&#231;a ainda mais a possibilidade de um quadro de ansiedade cronica.<br>A hipnose &#233; uma t&#233;cnica muito espec&#237;fica que pode auxiliar em quest&#245;es mais aliadas a quadros de neurose, mas mesmo assim n&#227;o se trata de uma t&#233;cnica que deve ser utilizada sozinha, j&#225; que ela tratar&#225; do sintoma mais do que a causa, fazendo com que voc&#234; transfira o comportamento que a tr&#225;s sofrimento para outro sintoma ao inv&#233;s de lidar com a causa e extinguir a sua causa de sofrimento.<br>Boa sorte com sua jornada!</p>
+            <ul class="actions">
+                <li class="thanks">
+                    <a class="btn btn-minor thanks" data-answer-thanks="801507" data-answer-thanks-insurance="false" href="#" title="Se esta resposta lhe foi útil, por favor agradeça ao especialista com um click."><i class="icon"></i>Obrigado</a>
+                    <span class="counter">0</span>
+                </li>
+                <li><a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.doctoralia.com.br%2fenfermidade%2fobesidade-16557%2fpergunta%2fola-mudei-de-cidade-a-7-anos-e-nesse-tempo-engordei-50kg-morando-sem-familiares-perto-e-adquiri-o-1225485%3fanswer%3d801507" rel="nofollow" target="_blank" title="Facebook"></a></li>
+                    <li class="experts-agree"><i class="icon"></i>1 especialista está de acordo</li>
+            </ul>
+            <i class="pointer"></i>
+        </div>
+        <div class="doctor">
+            <dl>
+                    <dt class="photo">
+<img alt="Dr. Caio Fasoli Rebouças" height="75" src="//photos.doctoralia.com/636396409530304666_2.jpg" width="63" />
+                    </dt>
+                <dd>
+                    <h3>Dr. Caio Fasoli Rebouças</h3>
+                        <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                            <i class="icon"></i>
+                            <b>Profissional Premium: Tem um perfil mais completo.</b>
+                        </dfn>
+                    <!-- todo -->
+                        <p class="specialities">Psicólogo, Terapeuta alternativo</p>
+                                            <p class="city">São Paulo</p>
+                </dd>
+
+            </dl>
+        </div>
+
+    </div>    <div class="clearfix"></div>
+    <div class="question">
+        <p class="ask-about">Pergunta sobre <a href="https://www.doctoralia.com.br/enfermidade/dor-14780">Dor</a></p>
+        <a class="text not-first" href="https://www.doctoralia.com.br/enfermidade/dor-14780/pergunta/o-que-e-biopuntura-sinto-muita-dor-me-poderia-ajudar-isso-ja-nao-aguento-tanto-remedio-1148021">"O que é Biopuntura? Sinto muita dor, me poderia ajudar isso? Já não aguento tanto remédio."</a>
+        <i class="pointer"></i>
+    </div>    <div class="answer-wrapper">
+        <div class="answer">
+            <p class="text">Dores cronicas sem &quot;raz&#227;o aparente&quot; podem muitas vezes ter causas psicossomaticas (o psicologico afetando seu corpo). &#201; interessante explorar alternativas sim para o seu caso, Talvez acupuntura, terapia corporal ou homeopatia.<br>J&#225; que voc&#234; relata que j&#225; est&#225; tomando &quot;muitas medica&#231;&#245;es&quot; assumo que acompanhamento m&#233;dico j&#225; acontece, mas independentemente dos tratamentos alternativos que voc&#234; possa vir a aderir vai ser extremamente importante que esses profissionais conversem entre si.<br>Abra&#231;os e boa sorte.</p>
+            <ul class="actions">
+                <li class="thanks">
+                    <a class="btn btn-minor thanks" data-answer-thanks="713704" data-answer-thanks-insurance="false" href="#" title="Se esta resposta lhe foi útil, por favor agradeça ao especialista com um click."><i class="icon"></i>Obrigado</a>
+                    <span class="counter">0</span>
+                </li>
+                <li><a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.doctoralia.com.br%2fenfermidade%2fdor-14780%2fpergunta%2fo-que-e-biopuntura-sinto-muita-dor-me-poderia-ajudar-isso-ja-nao-aguento-tanto-remedio-1148021%3fanswer%3d713704" rel="nofollow" target="_blank" title="Facebook"></a></li>
+                    <li class="experts-agree"><i class="icon"></i>1 especialista está de acordo</li>
+            </ul>
+            <i class="pointer"></i>
+        </div>
+        <div class="doctor">
+            <dl>
+                    <dt class="photo">
+<img alt="Dr. Caio Fasoli Rebouças" height="75" src="//photos.doctoralia.com/636396409530304666_2.jpg" width="63" />
+                    </dt>
+                <dd>
+                    <h3>Dr. Caio Fasoli Rebouças</h3>
+                        <dfn rel="tooltip" class="hovertip premium hovertip-middle">
+                            <i class="icon"></i>
+                            <b>Profissional Premium: Tem um perfil mais completo.</b>
+                        </dfn>
+                    <!-- todo -->
+                        <p class="specialities">Psicólogo, Terapeuta alternativo</p>
+                                            <p class="city">São Paulo</p>
+                </dd>
+
+            </dl>
+        </div>
+
+    </div>    <div class="clearfix"></div>
+
+                <p class="goto">
+                    <i class="icon"></i>Ver as 5 <a href="https://www.doctoralia.com.br/medico/fasoli+reboucas+caio-14927255/respostas">perguntas respondidas por Dr. Caio Fasoli Rebouças</a>
+                </p>
+        </section>
+
+        <span id="photos" class="anchor"></span>
+        <section class="box photos">
+            <h2>Fotos</h2>
+            <div class="gallery-wrapper">
+                
+                    <div class="gallery-container">
+                        <div class="slider" data-slider-pictures>
+                            <ul class="columns gallery"><li><a data-openpic="lightbox-journey" href="//photos.doctoralia.com/636409229183655302.jpg" rel="nofollow"><img alt="" height="127" src="//photos.doctoralia.com/636409229183655302_3.jpg" width="226" /></a></li><li><a data-openpic="lightbox-journey" href="//photos.doctoralia.com/636409229304412414.jpg" rel="nofollow"><img alt="" height="127" src="//photos.doctoralia.com/636409229304412414_3.jpg" width="226" /></a></li></ul>
+                            <div class="arrow-container-right">
+                                <a href="#" class="icon arrow-left" data-arrow="left"></a>
+                            </div>
+                            <div class="arrow-container-left">
+                                <a href="#" class="icon arrow-right" data-arrow="right"></a>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </section>
+    
+
+<form action="/noindex/doctor-phone" id="frmPhone" method="post"><input name="__RequestVerificationToken" type="hidden" value="FqgMn7y3UfeZkfCS3HCTB4SmzGd2i3L6eXSi5WaCEW0Gt8lhe9163OWJ2j9Ai_kb0bz9xi41FZlwr7HJwAvWCap1-c41" /><input id="entityKey" name="entityKey" type="hidden" value="14927255" /><input id="placeType" name="placeType" type="hidden" value="" /><input id="placeKey" name="placeKey" type="hidden" value="" /></form>    <div id="phonePlacer"></div>
+<div id="map" class="hidden">
+    <div class="map-heading">Mapa de situação - <strong>Dr. Caio Fasoli Rebouças</strong></div>
+    <div class="map-body clearfix">
+        <div id="mapview" class="overview"></div>
+        <div id="streetviewpanorama" class="streetview"></div>
+    </div>
+    <footer></footer>
+</div>
+
+<div id="mapInfo" class="map-info">
+    <strong>{0}</strong><span>{1}</span>
+</div>
+
+
+        <div class="sticky-topbar entity-doctor magic">
+            <header class="box">
+            <div class="entity-actions">
+<img height="82" src="//photos.doctoralia.com/636396409530304666_2.jpg" width="69" />                <div class="entity-actions-right">
+                    <h1><a href="#top">Dr. Caio Fasoli Rebouças</a></h1>
+                    <br>
+                    
+<div class="actions">
+
+        <div id="book-btn-primary" class="btn btn-primary book" data-button="#locationsMenu">
+            <a id="locationsMenu" href="#booking" rel="nofollow">Marcar consulta</a>
+            <i class="icon"></i>
+        </div>
+            <div id="lead-btn-secondary" class="btn btn-secondary contact hidden" data-button=".lnkContact">
+            <a class="lnkContact" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-ga-action="clicked" data-ga-category="contact-form" data-ga-label="clicked" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14927255&amp;fullname=Dr.%20Caio%20Fasoli%20Rebou%C3%A7as" rel="nofollow">Enviar mensagem</a>
+            <i class="icon"></i>
+        </div>
+            <div id="phone-btn-secondary" class="btn btn-secondary viewnumber phone-trigger" data-ga-action="sticky">
+            <a href="#" rel="nofollow">Ver telefone</a>
+            <i class="icon"></i>
+        </div>
+    </div>
+
+
+
+                </div>
+            </div>
+            
+            <nav role="navigation" class="onpage">
+                <ul>
+                        <li><a href="#booking" data-sticky>Marcação de consultas</a></li>
+                                            <li><a href="#location" data-sticky>Consultório</a></li>
+                                            <li>
+                            <a href="#reviews" data-sticky>
+                                Opiniões  <span> (1)</span>                            </a>
+                        </li>
+                                            <li><a href="#curriculum" data-sticky>Experiência</a></li>
+                                            <li><a href="#services" data-sticky>Serviços</a></li>
+                                            <li><a href="#articles" data-sticky>Artigos</a></li>
+                                            <li><a href="#answers" data-sticky>Respostas</a></li>
+                                            <li><a href="#photos" data-sticky>Fotos</a></li>
+                </ul>
+            </nav>
+        </header>
+        </div>
+    
+</div>
+
+        </div>
+
+    </div>
+<script src="/bundles/layout__v__miT3LYpNHOzMLtiw0wIR9eDJAHw5C3whXB8znnRQr301"></script>
+
+<script src="/bundles/scheduleslegacy__v__N6lMy3PHoeFS2gyDigYyLRQwaCAZclkQFdBwvq5KO1Q1"></script>
+    <script src="/bundles/entity__v__AyiG3MwgnDvpto7i1fyFQuQ-h8xhL6KPBxzRTj5zWYY1"></script>
+
+    <script src="/bundles/entity-detail__v__4tGb2VhDD-CVyXhZmeBy-EFpWboQ4v3yV9kpuYquzLo1"></script>
+
+        <script type="text/javascript">
+            $(window).load(function () {
+                $('[data-slider-pictures]').animatedSlider(920);
+            });
+        </script>
+    
+    <script src="/bundles/search-typeahead__v__D806VR3Su6Z1WFH9RhNrZSjsaZ_RzHaRovfj8P1IuNY1"></script>
+
+<script src="/bundles/register-header__v__qIJz9fNypRKpAlc8HWqF6Wy7vZlH6SLU8DXuJcq1Rsw1"></script>
+
+<footer class="footer">
+    <div class="container cross-link seo clearfix" role="navigation">
+        <section>
+<h3>Médicos em Brasil</h3>                <ul>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312/brasilia-116707-1">Psiquiatras Brasília</a></li>
+                        <li><a href="/medicos/especialidade/nutricionistas-2203/belo+horizonte-116720-1">Nutricionistas Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/brasilia-116707-1">Endocrinologistas Brasília</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293/curitiba-116724-1">Urologistas Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/sete+lagoas-116945-1">Psicólogos Sete Lagoas</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/bento+goncalves-116744-1">Pediatras Bento Gonçalves</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/sao+sape-133364-1">Dentistas São Sapê</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/vinhedo-117153-1">Psicólogos Vinhedo</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/guaxupe-116764-1">Dentistas Guaxupé</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/campina+grande-116836-1">Endocrinologistas Campina Grande</a></li>
+                        <li><a href="/medicos/especialidade/homeopatas-1335">Homeopatas</a></li>
+                        <li><a href="/medicos/especialidade/otorrinos-1308">Otorrinos</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340">Cirurgiões vasculares</a></li>
+                    <li><span><a href="https://www.doctoralia.com.br/lista-de-medicos">Lista de médicos</a></span></li>
+                </ul>
+        </section>
+        <section>
+                <ul class="mt28">
+                        <li><a href="/medicos/especialidade/nutricionistas-2203/rio+de+janeiro-116704-1">Nutricionistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/psiquiatras-1312/sao+paulo-116705-1">Psiquiatras São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/rio+de+janeiro-116704-1">Ginecologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/sao+paulo-116705-1">Pediatras São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+vasculares-1340/rio+de+janeiro-116704-1">Cirurgiões vasculares Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/rio+de+janeiro-116704-1">Ortopedistas - Traumatologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293/sao+paulo-116705-1">Urologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/endocrinologistas-1296/rio+de+janeiro-116704-1">Endocrinologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/otorrinos-1308/rio+de+janeiro-116704-1">Otorrinos Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/rio+de+janeiro-116704-1">Psicólogos Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/quiropraxistas-2381/goiania-116733-1">Quiropraxistas Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/sexologos-2819/belo+horizonte-116720-1">Sexólogos Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/terapeutas+ocupacionais-2799/goiania-116733-1">Terapeutas ocupacionais Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/fonoaudiologos-2202/brasilia-116707-1">Fonoaudiólogos Brasília</a></li>
+                </ul>
+        </section>
+        <section>
+<h3>Especialistas</h3>                <ul>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/salpingoplastia+videolaparoscopica-15097/especialistas/rio+de+janeiro-116704-1">Salpingoplastia videolaparoscopica Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/mindfulness-29857/especialistas/rio+de+janeiro-116704-1">Mindfulness Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/exame+ginecologico-19519/especialistas/sao+paulo-116705-1">Exame ginecológico São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/colposcopia-24798/especialistas/curitiba-116724-1">Colposcopia Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/dietoterapia+chinesa-24793/especialistas/rio+de+janeiro-116704-1">Dietoterapia chinesa Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/tratamento+cirurgico+da+hipertrofia+dos+pequenos+labios-15426/especialistas/brasilia-116707-1">Tratamento Cirurgico Da Hipertrofia Dos Pequenos Labios Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/cistocele-14053/especialistas/rio+de+janeiro-116704-1">Cistocele Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/hpv-52756/especialistas/brasilia-116707-1">HPV Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/vulvovaginite-17798/especialistas/sao+paulo-116705-1">Vulvovaginite São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/dor-14780/especialistas/goiania-116733-1">Dor Goiânia</a></li>
+                </ul>
+        </section>
+        <section>
+            <h3>Pesquisar por</h3>            <ul class="other-links">
+                        <li><a href="https://www.doctoralia.com.br/sitemap/medicos">Profissionais por cidade</a></li>
+                        <li><a href="https://www.doctoralia.com.br/sitemap/centros-medicos">Centros médicos por cidade</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provasmedicas">Exames médicos e tratamentos</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidades">Doenças</a></li>
+                        <li><a href="https://www.doctoralia.com.br/medicamentos">Medicamentos</a></li>
+                        <li><a href="https://www.doctoralia.com.br/sitemap/perguntas">Perguntas a Especialistas</a></li>
+                        <li><a href="https://www.doctoralia.com.br/medicos-credenciados">Convênios médicos</a></li>
+            </ul>
+<span>Rede Doctoralia</span>            <ul>
+                        <li class="network"><a href="http://www.doctoraliar.com">Argentina</a></li>
+                        <li class="network"><a href="http://www.doctoralia.co.uk">Reino Unido</a></li>
+                        <li class="network"><a href="http://www.doctoralia.com.pt">Portugal</a></li>
+            </ul>
+        </section>
+    </div>
+    <nav class="links-about" role="navigation">
+    <div class="container clearfix">
+        <ul>
+            <li><a href="https://www.doctoralia.com.br/quem-somos-contato" rel="nofollow">Quem somos</a></li>
+            <li><a href="https://www.doctoralia.com.br/quem-somos-contato#contact" rel="nofollow">Contatar</a></li>
+                <li><a href="http://press.doctoralia.com.br" rel="nofollow">Press</a></li>
+            <li><a href="http://www.doctoralia.com.br/legal.aspx" rel="nofollow">Termos de Uso e Privacidade</a></li>
+        </ul>
+        <ul class="right">
+                <li><a href="http://insights.doctoralia.com.br">Insights Blog</a></li>
+                    <li><a href="http://academy.doctoralia.com.br">Doctoralia Academy</a></li>
+                    <li><a href="http://blog.doctoralia.com.br/">Blog para especialistas</a></li>
+    </ul>
+    </div>
+</nav>
+    
+    <div class="copy">
+        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 05/04/2018</span>
+    </div>
+</footer>
+    </body>
+</html>

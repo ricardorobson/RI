@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0x1CwcQCktBSXMHElAKXQ==","queueTime":0,"applicationTime":336,"ttGuid":"3F66533E5EEB5A31","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="description" content="Marque uma consulta com Sandro Azevêdo - Veja as  opiniões dos pacientes, consultórios, especialidades, preços e convênios. Aconselhamento Psicológico, Psicologia Humanista, Psicoterapia" /><meta name="keywords" content="Sandro Azevêdo, bom, melhor, saúde, médico, medicina privada, plano de saúde, clínica" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="@doctoralia" /><meta name="twitter:image" content="https://photos.doctoralia.com/636555372848632112_1.jpg" /><meta property="og:title" content="Sandro Azevêdo  - Psicólogo Salvador" />
+<meta property="og:description" content="Marque uma consulta com Sandro Azevêdo - Veja as  opiniões dos pacientes, consultórios, especialidades, preços e convênios. Aconselhamento Psicológico, Psicologia Humanista, Psicoterapia" /><meta property="og:type" content="website" />
+<meta property="og:image" content="https://photos.doctoralia.com/636555372848632112.jpg" />
+<meta property="og:url" content="https://www.doctoralia.com.br/medico/azevedo+sandro-14998825" />
+<meta property="og:site_name" content="Doctoralia" />
+<meta property="og:locale" content="pt_BR" />
+
+    <meta name="robots" content="all" />
+
+
+<meta property="fb:admins" content="100002164932184">
+<link rel="shortcut icon" href="/favicon.ico?v=20141103" />
+    <link rel="canonical" href="https://www.doctoralia.com.br/medico/azevedo+sandro-14998825" />
+
+    
+    <title>Sandro Azevêdo  - Psicólogo Salvador</title>
+
+    <link href="/content/doctor-details__v__k18vFvEhub0INILm_vP1KCumwlRZSwMBHvLPO4tVhPY1" rel="stylesheet"/>
+
+        <!--[if IE 8]>
+        <link href="/content/ie8.css" rel="stylesheet"/>
+
+    <![endif]-->
+    
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-1127942-6', 'auto', { 'allowLinker': true  });
+        ga('require', 'linker');
+        ga('linker:autoLink', ['app.doctoralia.com']);
+                    ga(function (tracker) { document.cookie = '_uaClientID_=' + tracker.get('clientId') + '; path=/'; });
+        ga('send', 'pageview');
+    </script>
+                <script type="application/ld+json">
+                {"@context" : "http://schema.org","@type" : "Physician","name" : "Sandro Azevêdo","photo" : "//photos.doctoralia.com/636555372848632112.jpg","image" : "//photos.doctoralia.com/636555372848632112.jpg","address" : "Brasil, Salvador, Pituba, Rua Minas Gerais,436  (Edifício Sinduscon, 5º andar)","aggregateRating" : {"@type" : "AggregateRating","bestRating" : "5","worstRating" : "1","ratingValue" : "5","reviewCount" : "1"},"review" : [{"@type" : "Review","datePublished" : "2018-03-05","reviewRating" : {"bestRating" : "5","worstRating" : "1","ratingValue" : "5"},"author" : {"@type" : "Person","name" : "Marcelo B."}}]}
+            </script>
+            <script type="application/ld+json">
+                {"@context" : "http://schema.org","@type" : "LocalBusiness","address" : "Brasil, Salvador, Pituba, Rua Minas Gerais,436  (Edifício Sinduscon, 5º andar)","name" : "Holos Clínica de Saúde e Desenvolvimento Pessoal","geo" : {"@type" : "GeoCoordinates","latitude" : "-13,0079926","longitude" : "-38,4617513"}}
+            </script>
+
+</head>
+<body data-fb-culture="pt_BR" data-fb-appid="138687599526585" data-login-redirect="">
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WNHGKJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+        var dataLayerContainer = {};
+        dataLayerContainer['gtm-pageType'] = 'profile_visit';
+        dataLayerContainer['gtm-specialization'] = 'Psicologia';
+        dataLayerContainer['gtm-region'] = 'Bahia BA';
+        dataLayerContainer['gtm-city'] = 'Salvador';
+        dataLayerContainer['gtm-disease'] = '';
+        dataLayerContainer['gtm-service'] = '';
+        dataLayerContainer['gtm-medication'] = '';
+        dataLayerContainer['gtm-is-mobile'] = '0';
+                dataLayer = [dataLayerContainer];
+
+
+            
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WNHGKJ');
+            
+    </script>
+
+    <div class="wrap" id="top">
+        <header class="heading-bar">
+    <div class="container-l">
+        <a href="https://www.doctoralia.com.br/" class="logo" title="Doctoralia">
+            <img src="/content/images/d4/logo.png" alt="Doctoralia" width="180" height="48" />
+        </a>
+                    <fieldset class="search">
+<form action="/search" data-search-bar="" method="post">                            <input type="text" name="SearchTerms" autocomplete="off" placeholder="" maxlength="150" class="textBox" data-searchterms-input />
+                            <input type="submit" class="btn btn-ico" value="" data-ga-event="click" data-ga-category="search" data-ga-action="header" data-ga-label="professional" />
+</form>                    </fieldset>
+                    <nav class="visitor">
+                        <div class="register-multiple-container">
+                            <div class="register-multiple hidden">
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register?openSection=2" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-doctor"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Doctor Sign up">
+                                    Profissional da saúde
+                                </a>
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register?openSection=3" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-center"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Facilty Sign up">
+                                    Centro médico
+                                </a>
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register/patient/1" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-patient"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Patient Sign up">
+                                    Paciente
+                                </a>
+                            </div>
+                        </div>
+                        <a rel="nofollow" data-register-link href="https://www.doctoralia.com.br/users/register">
+                            Cadastre-se
+                            <i class="ico-triangle-down"></i>
+                        </a>
+                        <i></i>
+                        <a rel="nofollow" href="https://app.doctoralia.com.br/usuarios/login">
+                            Entrar
+                        </a>
+                    </nav>
+    </div>
+</header>
+    <div class="search-typeahead-container-center">
+        <div class="search-typeahead-container">
+            <div class="search-textbox-typeahead hidden"></div>
+        </div>
+    </div>
+
+        
+    
+
+        <div class="container fixed">
+<ul class="breadcrumb"><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.doctoralia.com.br/" itemprop="url"><span itemprop="title">Home</span></a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.doctoralia.com.br/medicos" itemprop="url"><span itemprop="title">Médicos</span></a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a data-ga-action="click" data-ga-category="pu-profile-breadcrumb" data-ga-event="click" data-ga-label="specialty" href="https://www.doctoralia.com.br/medicos/especialidade/psicologos-1434" itemprop="url"><span itemprop="title">Psicólogos</span></a></li><li class="active" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a data-ga-action="click" data-ga-category="pu-profile-breadcrumb" data-ga-event="click" data-ga-label="specialty_city" href="https://www.doctoralia.com.br/medicos/especialidade/psicologos-1434/salvador-116711-1" itemprop="url"><span itemprop="title">Psicólogos Salvador</span></a></li></ul>
+                <p class="share">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.doctoralia.com.br%2fmedico%2fazevedo%2bsandro-14998825" rel="nofollow" target="_blank" title="Facebook"></a>
+<a class="twitter" data-lang="en" href="http://twitter.com/share?url=https%3a%2f%2fwww.doctoralia.com.br%2fmedico%2fazevedo%2bsandro-14998825&amp;text=Recomendo+Sandro+Azev%c3%aado%2c+psic%c3%b3logo&amp;via=Doctoralia_br" rel="nofollow" target="_blank" title="Twitter"></a>
+
+                </p>
+        </div>
+
+        <div id="main">
+            <svg style="display:none;">
+    <symbol id="icoComment">
+        <path d="M3.2002,13 C2.5402,13 2.0002,12.46 2.0002,11.8 L2.0002,3.2 C2.0002,2.54 2.5402,2 3.2002,2 L18.8002,2 C19.4602,2 20.0002,2.54 20.0002,3.2 L20.0002,11.8 C20.0002,12.46 19.4602,13 18.8002,13 L14.0002,13 L14.0002,16 L10.3302,13 L3.2002,13 Z M2.9602,0 C1.3302,0 0.0002,1.33 0.0002,2.96 L0.0002,12.04 C0.0002,13.67 1.3302,15 2.9602,15 L9.8902,15 L16.0002,20 L16.0002,15 L19.0402,15 C20.6702,15 22.0002,13.67 22.0002,12.04 L22.0002,2.96 C22.0002,1.33 20.6702,0 19.0402,0 L2.9602,0 Z" fill="#FFFFFF"></path>
+    </symbol>
+</svg>
+
+
+
+
+<style id="slider-style"></style>
+
+<div>
+    
+    <header class="box d premium">
+        <figure class="photo d">
+                <a href="//photos.doctoralia.com/636555372848632112.jpg" data-openpic="lightbox-journey">                
+                    <img alt="Sandro Azevêdo" height="191" src="//photos.doctoralia.com/636555372848632112_2.jpg" width="160" />
+                </a>
+        </figure>
+        
+        <div class="header-content">
+            <div class="title">
+                <h1>Sandro Azevêdo</h1>
+                    <div id="doctorSpecialities" class="description">
+                        <p>Psicólogo</p><p class="subspecialities">Competência em: Psicologia Humanista, Psicoterapia, Aconselhamento Psicológico</p>
+                    </div>
+            </div>
+            
+            <div class="contribution">
+<div>
+    <span class="ratingXL">
+        <a href="#reviews" rel="nofollow" data-sticky>
+            <span class="rating-avg-large"><span class="p100"></span></span>
+        </a>
+    </span>
+    <a href="#reviews" class="reviews" rel="nofollow" data-sticky>
+        <span>1</span> opinião
+    </a>
+</div>
+                            </div>
+            
+                <p class="regnum">Número de Identificação Profissional: CRP - 03/11004</p>
+
+            
+<div class="actions">
+        <div class="btn btn-primary book" data-button="#locationsMenu">
+            <a id="locationsMenu" href="#booking" rel="nofollow">Marcar consulta</a>
+            <i class="icon"></i>
+        </div>
+            <div class="btn btn-secondary contact hidden" data-button=".lnkContact">
+            <a class="lnkContact" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-ga-action="clicked" data-ga-category="contact-form" data-ga-label="clicked" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo" rel="nofollow">Enviar mensagem</a>
+            <i class="icon"></i>
+        </div>
+        <div id="frmContact" class="contactForm hidden"></div>
+            <div class="btn btn-secondary viewnumber phone-trigger " data-ga-action="header">
+            <a href="#" rel="nofollow">Ver telefone</a>
+            <i class="icon"></i>
+        </div>
+    
+    <div class="btn btn-tertiary favorites no" data-fav="0" data-fav-type="2" data-fav-key="14998825" data-ga-event="click" data-ga-category="click-favorite" data-ga-action="add" data-ga-action-remove="remove" data-ga-action-add="add">
+        <a rel="nofollow" href="#">Favorito</a>
+        <i class="icon"></i>
+    </div>
+        <div class="btn btn-tertiary reviews" data-button-link="#addReviewMenu">
+            <a id="addReviewMenu" rel="nofollow" href="https://www.doctoralia.com.br/medico/azevedo+sandro-14998825/opiniao">Opinar</a>
+            <i class="icon"></i>
+        </div>
+    </div>
+
+        </div>
+    </header>
+
+
+    <nav role="navigation" class="onpage">
+        <ul>
+
+                <li class=active><a href="#booking" data-sticky>Marcação de consultas</a></li>
+                            <li><a href="#location" data-sticky>Consultório</a></li>
+                            <li><a href="#reviews" data-sticky>Opiniões</a></li>
+                            <li><a href="#curriculum" data-sticky>Experiência</a></li>
+                            <li><a href="#services" data-sticky>Serviços</a></li>
+                                                    <li><a href="#photos" data-sticky>Fotos</a></li>
+        </ul>
+    </nav>
+
+        <span id="booking" class="anchor"></span>
+        <section class="box booking">
+            <h2>Marcação de consultas</h2>
+                <div class="booking-filter no-bullet">
+                    <h3>Endereço do consultório</h3>
+                    <form>
+                            <input type="hidden" name="where" value="21507" data-placetype="Centre" data-address="Rua Minas Gerais,436  (Edif&#237;cio Sinduscon, 5&#186; andar) 41830-020 Pituba Salvador" />
+                            <div>Holos Cl&#237;nica de Sa&#250;de e Desenvolvimento Pessoal</div>
+                            <span class="doctorplacesaddress" id="dpa-21507">
+                                <label for="doctorPlaces">Rua Minas Gerais,436  (Edif&#237;cio Sinduscon, 5&#186; andar) 41830-020 Pituba Salvador | <a class="more" data-address="Rua Minas Gerais,436  (Edifício Sinduscon, 5º andar)" data-apikey="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-city-key="116711" data-full-address="Brasil, Salvador, Pituba, Rua Minas Gerais,436  (Edifício Sinduscon, 5º andar)" data-key="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-label="1" data-language="pt" data-lat="-13.0079926" data-lng="-38.4617513" data-marker-icon="/content/images/d4/marker-no-shadow.png" data-name="Sandro Azevêdo" data-show-map="" data-target="#map" href="#" rel="nofollow">ver mapa</a></label>
+                            </span>
+                    </form>
+                </div>
+            
+            <div class="booking-time no-bullet">
+                <h3>Que dia e hora estão bem para você?</h3>
+                <div class="calendar">
+
+<div id="schedule-list-container-21507">
+<form action="/schedules/legacy/schedulesingle?lite=False&amp;ismodal=False" class="schedule-list-form" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace-with" data-ajax-success="InitializeGATracking();" data-ajax-update="#schedule-list-container-21507" id="form0" method="post">        <div id="appointment-schedule-list" class="schedule scheduleList clearfix">
+            <div class="clearfix opacity loading-layer">
+                <table>
+                    <thead>
+                    </thead>
+                </table>
+            </div>
+            <input type="hidden" class="schedule-type" name="Schedule.Type" value="Centre" />
+            <input type="hidden" class="schedule-id" name="Schedule.Id" value="21507" />
+            <input type="hidden" class="input-date" name="date" value="2018/04/05" />
+            <input type="hidden" class="next-date" value="2018/04/12" />
+            <input type="hidden" class="previous-date" value="2018/03/29" />
+        </div>
+</form></div>
+                </div>
+                <aside>
+                    <div class="note">
+                        <h4>Marque uma consulta! <strong>É fácil, rápido e seguro</strong>.</h4>
+                        <p>O agendamento da consulta é um serviço gratuito da Doctoralia.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    
+        <span id="location" class="anchor"></span>
+        <section class="box general" id="locationMap">
+            <h2>Consultório</h2>
+            
+                        <div class="map-wrapper">
+                            <div class="clearfix">
+                                <div id="map-image" class="map map-wide map-premium">
+                                        <a class="map-link" href="#" rel="nofollow" data-ga-event="click" data-ga-category="map-profile" data-ga-action="click-zoom" data-ga-label="premium" data-here-maps-locale="br" data-here-maps-id="B51IO8SSwZrw3Wezghem" data-here-maps-code="MHPJJ-ZNe5_T2X-Gh1KFFQ" data-here-maps-pois="[[-13.0079926,-38.4617513]]" data-expand-map data-language="pt" data-apikey="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk">
+                                            <span class="label">Ampliar</span>
+                                        </a>
+                                </div>
+                                <div id="map-expanded" class="hidden map expanded map-premium">
+                                    <div id="map-expanded-canvas" class="canvas" data-marker-icon="/content/images/d4/marker-no-shadow.png"></div>
+                                    <span class="hidden" data-minimize>Minimizar mapa</span>
+                                    <div id="map-overlay" class="overlay"><span class="label">Ampliar</span></div>
+                                </div>
+                            </div>
+                        </div>
+                                                                                                                                                                                <div class="location d">
+                                                                    <mark>1</mark>
+                                                                    <article>
+                                                                        <h3>
+                                                                                <a href="https://www.doctoralia.com.br/centro-medico/holos+clinica+de+saude+e+desenvolvimento+pessoal-1143565">Holos Clínica de Saúde e Desenvolvimento Pessoal</a>
+                                                                        </h3>
+                                                                                <p class="address">
+                                                                                    <span class="street">Rua Minas Gerais,436  (Edifício Sinduscon, 5º andar) (Pituba)</span>
+                                                                                    <span class="location">
+                                                                                         41830-020 Salvador, Bahia BA
+                                                                                            | <a class="more" data-address="Rua Minas Gerais,436  (Edifício Sinduscon, 5º andar)" data-apikey="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-city-key="116711" data-full-address="Brasil, Salvador, Pituba, Rua Minas Gerais,436  (Edifício Sinduscon, 5º andar)" data-ga-action="click-see-map" data-ga-category="map-profile" data-ga-event="click" data-ga-label="premium" data-key="AIzaSyD0pUg4yNkss3GQwbenZSHJC3NV21MwBZk" data-label="1" data-language="pt" data-lat="-13.0079926" data-lng="-38.4617513" data-marker-icon="/content/images/d4/marker-no-shadow.png" data-name="Sandro Azevêdo" data-show-map="" data-target="#map" href="#" rel="nofollow">ver mapa</a>
+                                                                                    </span>
+                                                                                </p>
+                                                                                                                                                    <div class="actions" data-phone-container>
+                                                                                    <a href="#booking" data-sticky data-placeid="21507" data-placetype="Centre" class="btn btn-primary book" rel="nofollow">Marcar consulta<i class="icon"></i></a>
+
+                                                                                <a class="btn btn-secondary viewnumber" data-entity-key="14998825" data-ga-action="practice" data-ga-category="click_telf" data-ga-event="click" data-ga-label="premium" data-phone-modal="" data-phone-type="0" data-place-key="1143565" data-place-type="1" href="#" rel="nofollow" title="Ver telefone"><b>(71)</b>...Ver telefone<i class="icon"></i></a>
+                                                                            </div>
+                                                                    </article>
+                                                                        <aside >
+                                                                                                                                                                                                                                        <p class="openinghours">
+                                                                                    <b>Horário: </b>
+                                                                                        <br>
+                                                                                    segunda-feira:
+        7:00 - 12:00
+    <br>
+ter&#231;a-feira:
+        17:30 - 22:00
+    <br>
+quarta-feira:
+        13:00 - 22:00
+    <br>
+s&#225;bado:
+        7:00 - 12:00
+    <br>
+
+                                                                                </p>
+                                                                                                                                                            <p class="insurances"><b class="attends">Atende: </b><span class="t3">Pacientes particulares (sem convênios médicos)</span>, <a href="https://www.doctoralia.com.br/medicos/plano-saude/bradesco+saude-63">Bradesco Saúde</a><span data-products="63"> (Nacional, Internacional, Master, Standard, Top, Integrada, Preferencial, Premium, Plus, Exclusiva, Referencial, Tradicional)</span><span data-products-toggle-wrap="63"> (<a data-products-toggle="63" href="#">Ver planos</a>)</span>, <a href="https://www.doctoralia.com.br/medicos/plano-saude/geap-75">Geap</a><span data-products="75"> (Referência, Clássico, Família, Essencial, Saúde II)</span><span data-products-toggle-wrap="75"> (<a data-products-toggle="75" href="#">Ver planos</a>)</span>, <a href="https://www.doctoralia.com.br/medicos/plano-saude/postal+saude-68">Postal Saúde</a><span data-products="68"> (CorreiosSaúde, Postal Viver Saúde, Postal Benefício Medicamento (PBM))</span><span class="hidden" data-products-toggle-wrap="68"> (<a data-products-toggle="68" href="#">Ver planos</a>)</span><span class="hidden">, </span><a class="hidden" href="https://www.doctoralia.com.br/medicos/plano-saude/saude+caixa-89">Saude Caixa</a><span class="hidden">, </span><span class="hidden">ASFEB</span><span class="hidden">, </span><span class="hidden">FACHESF</span><span class="more" data-more-insurances=""> e <a href="#">3 mais</a></span></p>
+                                                                        </aside>
+                                                                </div>
+</section>
+            <span id="reviews" class="anchor"></span>
+        <section class="box reviews">
+            <h2>Opiniões para Sandro Azevêdo</h2>
+    <div class="review-overview">
+            <div class="global">
+                <h3>5</h3>
+
+                <span class="rating-avg-large"><span class="p100"></span></span>
+                        <p>
+Baseado em 1 opinião                        </p>
+            </div>
+            <div class="detailed">
+                <p class="punctuality" title="5"><i class="icon"></i>Pontualidade <span class="rating-avg"><span class="p100"></span></span></p>
+                <p class="attention" title="5"><i class="icon"></i>Atenção <span class="rating-avg"><span class="p100"></span></span></p>
+                <p class="facilities" title="5"><i class="icon"></i>Instalações <span class="rating-avg"><span class="p100"></span></span></p>
+            </div>
+            <div class="action">
+                <p>Você foi atendido/a por Sandro Azevêdo?</p>
+                <a href="https://www.doctoralia.com.br/medico/azevedo+sandro-14998825/opiniao" class="btn btn-secondary opinate" rel="nofollow">Opinar<i class="icon"></i></a>
+            </div>
+    </div>
+<div class="review-item"><div class="review"><span class="rating-avg"><span class="p100"></span></span><time datetime="2018-03-05">05/03/2018</time><div class="good"><i class="icon"></i><p><dfn>O melhor</dfn>: &quot;Sandro Azevedo é um excelente profissional , com ótimas intervenções. Tive muitos progressos com a conduta dele. Recomendo para todos!! Maravilhoso!!&quot;</p></div><p class="motive"><dfn>Motivo da visita:</dfn> Psicoterapia</p></div><div class="reviewer"><i class="icon"></i><p class="where">Marcelo B. marcou consulta com Sandro Azevêdo em <a href="https://www.doctoralia.com.br/centro-medico/holos+clinica+de+saude+e+desenvolvimento+pessoal-1143565" rel="nofollow">Holos Clínica de Saúde e Desenvolvimento Pessoal</a></p></div></div>
+            
+        </section>
+            <span id="curriculum" class="anchor"></span>
+        <section class="box curriculum">
+            <h2>Experiência</h2>
+
+
+                <section class="education">
+                    <i class="icon"></i>
+                    <h3>Formação</h3>
+                    <ul><li>Psicologia<span class="institution">Faculdade da Cidade</span><span class="year">2013</span></li><li>Especialização em Saúde Mental Coletiva<span class="institution">Faculdade Ruy Barbosa</span><span class="year">2013</span></li></ul>
+                </section>
+                            <section class="history">
+                    <i class="icon"></i>
+                    <h3>Sobre mim</h3>
+
+
+                        <p class="regnum"><b>Número de Identificação Profissional:</b> CRP - 03/11004</p>
+
+<div>Graduado em Psicologia e pós-graduado em Saúde Mental Coletiva, possuo experiência como psicólogo e psicoterapeuta tendo por base os fundamentos da Abordagem Centrada na Pessoa. Atuo, também, no atendimento a crianças, adolescentes e adultos portadores do Transtorno do Espectro Autista, TEA, no Centro de Atendimento Especializado Pestalozzi da Bahia. Possuo experiência em Psicologia Hospitalar por ter trabalhado no Setor de Nefrologia do Hospital Geral Roberto Santos.<br><br>Embora toda a minha atuação, hoje, ocorra no âmbito da Psicologia, sou, também, graduado em Direito, tendo trabalhado como advogado nos primeiros anos da minha vida profissional, até que o interesse e a vocação me fizeram escolher a Psicologia.</div>                </section>
+                            <section class="expertise">
+                    <i class="icon"></i>
+                    <h3>Experiência em</h3>
+                    <ul>
+                            <li>
+                                <h4>Exames e procedimentos</h4>
+                                <ul class="blt"><li><span class="item">Aconselhamento Psicológico</span></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/anamnese+psicologica-23973">Anamnese Psicológica</a></li><li><span class="item">Atendimento em assédio moral</span></li><li><span class="item">Atendimento em crise suicida</span></li><li><span class="item">Consulta psicológica do adolescente</span></li><li><span class="item">Consulta psicológica do adulto</span></li><li><span class="item">Consulta psicológica do idoso</span></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/psicoterapia-23668">Psicoterapia</a></li><li><a class="item" href="https://www.doctoralia.com.br/provamedica/terapia+do+luto-31396">Terapia do Luto</a></li><li><span class="item">Terapia Rogeriana</span></li><li><span class="item">Tratamento da ansiedade</span></li><li><span class="item">Tratamento de sofrimento psiquico</span></li></ul>
+                            </li>
+                                                    <li>
+                                <h4>Doenças</h4>
+                                <ul class="blt"><li><a href="https://www.doctoralia.com.br/enfermidade/alteracoes+do+humor-52786">Alterações do humor</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/angustia-54627">Angústia</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/autismo-52675">Autismo</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/bullying-52787">Bullying</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/conflitos+de+relacionamento-54628">Conflitos de relacionamento</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/depressao-41108">Depressão</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/dificuldade+na+tomada+de+decisoes-54087">Dificuldade na tomada de decisões</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/dificuldades+no+relacionamento-52852">Dificuldades no relacionamento</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/estresse-15078">Estresse</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/inseguranca-54088">Insegurança</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/saude+mental-53700">Saude Mental</a></li><li><a href="https://www.doctoralia.com.br/enfermidade/transtornos+de+ansiedade-17492">Transtornos de Ansiedade</a></li></ul>
+                            </li>
+                    </ul>
+                </section>
+            
+
+                <section class="languages">
+                    <i class="icon"></i>
+                    <h3>Idiomas</h3>
+                    <ul><li>Português</li><li>Inglês </li></ul>
+                </section>
+
+
+<section class="webs-social-network">
+    <i class="icon"></i>
+    <h3>Webs</h3>
+
+        <ul class="website-links blt">
+                    <li>
+                        <a target="_blank" href="http://clinicaholos.com/">Cl&#237;nica Holos</a>
+                    </li>
+                    </ul>
+            <hr />
+            <ul class="social-networks">
+                <li><a target="_blank" class="sn-facebook" href="https://www.facebook.com/ClinicaHolos/">Facebook</a></li>
+        </ul>
+
+</section>        </section>
+
+            <span id="services" class="anchor"></span>
+        <section class="box services">
+
+            <div class="details ">
+                <h2>Serviços</h2>
+                    <div class="filter">
+                        <label for="servicesFilter">Digite para pesquisar um serviço:</label>
+                        <input type="text" id="servicesFilter" placeholder="Comece digitando o exame ou tratamento" />
+                    </div>
+                <div class="expandable-text" data-dralia="expandable" id="servicesExpandable"><div class="expandable-text-content">                        <ul class="heading clearfix">
+                            <li>
+                                                                    <div class="tooltip">
+                                        Preço
+                                        <i class="icon"></i>
+                                        <div class="tooltip-info">
+                                            <span class="arrow"></span>
+                                            <div>Preços aproximados para pacientes particulares (sem plano de saúde).</div>
+                                        </div>
+                                    </div>
+                            </li>
+                        </ul>
+                    <ul id="servicesList" class="body">
+                            <li data-service="">
+                                <span class="name no-service mark" data-name="primeira consulta psicologia">Primeira consulta Psicologia</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Primeira%20consulta%20Psicologia" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service mark" data-name="retorno de consultas psicologia">Retorno de consultas Psicologia</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Retorno%20de%20consultas%20Psicologia" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="aconselhamento psicologico">Aconselhamento Psicológico</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Aconselhamento%20Psicol%C3%B3gico" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="anamnese psicologica">Anamnese Psicológica</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Anamnese%20Psicol%C3%B3gica" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="atendimento em assedio moral">Atendimento em assédio moral</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Atendimento%20em%20ass%C3%A9dio%20moral" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="atendimento em crise suicida">Atendimento em crise suicida</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Atendimento%20em%20crise%20suicida" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="consulta psicologica do adolescente">Consulta psicológica do adolescente</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Consulta%20psicol%C3%B3gica%20do%20adolescente" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="consulta psicologica do adulto">Consulta psicológica do adulto</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Consulta%20psicol%C3%B3gica%20do%20adulto" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="consulta psicologica do idoso">Consulta psicológica do idoso</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Consulta%20psicol%C3%B3gica%20do%20idoso" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="mindfulness">Mindfulness</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Mindfulness" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicologia positiva">Psicologia positiva</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Psicologia%20positiva" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicoterapia">Psicoterapia</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Psicoterapia" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="psicoterapia adulto">Psicoterapia Adulto</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Psicoterapia%20Adulto" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="terapia do luto">Terapia do Luto</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Terapia%20do%20Luto" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="terapia existencial">Terapia existencial</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Terapia%20existencial" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="terapia rogeriana">Terapia Rogeriana</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Terapia%20Rogeriana" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="tratamento da ansiedade">Tratamento da ansiedade</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Tratamento%20da%20ansiedade" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                            <li data-service="">
+                                <span class="name no-service" data-name="tratamento de sofrimento psiquico">Tratamento de sofrimento psiquico</span>
+
+                                                                    <span class="price "><a class="ask" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-type="contact" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo&amp;service=Tratamento%20de%20sofrimento%20psiquico" rel="nofollow">Solicitar pre&#231;o</a></span>
+                                                            </li>
+                    </ul>
+</div><div class="display" data-dralia-expandable="more"><a href="#">Ver mais</a></div><div class="hidden display" data-dralia-expandable="less"><a href="#">Ver menos</a></div></div>                <p id="servicesNoResults" class="hidden">Nenhum resultado encontrado.</p>
+            </div>
+                <aside>
+                    <p>Se você deseja saber os preços de outros serviços ou tem alguma questão sobre os preços, entre em contato com o profissional.</p>
+<div class="btn btn-secondary contact hidden" data-button=".lnkContact">
+    <a class="lnkContact" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-ga-action="clicked" data-ga-category="contact-form" data-ga-label="clicked" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo" rel="nofollow">Enviar mensagem</a>
+    <i class="icon"></i>
+</div>                </aside>
+        </section>
+    
+        <span id="photos" class="anchor"></span>
+        <section class="box photos">
+            <h2>Fotos</h2>
+            <div class="gallery-wrapper">
+                
+                    <div class="gallery-container">
+                        <div class="slider" data-slider-pictures>
+                            <ul class="columns gallery"><li><a data-openpic="lightbox-journey" href="//photos.doctoralia.com/636555376340073514.png" rel="nofollow"><img alt="" height="127" src="//photos.doctoralia.com/636555376340073514_3.jpg" width="218" /></a></li><li><a data-openpic="lightbox-journey" href="//photos.doctoralia.com/636555376594354882.png" rel="nofollow"><img alt="" height="127" src="//photos.doctoralia.com/636555376594354882_3.jpg" width="220" /></a></li><li><a data-openpic="lightbox-journey" href="//photos.doctoralia.com/636555376777170392.png" rel="nofollow"><img alt="" height="127" src="//photos.doctoralia.com/636555376777170392_3.jpg" width="218" /></a></li></ul>
+                            <div class="arrow-container-right">
+                                <a href="#" class="icon arrow-left" data-arrow="left"></a>
+                            </div>
+                            <div class="arrow-container-left">
+                                <a href="#" class="icon arrow-right" data-arrow="right"></a>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </section>
+    
+
+<form action="/noindex/doctor-phone" id="frmPhone" method="post"><input name="__RequestVerificationToken" type="hidden" value="IWaBITDukL2qiUWdZN_gskdBre41U5WRAOXMJGn6icm-TuYEOsGVjNqy_xYAs8T7oO7NWyl4UJZwpo2VKK9-mrjZ-V41" /><input id="entityKey" name="entityKey" type="hidden" value="14998825" /><input id="placeType" name="placeType" type="hidden" value="" /><input id="placeKey" name="placeKey" type="hidden" value="" /></form>    <div id="phonePlacer"></div>
+<div id="map" class="hidden">
+    <div class="map-heading">Mapa de situação - <strong>Sandro Azevêdo</strong></div>
+    <div class="map-body clearfix">
+        <div id="mapview" class="overview"></div>
+        <div id="streetviewpanorama" class="streetview"></div>
+    </div>
+    <footer></footer>
+</div>
+
+<div id="mapInfo" class="map-info">
+    <strong>{0}</strong><span>{1}</span>
+</div>
+
+
+        <div class="sticky-topbar entity-doctor magic">
+            <header class="box">
+            <div class="entity-actions">
+<img height="82" src="//photos.doctoralia.com/636555372848632112_2.jpg" width="69" />                <div class="entity-actions-right">
+                    <h1><a href="#top">Sandro Azevêdo</a></h1>
+                    <br>
+                    
+<div class="actions">
+
+        <div id="book-btn-primary" class="btn btn-primary book" data-button="#locationsMenu">
+            <a id="locationsMenu" href="#booking" rel="nofollow">Marcar consulta</a>
+            <i class="icon"></i>
+        </div>
+            <div id="lead-btn-secondary" class="btn btn-secondary contact hidden" data-button=".lnkContact">
+            <a class="lnkContact" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#frmContact" data-country="br" data-ga-action="clicked" data-ga-category="contact-form" data-ga-label="clicked" href="/entities/contactdisplay?entitytype=2&amp;entitykey=14998825&amp;fullname=Sandro%20Azev%C3%AAdo" rel="nofollow">Enviar mensagem</a>
+            <i class="icon"></i>
+        </div>
+            <div id="phone-btn-secondary" class="btn btn-secondary viewnumber phone-trigger" data-ga-action="sticky">
+            <a href="#" rel="nofollow">Ver telefone</a>
+            <i class="icon"></i>
+        </div>
+    </div>
+
+
+
+                </div>
+            </div>
+            
+            <nav role="navigation" class="onpage">
+                <ul>
+                        <li><a href="#booking" data-sticky>Marcação de consultas</a></li>
+                                            <li><a href="#location" data-sticky>Consultório</a></li>
+                                            <li>
+                            <a href="#reviews" data-sticky>
+                                Opiniões  <span> (1)</span>                            </a>
+                        </li>
+                                            <li><a href="#curriculum" data-sticky>Experiência</a></li>
+                                            <li><a href="#services" data-sticky>Serviços</a></li>
+                                                                                    <li><a href="#photos" data-sticky>Fotos</a></li>
+                </ul>
+            </nav>
+        </header>
+        </div>
+    
+</div>
+
+        </div>
+
+    </div>
+<script src="/bundles/layout__v__miT3LYpNHOzMLtiw0wIR9eDJAHw5C3whXB8znnRQr301"></script>
+
+<script src="/bundles/scheduleslegacy__v__N6lMy3PHoeFS2gyDigYyLRQwaCAZclkQFdBwvq5KO1Q1"></script>
+    <script src="/bundles/entity__v__AyiG3MwgnDvpto7i1fyFQuQ-h8xhL6KPBxzRTj5zWYY1"></script>
+
+    <script src="/bundles/entity-detail__v__4tGb2VhDD-CVyXhZmeBy-EFpWboQ4v3yV9kpuYquzLo1"></script>
+
+        <script type="text/javascript">
+            $(window).load(function () {
+                $('[data-slider-pictures]').animatedSlider(920);
+            });
+        </script>
+    
+    <script src="/bundles/search-typeahead__v__D806VR3Su6Z1WFH9RhNrZSjsaZ_RzHaRovfj8P1IuNY1"></script>
+
+<script src="/bundles/register-header__v__qIJz9fNypRKpAlc8HWqF6Wy7vZlH6SLU8DXuJcq1Rsw1"></script>
+
+<footer class="footer">
+    <div class="container cross-link seo clearfix" role="navigation">
+        <section>
+<h3>Médicos em Brasil</h3>                <ul>
+                        <li><a href="/medicos/especialidade/nutricionistas-2203/goiania-116733-1">Nutricionistas Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/brasilia-116707-1">Ginecologistas Brasília</a></li>
+                        <li><a href="/medicos/especialidade/fisioterapeutas-1901/goiania-116733-1">Fisioterapeutas Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/cirurgioes+plasticos-1310/belo+horizonte-116720-1">Cirurgiões plásticos Belo Horizonte</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/barroso-132884-1">Dentistas Barroso</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/santo+antonio+de+jesus-116729-1">Ginecologistas Santo Antonio de Jesus</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/cotia-116799-1">Psicólogos Cotia</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/rolandia-131634-1">Dentistas Rolândia</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293/belem-116709-1">Urologistas Belém</a></li>
+                        <li><a href="/medicos/especialidade/psicologos-1434/braganca+paulista-117056-1">Psicólogos Bragança Paulista</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433">Dentistas</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300">Ginecologistas</a></li>
+                        <li><a href="/medicos/especialidade/nutricionistas-2203">Nutricionistas</a></li>
+                    <li><span><a href="https://www.doctoralia.com.br/lista-de-medicos">Lista de médicos</a></span></li>
+                </ul>
+        </section>
+        <section>
+                <ul class="mt28">
+                        <li><a href="/medicos/especialidade/homeopatas-1335/sao+paulo-116705-1">Homeopatas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/ginecologistas-1300/sao+paulo-116705-1">Ginecologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/oftalmologistas-1305/sao+paulo-116705-1">Oftalmologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/nutricionistas-2203/rio+de+janeiro-116704-1">Nutricionistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/ortopedistas+-+traumatologistas-1306/sao+paulo-116705-1">Ortopedistas - Traumatologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/dermatologistas-1314/rio+de+janeiro-116704-1">Dermatologistas Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/urologistas-1293/sao+paulo-116705-1">Urologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/dentistas-1433/sao+paulo-116705-1">Dentistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/pediatras-1307/sao+paulo-116705-1">Pediatras São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/otorrinos-1308/rio+de+janeiro-116704-1">Otorrinos Rio de Janeiro</a></li>
+                        <li><a href="/medicos/especialidade/fonoaudiologos-2202/goiania-116733-1">Fonoaudiólogos Goiânia</a></li>
+                        <li><a href="/medicos/especialidade/anestesiologistas-1325/sao+paulo-116705-1">Anestesiologistas São Paulo</a></li>
+                        <li><a href="/medicos/especialidade/anatomopatologistas-1298/curitiba-116724-1">Anátomopatologistas Curitiba</a></li>
+                        <li><a href="/medicos/especialidade/reumatologistas-1336/brasilia-116707-1">Reumatologistas Brasília</a></li>
+                </ul>
+        </section>
+        <section>
+<h3>Especialistas</h3>                <ul>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/terapia+de+familia-25844/especialistas/belo+horizonte-116720-1">Terapia de Família Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/bateria+neuropsicologica+de+luria-nebraska-23971/especialistas/sao+paulo-116705-1">Bateria Neuropsicológica de Luria-Nebraska São Paulo</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/moxabustao-24786/especialistas/brasilia-116707-1">Moxabustão Brasília</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/mindfulness-29857/especialistas/curitiba-116724-1">Mindfulness Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/constelacao+familiar+sistemica-30396/especialistas/curitiba-116724-1">Constelação Familiar Sistêmica Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provamedica/terapia+da+gestalt-24955/especialistas/rio+de+janeiro-116704-1">Terapia da Gestalt Rio de Janeiro</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/fobia+social-54379/especialistas/belo+horizonte-116720-1">Fobia social Belo Horizonte</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/anorexia+nervosa-13700/especialistas/curitiba-116724-1">Anorexia nervosa Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/ganho+de+peso-15268/especialistas/curitiba-116724-1">Ganho De Peso Curitiba</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidade/transtorno+da+personalidade+obsessivo-compulsiva-17465/especialistas/brasilia-116707-1">Transtorno Da Personalidade Obsessivo-compulsiva Brasília</a></li>
+                </ul>
+        </section>
+        <section>
+            <h3>Pesquisar por</h3>            <ul class="other-links">
+                        <li><a href="https://www.doctoralia.com.br/sitemap/medicos">Profissionais por cidade</a></li>
+                        <li><a href="https://www.doctoralia.com.br/sitemap/centros-medicos">Centros médicos por cidade</a></li>
+                        <li><a href="https://www.doctoralia.com.br/provasmedicas">Exames médicos e tratamentos</a></li>
+                        <li><a href="https://www.doctoralia.com.br/enfermidades">Doenças</a></li>
+                        <li><a href="https://www.doctoralia.com.br/medicamentos">Medicamentos</a></li>
+                        <li><a href="https://www.doctoralia.com.br/sitemap/perguntas">Perguntas a Especialistas</a></li>
+                        <li><a href="https://www.doctoralia.com.br/medicos-credenciados">Convênios médicos</a></li>
+            </ul>
+<span>Rede Doctoralia</span>            <ul>
+                        <li class="network"><a href="http://www.doctoralia.it">Itália</a></li>
+                        <li class="network"><a href="http://www.doctoralia.co">Colômbia</a></li>
+                        <li class="network"><a href="http://www.doctoralia.com.pt">Portugal</a></li>
+            </ul>
+        </section>
+    </div>
+    <nav class="links-about" role="navigation">
+    <div class="container clearfix">
+        <ul>
+            <li><a href="https://www.doctoralia.com.br/quem-somos-contato" rel="nofollow">Quem somos</a></li>
+            <li><a href="https://www.doctoralia.com.br/quem-somos-contato#contact" rel="nofollow">Contatar</a></li>
+                <li><a href="http://press.doctoralia.com.br" rel="nofollow">Press</a></li>
+            <li><a href="http://www.doctoralia.com.br/legal.aspx" rel="nofollow">Termos de Uso e Privacidade</a></li>
+        </ul>
+        <ul class="right">
+                <li><a href="http://insights.doctoralia.com.br">Insights Blog</a></li>
+                    <li><a href="http://academy.doctoralia.com.br">Doctoralia Academy</a></li>
+                    <li><a href="http://blog.doctoralia.com.br/">Blog para especialistas</a></li>
+    </ul>
+    </div>
+</nav>
+    
+    <div class="copy">
+        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 05/04/2018</span>
+    </div>
+</footer>
+    </body>
+</html>
