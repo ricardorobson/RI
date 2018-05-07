@@ -1,6 +1,7 @@
 package classifier;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Main{
 
@@ -11,21 +12,16 @@ public class Main{
     public static final String LOGISTIC = "logistic";
     public static final String MLP = "perceptron";
 
-
-    public static void print(Object a) {
-        System.out.println(a);
-    }
-
     public static void main(String[] args){
         Preprocessing p;
         try {
-            p = new Preprocessing("./training/false", "./training/true", arffName, null );
+            p = new Preprocessing("./training/falses", "./training/true", "./training/maybe", arffName, null );
         } catch (IOException e) {
             e.printStackTrace();
         }
         MyClassifier classifier = null;
         try {
-            classifier = new MyClassifier(arffName, 30, 75, J48);
+            classifier = new MyClassifier(arffName, 30, 75, LOGISTIC);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -34,6 +30,7 @@ public class Main{
     }
 
     public static void classifyFiles( MyClassifier classifier){
+        ArrayList<String> outs = new ArrayList<String>();
         for (String file: Preprocessing.getFiles("./classification")){
             double[] prob = new double[0];
             try {
@@ -42,10 +39,12 @@ public class Main{
                 e.printStackTrace();
             }
             if (prob[1] > 0.5){
-                print('-' + file + " Classificado como: True");
+                outs.add('-' + file + " Classificado como: True");
             } else {
-                print('-' + file + " Classificado como: False");
+                outs.add('-' + file + " Classificado como: False");
             }
+
         }
+        WriteOut.writeOut("outFiles.txt", outs);
     }
 }

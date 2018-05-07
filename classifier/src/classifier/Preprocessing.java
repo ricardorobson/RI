@@ -14,16 +14,28 @@ public class Preprocessing {
     private String stopwords;
     private Hashtable sw = null;
 
-    public Preprocessing(String truePages, String falsePages, String arff, String stopwords) throws IOException {
+    public Preprocessing(String truePages, String falsePages, String maybePages, String arff, String stopwords) throws IOException {
         this.stopwords = stopwords;
         List<List> allPages = new ArrayList<List>();
 
-        falsePages(falsePages, allPages);
-        truePages(truePages, allPages);
+        allPages = falsePages(falsePages, allPages);
+        allPages = maybePages(maybePages, allPages);
+        allPages = truePages(truePages, allPages);
         bagOfWords(allPages, arff);
     }
 
     public static List<List> falsePages(String falsePages, List<List> allPages) throws IOException { //FALSE
+        List<String> sitesFalse = getFiles(falsePages);
+        for (String site : sitesFalse) {
+            List l = Parse.parse(site);
+            l.add("false");
+            allPages.add(l);
+        }
+        return allPages;
+
+    }
+
+    public static List<List> maybePages(String falsePages, List<List> allPages) throws IOException { //FALSE
         List<String> sitesFalse = getFiles(falsePages);
         for (String site : sitesFalse) {
             List l = Parse.parse(site);
@@ -68,11 +80,9 @@ public class Preprocessing {
 
 
     public void bagOfWords(List<List> sites, String file) throws IOException {
-        //inicializar stopwords
         StopWords.mStopWords(stopwords, sw);
 
         Hashtable bag = new Hashtable<String, Integer>();
-        /* contando as palavras e colocando numa hash */
         for (List<String> site : sites) {
             for (int i = 0; i < site.size() - 1; i++) {
                 String word = site.get(i);
@@ -82,7 +92,7 @@ public class Preprocessing {
             }
         }
 
-        WriteFile.writer( bag,  file, sites);
+        WriteArff.writer( bag,  file, sites);
     }
 
     public static boolean isStopWord(Hashtable stopWords, String word){

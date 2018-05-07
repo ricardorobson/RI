@@ -38,19 +38,20 @@ public class MyClassifier {
         print(Arrays.toString(a));
     }
 
-    public MyClassifier(String arff, int nfeatures, int percentageTraining, String classifier) throws Exception {
+    public MyClassifier(String arff, int nfeatures, int percentageTraining, String classifier)
+            throws Exception {
         DataSource source = new DataSource(arff);
 
-        data = source.getDataSet(); //carregando os dados em data
-        data.setClassIndex(data.numAttributes() - 1); //e setando a classe para classificar
+        data = source.getDataSet();
+        data.setClassIndex(data.numAttributes() - 1);
         if (nfeatures > 0){
-            informationGain (nfeatures, arff + ".infogain"); //fazendo feature selection
+            featureSelectionIG (nfeatures, arff + ".infogain"); //fazendo feature selection
             print("Com information gain de " + nfeatures + " features.");
         } else {
             print("Sem information gain.");
         }
         splitTest(percentageTraining); //separando um pouco para treino
-        build(classifier);
+        classifierTypeChoice(classifier);
         print(classifier + " treinamento em " + getTime() + " ms");
         print(testing());
     }
@@ -91,8 +92,7 @@ public class MyClassifier {
         return classifier.distributionForInstance(site);
     }
 
-    public void informationGain(int n, String arffn) throws Exception {
-        /** Faz o information gain nos dados carregados (Instances) e salva os filtrados em outro arff */
+    public void featureSelectionIG(int n, String arffn) throws Exception {
         AttributeSelection selector = new AttributeSelection();
         InfoGainAttributeEval evaluator = new InfoGainAttributeEval();
         Ranker ranker = new Ranker();
@@ -101,7 +101,6 @@ public class MyClassifier {
         selector.setSearch(ranker);
         selector.SelectAttributes(data);
         this.data = selector.reduceDimensionality(data);
-        // salvando em arff
         ArffSaver saver = new ArffSaver();
         saver.setInstances(data);
         saver.setFile(new File(arffn));
@@ -120,26 +119,28 @@ public class MyClassifier {
         data = new Instances(data, 0, trainSize);
     }
 
-    public void build(String type) throws Exception {
-        /** Cria e treina o classificador e salva qts nanos segundos o treino durou*/
-        Classifier f;
+    public void classifierTypeChoice(String type){
+        Classifier c = null;
         if (type.equals("bayes"))
-            f = new NaiveBayes();
+            c = new NaiveBayes();
         else if (type.equals("j48"))
-            f = new J48();
+            c = new J48();
         else if (type.equals("smo"))
-            f = new SMO();
+            c = new SMO();
         else if (type.equals("logistic"))
-            f = new Logistic();
+            c = new Logistic();
         else if (type.equals("mlp"))
-            f = new MultilayerPerceptron();
-        else
-            throw new Exception("build function: type nao encontrado");
-        classifier = f;
+            c = new MultilayerPerceptron();
+        classifier = c;
         double t = System.nanoTime();
-        classifier.buildClassifier(data);
+        try {
+            classifier.buildClassifier(data);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         time = System.nanoTime() - t;
     }
+
 
     public String testing() throws Exception {
         Evaluation e = new Evaluation(data);
