@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="pt_BR">
+<head>
+<link rel="manifest" href="/manifest.json">
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script>
+	var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+        /* Your other init options here */
+   		    appId: "ed8cdce2-4892-40bb-b55f-2b57efdbf3f0",
+            notifyButton: {
+           enable: true, /* Required to use the notify button */
+           displayPredicate: function() {
+               return OneSignal.isPushNotificationsEnabled()
+                   .then(function(isPushEnabled) {
+                       /* The user is subscribed, so we want to return "false" to hide the notify button */
+                       return !isPushEnabled;
+                   });
+           },
+           autoRegister: false,
+           size: 'medium', /* One of 'small', 'medium', or 'large' */
+           theme: 'default', /* One of 'default' (red-white) or 'inverse" (white-red) */
+           position: 'bottom-left', /* Either 'bottom-left' or 'bottom-right' */
+           offset: {
+               bottom: '30px',
+               left: '30px', /* Only applied if bottom-left */
+               right: '30px' /* Only applied if bottom-right */
+           },
+           prenotify: true, /* Show an icon with 1 unread message for first-time site visitors */
+           showCredit: false, /* Hide the OneSignal logo */
+           welcomeNotification: {
+               "title": "Zenklub",
+               "message": "Obrigado por subscrever nossas ofertas"
+           },
+           text: {
+               'tip.state.unsubscribed': 'Subscreva nossas ofertas',
+               'tip.state.subscribed': "Você está inscrito em nossas ofertas",
+               'tip.state.blocked': "Você bloqueou nossas ofertas",
+               'message.prenotify': 'Clique aqui para receber notificações de nossas ofertas',
+               'message.action.subscribed': "Obrigado por subscrever nossas ofertas",
+               'message.action.resubscribed': "Você está inscrito em nossas ofertas",
+               'message.action.unsubscribed': "Não vai voltar a receber nossas notificações de ofertas",
+               'dialog.main.title': 'Gerenciar Notificações',
+               'dialog.main.button.subscribe': 'SUBSCREVER',
+               'dialog.main.button.unsubscribe': 'REMOVER',
+               'dialog.blocked.title': 'Adicionar Notificações',
+               'dialog.blocked.message': "Siga estas instruções para habilitar a subscrição de ofertas:"
+           }
+        }
+    }]);
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex" />
+<title>Zenklub | Encontre o psic&#243;logo ideal</title>
+<meta name="description" content="Temos mais de 80 psic&#243;logos prontos para lhe ajudar. ✓ Dispon&#237;vel 24h ✓ Todas as especialidades ✓ Onde voc&#234; estiver" />
+<link rel="canonical" href="https://zenklub.com.br/busca/" />
+<meta property="og:title" content="Zenklub | Encontre o psic&#243;logo ideal" />
+<meta property="og:type" content="article" />
+<meta name="og:image" content="https://zenklub.com.br/Images/doctors_banner.jpg" />
+<meta property="og:url" content="https://zenklub.com.br/busca/" />
+<meta property="og:description" content="Temos mais de 80 psic&#243;logos prontos para lhe ajudar. ✓ Dispon&#237;vel 24h ✓ Todas as especialidades ✓ Onde voc&#234; estiver" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Zenklub" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://zenklub.com.br/busca/" />
+<meta name="twitter:title" content="Zenklub | Encontre o psic&#243;logo ideal" />
+<meta name="twitter:description" content="Temos mais de 80 psic&#243;logos prontos para lhe ajudar. ✓ Dispon&#237;vel 24h ✓ Todas as especialidades ✓ Onde voc&#234; estiver" />
+<meta name="twitter:image" content="https://zenklub.com.br/Images/doctors_banner.jpg" />
+
+<script>
+    (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    { 'GTM-MSV8CM3': true });
+</script>
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+<link href="/Content/layout-new-css?v=lKwxasguBNdje_2nU5dKgmQmvRmUOWHL5goP5Hj7BeA1" rel="stylesheet" />
+<script defer type="text/javascript" src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PW7SM8');
+</script>
+
+<script>
+        country = 'br';
+        window.globalUri = 'https://zenklub.com.br/';
+        window.globalApiUri = 'https://api.zenklub.com/'; ;
+    </script>
+</head>
+<body class="doctors-search" data-country="br" data-language-html="pt_BR" data-language-app="pt-BR">
+<noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PW7SM8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+<div class="navbar transparent">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="hidden-md hidden-lg visible-sm visible-xs navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+<span class="sr-only"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="https://zenklub.com.br/">
+<img class="logoDefault" src="https://zenklub.com.br/Images/logo_zenklub.png" alt="Zenklub" />
+<img class="logoTrainee" src="https://zenklub.com.br/Images/logo_zenklubstart.png" alt="Zenklub" />
+</a>
+</div>
+<div class="collapse navbar-collapse header-collapse">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/busca">Ver especialistas</a></li>
+<li><a href="/empresas">Empresas</a></li>
+<li><a href="https://mkt.zenklub.com.br/testes/" target="_blank">Fa&#231;a o teste</a></li>
+<li><a href="https://zenklub.typeform.com/to/JyFw1e?ref=home" target="_blank">Indicação Grátis</a></li>
+<li>
+<a href="https://zenklub.com.br/Account/Register" rel="nofollow">Cadastrar</a>
+</li>
+<li>
+<a href="https://zenklub.com.br/Account/Login" rel="nofollow">Entrar</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="divUserSubmenu" style="display:none;">
+<ul>
+<li onclick="javascript: document.getElementById('logoutFormFromMenu').submit()">
+<form action="/Account/LogOff" class="navbar-right" id="logoutFormFromMenu" method="post">
+</form> </li>
+</ul>
+</div>
+
+<div class="container-fixed">
+<head><link href="/angular/dist/styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet" /></head><app-root><div style="width: 100%; padding:30px 0; text-align:center;"><span class="page-loading">Por favor aguarde...</span></div></app-root><script type="text/javascript" src="/angular/dist/inline.ffa8329fbd0c69449145.bundle.js"></script><script type="text/javascript" src="/angular/dist/vendor.298b0b2049ba1d111a74.bundle.js"></script><script type="text/javascript" src="/angular/dist/main.ff65322940a9059eb973.bundle.js"></script>
+</div>
+<style>
+    .fixed {
+        position: fixed;
+        top: 0px;
+        border-bottom: 1px solid lightgray
+    }
+</style>
+<footer>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 footer-block">
+<span class="section-title">Zenklub</span>
+<hr class="visible-xs" />
+<ul>
+<li><a href="https://blog.zenklub.com.br" target="_blank" title="Blog">Blog</a></li>
+<li><a href="/busca">Especialistas</a></li>
+<li><a href="/temas">Temas</a></li>
+<li><a href="/especialidades">Especialidades</a></li>
+<li><a href="/quem-somos">Quem Somos</a></li>
+<li><a href="/sou-profissional">Sou profissional</a></li>
+<li><a href="/supervisao-online">Supervisão online</a></li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 footer-block">
+<span class="section-title">Suporte</span>
+<hr class="visible-xs" />
+<ul>
+<li>Whatsapp: (11) 98312-4195</li>
+<li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0a63646c654a706f6461667f6824696567">[email&#160;protected]</a></li>
+<li>Fernanda Martins Ribeiro da Costa</li>
+<li>(CRP 06/65475)</li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 footer-block">
+<div class="protocol-social">
+<a href="http://cadastrosite.cfp.org.br/cadastro/protocoloConsulta.cfm?search=106334673" target="_blank" rel="nofollow" title="Conselho Federal Psicologia Cadastro Site">
+<img src="/Images/psi_protocol.png" alt="Cadastro PSI" />
+</a>
+<span class="section-title">Pagamento Seguro</span>
+<ul class="payment">
+<li title="Mastercard"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></li>
+<li title="Visa"><i class="fa fa-cc-visa" aria-hidden="true"></i></li>
+</ul>
+</div>
+</div>
+<div class="footerLegal">
+<a href="/faq">Perguntas Frequentes</a>&nbsp;|&nbsp;
+<a href="/privacidade" rel="nofollow">Pol&#237;tica de Privacidade</a>&nbsp;|&nbsp;
+<a href="/termos" rel="nofollow">Termos de Uso</a>
+</div>
+</footer>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
+<script data-cfasync="false" src="/cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js"></script><script src="/bundles/jquery?v=QjnM8-D4Bc1hole9BZccPNIeK6-vCmbBJYpWKO89Zic1"></script>
+<script src="/bundles/bootstrap?v=5_XjNC2HlozdeH2Wmxqw8tlcTZgrddAVRdxitkWBjSo1"></script>
+<script src="/Scripts/fixed-header.js"></script>
+<script>
+
+        // Scrolls to top when pagination is clicked.
+        function paginationClick() {
+            $('html, body').animate({ scrollTop: $('#docListContainer').offset().top }, 1000);
+        }
+
+        // Show a video.
+        function showDoctorVideo(video) {
+            $("#doctorListVideo")[0].src = video + '?&showinfo=0&autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer';
+        }
+
+        // Stop a video.
+        function closeDoctorVideo() {
+            $("#doctorListVideo")[0].src = $("#doctorListVideo")[0].src.replace('autoplay=1', 'autoplay=0');
+            $('#doctorListVideo')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        }
+
+        /*$('.filter-options').mouseout(function (item) {
+            if (['filter-options', 'innerFilterOptions'].indexOf(item.target.className) == -1)
+                $('.filter-options').slideUp();
+        });*/
+
+        /*$('*').on('click', function (item) {
+            var cName = item.target.className;
+            if (cName && ['filter-options', 'innerFilterOptions'].indexOf(cName) == -1)
+                $('.filter-options').slideUp();
+        });*/
+
+        $('search').on('click', function (item) {
+            if (item.target.nodeName == "SEARCH" && $('.search-results').is(':visible'))
+                $('.search-results').slideUp('fast');
+        });
+
+        $('.search-bar').on('click', function (item) {
+            if (item.target.className == 'search-bar' && $('.search-results').is(':visible'))
+                $('.search-results').slideUp('fast');
+        });
+        $('.header-content').on('click', function (item) {
+            if (item.target.className == 'header-content' && $('.search-results').is(':visible'))
+                $('.search-results').slideUp('fast');
+        });
+
+    </script>
+<script src="/Scripts/lazysizes.min.js" data-cfasync="false" async=""></script>
+<script>
+        // When document is ready.
+        $(document).ready(function () {
+
+            // Show/hide submenu when user's menu is clicked.
+            $('li.liLoggedUserMenu').on('click', function () { toggleUserMenu(); });
+
+            // Hide submenu when mouse leave submenu.
+            $('#divUserSubmenu').on('mouseleave', function () { toggleUserMenu(); });
+
+            // Hide submenu when click on submenu.
+            $('#divUserSubmenu li').on('click', function () { toggleUserMenu(); });
+
+            // Force to hide submenu on body click.
+            /*$('.header').on('click', function () {
+                if ($('#divUserSubmenu').is(':visible'))
+                    toggleUserMenu(true);
+            });*/
+
+
+
+        });
+
+        // Show or hide user's menu.
+        function toggleUserMenu(forceHide) {
+
+            // Elements.
+            var navbar = $('.navbar');
+            var menu = $('.navbar .liLoggedUserMenu');
+            var submenu = $('#divUserSubmenu');
+            var faDown = $('.caretUserMenuDown');
+            var faUp = $('.caretUserMenuUp');
+
+            // Show or hide.
+            if (forceHide || submenu.is(':visible')) {
+
+                menu.removeClass('menuOpen');
+                faUp.hide();
+                faDown.show();
+                submenu.slideUp('fast');
+
+            } else {
+
+                // Reset position.
+                submenu.offset({ top: 0, left: 0 });
+
+                // Width size.
+                var menW = menu.outerWidth();
+                var subW = submenu.outerWidth();
+                var finalW = menW > subW ? menW : subW;
+
+                // Top position.
+                var menH = menu.height();
+                var menT = menu.offset().top;
+                var finalT = menT + menH + 15;
+
+                // Left position.
+                var winW = $(window).width();
+                var menL = menu.offset().left;
+                //var finalL = menL + (menW - subW);
+                var finalL = menL;
+
+                if ((finalL + subW) > winW) {
+                    var menR = menL + menW;
+                    finalL = menR - subW;
+                    //finalL = menL - (winW - (menL + menW));
+                }
+
+                menu.addClass('menuOpen');
+                faDown.hide();
+                faUp.show();
+                submenu.css('width', finalW);
+                //submenu.offset({ top: finalT, left: finalL });
+                submenu.css('left', finalL);
+                submenu.css('top', finalT);
+                submenu.slideDown('fast');
+
+            }
+
+        }
+
+        $('.navbar-collapse').on('show.bs.collapse', function () {
+            $('.navbar').toggleClass('in');
+        });
+
+        $('.navbar-collapse').on('hide.bs.collapse', function () {
+            $('.navbar').toggleClass('in');
+        });
+
+        var date = new Date();
+        var minutesToUTC = date.getTimezoneOffset();
+
+        
+            $('.url-timezone').each(function (i) {
+            $(this).attr('href', $(this).attr('href') + "?minutesToUTC=" + minutesToUTC);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1606 @@
+<!doctype html>
+<html lang="pt-BR" >
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <title>Sandra Chies - MundoPsicologos.com</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+            <meta name="description" content="Psicólogos - Sandra Chies - Sandra Chies, CRP 07/26162, é uma profissional que realiza atendimento psicoterapêutico com abordagem em terapia..." />
+    
+    <meta name="robots" content="index,follow" />
+            <link rel="canonical" href="https://br.mundopsicologos.com/consultorios/sandra-chies" />
+    
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sandra Chies - MundoPsicologos.com" />
+        <meta property="og:description" content="Psicólogos - Sandra Chies - Sandra Chies, CRP 07/26162, é uma profissional que realiza atendimento psicoterapêutico com abordagem em terapia..." />
+        <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://br.mundopsicologos.com/consultorios/sandra-chies" />
+    <meta property="og:image" content=" https://br.mundopsicologos.com/site/own/site_cover.png " />
+    <meta property="og:site_name" content="br" />
+    <!-- Twitter Card -->
+            <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@BRpsicologos" />
+        <meta name="twitter:title" content="Sandra Chies - MundoPsicologos.com" />
+                    <meta name="twitter:description" content="Psicólogos - Sandra Chies - Sandra Chies, CRP 07/26162, é uma profissional que realiza atendimento psicoterapêutico com abordagem em terapia..." />
+                <meta name="twitter:image" content=" https://br.mundopsicologos.com/site/own/site_cover.png " />
+    
+    <!-- The Grid -->
+
+    <link type="text/css" rel="stylesheet" media="all" href="/js/vendor/jquery-ui/themes/base/jquery-ui.min.css" />
+            <link media="screen" type="text/css" rel="stylesheet" href="/10006390/css/gen/psicologos/ps_master.css" />
+            <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-35714415-1', 'auto');
+        ga('create', 'UA-11698778-10', 'auto', 'countryTracker');
+        ga('create', 'UA-11698778-2', 'auto', 'globalTracker');
+
+        if (typeof window.Storage !== 'undefined' && localStorage.getItem('ie-usr-type')) {
+            ga('set', 'dimension4', localStorage.getItem('ie-usr-type'));
+            ga('globalTracker.set', 'dimension4', localStorage.getItem('ie-usr-type'));
+            ga('countryTracker.set', 'dimension4', localStorage.getItem('ie-usr-type'));
+        }
+
+                                        ga('require', 'GTM-N4PGQ3J');
+            ga('send', 'pageview');
+            ga('globalTracker.send', 'pageview');
+            ga('countryTracker.send', 'pageview');
+        
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1394448900661738');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1394448900661738&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+
+<body class="ie-ps  body_psico company-card "
+                data-com="314923"
+            data-meta="company_card"
+    >
+
+    <div class="container" itemscope itemtype="https://schema.org/LocalBusiness">
+        <header class="site-header">
+    <div id="header" class="menu-top">
+        <div class="company-access">
+            <div class="js_login_box">
+                <a id ="profile-login" href="/profile/login" rel="nofollow" title="Acesso usuários">
+                    <span class="icon-user-access"></span>
+                    Acesso usuários
+                </a>
+            </div>
+            <a href="/front/user_account/login" rel="nofollow" title="Acesso consultório">
+                <span class="icon-company-access"></span>
+                Acesso consultório
+            </a>
+            <a href="/register_web" rel="nofollow" title="Cadastrar seu consultório">
+                Cadastre grátis seu consultório
+            </a>
+        </div>
+    </div>
+    <div class="menu-site">
+        <div class="menu-hamburguer" id="js_mob_hamburguer" data-role="hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+                    <div class="project-logo">
+                    <a href="/" title="psicólogos" rel="home">
+                <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_color.svg" alt="psicólogos" title="psicólogos" class="desktop-logo"/>
+                <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_white.svg" alt="psicólogos" title="psicólogos" class="mob-logo"/>
+            </a>
+                    </div>
+                <nav id="js_mob-menu" class="menu-options">
+            <a href="/"
+               title="Psicólogos"
+               rel="home"
+               class="home ">
+                <span class="icon-home2"></span>
+                Início
+            </a>
+            <a id="js_companies_list_btn"
+               href="/consultorios"
+               title="Consultórios de MundoPsicologos.com"
+               class="active">
+                <span class="icon-list-2"></span>
+                Psicólogos
+            </a>
+                        <a href="/artigos"
+               title="Tudo sobre psicologia"
+               class="">
+                <span class="icon-article"></span>
+                Artigos
+            </a>
+                                        <a href="/perguntas" title="Perguntas" class="">
+                    <span class="icon-question-bubble"></span>
+                    Perguntas
+                </a>
+                                                    <a href="/comunidade" title="Fórum" class="">
+                    <span class="icon-community2"></span>
+                    Fórum
+                </a>
+                                    <div class="loginBox">
+                <a href="/profile/login"
+                   rel="nofollow"
+                   title="Acesso usuários">
+                    <span class="icon-user-access"></span>
+                    Acesso usuários
+                </a>
+                <a href="/front/user_account/login"
+                   rel="nofollow"
+                   title="Acesso consultório">
+                    <span class="icon-company-access"></span>
+                    Acesso consultório
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+            
+    <section class="wrapper" style="margin-bottom: 120px;">
+        <aside class="new-breadcrumb" data-role="breadcrumb" >
+                <ul>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <span>
+                    <a href="/"
+                       title="Psicólogos" itemprop="url">
+                        <span itemprop="title">Psicólogos</span>
+                    </a> &nbsp;&gt;
+                </span>
+
+                        </li>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <span>
+                    <a href="/consultorios"
+                       title="Consultórios de psicologia" itemprop="url">
+                        <span itemprop="title">Consultórios de psicologia</span>
+                    </a> &nbsp;&gt;
+                </span>
+
+                        </li>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <span>
+                    <a href="/consultorios/rio-grande-do-sul"
+                       title="Rio Grande do Sul" itemprop="url">
+                        <span itemprop="title">Rio Grande do Sul</span>
+                    </a> &nbsp;&gt;
+                </span>
+
+                        </li>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <span>
+                    <a href="/consultorios/passo-fundo"
+                       title="Passo Fundo" itemprop="url">
+                        <span itemprop="title">Passo Fundo</span>
+                    </a> &nbsp;&gt;
+                </span>
+
+                        </li>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <strong itemprop="title">Sandra Chies</strong>
+                <meta itemprop="url" content="https://br.mundopsicologos.com/consultorios/sandra-chies" />
+                        </li>
+            </ul>
+        </aside>
+
+        <div class="ie-company-header">
+            <span class="ie-company-header-premium"><span class="icon-star-full"></span></span>
+        <div class="ie-company-header-logo">
+        <img class="logo" src="https://cdn20.br.mundopsicologos.com/site/company/30/314923/logo/sandra-chies_li1.png" alt="Sandra Chies" title="Sandra Chies" itemprop="image" />
+    </div>
+    <div class="ie-company-header-title">
+        <h1 class="ie-company-header-name" itemprop="name">Sandra Chies</h1>
+                    <span class="ie-company-header-review" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+                <meta itemprop="name" content="Sandra Chies">
+                <meta itemprop="ratingCount" content="37">
+                <meta itemprop="ratingValue" content="5">
+                <meta itemprop="bestRating" content="5" >
+            </span>
+            <span class="ie-company-header-meta">
+                (<span itemprop="ratingCount">37</span>) -
+            </span>
+
+                            <a href="/consultorios/sandra-chies/opinioes" class="ie-company-header-meta"
+                   title="Ver todas as opiniões de Sandra Chies">
+                100% recomendam
+            </a>
+                    
+                    <span class="ie-company-header-meta">
+                -                9 perguntas respondidas</a>
+            </span>
+            </div>
+            <div class="ie-company-header-content">
+            <a href="/consultorios/sandra-chies/servicos">Ver todos os serviços</a>
+        </div>
+        <div class="ie-company-header-cta">
+        <button class="new-std-btn no-shadow 
+           js_presu"
+           title="Pedir informação"
+           onclick="gaqTrackEvent('CompanyCard', 'ask_request', 'headerButton_company');">
+                        Pedir informação
+        </button>
+                    <button id="open_appointment_week_modal" class="new-std-btn white"
+               onclick="gaqTrackEvent('CompanyCard', 'ask_appointment', 'headerButton_company');">
+                Agendar atendimento
+            </button>
+                                            <span class="ie-company-header-badge">
+                    Responde em menos de 24h
+                </span>
+                        </div>
+</div>
+
+    <meta itemprop="priceRange" content="R$ 80 - R$ 160">
+            <span itemprop="areaServed" itemscope itemtype="https://schema.org/State">
+                            <meta itemprop="name" content="Ernestina">
+                            <meta itemprop="name" content="Tapejara">
+                            <meta itemprop="name" content="Passo Fundo">
+                    </span>
+    
+        
+
+    <div class="ie-company-tab">
+        <a id="tab_info" href="/consultorios/sandra-chies" title="Sandra Chies"
+            class="ie-company-tab-item ie-company-tab-item_active">
+            O consultório
+        </a>
+
+                      <a href="/consultorios/sandra-chies?tab=adv" title="Sandra Chies"
+                 class="ie-company-tab-item ">
+                  Detalhes
+              </a>
+        
+                    <a id="tab_image" href="/consultorios/sandra-chies/imagens"
+               title="Fotos de Sandra Chies"
+               class="ie-company-tab-item ">
+                Fotos
+                <span class="ie-company-tab-count">6</span>
+            </a>
+        
+        
+        
+                    <a id="tab_reviews" href="/consultorios/sandra-chies/opinioes"
+               title="Recomendações"
+               class="ie-company-tab-item ">
+                Recomendações
+                <span class="ie-company-tab-count">37</span>
+            </a>
+        
+                            <a id="tab_prices" href="/consultorios/sandra-chies/servicos"
+               title="Serviços de Sandra Chies"
+               class="ie-company-tab-item ">
+                Serviços
+            </a>
+            </div>
+
+        <main class="ie-company-content">
+            <div class="ie-company-content-main">
+                    <h2 class="ie-company-title">Informação</h2>
+    
+<aside class="ie-company-adv ie-company-box">
+                                                                                                                                <p class="ie-company-box-subtitle">Psicólogo responsável:</p>
+                        <ul>
+                                                            <li class="ie-company-adv-item">07/26162</li>
+                                                    </ul>
+                                                                                                                    <p class="ie-company-box-subtitle">Planos de saúde ou seguros:</p>
+                        <ul>
+                                                            <li class="ie-company-adv-item">USAMED, AFSVP</li>
+                                                    </ul>
+                                                                                                                                                                    <p class="ie-company-box-subtitle">Especialidades:</p>
+                        <ul>
+                                                            <li class="ie-company-adv-item">Transtornos de humor, alimentares, neurodesenvolvimento, depressivos...</li>
+                                                    </ul>
+                                                                                                                                                                                                                                <p class="ie-company-box-subtitle">Atendemos habitualmente a:</p>
+                        <ul>
+                                                            <li class="ie-company-adv-item">Adultos</li>
+                                                            <li class="ie-company-adv-item">Crianças</li>
+                                                            <li class="ie-company-adv-item">Adolescentes</li>
+                                                    </ul>
+                                                                                                                    <p class="ie-company-box-subtitle">Preço médio de uma sessão (preço orientativo):</p>
+                        <ul>
+                                                            <li class="ie-company-adv-item">De R$ 60 a R$ 100</li>
+                                                    </ul>
+                                                                                                                                                                                                <div class="ie-company-more">
+            <a href="/consultorios/sandra-chies?tab=adv" title="Sandra Chies" class="ie-company-more-lnk"
+               onclick="gaqTrackEvent('CompanyCard', 'view_adv_data', 'view_more');">
+                Ver a informação completa
+            </a>
+        </div>
+            </aside>
+
+                <div id="vue_appointment">
+            <h2 class="ie-company-title">Agende um atendimento com Sandra Chies</h2>
+
+<switch-headquarter-block type="asBlock"></switch-headquarter-block>
+<availability-summary></availability-summary>
+<not-scheduled-alert></not-scheduled-alert>
+
+
+    <availability-week :show.sync="showAvailabilityWeekModal"></availability-week>
+        </div>
+        
+        <h2 class="ie-company-title">Descrição</h2>
+    <aside class="ie-company-box ie-company-desc" itemprop="description">
+        <p><strong>Sandra Chies, CRP 07/26162, </strong>é uma profissional que realiza atendimento psicoterapêutico com abordagem em terapia cognitiva-comportamental, além de <strong>avaliação psicológica infantil</strong>, avaliação neuropsicológica e atendimento psicopedagógico.</p>
+<p>Trabalha de maneira atenciosa, dedicada e compromissada em buscar, ao lado da pessoa, caminhos que melhorem sua <strong>qualidade de vida </strong>e lhe propiciem bem-estar.</p>
+<p><strong>Especialidades</strong></p>
+<p>A profissional trabalha com quadros envolvendo <strong>agressividade, </strong>ansiedade, <strong>depressão, </strong>fobia, <strong>insônia, </strong>medo, <strong>neurose, </strong>separação, stress, timidez, TOC, e transtornos de humor, bipolar, e de personalidade. Ainda trata de questões de <strong>desenvolvimento pessoal.</strong></p>
+<p>Atua também na área de atendimento psicopedagógico com reabilitação.</p>
+<p><strong>Localização</strong></p>
+<p>Seu consultório conta com <strong>ambiente acolhedor </strong>e aconchegante na cidade de Passo Fundo, Tapejara e Ernestina. Entre em contato para mais informações e agende um horário com a psicóloga, que terá o maior prazer em recebê-lo.</p>
+    </aside>
+    
+                <h2 class="ie-company-title">Serviços que oferece</h2>
+        <aside class="ie-company-service ie-company-box">
+                            <p class="ie-company-box-subtitle">Problemas psicológicos</p>
+                                    <ul class="ie-company-service-list">
+                                                    <li class="ie-company-service-item">Agressividade</li>
+                                                    <li class="ie-company-service-item">Angústia</li>
+                                                    <li class="ie-company-service-item">Anorexia</li>
+                                                    <li class="ie-company-service-item">Ansiedade</li>
+                                                    <li class="ie-company-service-item">Bulimia</li>
+                                                    <li class="ie-company-service-item">Ciúmes</li>
+                                                    <li class="ie-company-service-item">Depressão</li>
+                                                    <li class="ie-company-service-item">Esquizofrenia</li>
+                                                    <li class="ie-company-service-item">Fobia</li>
+                                                    <li class="ie-company-service-item">Insônia</li>
+                                                    <li class="ie-company-service-item">Medo</li>
+                                                    <li class="ie-company-service-item">Neurose</li>
+                                                    <li class="ie-company-service-item">Pânico</li>
+                                                    <li class="ie-company-service-item">Psicose</li>
+                                                    <li class="ie-company-service-item">Separação</li>
+                                                    <li class="ie-company-service-item">Sonambulismo</li>
+                                                    <li class="ie-company-service-item">Stress</li>
+                                                    <li class="ie-company-service-item">Timidez</li>
+                                                    <li class="ie-company-service-item">TOC</li>
+                                                    <li class="ie-company-service-item">Transtorno bipolar</li>
+                                                    <li class="ie-company-service-item">Transtorno de humor</li>
+                                                    <li class="ie-company-service-item">Transtornos personalidade</li>
+                                                    <li class="ie-company-service-item">Traumas</li>
+                                                    <li class="ie-company-service-item">Violência psicológica</li>
+                                                    <li class="ie-company-service-item">Violência sexual</li>
+                                            </ul>
+                                            <p class="ie-company-box-subtitle">Psicoterapias</p>
+                                    <ul class="ie-company-service-list">
+                                                    <li class="ie-company-service-item">Psicoterapia breve</li>
+                                                    <li class="ie-company-service-item">Terapia cognitiva</li>
+                                                    <li class="ie-company-service-item">Terapia comportamental</li>
+                                            </ul>
+                                            <p class="ie-company-box-subtitle">Psicologia infantil</p>
+                                    <ul class="ie-company-service-list">
+                                                    <li class="ie-company-service-item">Autismo</li>
+                                                    <li class="ie-company-service-item">Bullying</li>
+                                                    <li class="ie-company-service-item">Déficit de atenção</li>
+                                                    <li class="ie-company-service-item">Dificuldades de aprendizagem</li>
+                                                    <li class="ie-company-service-item">Dislexia</li>
+                                                    <li class="ie-company-service-item">Fracasso escolar</li>
+                                                    <li class="ie-company-service-item">Maus-tratos</li>
+                                                    <li class="ie-company-service-item">Superdotados</li>
+                                                    <li class="ie-company-service-item">TDAH</li>
+                                            </ul>
+                                            <p class="ie-company-box-subtitle">Desenvolvimento pessoal</p>
+                                    <ul class="ie-company-service-list">
+                                                    <li class="ie-company-service-item">Assertividade</li>
+                                                    <li class="ie-company-service-item">Autoestima</li>
+                                                    <li class="ie-company-service-item">Habilidades sociais</li>
+                                                    <li class="ie-company-service-item">Liderança</li>
+                                                    <li class="ie-company-service-item">Motivação</li>
+                                            </ul>
+                                            <p class="ie-company-box-subtitle">Vícios</p>
+                                    <ul class="ie-company-service-list">
+                                                    <li class="ie-company-service-item">Alcoolismo</li>
+                                            </ul>
+                                            <p class="ie-company-box-subtitle">Psicologia do trabalho</p>
+                                    <ul class="ie-company-service-list">
+                                                    <li class="ie-company-service-item">Assédio moral</li>
+                                                    <li class="ie-company-service-item">Burnout</li>
+                                                    <li class="ie-company-service-item">Coaching</li>
+                                                    <li class="ie-company-service-item">Orientação profissional</li>
+                                                    <li class="ie-company-service-item">Recrutamento e seleção</li>
+                                            </ul>
+                                            <p class="ie-company-box-subtitle">Testes psicológicos</p>
+                                    <ul class="ie-company-service-list">
+                                                    <li class="ie-company-service-item">Teste QI</li>
+                                                    <li class="ie-company-service-item">Teste de personalidade</li>
+                                                    <li class="ie-company-service-item">Teste psicotécnico</li>
+                                                    <li class="ie-company-service-item">Teste vocacional</li>
+                                            </ul>
+                                            <p class="ie-company-box-subtitle">Abordagem psicológica</p>
+                                    <ul class="ie-company-service-list">
+                                                    <li class="ie-company-service-item">Avaliação neuropsicológica</li>
+                                                    <li class="ie-company-service-item">Psicologia clínica</li>
+                                                    <li class="ie-company-service-item">Psicologia da educação</li>
+                                                    <li class="ie-company-service-item">Psicologia humanista</li>
+                                                    <li class="ie-company-service-item">Psicologia social</li>
+                                            </ul>
+                                            <p class="ie-company-box-subtitle">Outros</p>
+                                    <ul class="ie-company-service-list">
+                                                    <li class="ie-company-service-item">Atendimento domiciliar</li>
+                                                    <li class="ie-company-service-item">Atendimento de urgência</li>
+                                                    <li class="ie-company-service-item">Portadores de necessidades especiais</li>
+                                                    <li class="ie-company-service-item">Adolescência</li>
+                                                    <li class="ie-company-service-item">Idosos</li>
+                                            </ul>
+                            
+                            <div class="ie-company-more">
+                    <a href="/consultorios/sandra-chies/servicos" class="ie-company-more-lnk"
+                       title="Serviços de Sandra Chies"
+                       onclick="gaqTrackEvent('CompanyCard', 'view_services', 'view_more');">
+                        Ver todos os serviços
+                    </a>
+                </div>
+                    </aside>
+        
+        <h2 class="ie-company-title">Recomendações</h2>
+    <div class="ie-company-box">
+                        <aside class="ie-review noBorder" itemprop="review" itemscope itemtype="https://schema.org/Review">
+
+                    <div class="ie-review-rating">
+                <span class="ie-review-rating-score score-rw" itemprop="reviewRating" itemscope="" itemtype="https://schema.org/Rating">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="bestRating" content="5">
+                    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+                    <span class="rating" itemprop="ratingValue">5.0</span>
+                </span>
+                                    <span class="date" itemprop="datePublished">04 Maio 2018</span>
+                            </div>
+        
+        <div class="ie-review-review">
+            <p>
+                <span class="ie-review-review-person"  itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="name" content="Fabrício">
+                    <span>Fabrício:</span>
+                </span>
+                                    <span class="ie-review-review-text" itemprop="reviewBody">
+                        A Psicóloga é calma tranquila muito Profissional!!!
+                    </span>
+                            </p>
+            <a style="display: none" href="#">Ver mais</a>
+        </div>
+
+        
+            </aside>
+    <aside class="ie-review " itemprop="review" itemscope itemtype="https://schema.org/Review">
+
+                    <div class="ie-review-rating">
+                <span class="ie-review-rating-score score-rw" itemprop="reviewRating" itemscope="" itemtype="https://schema.org/Rating">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="bestRating" content="5">
+                    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+                    <span class="rating" itemprop="ratingValue">5.0</span>
+                </span>
+                                    <span class="date" itemprop="datePublished">01 Maio 2018</span>
+                            </div>
+        
+        <div class="ie-review-review">
+            <p>
+                <span class="ie-review-review-person"  itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="name" content="Paulo">
+                    <span>Paulo:</span>
+                </span>
+                                    <span class="ie-review-review-text" itemprop="reviewBody">
+                        Atendimento maravilhoso, a Psicóloga é muito humana e cordial muito responsável e dedicada.
+                    </span>
+                            </p>
+            <a style="display: none" href="#">Ver mais</a>
+        </div>
+
+        
+            </aside>
+    <aside class="ie-review " itemprop="review" itemscope itemtype="https://schema.org/Review">
+
+                    <div class="ie-review-rating">
+                <span class="ie-review-rating-score score-rw" itemprop="reviewRating" itemscope="" itemtype="https://schema.org/Rating">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="bestRating" content="5">
+                    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+                    <span class="rating" itemprop="ratingValue">5.0</span>
+                </span>
+                                    <span class="date" itemprop="datePublished">01 Maio 2018</span>
+                            </div>
+        
+        <div class="ie-review-review">
+            <p>
+                <span class="ie-review-review-person"  itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="name" content="Daniella">
+                    <span>Daniella:</span>
+                </span>
+                                    <span class="ie-review-review-text" itemprop="reviewBody">
+                        Agradecer nos torna pessoas melhores e mais capazes de apreciar tudo que a vida nos oferece. Sou grata a você por ter feito a escolha tao digna de respeito.
+                    </span>
+                            </p>
+            <a style="display: none" href="#">Ver mais</a>
+        </div>
+
+        
+            </aside>
+
+            <div class="ie-company-review-cta">
+                <button class="new-std-btn mkreview"  data-com="314923">
+                    Recomendar
+                </button>
+                                    <div class="ie-company-more">
+                        <a href="/consultorios/sandra-chies/opinioes" class="ie-company-more-lnk"
+                           title="Ver todas as opiniões de Sandra Chies"
+                           onclick="gaqTrackEvent('CompanyCard', 'view_reviews', 'view_more');">
+                            Ver mais recomendações
+                        </a>
+                    </div>
+                            </div>
+            </div>
+    
+            
+<div id="psico_request_box" class="ie-company-box ie-company-box_transparent">
+    <div id="div_steps">
+    <div id="frm-request" class="frm-request request-bg brds-round1">
+        <div id="js_check_autocomplete" style="display:none;">
+            <h2 class="form_h2">Confirme-nos a cidade escolhida</h2>
+            <p class="required">Selecione a cidade onde se realizará o serviço:</p>
+        </div>
+        <div id="errorProv" class="brds-round text-align-C"  style="display:none; margin-top:15px;">
+            <strong id="js_error_prov_ttl"></strong>
+            <p id="js_error_prov_txt"></p>
+            <button type="button" id="js_submit_ae2check" class="std-btn">
+                Enviar
+            </button>
+            <div>
+                <a href="javascript:void(0);" id="list_link">
+                    Ver mais consultórios
+                    <span id="list_link_txt"></span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="js_content">
+            <h2 id="h2_form_ttl">
+                                    Pedir informação a Sandra Chies
+                            </h2>
+
+            <form id="request_form_v2" action="/request/request" method="post">
+                <fieldset class="">
+                    <label for="req_name">Nome e sobrenome</label>
+                    <input id="req_name" name="req_name" type="text"
+                           placeholder="Nome e sobrenome" required/>
+                </fieldset>
+
+                <fieldset>
+                    <label for="req_email">E-mail</label>
+                    <input id="req_email" name="req_email" type="email"
+                           placeholder="E-mail" required/>
+                </fieldset>
+
+                <fieldset>
+                    <label for="req_phone">Telefone</label>
+                    <input id="req_phone" type="tel" name="req_phone"
+                           placeholder="Telefone" required/>
+                </fieldset>
+
+                <fieldset>
+                    <label for="population_autocomplete" class="pob-sugg">Cidade</label>
+                    <input type="text" autocorrect="off" autocapitalize="off" data-no-focus="true"
+                           name="population_autocomplete" id="population_autocomplete" autocomplete="off"
+                           placeholder="Cidade" required/>
+                    <input type="hidden" name="ae2_id" id="ae2_id" value="" />
+                    <input type="hidden" name="pop_id" id="pop_id" value="" />
+                </fieldset>
+
+                
+                <fieldset class="hqf">
+                                            <label>Consultório que receberá a sua solicitação</label>
+                        <select id="head_id" name="head_id">
+                                                            <optgroup label="Sede principal">
+                                                                                                                                                        <option value="357662" selected='selected'>
+                                            RUA QUINZE DE NOVEMBRO 750, Passo Fundo - Rio Grande do Sul
+                                        </option>
+                                                                    </optgroup>
+                                                            <optgroup label="Rio Grande do Sul">
+                                                                                                                                                        <option value="385458" >
+                                            Rua Alfredo Atelwein centro , Ernestina - Rio Grande do Sul
+                                        </option>
+                                                                                                                    <option value="385846" >
+                                            Rua Coronel Lolico 1122, Tapejara - Rio Grande do Sul
+                                        </option>
+                                                                                                                    <option value="357662" selected='selected'>
+                                            RUA QUINZE DE NOVEMBRO 750, Passo Fundo - Rio Grande do Sul
+                                        </option>
+                                                                    </optgroup>
+                                                    </select>
+                                    </fieldset>
+
+                <!-- Extended form -->
+                                    <div id="form_ext" class="c_frms_stp1">
+                        
+                    </div>
+                                <!-- End Extended form -->
+
+                <!-- START APPOINTMENT MODULE -->
+                                <!-- END APPOINTMENT MODULE -->
+
+                <fieldset class="req-desc">
+                    <label for="req_text">Solicitação</label>
+                    <textarea name="req_text" id="req_text"
+                              placeholder="Explique seu caso, incluindo toda a informação importante. Seus dados serão tratados com confidencialidade."></textarea>
+                </fieldset>
+
+                
+                <fieldset class="button-set text-align-C">
+                                        <input type="hidden" name="off_id" id="off_id"
+                           value="0" />
+                    <button id="btn_req_submit" type="submit" class="new-std-btn no-shadow">
+                        Enviar
+                    </button>
+
+                                                                <div class="clean text-align-L">
+                                                        <p>Li e aceito as <a href="/aviso_legal" target="_blank" rel="nofollow">Condições legais</a> e a <a href="/proteccion_datos" target="_blank" rel="nofollow">Política de Proteção de Dados</a> (receberá ofertas por e-mail e poderá pedir o cancelamento das comunicações a qualquer momento).</p>
+                        </div>
+                                    </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+            </div>
+            <div class="ie-company-content-sidebar">
+                <h3 class="ie-company-title">
+    Dados de contato
+</h3>
+<aside class="ie-company-box ie-company-data">
+        <div id="vue_company_address">
+                <company-address com-id="314923" headquarter-id="357662">
+            <div class="ie-company-data-map">
+                <div class="ie-company-data-map-info">
+                    <span>
+                        Ver sedes
+                    </span>
+                    <span class="asLink_mobile">Ver sedes</span>
+                </div>
+            </div>
+            <div class="ie-company-data-info">
+                <span class="icon-location"></span>
+                <p class="ie-company-data-info-ttl">
+                    Endereço
+                </p>
+                <address class="ie-company-data-info-txt">
+                    RUA QUINZE DE NOVEMBRO 750,
+                    Passo Fundo.
+                    Rio Grande do Sul
+                </address>
+            </div>
+        </company-address>
+
+                
+        <switch-headquarter :show.sync="showSwitchHeadquarterModal"></switch-headquarter>
+    
+    </div>
+
+        <div class="ie-company-data-cta">
+                <button id="js_show_phone" class="new-std-btn white"
+                onclick="gaqTrackEvent('CompanyCard', 'seephone', 'show_phone_head');">
+            <span class="icon-phone"></span>
+            Fone
+        </button>
+                <button class="new-std-btn white js_presu"
+                title="Pedir informação"
+                onclick="gaqTrackEvent('CompanyCard', 'ask_request', 'headerButton_company');">
+            <span class="icon-request"></span>
+            Contatar
+        </button>
+    </div>
+    <div class="ie-company-data-incorrect">
+        <span class="asLink_mobile js_form_error_lnk">Há algum dado incorreto?</span>
+    </div>
+        <div id="incorrect_data" style="display:none;">
+    <div class="ie-layer-content">
+        <h3>Problemas no perfil?</h3>
+        <form id="incorrect_form" action="/company/send_incorrect_data_email" method="post">
+            <fieldset class="form-group">
+                <input name="report_user" id="report_user" type="text" placeholder="Nome e sobrenome"
+                       data-rule-maxlength="100"/>
+            </fieldset>
+            <fieldset class="form-group">
+                <input name="report_email" id="report_email" type="email"
+                       placeholder="E-mail: " required
+                       data-rule-maxlength="100"/>
+            </fieldset>
+            <fieldset class="form-group">
+                <textarea name="report_text" id="report_text"
+                          placeholder="O que está errado?" required
+                          data-rule-rangelength="2,250"></textarea>
+            </fieldset>
+            <fieldset class="form-group" style="text-align: center;">
+                <input name="com" type="hidden" value="314923" />
+                <button class="new-std-btn new-std-btn_big">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+</aside>
+
+
+    <div id="vue_appointment_openings">
+        <headquarter-openings>
+                            <h3 class="ie-company-title">
+                    Horários
+                </h3>
+                <aside class="ie-openings ie-company-box">
+                    <div class="ie-openings-days">
+                        <span class="ie-openings-days-item">Seg</span>
+                        <span class="ie-openings-days-item">Ter</span>
+                        <span class="ie-openings-days-item">Qua</span>
+                        <span class="ie-openings-days-item">Qui</span>
+                        <span class="ie-openings-days-item">Sex</span>
+                        <span class="ie-openings-days-item">Sab</span>
+                        <span class="ie-openings-days-item">Dom</span>
+                    </div>
+                                            <div class="ie-openings-dates">
+                            <div class="ie-openings-dates-ttl">
+                                <img src="/img/menu/schedule_morning.png" alt="Manhã">
+                                Manhã
+                            </div>
+                                                                                                <div class="ie-openings-dates-hour">
+                                        08:00h - 12:00h
+                                    </div>
+                                                                                                                                <div class="ie-openings-dates-hour">
+                                        08:00h - 12:00h
+                                    </div>
+                                                                                                                                <div class="ie-openings-dates-hour">
+                                        08:00h - 12:00h
+                                    </div>
+                                                                                                                                <div class="ie-openings-dates-hour ie-openings-dates-hour_closed">Fechado</div>
+                                                                                                                                <div class="ie-openings-dates-hour ie-openings-dates-hour_closed">Fechado</div>
+                                                                                                                                <div class="ie-openings-dates-hour ie-openings-dates-hour_closed">Fechado</div>
+                                                                                                                                <div class="ie-openings-dates-hour ie-openings-dates-hour_closed">Fechado</div>
+                                                                                    </div>
+                        <div class="ie-openings-dates">
+                            <div class="ie-openings-dates-ttl">
+                                <img src="/img/menu/schedule_afternoon.png" alt="Manhã">
+                                Tarde
+                            </div>
+                                                                                                <div class="ie-openings-dates-hour">
+                                        13:00h - 20:00h
+                                    </div>
+                                                                                                                                <div class="ie-openings-dates-hour">
+                                        13:00h - 20:00h
+                                    </div>
+                                                                                                                                <div class="ie-openings-dates-hour">
+                                        13:00h - 20:00h
+                                    </div>
+                                                                                                                                <div class="ie-openings-dates-hour ie-openings-dates-hour_closed">Fechado</div>
+                                                                                                                                <div class="ie-openings-dates-hour ie-openings-dates-hour_closed">Fechado</div>
+                                                                                                                                <div class="ie-openings-dates-hour ie-openings-dates-hour_closed">Fechado</div>
+                                                                                                                                <div class="ie-openings-dates-hour ie-openings-dates-hour_closed">Fechado</div>
+                                                                                    </div>
+                    
+                                    </aside>
+                    </headquarter-openings>
+    </div>
+
+    <h3 class="ie-company-title">
+        pontuação média
+    </h3>
+    <aside class="ie-company-box ie-company-rating">
+        <div class="ie-company-rating-stars">
+            <span class="ie-company-rating-stars-number">5</span>
+            <span class="ie-company-rating-stars-number">/5</span>
+            <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+        </div>
+        <p class="ie-company-rating-count" data-role="com_reviews_num" data-value="37 opiniões">
+            <a href="/consultorios/sandra-chies/opinioes">37 opiniões</a>
+        </p>
+        <p class="ie-company-rating-percent">
+            100%
+            Recomendação
+        </p>
+                    <div class="ie-company-rating-detail">
+                                <p class="ie-company-rating-detail-item ">
+                    <span class="icon-mail-send"></span> Responde rápido
+                </p>
+                <p class="ie-company-rating-detail-item ">
+                    <span class="icon-money2"></span> Boa relação custo-benefício
+                </p>
+                <p class="ie-company-rating-detail-item">
+                    <span class="icon-heart2"></span>
+                    100%
+                    de usuários satisfeitos
+                </p>
+            </div>
+            </aside>
+
+    
+    <h3 class="ie-company-title">Fotos</h3>
+    <aside class="ie-company-gallery">
+                                                
+                            <a href="/consultorios/sandra-chies/imagens" class="ie-company-gallery-item" data-index="1">
+                    <img src="https://cdn20.br.mundopsicologos.com/site/company/30/314923/images/621804/sala-de-espera-infantil-consultorio-de-tapejara_ci3.jpg" alt="Sala de espera infantil consultório de Tapejara">
+                </a>
+                                                            
+                            <a href="/consultorios/sandra-chies/imagens" class="ie-company-gallery-item" data-index="2">
+                    <img src="https://cdn20.br.mundopsicologos.com/site/company/30/314923/images/621803/consultorio-de-tapejara_ci1.jpg" alt="Consultório de Tapejara ">
+                </a>
+                                                            
+                            <a href="/consultorios/sandra-chies/imagens" class="ie-company-gallery-item" data-index="3">
+                    <img src="https://cdn20.br.mundopsicologos.com/site/company/30/314923/images/621802/certificado-de-psicologa-destaque-passo-fundo-2017_ci1.jpg" alt="Certificado de psicóloga destaque Passo Fundo 2017">
+                </a>
+                                                            
+                            <a href="/consultorios/sandra-chies/imagens" class="ie-company-gallery-item" data-index="4">
+                    <img src="https://cdn20.br.mundopsicologos.com/site/company/30/314923/images/621801/certificado-de-psicologa-destaque-passo-fundo_ci1.jpg" alt="Certificado de psicóloga destaque Passo Fundo">
+                </a>
+                                                            
+                            <a href="/consultorios/sandra-chies/imagens" class="ie-company-gallery-item" data-index="5">
+                    <img src="https://cdn20.br.mundopsicologos.com/site/company/30/314923/images/581173/ministrando-trabalhos-em-anais-de-iniciacao-cientifica-faculdade-imed_ci1.jpg" alt="Ministrando trabalhos em Anais de Iniciação Cientifica Faculdade Imed">
+                </a>
+                                                            
+                            <div class="ie-company-more">
+            <a href="/consultorios/sandra-chies/imagens" class="ie-company-more-lnk"
+               title="Promoções de Sandra Chies"
+               onclick="gaqTrackEvent('CompanyCard', 'view_images', 'view_more');">
+                Ver todas as imagens
+            </a>
+        </div>
+        <div class="ie-company-gallery-badge">
+            <span class="icon-camera"></span>
+            <span class="ie-company-gallery-badge-txt">6</span>
+        </div>
+    </aside>
+
+            <h3 class="ie-company-title">
+            Últimas perguntas respondidas
+        </h3>
+        <div class="ie-company-box ie-company-qanda">
+                                            <aside class="ie-question-miniature">
+    <h4 class="ie-question-miniature-ttl">
+        <a href="/perguntas/por-que-nao-consigo-tirar-carteira-de-motorista" title="Por que não consigo tirar carteira de motorista?">Por que não consigo tirar carteira de motorista?</a>
+    </h4>
+    <p class="ie-question-miniature-text">
+        <span class="icon-bubble"></span>
+        2
+        respostas
+    </p>
+</aside>
+                                            <aside class="ie-question-miniature">
+    <h4 class="ie-question-miniature-ttl">
+        <a href="/perguntas/eu-nao-consigo-expressar-sentimentos-pelos-outros" title="Eu não consigo expressar sentimentos pelos outros">Eu não consigo expressar sentimentos pelos outros</a>
+    </h4>
+    <p class="ie-question-miniature-text">
+        <span class="icon-bubble"></span>
+        3
+        respostas
+    </p>
+</aside>
+                                            <aside class="ie-question-miniature">
+    <h4 class="ie-question-miniature-ttl">
+        <a href="/perguntas/a-minha-filha-nao-consegue-se-adaptar" title="A minha filha não consegue se adaptar">A minha filha não consegue se adaptar</a>
+    </h4>
+    <p class="ie-question-miniature-text">
+        <span class="icon-bubble"></span>
+        3
+        respostas
+    </p>
+</aside>
+                                            <aside class="ie-question-miniature">
+    <h4 class="ie-question-miniature-ttl">
+        <a href="/perguntas/como-lidar-com-alguem-que-sofreu-um-trauma" title="Como lidar com alguém que sofreu um trauma?">Como lidar com alguém que sofreu um trauma?</a>
+    </h4>
+    <p class="ie-question-miniature-text">
+        <span class="icon-bubble"></span>
+        6
+        respostas
+    </p>
+</aside>
+                                            <aside class="ie-question-miniature">
+    <h4 class="ie-question-miniature-ttl">
+        <a href="/perguntas/minha-psicologa-atendeu-meu-marido-sem-o-meu-consentimento" title="Minha psicóloga atendeu meu marido sem o meu consentimento">Minha psicóloga atendeu meu marido sem o meu consentimento</a>
+    </h4>
+    <p class="ie-question-miniature-text">
+        <span class="icon-bubble"></span>
+        5
+        respostas
+    </p>
+</aside>
+                                            <aside class="ie-question-miniature">
+    <h4 class="ie-question-miniature-ttl">
+        <a href="/perguntas/sem-animo-e-sono-excessivo-no-trabalho" title="Sem ânimo e sono excessivo no trabalho">Sem ânimo e sono excessivo no trabalho</a>
+    </h4>
+    <p class="ie-question-miniature-text">
+        <span class="icon-bubble"></span>
+        4
+        respostas
+    </p>
+</aside>
+                    </div>
+    
+            </div>
+        </main>
+
+        <div id="nav_bottom" class="ie-company-pagination"></div>
+
+                <h2 class="ie-company-title">Serviços relacionados</h2>
+        <div class="o-link-list o-link-list_three ie-company-box">
+                            <a href="/consultorios/problemas-psicologicos/rio-grande-do-sul" title="Problemas psicológicos Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Problemas psicológicos Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/alcoolismo/rio-grande-do-sul" title="Alcoolismo Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Alcoolismo Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/psicoterapias/rio-grande-do-sul" title="Psicoterapias Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Psicoterapias Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/anorexia/rio-grande-do-sul" title="Anorexia Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Anorexia Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/deficit-de-atencao/rio-grande-do-sul" title="Déficit de atenção Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Déficit de atenção Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/psicologia-infantil/rio-grande-do-sul" title="Psicologia infantil Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Psicologia infantil Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/ansiedade/rio-grande-do-sul" title="Ansiedade Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Ansiedade Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/bulimia/rio-grande-do-sul" title="Bulimia Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Bulimia Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/fracasso-escolar/rio-grande-do-sul" title="Fracasso escolar Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Fracasso escolar Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/depressao/rio-grande-do-sul" title="Depressão Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Depressão Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/teste-vocacional/rio-grande-do-sul" title="Teste vocacional Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Teste vocacional Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/testes-psicologicos/rio-grande-do-sul" title="Testes psicológicos Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Testes psicológicos Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/fobia/rio-grande-do-sul" title="Fobia Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Fobia Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/abordagem-psicologica/rio-grande-do-sul" title="Abordagem psicológica Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Abordagem psicológica Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/terapia-cognitiva/rio-grande-do-sul" title="Terapia cognitiva Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Terapia cognitiva Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/atendimento-domiciliar/rio-grande-do-sul" title="Atendimento domiciliar Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Atendimento domiciliar Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/atendimento-de-urgencia/rio-grande-do-sul" title="Atendimento de urgência Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Atendimento de urgência Rio Grande do Sul
+                </a>
+                            <a href="/consultorios/panico/rio-grande-do-sul" title="Pânico Rio Grande do Sul"
+                   class="o-link-list-item">
+                    Pânico Rio Grande do Sul
+                </a>
+                    </div>
+            </section>
+
+        <footer id="footer">
+    <aside class="footer">
+        <div class="wrapper">
+            <div class="footer-site">
+                <div class="project-logo">
+                    <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_white.svg" alt="psicólogos" title="psicólogos" width="150" height="31"/>
+                </div>
+                <ul>
+                    <li>
+                        <a href="/quienes" rel="nofollow" title="Quem somos">
+                            Quem somos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/aviso_legal" rel="nofollow" title="Condições legais">
+                            Condições legais
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/proteccion_datos" rel="nofollow" title="Proteção de dados">
+                            Proteção de dados
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/guia_comunidades" rel="nofollow" title="Condições de Participação do Fórum">
+                            Condições de Participação do Fórum
+                        </a>
+                    </li>
+                </ul>
+                <ul class="last">
+                                            <li>
+                            <a href="/potenciales" rel="nofollow" title="Plano Premium">
+                                Plano Premium
+                            </a>
+                        </li>
+                                        <li>
+                        <a href="/register_web" rel="nofollow" title="Cadastrar seu consultório">
+                            Cadastrar seu consultório
+                        </a>
+                    </li>
+                    <li><a href="/front/user_account/login" rel="nofollow" title="Acesso consultório">
+                            Acesso consultório
+                        </a>
+                    </li>
+                </ul>
+                                    <div class="social">
+                        <span>Siga-nos:</span>
+                                                    <a class="icon-facebook" onclick="gaqTrackEvent('socialButtons', 'footer_web', 'facebook');"
+                               href="https://www.facebook.com/MundopsicologosBrasil" target="_blank" rel="noopener"></a>
+                                                                            <a class="icon-twitter" onclick="gaqTrackEvent('socialButtons', 'footer_web', 'twitter');"
+                               href="https://twitter.com/BRpsicologos" target="_blank" rel="noopener"></a>
+                                            </div>
+                            </div>
+            <div class="footer-seo">
+                                                            <span>Últimos consultórios de psicologia</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/gisele-falcao-de-almeida-alves-psicologa" title="Gisele Falcão de Almeida Alves Psicóloga">Gisele Falcão de Almeida Alves Psicóloga</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologa-luciana-chiochetta" title="Psicóloga Luciana Chiochetta">Psicóloga Luciana Chiochetta</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologa-rachel-lisboa" title="Psicóloga Rachel Lisboa">Psicóloga Rachel Lisboa</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologo-mauricio-czeckailo" title="Psicólogo Mauricio Czeckailo">Psicólogo Mauricio Czeckailo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologa-thais-claudino" title="Psicóloga Thais Claudino">Psicóloga Thais Claudino</a>
+                                </li>
+                                                    </ul>
+                    
+                                            <span>Estados Top</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/sao-paulo" title="Psicólogos São Paulo">Psicólogos São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/rio-de-janeiro" title="Psicólogos Rio de Janeiro">Psicólogos Rio de Janeiro</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/parana" title="Psicólogos Paraná">Psicólogos Paraná</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/santa-catarina" title="Psicólogos Santa Catarina">Psicólogos Santa Catarina</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/minas-gerais" title="Psicólogos Minas Gerais">Psicólogos Minas Gerais</a>
+                                </li>
+                                                    </ul>
+                    
+                    
+                                            <span>Serviços por estado</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/ansiedade/rio-grande-do-sul" title="Angústia Rio Grande do Sul">Angústia Rio Grande do Sul</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologia-clinica/rio-grande-do-sul" title="Psicólogo clínico Rio Grande do Sul">Psicólogo clínico Rio Grande do Sul</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/depressao/rio-grande-do-sul" title="Depressão Rio Grande do Sul">Depressão Rio Grande do Sul</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/stress/rio-grande-do-sul" title="Estresse Rio Grande do Sul">Estresse Rio Grande do Sul</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/traumas/rio-grande-do-sul" title="Traumas Rio Grande do Sul">Traumas Rio Grande do Sul</a>
+                                </li>
+                                                    </ul>
+                    
+                                            <span>Pesquisas recentes</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/fobia" title="Fobia">
+                                        Fobia
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicoterapias" title="Psicoterapias">
+                                        Psicoterapias
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologia-clinica" title="Psicologia clínica">
+                                        Psicologia clínica
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/depressao" title="Psicólogos Depressão">
+                                        Psicólogos Depressão
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/ansiedade" title="Psicólogos Ansiedade">
+                                        Psicólogos Ansiedade
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/terapia-de-casal" title="Terapia de casal">
+                                        Terapia de casal
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                </div>
+        </div>
+    </aside>
+    <aside class="footer-bottom">
+        <div class="wrapper">
+            <ul>
+                                    <li>
+                        <span class="flg-ar"></span>
+                        <a href="https://www.mundopsicologos.com.ar">Mundopsicologos.com.ar</a>
+                    </li>
+                                    <li>
+                        <span class="flg-br"></span>
+                        <a href="https://br.mundopsicologos.com">MundoPsicologos.com</a>
+                    </li>
+                                    <li>
+                        <span class="flg-cl"></span>
+                        <a href="https://www.psicologosonline.cl">PsicologosOnline.cl</a>
+                    </li>
+                                    <li>
+                        <span class="flg-co"></span>
+                        <a href="https://www.psicologos.com.co">Psicologos.com.co</a>
+                    </li>
+                                    <li>
+                        <span class="flg-es"></span>
+                        <a href="https://www.mundopsicologos.com">MundoPsicologos.com</a>
+                    </li>
+                                    <li>
+                        <span class="flg-fr"></span>
+                        <a href="https://www.psychologue.net">Psychologue.net</a>
+                    </li>
+                                    <li>
+                        <span class="flg-it"></span>
+                        <a href="https://www.guidapsicologi.it">GuidaPsicologi.it</a>
+                    </li>
+                                    <li>
+                        <span class="flg-mx"></span>
+                        <a href="https://www.psico.mx">Psico.mx</a>
+                    </li>
+                                    <li>
+                        <span class="flg-pt"></span>
+                        <a href="https://www.guiadetectives.com">Psico.portugal</a>
+                    </li>
+                
+                            </ul>
+        </div>
+    </aside>
+</footer>
+
+        
+<script id="modal_template" type="x-template">
+    <div>
+        <div class="ie-modal-overlay" :class="{open: show}"></div>
+        <div class="ie-modal-wrapper" :class="{open: show}">
+            <div class="ie-modal" :class="{fullWidth: fullWidth}">
+                <span class="ie-modal-close icon-x" @click="close"></span>
+
+                <slot name="title"></slot>
+                <div class="ie-modal-container">
+                    <slot></slot>
+                </div>
+
+                <slot name="cta"></slot>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+        <script id="super_modal_template" type="x-template">
+    <div class="ie-sp"
+         :class="{'isSmall': isSmall, 'isBig': isBig}"
+         v-if="isVisible || isLoading">
+        <div class="ie-sp-wrap">
+        <span class="ie-sp-close"
+              v-if="showClose"
+              @click="remove">×</span>
+
+            <div class="ie-sp-ttl"
+                 v-if="title && !isLoading"
+                 v-html="title"></div>
+            <div class="ie-sp-content"
+                 v-show="!isLoading"
+                 ref="content"
+                 v-html="content">
+            </div>
+
+            <div class="ie-sp-loader"
+                 v-if="isLoading">
+                <div class="ie-sp-loader-item"></div>
+            </div>
+        </div>
+    </div>
+</script>        <div id="user_type_intercept" style="display: none;">
+    <div style="text-align: center;">
+        <p style="font-size: 20px; font-weight: 700; margin: 40px 0 0;" class="ie-text--primary">Quer falar com um psicólogo?</p>
+        <p style="font-size: 18px; line-height: 1.4;">Envie sua mensagem para receber ajuda dos nossos profissionais</p>
+        <div style="margin: 60px auto 20px;">
+            <a class="new-std-btn ie_m_close" target="_blank" style="display: inline-block; min-width: 200px; padding: 13px 20px; height: 45px;"
+               href="https://br.mundopsicologos.com/landing/deixe-seus-problemas-para-tras-47">
+                Enviar mensagem
+            </a>
+        </div>
+        <p style="font-size: 14px; color: #7B7F7F; line-height: 1.4; margin-bottom: 40px;">Seu contato é privado e sem compromisso</p>
+    </div>
+</div>
+            
+<script id="availability_summary" type="x-template">
+    <div class="ie-company-box ie-company-box_noPad" v-if="savedCalendarId.length > 0">
+        <timezone-alert></timezone-alert>
+        <aside class="ie-availability-summary">
+            <span class="ie-availability-nav" @click="prevDays" v-show="showPrev" data-role="prev">
+                <span class="icon-arrow-left"></span>
+            </span>
+            <div class="ie-availability-summary-content">
+                <div class="ie-loader" v-if="loading">
+                    <div class="ie-loader-item"></div>
+                </div>
+                <div class="ie-availability-summary-item" v-if="!loading"
+                     v-for="(day, index) in availableDays" :key="day.long_format">
+                    <div class="ie-availability-summary-item-title">
+                        <span class="ie-availability-summary-item-weekday">{{ day.label }}</span>
+                        <span class="ie-availability-summary-item-day">{{ day.short_format }}</span>
+                    </div>
+                    <div class="ie-availability-summary-item-hour"
+                         v-for="(period, index) in day.periods" :key="period.start"
+                         v-if="index < 6" @click="requestDate(period.start, period.end, period.isBusy)"
+                         :class="{isBusy: period.isBusy}">
+                        {{ period.start_gap }}
+                    </div>
+                </div>
+            </div>
+            <span class="ie-availability-nav" @click="nextDays" data-role="next">
+                <span class="icon-arrow-right"></span>
+            </span>
+        </aside>
+        <div class="ie-availability-summary-more">
+            <button class="new-std-btn white" @click="openWeekModal">
+                Outros horários disponíveis
+            </button>
+        </div>
+    </div>
+</script>
+    
+<script id="availability_week" type="x-template">
+    <modal :show.sync="show" :on-close="closeModal" full-width="true">
+            <div class="ie-modal-title" slot="title">
+            
+                Agende um atendimento com Sandra Chies
+            
+            </div>
+
+            <div class="ie-company-switch ie-company-switch_box inModal" v-if="address.length > 0">
+                <p class="ie-company-switch-ttl">
+                    <span class="ie-company-switch-pop">
+                        Sandra Chies
+                    </span>
+                </p>
+                <p class="ie-company-switch-address">
+                    {{ address }}, {{population}}.
+                    <span class="ie-company-switch-address-change asLink_mobile" v-if="canSwitchHeadquarter"
+                          @click="openSwitchHeadquarterModal">
+                        Mudar a sede
+                    </span>
+                </p>
+            </div>
+            <timezone-alert></timezone-alert>
+            <aside class="ie-availability-week" :style="{height: weekHeight + 'px', background: gradient}">
+                <span class="ie-availability-nav ie-availability-nav_weekly" data-role="prev"
+                      v-show="showPrev" @click="prevDays">
+                    <span class="icon-arrow-left"></span>
+                </span>
+                <div class="ie-availability-week-content" :style="{height: weekHeight + 'px'}">
+                    <div class="ie-loader" v-if="loading">
+                        <div class="ie-loader-item"></div>
+                    </div>
+                    <div class="ie-availability-week-item" v-if="!loading"
+                         v-for="(day, index) in weekData" :key="day.long_format">
+                        <div class="ie-availability-week-item-title">
+                            <span class="ie-availability-week-item-weekday">{{ day.label }}</span>
+                            <span class="ie-availability-week-item-day">{{ day.short_format }}</span>
+                        </div>
+                        <div class="ie-availability-week-item-hour"
+                             v-for="(period, index) in day.periods" :key="period.start"
+                             :class="{isBusy: period.isBusy}" @click="requestDate(period.start, period.end, period.isBusy)"
+                             :style="{top: period.position + 'px', height: period.height + 'px'}">
+                            {{ period.start_gap }}
+                        </div>
+                    </div>
+                </div>
+                <span class="ie-availability-nav ie-availability-nav_weekly" @click="nextDays" data-role="next">
+                    <span class="icon-arrow-right"></span>
+                </span>
+                <div class="ie-availability-week-labels" v-if="!loading && weekHourLabels.length > 0">
+                    <span v-for="(day, index) in weekHourLabels">
+                        {{day.hour}}:00 h
+                    </span>
+                </div>
+            </aside>
+
+        </modal>
+</script>
+    <script id="headquarter_openings" type="x-template">
+    <div v-if="haveOpenings">
+        <h3 class="ie-company-title">
+            Horários
+        </h3>
+        <aside class="ie-openings ie-company-box">
+            
+                <switch-headquarter-block></switch-headquarter-block>
+            
+            <div class="ie-openings-days">
+                <span class="ie-openings-days-item">Seg</span>
+                <span class="ie-openings-days-item">Ter</span>
+                <span class="ie-openings-days-item">Qua</span>
+                <span class="ie-openings-days-item">Qui</span>
+                <span class="ie-openings-days-item">Sex</span>
+                <span class="ie-openings-days-item">Sab</span>
+                <span class="ie-openings-days-item">Dom</span>
+            </div>
+            <div class="ie-loader ie-openings-loader" v-if="loading">
+                <div class="ie-loader-item"></div>
+            </div>
+            
+                <template v-if="openings.scheduleType === 'split' && !loading">
+                    <div class="ie-openings-dates">
+                        
+                            <div class="ie-openings-dates-ttl">
+                                <img src="/img/menu/schedule_morning.png" alt="Manhã">
+                                Manhã
+                            </div>
+                        
+                        <div class="ie-openings-dates-hour"
+                             v-for="(day, index) in openings.split"
+                             :class="[day.morning === null ? 'ie-openings-dates-hour_closed' : '' ]">
+                             <template v-if="day.morning !== null">
+                                {{ day.morning.timeStart }}h - {{ day.morning.timeEnd }}h
+                             </template>
+                            <template v-else>
+                                Fechado
+                            </template>
+                        </div>
+                    </div>
+                    <div class="ie-openings-dates">
+                        
+                            <div class="ie-openings-dates-ttl">
+                                <img src="/img/menu/schedule_afternoon.png" alt="Manhã">
+                                Tarde
+                            </div>
+                        
+                        <div class="ie-openings-dates-hour"
+                             v-for="(day, index) in openings.split"
+                             :class="[day.afternoon === null ? 'ie-openings-dates-hour_closed' : '' ]">
+                             <template v-if="day.afternoon !== null">
+                                {{ day.afternoon.timeStart }}h - {{ day.afternoon.timeEnd }}h
+                             </template>
+                            <template v-else>
+                                Fechado
+                            </template>
+                        </div>
+                    </div>
+                </template>
+
+                <template v-if="openings.scheduleType === 'whole' && !loading">
+                    <div class="ie-openings-dates">
+                        
+                            <div class="ie-openings-dates-ttl">
+                                <img src="/img/menu/schedule_day.png" alt="Horário intensivo">
+                                Horário intensivo
+                            </div>
+                        
+                        <div class="ie-openings-dates-hour"
+                             v-for="(day, index) in openings.whole"
+                             :class="[day.whole === null ? 'ie-openings-dates-hour_closed' : '' ]">
+                             <template v-if="day.whole !== null">
+                                {{ day.whole.timeStart }}h - {{ day.whole.timeEnd }}h
+                            </template>
+                            <template v-else>
+                                Fechado
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            
+        </aside>
+    </div>
+</script>    
+<script id="not_scheduled_alert" type="x-template">
+    <div class="ie-company-box ie-availability-alert ie-availability-alert_desktop" v-if="savedCalendarId.length === 0">
+        <span class="icon-calendar-empty ie-availability-alert-icon"></span>
+        <span class="ie-availability-alert-text">
+            Esta sede não divulga sua disponibilidade em MundoPsicologos.com
+        </span>
+        <span class="ie-availability-alert-link asLink_mobile" @click="openWeekModal">
+            Agendar atendimento
+        </span>
+    </div>
+</script>
+    
+<script id="timezone_alert" type="x-template">
+    <div class="ie-timezone" v-if="differentTimezone">
+        Os horários mostrados aqui correspondem a uma sede localizada em {{area2}},
+        <br>
+        Pense nisso para poder comparecer pontualmente ao atendimento marcado!
+    </div>
+</script>
+    
+<script id="company_address" type="x-template">
+    <div>
+        <div class="ie-company-data-map">
+            <div id="hq_company_map" class="ie-company-data-map-box"></div>
+            <div class="ie-company-data-map-info">
+                <span>
+                
+                                            Tem 3 sedes
+                                    
+                </span>
+                <span data-role="switch_headquarter" class="asLink_mobile" @click="openSwitchHeadquarterModal">
+                    Ver sedes
+                </span>
+            </div>
+        </div>
+        <div class="ie-company-data-info">
+            <span class="icon-location"></span>
+            <p class="ie-company-data-info-ttl">
+                Endereço
+            </p>
+            <address class="ie-company-data-info-txt" v-if="address.length > 0">
+                {{ address }},
+                {{ population }}.
+                {{ area2 }}
+            </address>
+            <div class="ie-loader" v-if="address.length === 0">
+                <div class="ie-loader-item"></div>
+            </div>
+        </div>
+    </div>
+</script>
+    
+    <script id="switch_headquarter" type="x-template">
+
+        <modal :show.sync="show" :on-close="closeModal">
+            <div class="ie-modal-title" slot="title">
+            sedes em Sandra Chies
+            </div>
+
+            <div id="hq_map" class="ie-hq-switcher-map"
+                 :class="[isShowMap ? 'isBigger' : '']"></div>
+            <div class="ie-hq-switcher-list" v-for="(headquarters, index) in filteredHeadquarterList" :key="index">
+                <div class="ie-hq-switcher-list-title">
+                    {{index}}
+                </div>
+                <div class="ie-hq-switcher-list-item" v-for="(headquarter, index) in headquarters"
+                     :key="headquarter.id" @click="selectHeadquarter(headquarter.id)"
+                     :class="[{isSelected: parseInt(headquarter.id) === parseInt(selectedHeadquarter), showMap: isShowMap}]">
+                    <span class="ie-hq-switcher-list-txt">{{headquarter.population}}</span>
+                    <span class="ie-hq-switcher-list-second">{{headquarter.address}}</span>
+                </div>
+            </div>
+
+            <div class="ie-hq-switcher-cta ie-modal-cta" slot="cta"
+                 :class="[isShowMap ? 'isHidden' : '']">
+                <button id="switch_hq_btn" class="new-std-btn" @click="changeHeadquarter()" data-role="switch_hq">
+                Mudar a sede
+                </button>
+            </div>
+        </modal>
+    </script>
+    
+    <script id="switch_headquarter_block" type="x-template">
+        <div class="ie-company-switch" v-if="address.length > 0"
+             :class="[asBlock ? 'ie-company-switch_box' : '']">
+            <p class="ie-company-switch-ttl">
+                <span class="ie-company-switch-pop">
+                    Sede em
+                    {{ population }}
+                </span>
+                <span class="ie-company-switch-lnk asLink_mobile" @click="openSwitchHeadquarterModal">
+                    
+                                                    Mudar a sede
+                                            
+                </span>
+            </p>
+            <p class="ie-company-switch-address">{{ address }}</p>
+        </div>
+    </script>
+    </div>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;language=pt-BR&amp;key=AIzaSyDnjzBsd68IcgU2kcuCEe2rwB3ExbUFQLM"></script>
+            
+    <script type="text/javascript" src="/10006390/site/own/_configurations.js"></script>
+    <script type="text/javascript" src="/10006390/js/jquery-iempresas.js"></script>
+    <script type="text/javascript" src="/10006390/js/global.js"></script>
+            <script type="text/javascript" src="/10006390/js/iempresas.js"></script>
+    
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC2ZF8"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MC2ZF8');</script>
+    <!-- End Google Tag Manager -->
+    
+    <script type="text/javascript">
+        //<![CDATA[
+        $.extend(App.pageVar, {
+            couId: "29",
+            proId: "92"
+        });
+        //]]>
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MundoPsicologos.com",
+      "url": "https://br.mundopsicologos.com",
+      "logo": "https://br.mundopsicologos.com/site/own/logo_color.png",
+      "sameAs": [
+                    "https://www.facebook.com/MundopsicologosBrasil",
+                            "https://twitter.com/BRpsicologos"
+                      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://br.mundopsicologos.com/search?search={search}",
+        "query-input": "required name=search"
+      }
+    }
+    </script>
+
+    
+    <script>
+    (function (d) {
+        var sc = d.createElement('script'); sc.async = true; sc.src = '/10006390/js/source-control.js';
+        var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
+    }(document));
+</script>
+    
+    
+    <script type="text/javascript">
+        //<![CDATA[
+        App.pageVar.comId = "314923";
+        //]]>
+    </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a9443b4dd8","applicationID":"4706831,16053980","transactionName":"YAFXbEcDCEMHVkANWllLdk1GFgldSXNGC1tDXnx9WBIUVRVURzh2WApBSloOClUUaXIWWlkQaX5HDQhEJVpZFFRZHQ9fUBYkSSJcRg1TTg==","queueTime":0,"applicationTime":726,"atts":"TEZUGg8ZG00=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

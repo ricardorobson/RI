@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"16d571aa6a","applicationID":"113922032","transactionName":"MVIAMkMCXxcFBxFQXQgYJglFLVQQJwsLTUAJWw4DQ0xhBRANAFdGNFIFD0IXQwUQDQpXHTRSBQ9CF1QWNAURUFcIQw==","queueTime":0,"applicationTime":58,"ttGuid":"646820760FFED159","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta property="og:title" content="Cadastro" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.doctoralia.com.br/content/images/logo/fb_doctoralia_logo_1500x768.png" />
+<meta property="og:url" content="https://www.doctoralia.com.br/users/register/patient/1" />
+<meta property="og:site_name" content="Doctoralia" />
+<meta property="og:locale" content="pt_BR" />
+
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+
+
+<meta property="fb:admins" content="100002164932184">
+<link rel="shortcut icon" href="/favicon.ico?v=20141103" />
+    <link rel="canonical" href="https://www.doctoralia.com.br/users/register/patient/1" />
+
+    
+    <title>Cadastro</title>
+<link href="/content/css__v__DjuQEeaF2jgzsAPh35MkwhN6ilepoJzxh2gPiPGjm6I1" rel="stylesheet"/>
+<link href="/content/register__v__yoRblZ947HLHkSBkWtNZHoIejJHxWDqp2v58_LdBK2Q1" rel="stylesheet"/>
+    <!--[if IE 7]>
+        <link href="/content/cssIE7__v__" rel="stylesheet"/>
+
+    <![endif]-->
+    
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-1127942-6', 'auto', { 'allowLinker': true , 'clientId': '1184624834.1522073736' });
+        ga('require', 'linker');
+        ga('linker:autoLink', ['app.doctoralia.com']);
+                ga('send', 'pageview');
+    </script>
+</head>
+<body data-fb-culture="pt_BR" data-fb-appid="138687599526585" data-login-redirect="/users/register/patient-logged">
+    <div class="wrap">
+        <header class="heading-bar">
+    <div class="container-l">
+        <a href="https://www.doctoralia.com.br/" class="logo" title="Doctoralia">
+            <img src="/content/images/d4/logo.png" alt="Doctoralia" width="180" height="48" />
+        </a>
+                    <fieldset class="search">
+<form action="/search" data-search-bar="" method="post">                            <input type="text" name="SearchTerms" autocomplete="off" placeholder="" maxlength="150" class="textBox" data-searchterms-input />
+                            <input type="submit" class="btn btn-ico" value="" data-ga-event="click" data-ga-category="search" data-ga-action="header" data-ga-label="other" />
+</form>                    </fieldset>
+                    <nav class="visitor">
+                        <div class="register-multiple-container">
+                            <div class="register-multiple hidden">
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register?openSection=2" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-doctor"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Doctor Sign up">
+                                    Profissional da saúde
+                                </a>
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register?openSection=3" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-center"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Facilty Sign up">
+                                    Centro médico
+                                </a>
+                                <a rel="nofollow" href="https://www.doctoralia.com.br/users/register/patient/1" 
+                                   data-ga-event="click" data-ga-category="register-dropdown" data-ga-action="click" data-ga-label="click-patient"
+                                   data-ga-event2="click" data-ga-category2="Registration" data-ga-action2="click" data-ga-label2="Menu - Patient Sign up">
+                                    Paciente
+                                </a>
+                            </div>
+                        </div>
+                        <a rel="nofollow" data-register-link href="https://www.doctoralia.com.br/users/register">
+                            Cadastre-se
+                            <i class="ico-triangle-down"></i>
+                        </a>
+                        <i></i>
+                        <a rel="nofollow" href="https://app.doctoralia.com.br/usuarios/login?_uaClientID_=MTE4NDYyNDgzNC4xNTIyMDczNzM2LjYzNjYxMzE2NTA5MTc3MjQ4NA%3d%3d">
+                            Entrar
+                        </a>
+                    </nav>
+    </div>
+</header>
+    <div class="search-typeahead-container-center">
+        <div class="search-typeahead-container">
+            <div class="search-textbox-typeahead hidden"></div>
+        </div>
+    </div>
+
+        <div class="main-clean sticky">
+            
+<div class="container register-v2">
+    <div class="main-section">
+        <h2 class="noAsteriskHeading">
+Cadastro        </h2>
+        <div>
+            <div>
+                <div>
+                    <div id="Step1">
+                        <div>
+                                                        <div class="register-form-doctoralia">
+                                <ul>
+                                    <li class="alreadyUser clearfix">
+                                        <span class="icoArrowR"></span>
+                                        <span class="floatLeft">Se já é usuário Doctoralia, <a rel="nofollow" class="green linkNoDecoration" href="https://app.doctoralia.com.br/usuarios/login?url=https%3A%2F%2Fwww.doctoralia.com.br%2F&_uaClientID_=MTE4NDYyNDgzNC4xNTIyMDczNzM2LjYzNjYxMzE2NTA5MTQ1OTk4MA%3d%3d">acesse sua conta</a>.</span>
+                                    </li>
+                                    <li class="register">
+                                        <span class="icoArrowR"></span>
+                                        O cadastro na Doctoralia é grátis! Cadastre-se com <a data-fb-login="" data-fb-redirect="1" rel="nofollow" class="blueFB bold switchlink" href="#">Facebook</a> ou com seu e-mail:
+                                    </li>
+                                </ul>
+<form action="/users/register/patient/2" method="post">                                    <fieldset class="mt25">
+                                        <dl class="email">
+                                            <dt><label>E-mail</label></dt>
+                                            <dd>
+                                                <input data-val="true" data-val-regex="O endereço de e-mail está incorreto" data-val-regex-pattern="^(?:[^@\.\n\s]\.?)+@(?:[^@\.\n\s]+\.)+[^@\.\n\s]+$" data-val-required="Campo obrigatório" id="Email" name="Email" type="text" value="" />
+
+                                                <span class="field-validation-valid error-message" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+
+                                                <p class="textHelp">Enviaremos um e-mail de confirmação para este endereço</p>
+                                            </dd>
+                                        </dl>
+                                        <dl class="password">
+                                            <dt><label>Senha</label></dt>
+                                            <dd>
+                                                <input data-val="true" data-val-minlength="Mínimo de 8 caractéres" data-val-minlength-min="8" data-val-required="Campo obrigatório" id="Password" name="Password" type="password" />
+
+                                                <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+
+                                                <p class="textHelp">Para acessar sua conta na Doctoralia</p>
+                                            </dd>
+                                        </dl>
+                                        <dl class="password">
+                                            <dt><label>Repetir nova senha</label></dt>
+                                            <dd>
+                                                <input data-val="true" data-val-equalto="As senhas não coincidem." data-val-equalto-other="*.Password" data-val-required="Campo obrigatório" id="PasswordConfirm" name="PasswordConfirm" type="password" />
+
+                                                <span class="field-validation-valid" data-valmsg-for="PasswordConfirm" data-valmsg-replace="true"></span>
+
+                                            </dd>
+                                        </dl>
+                                        <dl class="buttons">
+                                            <dt>
+                                                <span class="myloader">
+                                                    <div class="imgLoader" style="display:none;">
+
+                                                        <img src="/content/images/bullets/ajax-loader.gif" />
+
+                                                    </div>
+                                                </span>
+                                            </dt>
+                                            <dd>
+                                                <div class="clearfix">
+                                                    <div class="greyBorderBtn">
+                                                        <a class="my-button form-submitter" href="#">
+                                                            <span class="inner-button">Continuar</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="cancelRightBottom">
+                                                            <a href='https://www.doctoralia.com.br/'>Cancelar cadastro</a>
+                                                    </div>
+                                                </div>
+                                                <p class="info">Se continuar, estará aceitando as <a target="_blank" href="http://www.doctoralia.com.br/legal.aspx">condições de uso da Doctoralia</a></p>
+                                            </dd>
+                                        </dl>
+
+                                    </fieldset>
+</form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-side clearfix">
+    <div id="supportOnlineBooking">
+        <h2>Vantagens do cadastro:</h2>
+        <ul>
+                <li class="supportList"><span class="icoCheckMini"></span><strong>Reserve uma consulta</strong> com seu médico</li>
+                            <li class="supportList"><span class="icoCheckMini"></span><strong>Comente</strong> sobre médicos e centros</li>
+                            <li class="supportList"><span class="icoCheckMini"></span><strong>Pergunte</strong> aos especialistas</li>
+        </ul>
+        <p class="mt10">Tudo completamente <strong>grátis</strong>.</p>
+    </div>
+</div>
+</div>
+        </div>
+    </div>
+    <script src="/bundles/layout__v__miT3LYpNHOzMLtiw0wIR9eDJAHw5C3whXB8znnRQr301"></script>
+<script src="/bundles/accountlogin__v__1Nxv99UaudurrcZcN3CpBvMtrTmuXOqLKzKrII561vk1"></script>
+
+    <script src="/bundles/register__v__WjFOdHZXaWeb3jdg_Gp284WeLR3rz9UbyDeoeKn_UpE1"></script>
+
+<script src="/bundles/search-typeahead__v__D806VR3Su6Z1WFH9RhNrZSjsaZ_RzHaRovfj8P1IuNY1"></script>
+    <script src="/bundles/register-header__v__qIJz9fNypRKpAlc8HWqF6Wy7vZlH6SLU8DXuJcq1Rsw1"></script>
+
+
+<footer class="footer">   
+    <nav class="links-about" role="navigation">
+    <div class="container clearfix">
+        <ul>
+            <li><a href="https://www.doctoralia.com.br/quem-somos-contato" rel="nofollow">Quem somos</a></li>
+            <li><a href="https://www.doctoralia.com.br/quem-somos-contato#contact" rel="nofollow">Contatar</a></li>
+                <li><a href="http://press.doctoralia.com.br" rel="nofollow">Press</a></li>
+            <li><a href="http://www.doctoralia.com.br/legal.aspx" rel="nofollow">Termos de Uso e Privacidade</a></li>
+        </ul>
+        <ul class="right">
+                <li><a href="http://insights.doctoralia.com.br">Insights Blog</a></li>
+                    <li><a href="http://academy.doctoralia.com.br">Doctoralia Academy</a></li>
+                    <li><a href="http://blog.doctoralia.com.br/">Blog para especialistas</a></li>
+    </ul>
+    </div>
+</nav>
+    
+    <div class="copy">
+        <span class="icon logo">Copyright © 2007-2018 Doctoralia Brasil Servi&#231;os Online e Software Ltda Atualizado: 07/05/2018</span>
+    </div>
+</footer>
+    </body>
+</html>

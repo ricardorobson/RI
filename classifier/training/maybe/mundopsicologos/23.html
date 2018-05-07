@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta name="google-site-verification" content="s32CC9KBp2vRpndTzJq3TfWfl6ATxlZRyLmzNaBNBXw" />
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+        <title>Consultórios de MundoPsicologos.com - Página 2 - MundoPsicologos.com</title>
+                    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    
+    <meta name="robots" content="index,follow" />
+            <link rel="canonical" href="https://br.mundopsicologos.com/consultorios/2" />
+    
+            <link rel="prev" href="https://br.mundopsicologos.com/consultorios" />
+<link rel="next" href="https://br.mundopsicologos.com/consultorios/3" />
+
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Consultórios de MundoPsicologos.com - Página 2 - MundoPsicologos.com" />
+        <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://br.mundopsicologos.com/consultorios/2" />
+    <meta property="og:image" content="https://br.mundopsicologos.com/site/own/site_cover.png" />
+    <meta property="og:site_name" content="br" />
+    <!-- Twitter Card -->
+            <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@BRpsicologos" />
+        <meta name="twitter:title" content="Consultórios de MundoPsicologos.com - Página 2 - MundoPsicologos.com" />
+                <meta name="twitter:image" content=" https://br.mundopsicologos.com/site/own/site_cover.png " />
+    
+    <!-- The Grid -->
+
+            <link media="screen" type="text/css" rel="stylesheet" href="/10005910/css/gen/psicologos/front_master.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/js/vendor/jquery-ui/themes/base/jquery-ui.min.css" />
+            <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-35714415-1', 'auto');
+        ga('create', 'UA-11698778-10', 'auto', 'countryTracker');
+        ga('create', 'UA-11698778-2', 'auto', 'globalTracker');
+
+        if (typeof window.Storage !== 'undefined' && localStorage.getItem('ie-usr-type')) {
+            ga('set', 'dimension4', localStorage.getItem('ie-usr-type'));
+            ga('globalTracker.set', 'dimension4', localStorage.getItem('ie-usr-type'));
+            ga('countryTracker.set', 'dimension4', localStorage.getItem('ie-usr-type'));
+        }
+
+                                            ga('set', 'contentGroup1', 'company listing');
+                ga('globalTracker.set', 'contentGroup1', 'company listing');
+                ga('countryTracker.set', 'contentGroup1', 'company listing');
+                        ga('require', 'GTM-N4PGQ3J');
+            ga('send', 'pageview');
+            ga('globalTracker.send', 'pageview');
+            ga('countryTracker.send', 'pageview');
+        
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1394448900661738');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1394448900661738&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    </head>
+
+
+    <body class="page-list"          id="front_listing"          data-meta="listings"    >
+        <div id="smart_banner" class="ie-smart-banner">
+    <div class="ie-smart-banner-close">
+        <span id="smart_banner_close" class="ie-smart-banner-close-btn">&#10006;</span>
+    </div>
+    <div class="ie-smart-banner-content">
+        <div class="ie-smart-banner-content-img">
+            <img src="https://cdn20.br.mundopsicologos.com/site/own/app_user_icon.jpg"  width="44" height="44">
+        </div>
+        <div class="ie-smart-banner-name">MundoPsicologos.com</div>
+        <div class="ie-smart-banner-stars">
+            <span class="icon-star-full"></span>
+            <span class="icon-star-full"></span>
+            <span class="icon-star-full"></span>
+            <span class="icon-star-full"></span>
+            <span class="icon-star-half"></span>
+        </div>
+        <div class="ie-smart-banner-sub">
+            <span class="ie-only ie-only_android">GRÁTIS - No Google Play</span>
+            <span class="ie-only ie-only_ios">GRÁTIS - Na App Store</span>
+        </div>
+    </div>
+    <div class="ie-smart-banner-cta">
+        <a href="https://play.google.com/store/apps/details?id=com.intercomempresas.user.phsycologists" target="_blank" class="ie-smart-banner-btn ie-only ie-only_android"
+           onclick="window.gaqTrackEvent('mobile', 'smart_banner', 'install_android')">
+            Instalar
+        </a>
+        <a href="https://itunes.apple.com/app/apple-store/id1151071425?pt=101826870&ct=smartbanner&mt=8" target="_blank" class="ie-smart-banner-btn ie-only ie-only_ios"
+            onclick="window.gaqTrackEvent('mobile', 'smart_banner', 'install_ios')">
+            Instalar
+        </a>
+    </div>
+</div>
+
+        <div class="container" >
+            <header>
+    <div id="header" class="menu-top">
+        <div class="company-access">
+            <div class="js_login_box">
+                <a id ="profile-login" href="/profile/login" rel="nofollow" title="Acesso usuários">
+                    <span class="icon-user-access"></span>
+                    Acesso usuários
+                </a>
+            </div>
+            <a href="/front/user_account/login" rel="nofollow" title="Acesso consultório">
+                <span class="icon-company-access"></span>
+                Acesso consultório
+            </a>
+            <a href="/register_web" rel="nofollow" title="Cadastrar seu consultório">
+                Cadastre grátis seu consultório
+            </a>
+        </div>
+    </div>
+    <div class="menu-site">
+        <div class="menu-hamburguer" id="js_mob_hamburguer" data-role="hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+                    <div class="project-logo">
+                    <a href="/" title="psicólogos" rel="home">
+                <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_color.svg" alt="psicólogos" title="psicólogos" class="desktop-logo"/>
+                <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_white.svg" alt="psicólogos" title="psicólogos" class="mob-logo"/>
+            </a>
+                    </div>
+                <nav id="js_mob-menu" class="menu-options">
+            <a href="/"
+               title="Psicólogos"
+               rel="home"
+               class="home ">
+                <span class="icon-home2"></span>
+                Início
+            </a>
+            <a id="js_companies_list_btn"
+               href="/consultorios"
+               title="Consultórios de MundoPsicologos.com"
+               class="active">
+                <span class="icon-list-2"></span>
+                Psicólogos
+            </a>
+                        <a href="/artigos"
+               title="Tudo sobre psicologia"
+               class="">
+                <span class="icon-article"></span>
+                Artigos
+            </a>
+                                        <a href="/perguntas" title="Perguntas" class="">
+                    <span class="icon-question-bubble"></span>
+                    Perguntas
+                </a>
+                                                    <a href="/comunidade" title="Fórum" class="">
+                    <span class="icon-community2"></span>
+                    Fórum
+                </a>
+                                    <div class="loginBox">
+                <a href="/profile/login"
+                   rel="nofollow"
+                   title="Acesso usuários">
+                    <span class="icon-user-access"></span>
+                    Acesso usuários
+                </a>
+                <a href="/front/user_account/login"
+                   rel="nofollow"
+                   title="Acesso consultório">
+                    <span class="icon-company-access"></span>
+                    Acesso consultório
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+            
+    <div class="content relative simple-layout">
+
+        <div class="row">
+            <aside data-role="breadcrumb" class="new-breadcrumb with-searchBox">
+                    <ul>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <span>
+                    <a href="/"
+                       title="Psicólogos" itemprop="url">
+                        <span itemprop="title">Psicólogos</span>
+                    </a> &nbsp;&gt;
+                </span>
+
+                        </li>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <strong itemprop="title">Consultórios de psicologia</strong>
+                <meta itemprop="url" content="https://br.mundopsicologos.com/consultorios/2" />
+                        </li>
+            </ul>
+            </aside>
+
+            <aside class="search-box">
+    <form id="buscador" method="get" action="/search">
+        <input
+                id="search"
+                name="search"
+                placeholder="Ex.: Psicólogo em Minas Gerais"
+                type="text"
+                autocomplete="off"
+                value=""/>
+        <button class="icon-featured" id="btn-search" name="btn_search" type="submit"></button>
+    </form>
+</aside>
+        </div>
+        <div class="row intro-listing">
+            <div class="hide_dsktp filter-show-mobile float-R"><span class="icon-arrow-right"></span></div>
+
+            <div>
+                <h1>Consultórios de MundoPsicologos.com - Página 2</h1>
+            </div>
+
+            
+        </div>
+        <div class="row">
+            <div class="xtraSeo listing-separator hide_smrtphn">
+                                                                </div>
+
+            
+            <div class="twelvecol">
+                <div id="selectorsMobile">
+
+    <strong class="js_filter_title">Filtros</strong>
+
+    
+    <fieldset>
+        <select id="sel_ae2" name="sel_ae2" onchange="App.Front.Listing.selectedMobile('sel_ae2');">
+        </select>
+    </fieldset>
+
+    <fieldset>
+    <select id="sel_pop" name="sel_pop" onchange="App.Front.Listing.selectedMobile('sel_pop');">
+        <option value="0">
+            Antes escolha uma localidade
+        </option>
+    </select>
+    </fieldset>
+
+    <fieldset>
+        <select id="sel_sev" name="sel_sev" onchange="App.Front.Listing.selectedMobile('sel_sev');">
+        </select>
+    </fieldset>
+
+    
+        <fieldset>
+            <select id="sel_ssv" name="sel_ssv" onchange="App.Front.Listing.selectedMobile('sel_ssv');" disabled="disabled">
+            <option value="0">
+                Antes escolha um serviço
+            </option>
+            </select>
+        </fieldset>
+    
+    <fieldset>
+        <button type="button" class="std-btn" name="Accept" onclick="App.Front.Listing.acceptMobile();">
+            Aceitar
+        </button>
+    </fieldset>
+
+</div>
+            </div>
+        </div>
+        <div class="row listing-cols ">
+            <!-- MAIN CONTENT -->
+            <div class="ninecol main-col">
+                <div id="company_list" class="list-view">
+                    
+                        
+        <div data-company-id="281124" id="li_1" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-46.851151"
+             data-lat="-23.498068"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(11)41912475">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="CALÇADA DAS ORQUÍDEAS, 254">
+                <meta itemprop="postalCode" content="06453001">
+                <meta itemprop="addressLocality" content="Barueri, São Paulo">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount ">
+        <span class="icon-camera "></span>
+            2
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Edna Sampaio Priolli" href="/consultorios/edna-sampaio-priolli">
+                        <img itemprop="image" alt="Edna Sampaio Priolli" src="https://cdn20.br.mundopsicologos.com/site/company/66/281124/logo/edna-sampaio-priolli_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Edna Sampaio Priolli" href="/consultorios/edna-sampaio-priolli" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Edna Sampaio Priolli
+                    </a>
+                    <meta itemprop="name" content="Edna Sampaio Priolli"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="281124">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+                        <span class="score sc50"></span>
+                        <span class="rating">
+                            <span class="average">5</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>5</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Barueri (São Paulo)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Edna Sampaio Priolli, CRP 06/118131, é psicóloga, psicanalista, psicopedagoga e trabalha com terapia familiar sistêmica casal e família e coach vocacional e orientação. Trabalha...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/edna-sampaio-priolli#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (11...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="281124" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('281124');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="273957" id="li_2" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-34.893178"
+             data-lat="-8.056278"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(81) 988111891">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Av. Conde da Boa Vista, 1410">
+                <meta itemprop="postalCode" content="50060003">
+                <meta itemprop="addressLocality" content="Recife, Pernambuco">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount ">
+        <span class="icon-camera "></span>
+            4
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Ussénade Maria de Oliveira" href="/consultorios/ussenade-maria-de-oliveira">
+                        <img itemprop="image" alt="Ussénade Maria de Oliveira" src="https://cdn20.br.mundopsicologos.com/site/company/94/273957/logo/ussenade-maria-de-oliveira_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Ussénade Maria de Oliveira" href="/consultorios/ussenade-maria-de-oliveira" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Ussénade Maria de Oliveira
+                    </a>
+                    <meta itemprop="name" content="Ussénade Maria de Oliveira"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="273957">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+                        <span class="score sc50"></span>
+                        <span class="rating">
+                            <span class="average">5</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>5</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Recife (Pernambuco)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Ussénade Maria de Oliveira, CRP 02/17845, atende seus clientes a partir do pressuposto de que a pessoa mais importante é o cliente que entra em seu consultório em busca de...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/ussenade-maria-de-oliveira#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (81...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="273957" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('273957');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="324389" id="li_3" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-43.183514"
+             data-lat="-22.969545"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(21) 99383-7143">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Praça Serzedelo Correa 15/302">
+                <meta itemprop="postalCode" content="22040050">
+                <meta itemprop="addressLocality" content="Rio de Janeiro (cidade), Rio de Janeiro">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount void">
+        <span class="icon-camera void"></span>
+            0
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Juliana Ilele" href="/consultorios/juliana-ilele">
+                        <img itemprop="image" alt="Juliana Ilele" src="https://cdn20.br.mundopsicologos.com/site/company/59/324389/logo/juliana-ilele_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Juliana Ilele" href="/consultorios/juliana-ilele" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Juliana Ilele
+                    </a>
+                    <meta itemprop="name" content="Juliana Ilele"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="324389">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+                        <span class="score sc50"></span>
+                        <span class="rating">
+                            <span class="average">5</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>1</strong>
+                        <span class="hide_smrtphn">
+                            Recomendação
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Rio de Janeiro (cidade) (Rio de Janeiro)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Sou Juliana Ilele, psicóloga com CRP 05/53309. Ofereço um serviço que foca a busca do autoconhecimento e, consequente, domínio das emoções. Isso através da identificação de sentimentos...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/juliana-ilele#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (21...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="324389" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('324389');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="221478" id="li_4" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-49.250751"
+             data-lat="-16.671420"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(62) 8179-2101">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Rua C -233,n. 476.Setor, Jardim América.">
+                <meta itemprop="postalCode" content="74290040">
+                <meta itemprop="addressLocality" content="Goiânia, Goiás">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount void">
+        <span class="icon-camera void"></span>
+            0
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Sumara Gonçalves" href="/consultorios/sumara-goncalves">
+                        <img itemprop="image" alt="Sumara Gonçalves" src="https://cdn20.br.mundopsicologos.com/site/company/45/221478/logo/sumara-goncalves_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Sumara Gonçalves" href="/consultorios/sumara-goncalves" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Sumara Gonçalves
+                    </a>
+                    <meta itemprop="name" content="Sumara Gonçalves"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="221478">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+                        <span class="score sc50"></span>
+                        <span class="rating">
+                            <span class="average">5</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>16</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Goiânia (Goiás)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Sumara Gonçalves, CRP 09/008155, oferece terapias eficientes e personalizadas. Atua com crianças, adolescentes e suas família. Especialista em atendimento infantil, psicopedagogia...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/sumara-goncalves#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (62...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="221478" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('221478');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="310056" id="li_5" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-43.317307"
+             data-lat="-23.003571"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="21980803388">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Rua Bauhineas, 200 bl 1 apt 106">
+                <meta itemprop="postalCode" content="22776090">
+                <meta itemprop="addressLocality" content="Rio de Janeiro (cidade), Rio de Janeiro">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount ">
+        <span class="icon-facetime-video"></span>
+        1
+    </span>
+    <span class="imageCount ">
+        <span class="icon-camera "></span>
+            7
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Cristyani Paiva" href="/consultorios/cristyani-paiva">
+                        <img itemprop="image" alt="Cristyani Paiva" src="https://cdn20.br.mundopsicologos.com/site/company/e4/310056/logo/cristyani-paiva_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Cristyani Paiva" href="/consultorios/cristyani-paiva" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Cristyani Paiva
+                    </a>
+                    <meta itemprop="name" content="Cristyani Paiva"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="310056">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+                        <span class="score sc40"></span>
+                        <span class="rating">
+                            <span class="average">4</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>4</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Rio de Janeiro (cidade) (Rio de Janeiro)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Cristyani Paiva, CRP 05/22872, mantém um espaço de atendimento onde oferece psicoterapia para adolescentes, adultos e idosos, sempre focando em suas necessidades individuais e...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/cristyani-paiva#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (21...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="310056" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('310056');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="330025" id="li_6" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-61.775948"
+             data-lat="-11.732002"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(92) 984194798">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Av. Jornalista Umberto Calderaro Filho, 455 - Adrianopolis">
+                <meta itemprop="postalCode" content="69057015">
+                <meta itemprop="addressLocality" content="Manaus (Amazonas), Amazonas">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount ">
+        <span class="icon-camera "></span>
+            1
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Kássia Cristina Xavier de Amorim" href="/consultorios/kassia-cristina-xavier-de-amorim">
+                        <img itemprop="image" alt="Kássia Cristina Xavier de Amorim" src="https://cdn20.br.mundopsicologos.com/site/company/aa/330025/logo/kassia-cristina-xavier-de-amorim_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="">
+                    <a class="fn com_name org jq_company_card" title="Kássia Cristina Xavier de Amorim" href="/consultorios/kassia-cristina-xavier-de-amorim" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Kássia Cristina Xavier de Amorim
+                    </a>
+                    <meta itemprop="name" content="Kássia Cristina Xavier de Amorim"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="330025">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Manaus (Amazonas) (Amazonas)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>A profissional Kássia Amorim atua no campo da Psicologia, sendo experiente e capacitada no mercado. Possui ampla vivência na área e também diversos cursos que visam agregar...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/kassia-cristina-xavier-de-amorim#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (92...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="330025" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('330025');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="182318" id="li_7" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-38.480028"
+             data-lat="-3.742106"
+             data-appointment="false">
+            <meta itemprop="telephone"  content="(85) 98712-3462">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Rua Monsenhor Bruno, 2510 - Aldeota">
+                <meta itemprop="postalCode" content="60115046">
+                <meta itemprop="addressLocality" content="Fortaleza (Ceará), Ceará">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount ">
+        <span class="icon-camera "></span>
+            3
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Lia Soares Dantas" href="/consultorios/lia-soares-dantas">
+                        <img itemprop="image" alt="Lia Soares Dantas" src="https://cdn20.br.mundopsicologos.com/site/company/2e/182318/logo/lia-soares-dantas_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Lia Soares Dantas" href="/consultorios/lia-soares-dantas" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Lia Soares Dantas
+                    </a>
+                    <meta itemprop="name" content="Lia Soares Dantas"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="182318">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
+                        <span class="score sc40"></span>
+                        <span class="rating">
+                            <span class="average">4</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>1</strong>
+                        <span class="hide_smrtphn">
+                            Recomendação
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Fortaleza (Ceará) (Ceará)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Lia Soares Dantas, CRP 11/01456, é a profissional que lhe ajudará a enfrentar seus problemas emocionais e comportamentais que de alguma forma interferem na sua felicidade. Atendendo...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/lia-soares-dantas#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (85...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="182318" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('182318');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="312115" id="li_8" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-60.039966"
+             data-lat="-3.089150"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(92) 991696253">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Rua Belém, 929 - São Francisco - 3 andar - sala 306 - Shalom office - centro empresarial">
+                <meta itemprop="postalCode" content="69065120">
+                <meta itemprop="addressLocality" content="Manaus (Amazonas), Amazonas">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount ">
+        <span class="icon-camera "></span>
+            9
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Psicóloga Raquel Navarro" href="/consultorios/psicologa-raquel-navarro">
+                        <img itemprop="image" alt="Psicóloga Raquel Navarro" src="https://cdn20.br.mundopsicologos.com/site/company/14/312115/logo/psicologa-raquel-navarro_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Psicóloga Raquel Navarro" href="/consultorios/psicologa-raquel-navarro" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Psicóloga Raquel Navarro
+                    </a>
+                    <meta itemprop="name" content="Psicóloga Raquel Navarro"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="312115">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+                        <span class="score sc50"></span>
+                        <span class="rating">
+                            <span class="average">5</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>39</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Manaus (Amazonas) (Amazonas)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Raquel Navarro, CRP 20/01209, é especialista em Psicologia Clínica, tem mestrado em Saúde e 14 anos de experiência clínica. Psicoterapeuta de crianças, adolescentes, adultos e...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/psicologa-raquel-navarro#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (92...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="312115" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('312115');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="281654" id="li_9" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-49.283916"
+             data-lat="-25.444010"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="41 99862-0527">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Av. Sete de Setembro, 4698, sala 1508. ">
+                <meta itemprop="postalCode" content="80240000">
+                <meta itemprop="addressLocality" content="Curitiba, Paraná">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount ">
+        <span class="icon-facetime-video"></span>
+        2
+    </span>
+    <span class="imageCount ">
+        <span class="icon-camera "></span>
+            7
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Carpeendi Psicologia" href="/consultorios/carpeendi-psicologia">
+                        <img itemprop="image" alt="Carpeendi Psicologia" src="https://cdn20.br.mundopsicologos.com/site/company/de/281654/logo/carpeendi-psicologia_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Carpeendi Psicologia" href="/consultorios/carpeendi-psicologia" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Carpeendi Psicologia
+                    </a>
+                    <meta itemprop="name" content="Carpeendi Psicologia"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="281654">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+                        <span class="score sc40"></span>
+                        <span class="rating">
+                            <span class="average">4</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>3</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Curitiba (Paraná)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>A Carpeendi Psicologia oferece aos clientes um trabalho voltado ao lado emocional, com a saúde dos relacionamentos para o bem-estar e o desenvolvimento da autonomia de seus...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/carpeendi-psicologia#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (41...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="281654" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('281654');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="157758" id="li_10" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-48.483650"
+             data-lat="-1.446136"
+             data-appointment="false">
+            <meta itemprop="telephone"  content="(91) 3222-2224">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Travessa Dom Romualdo de Seixas, 1529">
+                <meta itemprop="postalCode" content="">
+                <meta itemprop="addressLocality" content="Belém (Pará), Pará">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount ">
+        <span class="icon-camera "></span>
+            3
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Lilia Valdez" href="/consultorios/lilia-valdez">
+                        <img itemprop="image" alt="Lilia Valdez" src="https://cdn20.br.mundopsicologos.com/site/company/60/157758/logo/lilia-valdez_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Lilia Valdez" href="/consultorios/lilia-valdez" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Lilia Valdez
+                    </a>
+                    <meta itemprop="name" content="Lilia Valdez"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="157758">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+                        <span class="score sc40"></span>
+                        <span class="rating">
+                            <span class="average">4</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>3</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Belém (Pará) (Pará)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Na hora de tratar qualquer sintoma psicológico ou escolher um profissional competente para um processo de psicoterapia, você pode contar com a psicóloga Lilia Valdez, CRP 10/01854...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/lilia-valdez#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (91...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="157758" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('157758');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="322878" id="li_11" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-52.667250"
+             data-lat="-31.395315"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(53) 98474-3487">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Rua João de Deus nunes,340">
+                <meta itemprop="postalCode" content="96600000">
+                <meta itemprop="addressLocality" content="Canguçu, Rio Grande do Sul">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount void">
+        <span class="icon-camera void"></span>
+            0
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Cicera Sonia dos Santos Silva" href="/consultorios/cicera-sonia-dos-santos-silva">
+                        <img itemprop="image" alt="Cicera Sonia dos Santos Silva" src="https://cdn20.br.mundopsicologos.com/site/company/85/322878/logo/cicera-sonia-dos-santos-silva_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Cicera Sonia dos Santos Silva" href="/consultorios/cicera-sonia-dos-santos-silva" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Cicera Sonia dos Santos Silva
+                    </a>
+                    <meta itemprop="name" content="Cicera Sonia dos Santos Silva"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="322878">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+                        <span class="score sc50"></span>
+                        <span class="rating">
+                            <span class="average">5</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>2</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Canguçu (Rio Grande do Sul)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Com um grande conhecimento e atendimento diferenciado, Cicera Sonia dos Santos, CRP 06/116635, possui especialização em terapias breves. A competente psicóloga realiza atendimento...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/cicera-sonia-dos-santos-silva#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (53...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="322878" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('322878');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="172607" id="li_12" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-48.635208"
+             data-lat="-26.991072"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(47) 999350633">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Avenida do Estado, 1801, 3º andar, sl 07">
+                <meta itemprop="postalCode" content="88331150">
+                <meta itemprop="addressLocality" content="Balneário Camboriú, Santa Catarina">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount void">
+        <span class="icon-camera void"></span>
+            0
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Graciela Ciappino Psicóloga e Gestalt-terapeuta" href="/consultorios/graciela-ciappino-psicologa-e-gestalt-terapeuta">
+                        <img itemprop="image" alt="Graciela Ciappino Psicóloga e Gestalt-terapeuta" src="https://cdn20.br.mundopsicologos.com/site/company/af/172607/logo/graciela-ciappino-psicologa-e-gestalt-terapeuta_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Graciela Ciappino Psicóloga e Gestalt-terapeuta" href="/consultorios/graciela-ciappino-psicologa-e-gestalt-terapeuta" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Graciela Ciappino Psicóloga e Gestalt-terapeuta
+                    </a>
+                    <meta itemprop="name" content="Graciela Ciappino Psicóloga e Gestalt-terapeuta"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="172607">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+                        <span class="score sc40"></span>
+                        <span class="rating">
+                            <span class="average">4</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>10</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Balneário Camboriú (Santa Catarina)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>A psicoterapia é um instrumento valioso, que auxilia o ser humano em momentos delicados de sua vida, de forma a adquirir o autoconhecimento, promover mudanças em si e ser...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/graciela-ciappino-psicologa-e-gestalt-terapeuta#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (47...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="172607" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('172607');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="175937" id="li_13" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-38.450891"
+             data-lat="-12.959236"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(71) 99931-3512">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Rua Metódio Coelho, Edf. Liberal Center, sala 301. Avenida ACM">
+                <meta itemprop="postalCode" content="41810570">
+                <meta itemprop="addressLocality" content="Salvador (Bahia), Bahia">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount void">
+        <span class="icon-camera void"></span>
+            0
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Tatiana Gonçalves" href="/consultorios/tatiana-goncalves">
+                        <img itemprop="image" alt="Tatiana Gonçalves" src="https://cdn20.br.mundopsicologos.com/site/company/8a/175937/logo/tatiana-goncalves_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Tatiana Gonçalves" href="/consultorios/tatiana-goncalves" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Tatiana Gonçalves
+                    </a>
+                    <meta itemprop="name" content="Tatiana Gonçalves"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="175937">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+                        <span class="score sc50"></span>
+                        <span class="rating">
+                            <span class="average">5</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>43</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Salvador (Bahia) (Bahia)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Sempre com muito profissionalismo e responsabilidade, a psicóloga Tatiana Gonçalves, CRP 03/IP9356, atende seus clientes para terapias individuais em seu consultório particular...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/tatiana-goncalves#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (71...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="175937" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('175937');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="314952" id="li_14" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-46.658381"
+             data-lat="-23.558758"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(11) 99456-1269">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Rua Frei Caneca, 1407, Sala 503">
+                <meta itemprop="postalCode" content="01307090">
+                <meta itemprop="addressLocality" content="São Paulo (cidade), São Paulo">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount ">
+        <span class="icon-camera "></span>
+            6
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Lucia Serrão do Nascimento" href="/consultorios/lucia-serrao-do-nascimento">
+                        <img itemprop="image" alt="Lucia Serrão do Nascimento" src="https://cdn20.br.mundopsicologos.com/site/company/22/314952/logo/lucia-serrao-do-nascimento_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Lucia Serrão do Nascimento" href="/consultorios/lucia-serrao-do-nascimento" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Lucia Serrão do Nascimento
+                    </a>
+                    <meta itemprop="name" content="Lucia Serrão do Nascimento"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="314952">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+                        <span class="score sc50"></span>
+                        <span class="rating">
+                            <span class="average">5</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>12</strong>
+                        <span class="hide_smrtphn">
+                            Recomendações
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    São Paulo (cidade) (São Paulo)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>Lucia Serrão do Nascimento, CRP 06/36055, é uma profissional que realiza atendimento psicoterápico com adolescentes e adultos, além de realiza terapia de casal, terapia de grupo...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/lucia-serrao-do-nascimento#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (11...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="314952" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('314952');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+        
+        <div data-company-id="157258" id="li_15" data-global-offer=""
+             class=" list-item offer-announce com_itm client
+                          "
+             itemscope="" itemtype="https://schema.org/LocalBusiness"
+             data-lon="-47.921820"
+             data-lat="-15.826691"
+             data-appointment="true">
+            <meta itemprop="telephone"  content="(61) 3328-5950">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="SRTVN 702 Norte, ala A sl 3138 (Ed. Brasília Radio Center), Asa Norte">
+                <meta itemprop="postalCode" content="70719-000">
+                <meta itemprop="addressLocality" content="Brasília (Distrito Federal), Distrito Federal">
+            </span>
+        <div class="logo-box float-L relative">
+                            <span class="customer_icon  absolute" title="Consultório destacado"></span>
+                <div class="media-counters">
+    <span class="videoCount void">
+        <span class="icon-facetime-video"></span>
+        0
+    </span>
+    <span class="imageCount ">
+        <span class="icon-camera "></span>
+            3
+        </span>
+</div>            
+            <div class="empty">
+                                <div>
+                    <a class="com_name org jq_company_card" title="Humanus - Psicologia Especializada" href="/consultorios/humanus-psicologia-especializada">
+                        <img itemprop="image" alt="Humanus - Psicologia Especializada" src="https://cdn20.br.mundopsicologos.com/site/company/c4/157258/logo/humanus-psicologia-especializada_li1.png" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box float-L relative">
+            <div>
+
+                <h3 class="item">
+                    <a class="fn com_name org jq_company_card" title="Humanus - Psicologia Especializada" href="/consultorios/humanus-psicologia-especializada" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'image_title_link');">
+                        Humanus - Psicologia Especializada
+                    </a>
+                    <meta itemprop="name" content="Humanus - Psicologia Especializada"/>
+                </h3>
+                <span class="videocall-state-btn hide-element tooltip-right"
+                      data-tooltip="Este profissional pode responder você neste exato momento através de uma vídeo chamada gratuita."
+                      data-company-id="157258">
+                    Conectado
+                </span>
+                <!-- TODO IF NOT EXIST NOT PRINT -->
+
+                                <span class="score-rw">
+                    
+                    <span class="rvw-box">
+                       <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+                        <span class="score sc50"></span>
+                        <span class="rating">
+                            <span class="average">5</span>
+                                de
+                            <span>5</span>
+                        </span>
+                    </span>
+                                                            <span class="rvw-box v-align-M">
+                        <strong>1</strong>
+                        <span class="hide_smrtphn">
+                            Recomendação
+                        </span>
+                    </span>
+                                    </span>
+                                <!-- TODO IF NOT EXIST NOT PRINT -->
+            </div>
+            <div class="hide_dsktp hide_tblt mb-address">
+                                    Brasília (Distrito Federal) (Distrito Federal)
+                            </div>
+            <div class="desc" itemprop="description">
+                <p>O Humanus - Psicologia Especializada possui unidades em todas as principais cidades do DF, possui atendimento particular e por convênios e dispõe de uma ampla equipe de psicólogos...</p>
+            </div>
+                                <div class="foot-items clean">
+                <div class="eightcol">
+                    <div class="company-info-group">
+                                                                            <div class="company-info" onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'seephone'); document.location.href='/consultorios/humanus-psicologia-especializada#show_phone'"
+                                 title="Fone">
+                                <p>Fone</p>
+                                <p><span class="icon-phone"></span> (61...</p>
+                            </div>
+                                                
+                                            </div>
+                </div>
+                <div class="fourcol last text-align-R">
+                    <button data-company-id="157258" type="button"
+                            onclick="gaqTrackEvent('CompanyList', 'go_company_card', 'btn_contact');
+                                    showLayerRequestForm('157258');"
+                            class="std-btn magic-btn jq_btn_company_card hide_smrtphn inline-b"
+                            title="Pedir informação">
+                        Pedir informação
+                    </button>
+                </div>
+            </div>
+                </div>
+    </div>
+    
+
+
+
+                    
+                    <div id="nav_bottom" class=" bottom text-align-C">
+                        <div class="pager-module">
+                                <a class="pager-a icon-icon-arrow-left brds-round"
+       href="/consultorios"
+       title="">
+    </a>
+
+<span class="active">2</span>
+<span>de&nbsp;506</span>
+
+    <a class="pager-a icon-icon-arrow-right brds-round" data-role="next-page"
+       href="/consultorios/3"
+       title="">
+    </a>
+
+                        </div>
+                    </div>
+                                    </div>
+            </div>
+            <!-- MAIN CONTENT -->
+            <!-- SIDEBAR -->
+            <div class="threecol sidebar last">
+                
+                <!-- FILTER LOCATION MODULE -->
+                    <div class="filter-module hide_smrtphn hide_tblt">
+                    <strong class="ftitle" id="js_geo" data-openfilter="1">
+                Todos os estados
+                <span class="icon-arrow-right absolute"></span>
+            </strong>
+            <div id="mcscontainer_geo" class="mcs_container js_scrollclass" style="display: none;">
+                <div class="filter_holder">
+                    <ul id="ul_geo" class="filter">
+                                                                        <li class="nochild
+                                                                ">
+                                <a id="li_geo_783553" href="/consultorios/acre"
+                                   title="Psicólogos Acre">
+                                    Acre
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783536" href="/consultorios/alagoas"
+                                   title="Psicólogos Alagoas">
+                                    Alagoas
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783535" href="/consultorios/amapa"
+                                   title="Psicólogos Amapá">
+                                    Amapá
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783552" href="/consultorios/amazonas"
+                                   title="Psicólogos Amazonas">
+                                    Amazonas
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783549" href="/consultorios/bahia"
+                                   title="Psicólogos Bahia">
+                                    Bahia
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783534" href="/consultorios/ceara"
+                                   title="Psicólogos Ceará">
+                                    Ceará
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783547" href="/consultorios/distrito-federal"
+                                   title="Psicólogos Distrito Federal">
+                                    Distrito Federal
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783548" href="/consultorios/espirito-santo"
+                                   title="Psicólogos Espírito Santo">
+                                    Espírito Santo
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783546" href="/consultorios/goias"
+                                   title="Psicólogos Goiás">
+                                    Goiás
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783533" href="/consultorios/maranhao"
+                                   title="Psicólogos Maranhão">
+                                    Maranhão
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783545" href="/consultorios/mato-grosso"
+                                   title="Psicólogos Mato Grosso">
+                                    Mato Grosso
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783544" href="/consultorios/mato-grosso-do-sul"
+                                   title="Psicólogos Mato Grosso do Sul">
+                                    Mato Grosso do Sul
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783543" href="/consultorios/minas-gerais"
+                                   title="Psicólogos Minas Gerais">
+                                    Minas Gerais
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783532" href="/consultorios/para"
+                                   title="Psicólogos Pará">
+                                    Pará
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783531" href="/consultorios/paraiba"
+                                   title="Psicólogos Paraíba">
+                                    Paraíba
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783542" href="/consultorios/parana"
+                                   title="Psicólogos Paraná">
+                                    Paraná
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783530" href="/consultorios/pernambuco"
+                                   title="Psicólogos Pernambuco">
+                                    Pernambuco
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783529" href="/consultorios/piaui"
+                                   title="Psicólogos Piauí">
+                                    Piauí
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783541" href="/consultorios/rio-de-janeiro"
+                                   title="Psicólogos Rio de Janeiro">
+                                    Rio de Janeiro
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783528" href="/consultorios/rio-grande-do-norte"
+                                   title="Psicólogos Rio Grande do Norte">
+                                    Rio Grande do Norte
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783540" href="/consultorios/rio-grande-do-sul"
+                                   title="Psicólogos Rio Grande do Sul">
+                                    Rio Grande do Sul
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783554" href="/consultorios/rondonia"
+                                   title="Psicólogos Rondônia">
+                                    Rondônia
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783551" href="/consultorios/roraima"
+                                   title="Psicólogos Roraima">
+                                    Roraima
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783539" href="/consultorios/santa-catarina"
+                                   title="Psicólogos Santa Catarina">
+                                    Santa Catarina
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783538" href="/consultorios/sao-paulo"
+                                   title="Psicólogos São Paulo">
+                                    São Paulo
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783537" href="/consultorios/sergipe"
+                                   title="Psicólogos Sergipe">
+                                    Sergipe
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_geo_783550" href="/consultorios/tocantins"
+                                   title="Psicólogos Tocantins">
+                                    Tocantins
+                                </a>
+                            </li>
+                                                                </ul>
+                </div>
+            </div>
+            </div>
+                <!-- FILTER SERVICE MODULE -->
+                    <div class="filter-module hide_smrtphn hide_tblt">
+                    <strong class="ftitle" id="js_sev" data-openfilter="">
+                Todos os serviços
+                <span class="icon-arrow-right absolute"></span>
+            </strong>
+            <div id="mcscontainer_sev" class="mcs_container js_scrollclass" style="display: none;">
+                <div class="filter_holder">
+                    <ul id="ul_sev" class="filter">
+                                                                        <li class="nochild
+                                                                ">
+                                <a id="li_sev_3445" href="/consultorios/abordagem-psicologica"
+                                   title="Abordagem psicológica">
+                                    Abordagem psicológica
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_sev_6052" href="/consultorios/desenvolvimento-pessoal"
+                                   title="Desenvolvimento pessoal">
+                                    Desenvolvimento pessoal
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_sev_5913" href="/consultorios/outros"
+                                   title="Outros">
+                                    Outros
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_sev_3407" href="/consultorios/problemas-psicologicos"
+                                   title="Problemas psicológicos">
+                                    Problemas psicológicos
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_sev_3452" href="/consultorios/psicologia-do-trabalho"
+                                   title="Psicologia do trabalho">
+                                    Psicologia do trabalho
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_sev_3444" href="/consultorios/psicologia-infantil"
+                                   title="Psicologia infantil">
+                                    Psicologia infantil
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_sev_3410" href="/consultorios/psicoterapias"
+                                   title="Psicoterapias">
+                                    Psicoterapias
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_sev_3443" href="/consultorios/sexualidade"
+                                   title="Sexualidade">
+                                    Sexualidade
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_sev_3446" href="/consultorios/testes-psicologicos"
+                                   title="Testes psicológicos">
+                                    Testes psicológicos
+                                </a>
+                            </li>
+                                                                                                <li class="nochild
+                                                                ">
+                                <a id="li_sev_3433" href="/consultorios/vicios"
+                                   title="Vícios">
+                                    Vícios
+                                </a>
+                            </li>
+                                                                </ul>
+                </div>
+            </div>
+            </div>
+
+                <div style="margin: 25px 0 0;">
+                    <!-- OFFERS MODULE -->
+                    
+                    <!-- ARTICLES MODULE -->
+                    
+                    <!-- QUESTIONS MODULE -->
+                                    </div>
+
+                
+                <div class="desk-sidebar">
+                    <div id="banner_rpage" class="sky-banner"></div>
+                    <div id="banner"></div>
+                                    </div>
+            </div>
+
+        </div>
+
+                
+    </div>
+        <div class="receptionist">
+        <div class="receptionist-header">
+            <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_white.svg" alt="psicólogos" title="psicólogos" width="350" height="100"/>
+        </div>
+        <div class="receptionist-head">
+            <div class="receptionist-head--title">
+                <p>Bem-vindo a MundoPsicologos.com</p>
+                <p>O que você necessita?</p>
+            </div>
+        </div>
+        <div class="receptionist-blocks">
+            <div class="receptionist-blocks--item js_close_receptionist" onclick="gaqTrackEvent('CompanyList', 'recepcionista', 'find_company');">
+                <div class="image">
+                    <img src="/img/web/receptionist_1.png" alt="">
+                </div>
+                <div class="text">
+                    <p>Encontrar um profissional</p>
+                    <p>Você verá uma seleção dos profissionais mais destacados da sua região</p>
+                </div>
+                <div class="arrow">
+                    <span class="icon-arrow-right"></span>
+                </div>
+            </div>
+            <div class="receptionist-blocks--item" onclick="window.location.href='https://br.mundopsicologos.com/perguntas'; gaqTrackEvent('CompanyList', 'recepcionista', 'qanda');">
+                <div class="image">
+                    <img src="/img/web/receptionist_2.png" alt="">
+                </div>
+                <div class="text">
+                    <p>Fazer uma pergunta</p>
+                    <p>Os melhores profissionais disponíveis para responder às suas dúvidas.</p>
+                </div>
+                <div class="arrow">
+                    <span class="icon-arrow-right"></span>
+                </div>
+            </div>
+                        <div class="receptionist-blocks--item" onclick="window.location.href = 'https://br.mundopsicologos.com/foro'; gaqTrackEvent('CompanyList', 'recepcionista', 'comunidad');">
+                <div class="image">
+                    <img src="/img/web/receptionist_4.png" alt="">
+                </div>
+                <div class="text">
+                    <p>Publicar um tópico no nosso fórum</p>
+                    <p>Compartilhe suas dúvidas ou experiências com os usuários do nosso fórum</p>
+                </div>
+                <div class="arrow">
+                    <span class="icon-arrow-right"></span>
+                </div>
+            </div>
+                        <div class="receptionist-blocks--item js_close_receptionist" onclick="window.open('https://br.mundopsicologos.com/landing/deixe-seus-problemas-para-tras-47'); gaqTrackEvent('CompanyList', 'recepcionista', 'landing');">
+                <div class="image">
+                    <img src="/img/web/receptionist_3.png" alt="">
+                </div>
+                <div class="text">
+                    <p>Pedir informação</p>
+                    <p>Explique aqui sua necessidade e você receberá respostas nas próximas horas</p>
+                </div>
+                <div class="arrow">
+                    <span class="icon-arrow-right"></span>
+                </div>
+            </div>
+        </div>
+        <div class="receptionist-close">
+            <p id="close_receptionist" class="text-align-C js_close_receptionist" onclick="gaqTrackEvent('CompanyList', 'recepcionista', 'close');">
+                Continuar em MundoPsicologos.com
+            </p>
+        </div>
+    </div>
+
+
+            <footer id="footer">
+    <aside class="footer">
+        <div class="wrapper">
+            <div class="footer-site">
+                <div class="project-logo">
+                    <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_white.svg" alt="psicólogos" title="psicólogos" width="150" height="31"/>
+                </div>
+                <ul>
+                    <li>
+                        <a href="/quienes" rel="nofollow" title="Quem somos">
+                            Quem somos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/aviso_legal" rel="nofollow" title="Condições legais">
+                            Condições legais
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/proteccion_datos" rel="nofollow" title="Proteção de dados">
+                            Proteção de dados
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/guia_comunidades" rel="nofollow" title="Condições de Participação do Fórum">
+                            Condições de Participação do Fórum
+                        </a>
+                    </li>
+                </ul>
+                <ul class="last">
+                                            <li>
+                            <a href="/potenciales" rel="nofollow" title="Plano Premium">
+                                Plano Premium
+                            </a>
+                        </li>
+                                        <li>
+                        <a href="/register_web" rel="nofollow" title="Cadastrar seu consultório">
+                            Cadastrar seu consultório
+                        </a>
+                    </li>
+                    <li><a href="/front/user_account/login" rel="nofollow" title="Acesso consultório">
+                            Acesso consultório
+                        </a>
+                    </li>
+                </ul>
+                                    <div class="social">
+                        <span>Siga-nos:</span>
+                                                    <a class="icon-facebook" onclick="gaqTrackEvent('socialButtons', 'footer_web', 'facebook');"
+                               href="https://www.facebook.com/MundopsicologosBrasil" target="_blank" rel="noopener"></a>
+                                                                            <a class="icon-twitter" onclick="gaqTrackEvent('socialButtons', 'footer_web', 'twitter');"
+                               href="https://twitter.com/BRpsicologos" target="_blank" rel="noopener"></a>
+                                            </div>
+                            </div>
+            <div class="footer-seo">
+                                                            <span>Últimos consultórios de psicologia</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/pamela-rosa-psicologa" title="Pâmela Rosa Psicóloga">Pâmela Rosa Psicóloga</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/lais-tamara-dos-santos-psicologa" title="Lais Tamara dos Santos Psicóloga">Lais Tamara dos Santos Psicóloga</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/kelvio-silva-psicologo" title="Kélvio Silva Psicólogo">Kélvio Silva Psicólogo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/marcela-romero-psicologa" title="Marcela Romero Psicóloga">Marcela Romero Psicóloga</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/tamara-alves-psicologa" title="Tamara Alves Psicóloga">Tamara Alves Psicóloga</a>
+                                </li>
+                                                    </ul>
+                    
+                                            <span>Estados Top</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/sao-paulo" title="Psicólogos São Paulo">Psicólogos São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/rio-de-janeiro" title="Psicólogos Rio de Janeiro">Psicólogos Rio de Janeiro</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/parana" title="Psicólogos Paraná">Psicólogos Paraná</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/santa-catarina" title="Psicólogos Santa Catarina">Psicólogos Santa Catarina</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/minas-gerais" title="Psicólogos Minas Gerais">Psicólogos Minas Gerais</a>
+                                </li>
+                                                    </ul>
+                    
+                    
+                                            <span>Serviços por estado</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/ansiedade/sao-paulo" title="Angústia São Paulo">Angústia São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/depressao/sao-paulo" title="Depressão São Paulo">Depressão São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/stress/sao-paulo" title="Estresse São Paulo">Estresse São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologia-clinica/sao-paulo" title="Psicólogo clínico São Paulo">Psicólogo clínico São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/traumas/sao-paulo" title="Traumas São Paulo">Traumas São Paulo</a>
+                                </li>
+                                                    </ul>
+                    
+                                            <span>Pesquisas recentes</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/fobia" title="Fobia">
+                                        Fobia
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicoterapias" title="Psicoterapias">
+                                        Psicoterapias
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologia-clinica" title="Psicologia clínica">
+                                        Psicologia clínica
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/depressao" title="Psicólogos Depressão">
+                                        Psicólogos Depressão
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/ansiedade" title="Psicólogos Ansiedade">
+                                        Psicólogos Ansiedade
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/terapia-de-casal" title="Terapia de casal">
+                                        Terapia de casal
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                </div>
+        </div>
+    </aside>
+    <aside class="footer-bottom">
+        <div class="wrapper">
+            <ul>
+                                    <li>
+                        <span class="flg-ar"></span>
+                        <a href="https://www.mundopsicologos.com.ar">Mundopsicologos.com.ar</a>
+                    </li>
+                                    <li>
+                        <span class="flg-br"></span>
+                        <a href="https://br.mundopsicologos.com">MundoPsicologos.com</a>
+                    </li>
+                                    <li>
+                        <span class="flg-cl"></span>
+                        <a href="https://www.psicologosonline.cl">PsicologosOnline.cl</a>
+                    </li>
+                                    <li>
+                        <span class="flg-co"></span>
+                        <a href="https://www.psicologos.com.co">Psicologos.com.co</a>
+                    </li>
+                                    <li>
+                        <span class="flg-es"></span>
+                        <a href="https://www.mundopsicologos.com">MundoPsicologos.com</a>
+                    </li>
+                                    <li>
+                        <span class="flg-fr"></span>
+                        <a href="https://www.psychologue.net">Psychologue.net</a>
+                    </li>
+                                    <li>
+                        <span class="flg-it"></span>
+                        <a href="https://www.guidapsicologi.it">GuidaPsicologi.it</a>
+                    </li>
+                                    <li>
+                        <span class="flg-mx"></span>
+                        <a href="https://www.psico.mx">Psico.mx</a>
+                    </li>
+                
+                            </ul>
+        </div>
+    </aside>
+</footer>
+
+            <div id="ie_m_overlay" class="ie-modal-overlay"></div>
+<div id="ie_m" class="ie-modal-wrapper">
+    <div class="ie-modal">
+        <span class="ie-modal-close icon-x ie_m_close"></span>
+        <div id="ie_m_title" class="ie-modal-title"></div>
+        <div id="ie_m_container" class="ie-modal-content"></div>
+        <div id="ie_m_loader" class="ie-modal-loader">
+            <div class="ie-modal-loader-item"></div>
+        </div>
+    </div>
+</div>            <div id="user_type_intercept" style="display: none;">
+    <p style="font-size: 20px; font-weight: 700; margin: 40px 0 0;" class="ie-text--primary">Quer falar com um psicólogo?</p>
+    <p style="font-size: 18px; line-height: 1.4;">Envie sua mensagem para receber ajuda dos nossos profissionais</p>
+    <div style="margin: 60px auto 20px;">
+        <a class="new-std-btn ie_m_close" target="_blank" style="display: inline-block; min-width: 200px; padding: 13px 20px; height: 45px;"
+           href="https://br.mundopsicologos.com/landing/deixe-seus-problemas-para-tras-47">
+            Enviar mensagem
+        </a>
+    </div>
+    <p style="font-size: 14px; color: #7B7F7F; line-height: 1.4; margin-bottom: 40px;">Seu contato é privado e sem compromisso</p>
+</div>
+                    </div>
+                        
+    <script type="text/javascript" src="/10005910/site/own/_configurations.js"></script>
+    <script type="text/javascript" src="/10005910/js/jquery-iempresas.js"></script>
+    <script type="text/javascript" src="/10005910/js/global.js"></script>
+            <script type="text/javascript" src="/10005910/js/iempresas.js"></script>
+    
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC2ZF8"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MC2ZF8');</script>
+    <!-- End Google Tag Manager -->
+    
+    <script type="text/javascript">
+        //<![CDATA[
+        $.extend(App.pageVar, {
+            couId: "29",
+            proId: "92"
+        });
+        //]]>
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MundoPsicologos.com",
+      "url": "https://br.mundopsicologos.com",
+      "logo": "https://br.mundopsicologos.com/site/own/logo_color.png",
+      "sameAs": [
+                    "https://www.facebook.com/MundopsicologosBrasil",
+                            "https://twitter.com/BRpsicologos"
+                      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://br.mundopsicologos.com/search?search={search}",
+        "query-input": "required name=search"
+      }
+    }
+    </script>
+
+    
+    <script>
+    (function (d) {
+        var sc = d.createElement('script'); sc.async = true; sc.src = '/10005910/js/source-control.js';
+        var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
+    }(document));
+</script>
+        
+    <script async type="text/javascript" src="/front/banner/show?sec=objective&amp;list=all&amp;ae1=0&amp;ae2=0&amp;pop=0&amp;sev=0"></script>
+    <script type="text/javascript">
+        var pageVar = {"nav":{"name":"all","sev_id":0,"ae1_id":0,"ae2_id":0,"pop_id":0},"RequestFormMultiVariant":true,"couId":29,"msgs":{"FORM_ERROR_repeated_request_txt":"Este consult\u00f3rio j\u00e1 recebeu a sua solicita\u00e7\u00e3o. Se deseja enviar um novo pedido, modifique o coment\u00e1rio."},"281124":{"head_by_pop":{"710108120":{"length":1,"0":"368419"},"710108073":{"length":1,"0":"368414"},"710107841":{"length":1,"0":"368418"},"710107868":{"length":1,"0":"368417"}},"head_by_ae2":{"783538":{"length":1,"0":"368419"}},"headId":319280},"273957":{"head_by_pop":{"710099722":{"length":1,"0":"311508"}},"head_by_ae2":{"783530":{"length":1,"0":"311508"}},"headId":311508},"324389":{"head_by_pop":{"710113541":{"length":1,"0":"369925"}},"head_by_ae2":{"783541":{"length":1,"0":"369925"}},"headId":368376},"221478":{"head_by_pop":{"710125120":{"length":1,"0":"254269"}},"head_by_ae2":{"783546":{"length":1,"0":"254269"}},"headId":254269},"310056":{"head_by_pop":{"710113541":{"length":1,"0":"369687"}},"head_by_ae2":{"783541":{"length":1,"0":"369687"}},"headId":351565},"330025":{"head_by_pop":{"710129226":{"length":1,"0":"374794"}},"head_by_ae2":{"783552":{"length":1,"0":"374794"}},"headId":374794},"182318":{"head_by_pop":{"710104504":{"length":1,"0":"213514"}},"head_by_ae2":{"783534":{"length":1,"0":"213514"}},"headId":213514},"312115":{"head_by_pop":{"710129226":{"length":1,"0":"381576"}},"head_by_ae2":{"783552":{"length":1,"0":"381576"}},"headId":354170},"281654":{"head_by_pop":{"710114253":{"length":1,"0":"328103"}},"head_by_ae2":{"783542":{"length":1,"0":"328103"}},"headId":328103},"157758":{"head_by_pop":{"710102061":{"length":1,"0":"184443"}},"head_by_ae2":{"783532":{"length":1,"0":"184443"}},"headId":184443},"322878":{"head_by_pop":{"710112591":{"length":1,"0":"376233"},"710112545":{"length":1,"0":"376234"}},"head_by_ae2":{"783540":{"length":1,"0":"376234"}},"headId":376233},"172607":{"head_by_pop":{"710111194":{"length":1,"0":"202006"}},"head_by_ae2":{"783539":{"length":1,"0":"202006"}},"headId":202006},"175937":{"head_by_pop":{"710126016":{"length":1,"0":"205978"}},"head_by_ae2":{"783549":{"length":1,"0":"205978"}},"headId":205978},"314952":{"head_by_pop":{"710107841":{"length":1,"0":"357699"}},"head_by_ae2":{"783538":{"length":1,"0":"357699"}},"headId":357699},"157258":{"head_by_pop":{"710125536":{"length":1,"0":"183873"}},"head_by_ae2":{"783547":{"length":1,"0":"183873"}},"headId":183873}};
+        $(document).on('ready', function () {
+            App.pageVar = pageVar;
+            App.Front.Listing.initListing();
+        });
+
+        if (typeof window.fbq !== 'undefined') {
+            window.fbq('track', 'Search');
+        }
+    </script>
+
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a9443b4dd8","applicationID":"4706831,16053980","transactionName":"YAFXbEcDCEMHVkANWllLdk1GFgldSXNGC1tDXnx9WBIUVRVURzh2WApBSloOClUUaXIWWlkQaX5HDQhEKlxHEFxZAw9UXBEScQpZ","queueTime":0,"applicationTime":373,"atts":"TEZUGg8ZG00=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

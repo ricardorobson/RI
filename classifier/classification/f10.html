@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta name="google-site-verification" content="s32CC9KBp2vRpndTzJq3TfWfl6ATxlZRyLmzNaBNBXw" />
+        <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+        <title>Artigos sobre psicologia - MundoPsicologos.com</title>
+                    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    
+    <meta name="robots" content="index,follow" />
+            <link rel="canonical" href="https://br.mundopsicologos.com/artigos" />
+    
+            <link rel="next" href="https://br.mundopsicologos.com/artigos/2"/>
+
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Artigos sobre psicologia - MundoPsicologos.com" />
+        <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://br.mundopsicologos.com/artigos" />
+    <meta property="og:image" content="https://br.mundopsicologos.com/site/own/site_cover.png" />
+    <meta property="og:site_name" content="br" />
+    <!-- Twitter Card -->
+            <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@BRpsicologos" />
+        <meta name="twitter:title" content="Artigos sobre psicologia - MundoPsicologos.com" />
+                <meta name="twitter:image" content=" https://br.mundopsicologos.com/site/own/site_cover.png " />
+    
+    <!-- The Grid -->
+
+            <link media="screen" type="text/css" rel="stylesheet" href="/10006390/css/gen/psicologos/front_master.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/js/vendor/jquery-ui/themes/base/jquery-ui.min.css" />
+            <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-35714415-1', 'auto');
+        ga('create', 'UA-11698778-10', 'auto', 'countryTracker');
+        ga('create', 'UA-11698778-2', 'auto', 'globalTracker');
+
+        if (typeof window.Storage !== 'undefined' && localStorage.getItem('ie-usr-type')) {
+            ga('set', 'dimension4', localStorage.getItem('ie-usr-type'));
+            ga('globalTracker.set', 'dimension4', localStorage.getItem('ie-usr-type'));
+            ga('countryTracker.set', 'dimension4', localStorage.getItem('ie-usr-type'));
+        }
+
+                                            ga('set', 'contentGroup3', 'article listing');
+                ga('globalTracker.set', 'contentGroup3', 'article listing');
+                ga('countryTracker.set', 'contentGroup3', 'article listing');
+                        ga('require', 'GTM-N4PGQ3J');
+            ga('send', 'pageview');
+            ga('globalTracker.send', 'pageview');
+            ga('countryTracker.send', 'pageview');
+        
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1394448900661738');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1394448900661738&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    </head>
+
+
+    <body           id="article_listing"              >
+
+                    <div id="smart_banner" class="ie-smart-banner">
+    <div class="ie-smart-banner-close">
+        <span id="smart_banner_close" class="ie-smart-banner-close-btn">&#10006;</span>
+    </div>
+    <div class="ie-smart-banner-content">
+        <div class="ie-smart-banner-content-img">
+            <img src="https://cdn20.br.mundopsicologos.com/site/own/app_user_icon.jpg"  width="44" height="44">
+        </div>
+        <div class="ie-smart-banner-name">MundoPsicologos.com</div>
+        <div class="ie-smart-banner-stars">
+            <span class="icon-star-full"></span>
+            <span class="icon-star-full"></span>
+            <span class="icon-star-full"></span>
+            <span class="icon-star-full"></span>
+            <span class="icon-star-half"></span>
+        </div>
+        <div class="ie-smart-banner-sub">
+            <span class="ie-only ie-only_android">No Google Play</span>
+            <span class="ie-only ie-only_ios">Na App Store</span>
+        </div>
+    </div>
+    <div class="ie-smart-banner-cta">
+        <button data-seo-lnk="https://play.google.com/store/apps/details?id=com.intercomempresas.user.phsycologists" data-seo-target="_blank" class="ie-smart-banner-btn ie-only ie-only_android"
+           onclick="window.gaqTrackEvent('mobile', 'smart_banner', 'install_android')">
+            Instalar
+        </button>
+        <button data-seo-lnk="https://itunes.apple.com/app/apple-store/id1151071425?pt=101826870&ct=smartbanner&mt=8" data-seo-target="_blank"
+                class="ie-smart-banner-btn ie-only ie-only_ios"
+            onclick="window.gaqTrackEvent('mobile', 'smart_banner', 'install_ios')">
+            Instalar
+        </button>
+    </div>
+</div>
+        
+        <div class="container" >
+            <header class="site-header">
+    <div id="header" class="menu-top">
+        <div class="company-access">
+            <div class="js_login_box">
+                <a id ="profile-login" href="/profile/login" rel="nofollow" title="Acesso usuários">
+                    <span class="icon-user-access"></span>
+                    Acesso usuários
+                </a>
+            </div>
+            <a href="/front/user_account/login" rel="nofollow" title="Acesso consultório">
+                <span class="icon-company-access"></span>
+                Acesso consultório
+            </a>
+            <a href="/register_web" rel="nofollow" title="Cadastrar seu consultório">
+                Cadastre grátis seu consultório
+            </a>
+        </div>
+    </div>
+    <div class="menu-site">
+        <div class="menu-hamburguer" id="js_mob_hamburguer" data-role="hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+                    <div class="project-logo">
+                    <a href="/" title="psicólogos" rel="home">
+                <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_color.svg" alt="psicólogos" title="psicólogos" class="desktop-logo"/>
+                <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_white.svg" alt="psicólogos" title="psicólogos" class="mob-logo"/>
+            </a>
+                    </div>
+                <nav id="js_mob-menu" class="menu-options">
+            <a href="/"
+               title="Psicólogos"
+               rel="home"
+               class="home ">
+                <span class="icon-home2"></span>
+                Início
+            </a>
+            <a id="js_companies_list_btn"
+               href="/consultorios"
+               title="Consultórios de MundoPsicologos.com"
+               class="">
+                <span class="icon-list-2"></span>
+                Psicólogos
+            </a>
+                        <a href="/artigos"
+               title="Tudo sobre psicologia"
+               class="active">
+                <span class="icon-article"></span>
+                Artigos
+            </a>
+                                        <a href="/perguntas" title="Perguntas" class="">
+                    <span class="icon-question-bubble"></span>
+                    Perguntas
+                </a>
+                                                    <a href="/comunidade" title="Fórum" class="">
+                    <span class="icon-community2"></span>
+                    Fórum
+                </a>
+                                    <div class="loginBox">
+                <a href="/profile/login"
+                   rel="nofollow"
+                   title="Acesso usuários">
+                    <span class="icon-user-access"></span>
+                    Acesso usuários
+                </a>
+                <a href="/front/user_account/login"
+                   rel="nofollow"
+                   title="Acesso consultório">
+                    <span class="icon-company-access"></span>
+                    Acesso consultório
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+                <section class="wrapper" itemscope itemtype="https://schema.org/ItemList">
+        <aside data-role="breadcrumb" class="new-breadcrumb">
+                <ul>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <span>
+                    <a href="/"
+                       title="Psicólogos" itemprop="url">
+                        <span itemprop="title">Psicólogos</span>
+                    </a> &nbsp;&gt;
+                </span>
+
+                        </li>
+                    <li itemscope itemtype="https://data-vocabulary.org/Breadcrumb">
+
+                            <strong itemprop="title">Artigos</strong>
+                <meta itemprop="url" content="https://br.mundopsicologos.com/artigos" />
+                        </li>
+            </ul>
+        </aside>
+
+        <h1 class="pageTitle" id="js_page_title">Artigos sobre psicologia</h1>
+
+                                <aside class="article-featured" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+                <div class="article-featured--image">
+                                            <a href="/artigos/fibromialgia-sintomas-diagnostico-e-tratamento" title="Fibromialgia: sintomas, diagnóstico e tratamento">
+                            <img id="article-img"
+                                 src="https://cdn20.br.mundopsicologos.com/site/article/46467/37398/shutterstock-603095825_ai1.jpg"
+                                 srcset="/site/article/46467/37398/shutterstock-603095825_ai2.jpg 600w, /site/article/46467/37398/shutterstock-603095825_ai1.jpg 1420w"
+                                 sizes="(min-width:600px) 1420px, 600px" alt="Fibromialgia: sintomas, diagnóstico e tratamento"/>
+                        </a>
+                                    </div>
+                <div class="article-featured--excerpt">
+                    <meta itemprop="position" content="1">
+                    <h2>
+                        <meta itemprop="name" content="Fibromialgia: sintomas, diagnóstico e tratamento">
+                        <a id="article-featured" itemprop="url" href="/artigos/fibromialgia-sintomas-diagnostico-e-tratamento"
+                           title="Fibromialgia: sintomas, diagnóstico e tratamento">
+                            Fibromialgia: sintomas, diagnóstico e tratamento
+                        </a>
+                    </h2>
+                    <p class="contextual">
+                        <span>Autor:MundoPsicologos.com</span>
+                        <span>Hoje, 07 Maio 2018  
+                            <a href="/artigos/categoria/atualidades-sobre-psicologia">
+                                Atualidades sobre psicologia
+                            </a>
+                        </span>
+                    </p>
+                    <p class="abstract">Não são muitos os que conhecem o que é a fibromialgia, nem sabem os sintomas que pode chegar a provocar. Veja a seguir quais são, e entenda o peso psicológico de ter uma síndrome como essa.</p>
+                </div>
+                <aside class="article-contentList_sharing">
+                    <div class="social-sharer horizontal mob-fixed" id="social-container" data-page="article_listing">
+                        <a href="http://www.facebook.com/sharer/sharer.php?"
+   target="_blank"
+   class="share-facebook"
+   id="js_share_facebook"
+   title="facebook"
+   data-action="share">
+    <span class="icon-facebook-share"></span>
+</a>
+<a href="http://twitter.com/home?status="
+   target="_blank"
+   class="share-twitter"
+   id="js_share_twitter"
+   title="twitter"
+   data-action="share">
+    <span class="icon-twitter-share"></span>
+</a>
+<a href="whatsapp://send?"
+   class="share-whatsapp hide-element"
+   id="js_share_whatsapp"
+   title="whatsapp"
+   data-action="share">
+    <span class="icon-whatsapp-share"></span>
+</a>
+<a href="mailto:email@address.com?"
+   class="share-mail"
+   id="js_share_mail"
+   title="email"
+   data-action="share">
+    <span class="icon-mail-share"></span>
+</a>                    </div>
+                </aside>
+            </aside>
+        
+        <aside id="js_article_listing_nav" class="article-nav">
+            <h2>Artigos por temas</h2>
+            <ul>
+    <li class="category-general active">
+        <a href="/artigos">
+            Todos os artigos
+        </a>
+    </li>
+                        <li>
+                <a href="/terapia-de-casal/artigos">Terapia de casal</a>
+            </li>
+
+                                                    <li class="parent ">
+                    <a href="/artigos/categoria/atualidades-sobre-psicologia">Atualidades sobre psicologia</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="parent ">
+                    <a href="/artigos/categoria/congressos-e-eventos">Congressos e eventos</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/criancas-e-adolescentes">Crianças e adolescentes</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/dicas-de-psicologia">Dicas de psicologia</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/familia">Família</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/fobias">Fobias</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/neuropsicologia">Neuropsicologia</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/o-psicologo-esclarece">O psicólogo esclarece</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/problemas-psicologicos">Problemas psicológicos</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/sexualidade">Sexualidade</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/terapias-e-abordagens">Terapias e abordagens</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/trabalho">Trabalho</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="parent ">
+                    <a href="/artigos/categoria/traumas">Traumas</a>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </aside>
+
+        
+        <section class="article-contentList">
+                                                <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+                                                                        
+                        
+                                                    <a href="/artigos/o-que-e-o-stress-pos-traumatico-e-quais-os-seus-sintomas" title="O que é o stress pós-traumático e quais os seus sintomas">
+                                <img src="https://cdn20.br.mundopsicologos.com/site/article/46620/37340/shutterstock-228722455_ai3.jpg"
+                                     srcset="/site/article/46620/37340/shutterstock-228722455_ai1.jpg 485w, /site/article/46620/37340/shutterstock-228722455_ai3.jpg 1420w"
+                                     sizes="(min-width:485px) 1420px, 485px" alt="O que é o stress pós-traumático e quais os seus sintomas"/>
+                            </a>
+                        
+                        <meta itemprop="position" content="2">
+                                                <h3>
+                            <meta itemprop="name" content="O que é o stress pós-traumático e quais os seus sintomas">
+                            <a itemprop="url" href="/artigos/o-que-e-o-stress-pos-traumatico-e-quais-os-seus-sintomas">O que é o stress pós-traumático e quais os seus sintomas</a>
+                        </h3>
+                        <p class="contextual">
+                            <span class="icon-user2"></span>
+                            <span>MundoPsicologos.com</span>
+                        </p>
+                        <p class="abstract">Não é fácil identificar um quadro de stress pós-traumático. Porém, é importante saber reconhecer os sintomas e buscar ajuda quando o quadro se agrava, já que os danos podem ser substanciais.</p>
+                    </aside>
+                                    <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+                                                                        
+                        
+                                                    <a href="/artigos/como-voltar-a-confiar-depois-de-uma-decepcao-amorosa" title="Como voltar a confiar depois de uma decepção amorosa">
+                                <img src="https://cdn20.br.mundopsicologos.com/site/article/46549/37331/shutterstock-774746863_ai3.jpg"
+                                     srcset="/site/article/46549/37331/shutterstock-774746863_ai1.jpg 485w, /site/article/46549/37331/shutterstock-774746863_ai3.jpg 1420w"
+                                     sizes="(min-width:485px) 1420px, 485px" alt="Como voltar a confiar depois de uma decepção amorosa"/>
+                            </a>
+                        
+                        <meta itemprop="position" content="3">
+                                                <h3>
+                            <meta itemprop="name" content="Como voltar a confiar depois de uma decepção amorosa">
+                            <a itemprop="url" href="/artigos/como-voltar-a-confiar-depois-de-uma-decepcao-amorosa">Como voltar a confiar depois de uma decepção amorosa</a>
+                        </h3>
+                        <p class="contextual">
+                            <span class="icon-user2"></span>
+                            <span>MundoPsicologos.com</span>
+                        </p>
+                        <p class="abstract">Uma decepção amorosa pode ser sinônimo de dor e frustração. Como fazer para que uma experiência negativa não acabe com sua confiança no amor? Fique atento às dicas compartilhadas a seguir.</p>
+                    </aside>
+                                    <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+                                                                        
+                        
+                                                    <a href="/artigos/saiba-o-que-e-a-ortorexia-e-conheca-seus-riscos" title="Saiba o que é a ortorexia e conheça seus riscos">
+                                <img src="https://cdn20.br.mundopsicologos.com/site/article/46501/37196/shutterstock-198603971_ai3.jpg"
+                                     srcset="/site/article/46501/37196/shutterstock-198603971_ai1.jpg 485w, /site/article/46501/37196/shutterstock-198603971_ai3.jpg 1420w"
+                                     sizes="(min-width:485px) 1420px, 485px" alt="Saiba o que é a ortorexia e conheça seus riscos"/>
+                            </a>
+                        
+                        <meta itemprop="position" content="4">
+                                                <h3>
+                            <meta itemprop="name" content="Saiba o que é a ortorexia e conheça seus riscos">
+                            <a itemprop="url" href="/artigos/saiba-o-que-e-a-ortorexia-e-conheca-seus-riscos">Saiba o que é a ortorexia e conheça seus riscos</a>
+                        </h3>
+                        <p class="contextual">
+                            <span class="icon-user2"></span>
+                            <span>MundoPsicologos.com</span>
+                        </p>
+                        <p class="abstract">Você já deve ter ouvido falar que tudo em excesso é prejudicial. Com a alimentação não seria diferente. Neste artigo falamos sobre a ortorexia, a obsessão pela alimentação saudável</p>
+                    </aside>
+                                    <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+                                                                        
+                        
+                                                    <a href="/artigos/ciume-retroativo-quando-o-passado-do-parceiro-e-o-vilao" title="Ciúme retroativo: quando o passado do parceiro é o vilão">
+                                <img src="https://cdn20.br.mundopsicologos.com/site/article/46288/37002/shutterstock-533459629_ai3.jpg"
+                                     srcset="/site/article/46288/37002/shutterstock-533459629_ai1.jpg 485w, /site/article/46288/37002/shutterstock-533459629_ai3.jpg 1420w"
+                                     sizes="(min-width:485px) 1420px, 485px" alt="Ciúme retroativo: quando o passado do parceiro é o vilão"/>
+                            </a>
+                        
+                        <meta itemprop="position" content="5">
+                                                <h3>
+                            <meta itemprop="name" content="Ciúme retroativo: quando o passado do parceiro é o vilão">
+                            <a itemprop="url" href="/artigos/ciume-retroativo-quando-o-passado-do-parceiro-e-o-vilao">Ciúme retroativo: quando o passado do parceiro é o vilão</a>
+                        </h3>
+                        <p class="contextual">
+                            <span class="icon-user2"></span>
+                            <span>MundoPsicologos.com</span>
+                        </p>
+                        <p class="abstract">O ciúme pode colocar em xeque qualquer relação, e não seria diferente naqueles casos em que o fator desencadeante está no passado. Saiba mais sobre o problema e como superá-lo a seguir.</p>
+                    </aside>
+                                    <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+                                                                        
+                        
+                                                    <a href="/artigos/a-importancia-de-desenvolver-a-inteligencia-emocional" title="A importância de desenvolver a inteligência emocional">
+                                <img src="https://cdn20.br.mundopsicologos.com/site/article/46419/37272/shutterstock-360287792_ai3.jpg"
+                                     srcset="/site/article/46419/37272/shutterstock-360287792_ai1.jpg 485w, /site/article/46419/37272/shutterstock-360287792_ai3.jpg 1420w"
+                                     sizes="(min-width:485px) 1420px, 485px" alt="A importância de desenvolver a inteligência emocional"/>
+                            </a>
+                        
+                        <meta itemprop="position" content="6">
+                                                <h3>
+                            <meta itemprop="name" content="A importância de desenvolver a inteligência emocional">
+                            <a itemprop="url" href="/artigos/a-importancia-de-desenvolver-a-inteligencia-emocional">A importância de desenvolver a inteligência emocional</a>
+                        </h3>
+                        <p class="contextual">
+                            <span class="icon-user2"></span>
+                            <span>MundoPsicologos.com</span>
+                        </p>
+                        <p class="abstract">Muitos especialistas coincidem em que a inteligência emocional é um dos fatores mais importantes para alcançar o sucesso. Entenda por que neste artigo, e saiba como trabalhar sua capacidade.</p>
+                    </aside>
+                                    <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+                                                                        
+                        
+                                                    <a href="/artigos/como-controlar-a-raiva" title="Como controlar a raiva">
+                                <img src="https://cdn20.br.mundopsicologos.com/site/article/46331/37014/shutterstock-646731202_ai3.jpg"
+                                     srcset="/site/article/46331/37014/shutterstock-646731202_ai1.jpg 485w, /site/article/46331/37014/shutterstock-646731202_ai3.jpg 1420w"
+                                     sizes="(min-width:485px) 1420px, 485px" alt="Como controlar a raiva"/>
+                            </a>
+                        
+                        <meta itemprop="position" content="7">
+                                                <h3>
+                            <meta itemprop="name" content="Como controlar a raiva">
+                            <a itemprop="url" href="/artigos/como-controlar-a-raiva">Como controlar a raiva</a>
+                        </h3>
+                        <p class="contextual">
+                            <span class="icon-user2"></span>
+                            <span>MundoPsicologos.com</span>
+                        </p>
+                        <p class="abstract">A raiva é uma reação natural à frustração, às situações em que você se sente injustiçado. Porém, cuidado com esse sentimento, pode ser muito nocivo. Entenda por que e aprenda a controlá-lo.</p>
+                    </aside>
+                                    </section>
+
+        <section class="article-contentPro">
+                        <h3>A voz do profissional</h3>
+    
+                    
+                            
+        <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+            <meta itemprop="position" content="8">
+                        <h3>
+                <meta itemprop="name" content="Psicologia do esporte aplicada na formação de jovens atletas">
+                <a itemprop="url" href="/artigos/psicologia-do-esporte-aplicada-na-formacao-de-jovens-atletas">Psicologia do esporte aplicada na formação de jovens atletas</a>
+            </h3>
+            <p class="contextual">
+                <span><a href='/consultorios/alexandre-herbst-psicologia-do-esporte'>Alexandre Herbst - Psicologia do Esporte</a> </span>
+                <span>05 Maio 2018</span>
+            </p>
+            <p class="abstract">A prática esportiva infantil pode proporcionar diversos benefícios físicos, psicológicos, emocionais. Por outro lado, caso não seja bem orientada, os prejuízos podem ser irreversíveis.</p>
+        </aside>
+                    
+                            
+        <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+            <meta itemprop="position" content="9">
+                        <h3>
+                <meta itemprop="name" content="Estado de Flow: uma ferramenta para o alto desempenho e a realização pessoal">
+                <a itemprop="url" href="/artigos/estado-de-flow-uma-ferramenta-para-o-alto-desempenho-e-a-realizacao-pessoal">Estado de Flow: uma ferramenta para o alto desempenho e a realização pessoal</a>
+            </h3>
+            <p class="contextual">
+                <span><a href='/consultorios/alexandre-herbst-psicologia-do-esporte'>Alexandre Herbst - Psicologia do Esporte</a> </span>
+                <span>05 Maio 2018</span>
+            </p>
+            <p class="abstract">Muito além do conceito, está o que esse estado representa na busca pelo bem-estar e por um sentido naquilo que fazemos. Vamos entender melhor essa ideia.</p>
+        </aside>
+                    
+                            
+        <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+            <meta itemprop="position" content="10">
+                        <h3>
+                <meta itemprop="name" content="Abuso sexual no esporte">
+                <a itemprop="url" href="/artigos/abuso-sexual-no-esporte">Abuso sexual no esporte</a>
+            </h3>
+            <p class="contextual">
+                <span><a href='/consultorios/alexandre-herbst-psicologia-do-esporte'>Alexandre Herbst - Psicologia do Esporte</a> </span>
+                <span>05 Maio 2018</span>
+            </p>
+            <p class="abstract">Sabe-se que muitas vítimas se sentem acuadas e envergonhadas para tomarem uma atitude, e acabam sofrendo em silêncio. É algo preocupante, pois pode comprometer a vida de centenas de jovens.</p>
+        </aside>
+                    
+                            
+        <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+            <meta itemprop="position" content="11">
+                        <h3>
+                <meta itemprop="name" content="Ficar triste também é normal">
+                <a itemprop="url" href="/artigos/ficar-triste-tambem-e-normal">Ficar triste também é normal</a>
+            </h3>
+            <p class="contextual">
+                <span><a href='/consultorios/liediani-souza-psicologa'>Liediani Souza Psicóloga</a> </span>
+                <span>05 Maio 2018</span>
+            </p>
+            <p class="abstract">Ainda existe a compreensão, errônea, de que pessoas saudáveis estão felizes o tempo todo. Isso não é verdade</p>
+        </aside>
+                    
+                            
+        <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+            <meta itemprop="position" content="12">
+                        <h3>
+                <meta itemprop="name" content="Psicologia do Esporte: O que é? O que faz? Como faz?">
+                <a itemprop="url" href="/artigos/psicologia-do-esporte-o-que-e-o-que-faz-como-faz">Psicologia do Esporte: O que é? O que faz? Como faz?</a>
+            </h3>
+            <p class="contextual">
+                <span><a href='/consultorios/alexandre-herbst-psicologia-do-esporte'>Alexandre Herbst - Psicologia do Esporte</a> </span>
+                <span>05 Maio 2018</span>
+            </p>
+            <p class="abstract">Apresentando a Psicologia do Esporte ciência e profissão: história, formas de atuação, objetivos, e tudo que você precisa saber.</p>
+        </aside>
+                    
+                            
+        <aside class="article-object" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+            <meta itemprop="position" content="13">
+                        <h3>
+                <meta itemprop="name" content="Pais de filhos adolescentes">
+                <a itemprop="url" href="/artigos/pais-de-filhos-adolescentes">Pais de filhos adolescentes</a>
+            </h3>
+            <p class="contextual">
+                <span><a href='/consultorios/josiele-de-souza-psicologa-gestalt-terapeuta-e-coach'>Josiele de Souza - Psicóloga, Gestalt terapeuta e Coach</a> </span>
+                <span>05 Maio 2018</span>
+            </p>
+            <p class="abstract">O universo do jovem é diferente do adulto e carece de atenção, cuidado e suporte. 
+Para ajudar é preciso conhecer primeiro, pais o quanto vocês conhecem seus filhos?</p>
+        </aside>
+            </section>
+
+        <!-- Paginator -->
+                    <aside class="paginator">
+                <div id="nav_bottom">
+                    <div class="pager-module">
+                        <span class='pager-s icon-icon-arrow-left'></span>&nbsp;<span class="active">1</span>&nbsp;<span>de&nbsp;72</span><a class="pager-a icon-icon-arrow-right brds-round active" data-role="next-page" href="/artigos/2" title="Próxima"></a>
+                    </div>
+                </div>
+            </aside>
+                <!-- Paginator -->
+    </section>
+
+            <div class="lead-chat" id="js_register_call_us">
+            <div>
+                <a href='https://br.mundopsicologos.com/landing/deixe-seus-problemas-para-tras-47' target="_blank">
+                    <span class="icon-comment"></span>
+                    Fale com um psicólogo
+                </a>
+            </div>
+        </div>
+    
+
+            <footer id="footer">
+    <aside class="footer">
+        <div class="wrapper">
+            <div class="footer-site">
+                <div class="project-logo">
+                    <img src="https://cdn20.br.mundopsicologos.com/site/own/logo_white.svg" alt="psicólogos" title="psicólogos" width="150" height="31"/>
+                </div>
+                <ul>
+                    <li>
+                        <a href="/quienes" rel="nofollow" title="Quem somos">
+                            Quem somos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/aviso_legal" rel="nofollow" title="Condições legais">
+                            Condições legais
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/proteccion_datos" rel="nofollow" title="Proteção de dados">
+                            Proteção de dados
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/guia_comunidades" rel="nofollow" title="Condições de Participação do Fórum">
+                            Condições de Participação do Fórum
+                        </a>
+                    </li>
+                </ul>
+                <ul class="last">
+                                            <li>
+                            <a href="/potenciales" rel="nofollow" title="Plano Premium">
+                                Plano Premium
+                            </a>
+                        </li>
+                                        <li>
+                        <a href="/register_web" rel="nofollow" title="Cadastrar seu consultório">
+                            Cadastrar seu consultório
+                        </a>
+                    </li>
+                    <li><a href="/front/user_account/login" rel="nofollow" title="Acesso consultório">
+                            Acesso consultório
+                        </a>
+                    </li>
+                </ul>
+                                    <div class="social">
+                        <span>Siga-nos:</span>
+                                                    <a class="icon-facebook" onclick="gaqTrackEvent('socialButtons', 'footer_web', 'facebook');"
+                               href="https://www.facebook.com/MundopsicologosBrasil" target="_blank" rel="noopener"></a>
+                                                                            <a class="icon-twitter" onclick="gaqTrackEvent('socialButtons', 'footer_web', 'twitter');"
+                               href="https://twitter.com/BRpsicologos" target="_blank" rel="noopener"></a>
+                                            </div>
+                            </div>
+            <div class="footer-seo">
+                                                            <span>Últimos consultórios de psicologia</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/gisele-falcao-de-almeida-alves-psicologa" title="Gisele Falcão de Almeida Alves Psicóloga">Gisele Falcão de Almeida Alves Psicóloga</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologa-luciana-chiochetta" title="Psicóloga Luciana Chiochetta">Psicóloga Luciana Chiochetta</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologa-rachel-lisboa" title="Psicóloga Rachel Lisboa">Psicóloga Rachel Lisboa</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologo-mauricio-czeckailo" title="Psicólogo Mauricio Czeckailo">Psicólogo Mauricio Czeckailo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologa-thais-claudino" title="Psicóloga Thais Claudino">Psicóloga Thais Claudino</a>
+                                </li>
+                                                    </ul>
+                    
+                                            <span>Estados Top</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/sao-paulo" title="Psicólogos São Paulo">Psicólogos São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/rio-de-janeiro" title="Psicólogos Rio de Janeiro">Psicólogos Rio de Janeiro</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/parana" title="Psicólogos Paraná">Psicólogos Paraná</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/santa-catarina" title="Psicólogos Santa Catarina">Psicólogos Santa Catarina</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/minas-gerais" title="Psicólogos Minas Gerais">Psicólogos Minas Gerais</a>
+                                </li>
+                                                    </ul>
+                    
+                    
+                                            <span>Serviços por estado</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/ansiedade/sao-paulo" title="Angústia São Paulo">Angústia São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/depressao/sao-paulo" title="Depressão São Paulo">Depressão São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/stress/sao-paulo" title="Estresse São Paulo">Estresse São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologia-clinica/sao-paulo" title="Psicólogo clínico São Paulo">Psicólogo clínico São Paulo</a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/traumas/sao-paulo" title="Traumas São Paulo">Traumas São Paulo</a>
+                                </li>
+                                                    </ul>
+                    
+                                            <span>Pesquisas recentes</span>
+                        <ul>
+                                                            <li>
+                                    <a href="/consultorios/fobia" title="Fobia">
+                                        Fobia
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicoterapias" title="Psicoterapias">
+                                        Psicoterapias
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/psicologia-clinica" title="Psicologia clínica">
+                                        Psicologia clínica
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/depressao" title="Psicólogos Depressão">
+                                        Psicólogos Depressão
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/ansiedade" title="Psicólogos Ansiedade">
+                                        Psicólogos Ansiedade
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/consultorios/terapia-de-casal" title="Terapia de casal">
+                                        Terapia de casal
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                </div>
+        </div>
+    </aside>
+    <aside class="footer-bottom">
+        <div class="wrapper">
+            <ul>
+                                    <li>
+                        <span class="flg-ar"></span>
+                        <a href="https://www.mundopsicologos.com.ar">Mundopsicologos.com.ar</a>
+                    </li>
+                                    <li>
+                        <span class="flg-br"></span>
+                        <a href="https://br.mundopsicologos.com">MundoPsicologos.com</a>
+                    </li>
+                                    <li>
+                        <span class="flg-cl"></span>
+                        <a href="https://www.psicologosonline.cl">PsicologosOnline.cl</a>
+                    </li>
+                                    <li>
+                        <span class="flg-co"></span>
+                        <a href="https://www.psicologos.com.co">Psicologos.com.co</a>
+                    </li>
+                                    <li>
+                        <span class="flg-es"></span>
+                        <a href="https://www.mundopsicologos.com">MundoPsicologos.com</a>
+                    </li>
+                                    <li>
+                        <span class="flg-fr"></span>
+                        <a href="https://www.psychologue.net">Psychologue.net</a>
+                    </li>
+                                    <li>
+                        <span class="flg-it"></span>
+                        <a href="https://www.guidapsicologi.it">GuidaPsicologi.it</a>
+                    </li>
+                                    <li>
+                        <span class="flg-mx"></span>
+                        <a href="https://www.psico.mx">Psico.mx</a>
+                    </li>
+                                    <li>
+                        <span class="flg-pt"></span>
+                        <a href="https://www.guiadetectives.com">Psico.portugal</a>
+                    </li>
+                
+                            </ul>
+        </div>
+    </aside>
+</footer>
+
+            <script id="super_modal_template" type="x-template">
+    <div class="ie-sp"
+         :class="{'isSmall': isSmall, 'isBig': isBig}"
+         v-if="isVisible || isLoading">
+        <div class="ie-sp-wrap">
+        <span class="ie-sp-close"
+              v-if="showClose"
+              @click="remove">×</span>
+
+            <div class="ie-sp-ttl"
+                 v-if="title && !isLoading"
+                 v-html="title"></div>
+            <div class="ie-sp-content"
+                 v-show="!isLoading"
+                 ref="content"
+                 v-html="content">
+            </div>
+
+            <div class="ie-sp-loader"
+                 v-if="isLoading">
+                <div class="ie-sp-loader-item"></div>
+            </div>
+        </div>
+    </div>
+</script>            <div id="user_type_intercept" style="display: none;">
+    <div style="text-align: center;">
+        <p style="font-size: 20px; font-weight: 700; margin: 40px 0 0;" class="ie-text--primary">Quer falar com um psicólogo?</p>
+        <p style="font-size: 18px; line-height: 1.4;">Envie sua mensagem para receber ajuda dos nossos profissionais</p>
+        <div style="margin: 60px auto 20px;">
+            <a class="new-std-btn ie_m_close" target="_blank" style="display: inline-block; min-width: 200px; padding: 13px 20px; height: 45px;"
+               href="https://br.mundopsicologos.com/landing/deixe-seus-problemas-para-tras-47">
+                Enviar mensagem
+            </a>
+        </div>
+        <p style="font-size: 14px; color: #7B7F7F; line-height: 1.4; margin-bottom: 40px;">Seu contato é privado e sem compromisso</p>
+    </div>
+</div>
+                    </div>
+                    
+    <script type="text/javascript" src="/10006390/site/own/_configurations.js"></script>
+    <script type="text/javascript" src="/10006390/js/jquery-iempresas.js"></script>
+    <script type="text/javascript" src="/10006390/js/global.js"></script>
+            <script type="text/javascript" src="/10006390/js/iempresas.js"></script>
+    
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC2ZF8"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MC2ZF8');</script>
+    <!-- End Google Tag Manager -->
+    
+    <script type="text/javascript">
+        //<![CDATA[
+        $.extend(App.pageVar, {
+            couId: "29",
+            proId: "92"
+        });
+        //]]>
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MundoPsicologos.com",
+      "url": "https://br.mundopsicologos.com",
+      "logo": "https://br.mundopsicologos.com/site/own/logo_color.png",
+      "sameAs": [
+                    "https://www.facebook.com/MundopsicologosBrasil",
+                            "https://twitter.com/BRpsicologos"
+                      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://br.mundopsicologos.com/search?search={search}",
+        "query-input": "required name=search"
+      }
+    }
+    </script>
+
+    
+    <script>
+    (function (d) {
+        var sc = d.createElement('script'); sc.async = true; sc.src = '/10006390/js/source-control.js';
+        var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
+    }(document));
+</script>
+            <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a9443b4dd8","applicationID":"4706831,16053980","transactionName":"YAFXbEcDCEMHVkANWllLdk1GFgldSXNGC1tDXnx9WBIUVRVURzh2WApBSloOClUUaXIWWlkQaX5HDQhEJ0dADVZbAXlRRhYPXgEPWA1GQyVZVA==","queueTime":0,"applicationTime":113,"atts":"TEZUGg8ZG00=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
